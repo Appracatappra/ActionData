@@ -46,7 +46,8 @@ Besides acting as a model for the physical representation of the data within the
 ## Example:
 ```swift
 import Foundation
-import ActionControls
+import ActionUtilities
+import ActionData
  
 class Category: ADDataTable {
 	 
@@ -86,7 +87,8 @@ A class or struct conforming to this protocol can be used to store a one-to-many
 
 ```swift
 import Foundation
-import ActionControls
+import ActionUtilities
+import ActionData
 
 struct Address: Codable {
     var addr1 = ""

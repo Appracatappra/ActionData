@@ -16,6 +16,9 @@ Decodes a `Codable` or `Decodable` class from a `ADRecord` read from a SQLite da
  
 ### Example:
 ```swift
+import ActionUtilities
+import ActionData
+
 class Category: ADDataTable {
  
 	enum CategoryType: String, Codable {

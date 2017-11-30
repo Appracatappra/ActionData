@@ -16,29 +16,32 @@ Decodes a `Codable` or `Decodable` class from a `ADRecord` read from a SQLite da
 
 ### Example:
 ```swift
+import ActionUtilities
+import ActionData
+
 class Category: ADDataTable {
 
-enum CategoryType: String, Codable {
-case local
-case web
-}
-
-static var tableName = "Categories"
-static var primaryKey = "id"
-static var primaryKeyType: ADDataTableKeyType = .computedInt
-
-var id = 0
-var added = Date()
-var name = ""
-var description = ""
-var enabled = true
-var highlightColor = UIColor.white.toHex()
-var type: CategoryType = .local
-var icon: Data = UIImage().toData()
-
-required init() {
-
-}
+	enum CategoryType: String, Codable {
+		case local
+		case web
+	}
+	
+	static var tableName = "Categories"
+	static var primaryKey = "id"
+	static var primaryKeyType: ADDataTableKeyType = .computedInt
+	
+	var id = 0
+	var added = Date()
+	var name = ""
+	var description = ""
+	var enabled = true
+	var highlightColor = UIColor.white.toHex()
+	var type: CategoryType = .local
+	var icon: Data = UIImage().toData()
+	
+	required init() {
+	
+	}
 }
 
 let encoder = ADSPONEncoder()

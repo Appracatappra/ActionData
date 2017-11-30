@@ -43,7 +43,7 @@ The following creates a relationship between the `Group` and `Person` tables (bo
  
 ```swift
 import Foundation
-import ActionControls
+import ActionData
  
 class Group: ADDataTable {
 	 
@@ -109,6 +109,6 @@ Use the `execute` method to execute non-query SQL statements against the Data St
 
 Defines a set of utilities to handle data related issues such as comparing two values of type `Any`. This includes the following functions:
 
-* **compare** - Compares two values of type `Any` to see if they are equal, not equal, less than, greater than, less than or equal to or greater than or equal to eachother. Both values must be of the same type and internally stored as a **Int**, **Double**, **Float**, **String** or **Bool**.
+* **compare** - Compares two values of type `Any` to see if they are equal, not equal, less than, greater than, less than or equal to or greater than or equal to each other. Both values must be of the same type and internally stored as a **Int**, **Double**, **Float**, **String** or **Bool**.
 * **compute** - Calculates the addition, subtraction, multiplication or division of two values of type `Any`. Both values must be of the same type and internally stored as a **Int**, **Double**, **Float**, **String** or **Bool**. **String** and **Bool** types support addition only. Additionally, **String** can be added to any other type and the result is a **String** with the value appended to it.
 * **cast** - Attempts to cast the given `Any` type value to the given SQL Database type.

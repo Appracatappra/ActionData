@@ -18,7 +18,6 @@ This includes the following:
 * [Shared Elements](#Shared-Elements)
 * [Enumerations](#Enumerations)
 * [Protocols](#Protocols)
-* [SQLParser](#SQLParser)
 * [ADSQLiteProvider](#ADSQLiteProvider)
 * [ADSPONProvider](#ADSPONProvider)
 
@@ -37,31 +36,10 @@ Contains the enumerations shared across all **Action Data Providers** such as `A
 
 Contains the protocols shared across all **Action Data Providers** such as `ADDataProvider`, `ADDataTable` and `ADDataCrossReference`.
 
-<a name="SQLParser"></a>
-## SQLParser
-
-The `ADSQLParser` provides the ability to parse text containing one or more SQL commands into an Action Data SQL Document Object Model (DOM) and is used to provide SQL support for data sources that don't support SQL natively (such as CloudKit and JSON).
-
-The `ADSQLParser` uses SQLite's SQL syntax and currently support a subset of the full SQL language. For example:
-
-```swift
-let sql = """
-CREATE TABLE IF NOT EXISTS parts
-(
-    part_id           INTEGER   PRIMARY KEY,
-    stock             INTEGER   DEFAULT 0   NOT NULL,
-    description       TEXT      CHECK( description != '' )    -- empty strings not allowed
-);
-"""
-    
-let instructions = try ADSQLParser.parse(sql)
-print(instructions)
-```
-
 <a name="ADSQLiteProvider"></a>
 ## ADSQLiteProvider
 
-The `ADSQLiteProvider` provides both light-weight, low-level access to data stored in a SQLite database and high-level access via a Object Relationship Management (ORM) model. Use provided functions to read and write data stored in a `ADRecord` format from and to the database using SQL statements directly.
+The `ADSQLiteProvider` provides both light-weight, low-level access to data stored in a SQLite database and high-level access via a **Object Relationship Management** (ORM) model. Use provided functions to read and write data stored in a `ADRecord` format from and to the database using SQL statements directly.
  
 ### Example:
 
@@ -92,7 +70,7 @@ The `ADSQLiteProvider` will automatically create a SQL Table from a class instan
 <a name="ADSPONProvider"></a>
 ## ADSPONProvider
 
-The `ADSPONProvider` provides both light-weight, low-level access to data stored in a Swift Portable Object Notation (SPON) database and high-level access via a Object Relationship Management (ORM) model. Use provided functions to read and write data stored in a `ADRecord` format from and to the database using SQL statements directly.
+The `ADSPONProvider` provides both light-weight, low-level access to data stored in a **Swift Portable Object Notation** (SPON) database and high-level access via a **Object Relationship Management** (ORM) model. Use provided functions to read and write data stored in a `ADRecord` format from and to the database using SQL statements directly.
  
 ### Example:
  

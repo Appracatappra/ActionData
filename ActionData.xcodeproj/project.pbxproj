@@ -89,6 +89,10 @@
 		2D6CEB331FD0A1B300A482D0 /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA391FD092F200A482D0 /* ActionData.framework */; };
 		2DB70D821FD0A2E50049BA1E /* SPONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D801FD0A2E50049BA1E /* SPONTests.swift */; };
 		2DB70D831FD0A2E50049BA1E /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */; };
+		2DB70D851FD0A5BB0049BA1E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D841FD0A5BB0049BA1E /* README.md */; };
+		2DB70D881FD0A6A00049BA1E /* BuildUnifiedLibrary.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */; };
+		2DB70D891FD0A6A00049BA1E /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */; };
+		2DB70D8A1FD0B0220049BA1E /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +217,9 @@
 		2DB70D7F1FD0A2E40049BA1E /* ActionDataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActionDataTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		2DB70D801FD0A2E50049BA1E /* SPONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPONTests.swift; sourceTree = "<group>"; };
 		2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
+		2DB70D841FD0A5BB0049BA1E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = BuildUnifiedLibrary.sh; sourceTree = "<group>"; };
+		2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = TrimFramework.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +246,9 @@
 		2D6CEA2F1FD092F200A482D0 = {
 			isa = PBXGroup;
 			children = (
+				2DB70D841FD0A5BB0049BA1E /* README.md */,
+				2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */,
+				2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */,
 				2D6CEA3B1FD092F200A482D0 /* ActionData */,
 				2D6CEB2F1FD0A1B300A482D0 /* ActionDataTests */,
 				2D6CEA3A1FD092F200A482D0 /* Products */,
@@ -642,6 +652,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB70D8A1FD0B0220049BA1E /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,6 +660,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB70D891FD0A6A00049BA1E /* TrimFramework.sh in Resources */,
+				2DB70D881FD0A6A00049BA1E /* BuildUnifiedLibrary.sh in Resources */,
+				2DB70D851FD0A5BB0049BA1E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

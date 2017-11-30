@@ -13,6 +13,9 @@ import Foundation
  
  ## Example:
  ```
+ import ActionUtilities
+ import ActionData
+ 
  class Category: ADDataTable {
  
      enum CategoryType: String, Codable {
