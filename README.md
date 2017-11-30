@@ -22,6 +22,7 @@ With **Action Codable** and **Action Data Providers**, build your data model obj
 
 ```swift
 import Foundation
+import ActionUtilities
 import ActionData
 
 class Category: ADDataTable {
@@ -54,6 +55,7 @@ This includes support for complex tables with nested objects, arrays and diction
 
 ```swift
 import Foundation
+import ActionUtilities
 import ActionData
 
 struct Address: Codable {
