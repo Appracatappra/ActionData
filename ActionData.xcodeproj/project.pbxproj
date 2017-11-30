@@ -8,12 +8,211 @@
 
 /* Begin PBXBuildFile section */
 		2D6CEA3E1FD092F200A482D0 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6CEA3C1FD092F200A482D0 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D6CEA541FD0961900A482D0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */; };
+		2D6CEA5E1FD0972B00A482D0 /* ADInstanceDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */; };
+		2D6CEA601FD0972B00A482D0 /* ADDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */; };
+		2D6CEA611FD0972B00A482D0 /* ADInstanceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */; };
+		2D6CEA621FD0972B00A482D0 /* ADRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */; };
+		2D6CEA631FD0972B00A482D0 /* ADKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */; };
+		2D6CEA641FD0972B00A482D0 /* ADEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */; };
+		2D6CEA6E1FD0979800A482D0 /* ADSPONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */; };
+		2D6CEA6F1FD0979800A482D0 /* ADSPONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */; };
+		2D6CEA701FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */; };
+		2D6CEA711FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */; };
+		2D6CEA721FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */; };
+		2D6CEA781FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */; };
+		2D6CEA7A1FD097BF00A482D0 /* ADSPONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */; };
+		2D6CEA7B1FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */; };
+		2D6CEA7C1FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */; };
+		2D6CEA851FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */; };
+		2D6CEA861FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */; };
+		2D6CEA871FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */; };
+		2D6CEA881FD0982000A482D0 /* ADSQLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */; };
+		2D6CEA891FD0982000A482D0 /* ADSQLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */; };
+		2D6CEA901FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */; };
+		2D6CEA911FD0983200A482D0 /* ADSQLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */; };
+		2D6CEA921FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */; };
+		2D6CEA931FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */; };
+		2D6CEA9E1FD09A1700A482D0 /* ADSQLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */; };
+		2D6CEAA81FD09A3200A482D0 /* ADSQLParseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */; };
+		2D6CEAA91FD09A3200A482D0 /* ADSQLColumnDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */; };
+		2D6CEAAA1FD09A3200A482D0 /* ADSQLJoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */; };
+		2D6CEAAB1FD09A3200A482D0 /* ADSQLResultColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */; };
+		2D6CEAAD1FD09A3200A482D0 /* ADSQLColumnConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */; };
+		2D6CEAAE1FD09A3200A482D0 /* ADSQLSetClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */; };
+		2D6CEAAF1FD09A3200A482D0 /* ADSQLOrderByClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */; };
+		2D6CEAB01FD09A3200A482D0 /* ADSQLTableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */; };
+		2D6CEABE1FD09A8C00A482D0 /* ADSQLDeleteInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */; };
+		2D6CEABF1FD09A8C00A482D0 /* ADSQLCreateTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */; };
+		2D6CEAC01FD09A8C00A482D0 /* ADSQLCreateTriggerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */; };
+		2D6CEAC11FD09A8C00A482D0 /* ADSQLCreateIndexInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */; };
+		2D6CEAC21FD09A8C00A482D0 /* ADSQLInsertInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */; };
+		2D6CEAC31FD09A8C00A482D0 /* ADSQLTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */; };
+		2D6CEAC41FD09A8C00A482D0 /* ADSQLCreateViewInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */; };
+		2D6CEAC51FD09A8C00A482D0 /* ADSQLUpdateInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */; };
+		2D6CEAC61FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */; };
+		2D6CEAC71FD09A8C00A482D0 /* ADSQLDropInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */; };
+		2D6CEAC81FD09A8C00A482D0 /* ADSQLSelectInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */; };
+		2D6CEAD41FD09A9D00A482D0 /* ADSQLWhenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */; };
+		2D6CEAD51FD09A9D00A482D0 /* ADSQLFunctionExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */; };
+		2D6CEAD61FD09A9D00A482D0 /* ADSQLBetweenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */; };
+		2D6CEAD71FD09A9D00A482D0 /* ADSQLUnaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */; };
+		2D6CEAD91FD09A9D00A482D0 /* ADSQLForeignKeyExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */; };
+		2D6CEADA1FD09A9D00A482D0 /* ADSQLExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */; };
+		2D6CEADB1FD09A9D00A482D0 /* ADSQLLiteralExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */; };
+		2D6CEADC1FD09A9D00A482D0 /* ADSQLBinaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */; };
+		2D6CEADD1FD09A9D00A482D0 /* ADSQLCaseExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */; };
+		2D6CEADE1FD09A9D00A482D0 /* ADSQLInExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */; };
+		2D6CEAE51FD09ABB00A482D0 /* ADSQLColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */; };
+		2D6CEAE61FD09ABC00A482D0 /* ADSQLFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */; };
+		2D6CEAE71FD09ABC00A482D0 /* ADSQLParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */; };
+		2D6CEAE81FD09ABC00A482D0 /* ADSQLConflictHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */; };
+		2D6CEAE91FD09ABC00A482D0 /* ADSQLKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */; };
+		2D6CEAEE1FD09ADB00A482D0 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */; };
+		2D6CEAEF1FD09ADB00A482D0 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */; };
+		2D6CEAF31FD09C1400A482D0 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */; };
+		2D6CEAFB1FD09D4D00A482D0 /* ADSPONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */; };
+		2D6CEAFC1FD09D4D00A482D0 /* ADSQLiteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */; };
+		2D6CEB041FD09D7700A482D0 /* ADCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */; };
+		2D6CEB051FD09D7700A482D0 /* ADUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */; };
+		2D6CEB061FD09D7700A482D0 /* ADTableSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */; };
+		2D6CEB071FD09D7700A482D0 /* ADTableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */; };
+		2D6CEB091FD09D7700A482D0 /* ADDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */; };
+		2D6CEB0A1FD09D7700A482D0 /* ADColumnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */; };
+		2D6CEB0F1FD09D9300A482D0 /* ADDataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */; };
+		2D6CEB101FD09D9300A482D0 /* ADSQLExecutionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */; };
+		2D6CEB111FD09D9300A482D0 /* ADDataTableKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */; };
+		2D6CEB171FD09DCE00A482D0 /* ADDataCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */; };
+		2D6CEB181FD09DCE00A482D0 /* ADDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */; };
+		2D6CEB191FD09DCE00A482D0 /* ADDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */; };
+		2D6CEB1B1FD09E3C00A482D0 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */; };
+		2D6CEB331FD0A1B300A482D0 /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA391FD092F200A482D0 /* ActionData.framework */; };
+		2DB70D821FD0A2E50049BA1E /* SPONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D801FD0A2E50049BA1E /* SPONTests.swift */; };
+		2DB70D831FD0A2E50049BA1E /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D6CEA501FD0958800A482D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2D6CEA161FD07B2100A482D0;
+			remoteInfo = ActionUtilities;
+		};
+		2D6CEB341FD0A1B300A482D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D6CEA301FD092F200A482D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D6CEA381FD092F200A482D0;
+			remoteInfo = ActionData;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2D6CEA391FD092F200A482D0 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D6CEA3C1FD092F200A482D0 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
 		2D6CEA3D1FD092F200A482D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionUtilities.xcodeproj; path = ../ActionUtilities/ActionUtilities.xcodeproj; sourceTree = "<group>"; };
+		2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2D6CEA551FD096C600A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADInstanceDictionary.swift; sourceTree = "<group>"; };
+		2D6CEA581FD0972B00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDecodingStorage.swift; sourceTree = "<group>"; };
+		2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADInstanceArray.swift; sourceTree = "<group>"; };
+		2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADRecord.swift; sourceTree = "<group>"; };
+		2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADKey.swift; sourceTree = "<group>"; };
+		2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADEncodingStorage.swift; sourceTree = "<group>"; };
+		2D6CEA651FD0978500A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA671FD0979700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONReferencingEncoder.swift; sourceTree = "<group>"; };
+		2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONEncoder.swift; sourceTree = "<group>"; };
+		2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA741FD097BF00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONDecoder.swift; sourceTree = "<group>"; };
+		2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA7D1FD0981400A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLReferencingEncoder.swift; sourceTree = "<group>"; };
+		2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLEncoder.swift; sourceTree = "<group>"; };
+		2D6CEA841FD0982000A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDecoder.swift; sourceTree = "<group>"; };
+		2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D6CEA8F1FD0983200A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA9B1FD09A1700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParser.swift; sourceTree = "<group>"; };
+		2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParseQueue.swift; sourceTree = "<group>"; };
+		2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnDefinition.swift; sourceTree = "<group>"; };
+		2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLJoinClause.swift; sourceTree = "<group>"; };
+		2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLResultColumn.swift; sourceTree = "<group>"; };
+		2D6CEAA31FD09A3200A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnConstraint.swift; sourceTree = "<group>"; };
+		2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSetClause.swift; sourceTree = "<group>"; };
+		2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLOrderByClause.swift; sourceTree = "<group>"; };
+		2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLTableConstraint.swift; sourceTree = "<group>"; };
+		2D6CEAB11FD09A8B00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDeleteInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTableInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTriggerInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateIndexInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInsertInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLTransaction.swift; sourceTree = "<group>"; };
+		2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateViewInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUpdateInstruction.swift; sourceTree = "<group>"; };
+		2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLAlterTableInstruction.swift; sourceTree = "<group>"; };
+		2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDropInstruction.swift; sourceTree = "<group>"; };
+		2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSelectInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLWhenExpression.swift; sourceTree = "<group>"; };
+		2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLFunctionExpression.swift; sourceTree = "<group>"; };
+		2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLBetweenExpression.swift; sourceTree = "<group>"; };
+		2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnaryExpression.swift; sourceTree = "<group>"; };
+		2D6CEACD1FD09A9C00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLForeignKeyExpression.swift; sourceTree = "<group>"; };
+		2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExpressionBuilder.swift; sourceTree = "<group>"; };
+		2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLLiteralExpression.swift; sourceTree = "<group>"; };
+		2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLBinaryExpression.swift; sourceTree = "<group>"; };
+		2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCaseExpression.swift; sourceTree = "<group>"; };
+		2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInExpression.swift; sourceTree = "<group>"; };
+		2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnType.swift; sourceTree = "<group>"; };
+		2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLFunction.swift; sourceTree = "<group>"; };
+		2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParseError.swift; sourceTree = "<group>"; };
+		2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLConflictHandling.swift; sourceTree = "<group>"; };
+		2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyword.swift; sourceTree = "<group>"; };
+		2D6CEAE41FD09ABB00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInstruction.swift; sourceTree = "<group>"; };
+		2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExpression.swift; sourceTree = "<group>"; };
+		2D6CEAED1FD09ADB00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		2D6CEAF71FD09D4D00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONProvider.swift; sourceTree = "<group>"; };
+		2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLiteProvider.swift; sourceTree = "<group>"; };
+		2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADCrossReference.swift; sourceTree = "<group>"; };
+		2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADUtilities.swift; sourceTree = "<group>"; };
+		2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADTableSchema.swift; sourceTree = "<group>"; };
+		2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADTableStore.swift; sourceTree = "<group>"; };
+		2D6CEB011FD09D7700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataStore.swift; sourceTree = "<group>"; };
+		2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADColumnSchema.swift; sourceTree = "<group>"; };
+		2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataProviderError.swift; sourceTree = "<group>"; };
+		2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExecutionError.swift; sourceTree = "<group>"; };
+		2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataTableKeyType.swift; sourceTree = "<group>"; };
+		2D6CEB0E1FD09D9300A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataCrossReference.swift; sourceTree = "<group>"; };
+		2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataProvider.swift; sourceTree = "<group>"; };
+		2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataTable.swift; sourceTree = "<group>"; };
+		2D6CEB161FD09DCE00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D6CEB321FD0A1B300A482D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DB70D7F1FD0A2E40049BA1E /* ActionDataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActionDataTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		2DB70D801FD0A2E50049BA1E /* SPONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPONTests.swift; sourceTree = "<group>"; };
+		2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +220,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6CEB1B1FD09E3C00A482D0 /* ActionUtilities.framework in Frameworks */,
+				2D6CEA541FD0961900A482D0 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D6CEB2B1FD0A1B300A482D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D6CEB331FD0A1B300A482D0 /* ActionData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,7 +240,10 @@
 			isa = PBXGroup;
 			children = (
 				2D6CEA3B1FD092F200A482D0 /* ActionData */,
+				2D6CEB2F1FD0A1B300A482D0 /* ActionDataTests */,
 				2D6CEA3A1FD092F200A482D0 /* Products */,
+				2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */,
+				2D6CEA521FD095AD00A482D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				2D6CEA391FD092F200A482D0 /* ActionData.framework */,
+				2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -46,10 +259,275 @@
 		2D6CEA3B1FD092F200A482D0 /* ActionData */ = {
 			isa = PBXGroup;
 			children = (
+				2D6CEA441FD0947A00A482D0 /* ActionCodable */,
+				2D6CEAF11FD09B3200A482D0 /* ActionDataProviders */,
+				2D6CEA951FD098F000A482D0 /* ActionSQLParser */,
 				2D6CEA3C1FD092F200A482D0 /* ActionData.h */,
+				2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */,
 				2D6CEA3D1FD092F200A482D0 /* Info.plist */,
 			);
 			path = ActionData;
+			sourceTree = "<group>";
+		};
+		2D6CEA441FD0947A00A482D0 /* ActionCodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA551FD096C600A482D0 /* README.md */,
+				2D6CEA451FD094B000A482D0 /* SharedElements */,
+				2D6CEA471FD094DC00A482D0 /* SPON */,
+				2D6CEA461FD094C900A482D0 /* SQLite */,
+			);
+			path = ActionCodable;
+			sourceTree = "<group>";
+		};
+		2D6CEA451FD094B000A482D0 /* SharedElements */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA581FD0972B00A482D0 /* README.md */,
+				2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */,
+				2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */,
+				2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */,
+				2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */,
+				2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */,
+				2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */,
+			);
+			path = SharedElements;
+			sourceTree = "<group>";
+		};
+		2D6CEA461FD094C900A482D0 /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA7D1FD0981400A482D0 /* README.md */,
+				2D6CEA4B1FD0952800A482D0 /* Encodable */,
+				2D6CEA4A1FD0951D00A482D0 /* Decodable */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
+		2D6CEA471FD094DC00A482D0 /* SPON */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA651FD0978500A482D0 /* README.md */,
+				2D6CEA481FD094FF00A482D0 /* Encodable */,
+				2D6CEA491FD0950B00A482D0 /* Decodable */,
+			);
+			path = SPON;
+			sourceTree = "<group>";
+		};
+		2D6CEA481FD094FF00A482D0 /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA671FD0979700A482D0 /* README.md */,
+				2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */,
+				2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */,
+				2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */,
+				2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */,
+				2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		2D6CEA491FD0950B00A482D0 /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA741FD097BF00A482D0 /* README.md */,
+				2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */,
+				2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */,
+				2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */,
+				2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */,
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
+		2D6CEA4A1FD0951D00A482D0 /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA8F1FD0983200A482D0 /* README.md */,
+				2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */,
+				2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */,
+				2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */,
+				2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */,
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
+		2D6CEA4B1FD0952800A482D0 /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA841FD0982000A482D0 /* README.md */,
+				2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */,
+				2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */,
+				2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */,
+				2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */,
+				2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		2D6CEA4D1FD0958800A482D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D6CEA521FD095AD00A482D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D6CEA951FD098F000A482D0 /* ActionSQLParser */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEA9B1FD09A1700A482D0 /* README.md */,
+				2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */,
+				2D6CEA961FD0990A00A482D0 /* SharedElements */,
+				2D6CEA971FD0991D00A482D0 /* Instructions */,
+				2D6CEA981FD0992700A482D0 /* Expressions */,
+				2D6CEA9A1FD0994400A482D0 /* Enumerations */,
+				2D6CEA991FD0993900A482D0 /* Protocols */,
+			);
+			path = ActionSQLParser;
+			sourceTree = "<group>";
+		};
+		2D6CEA961FD0990A00A482D0 /* SharedElements */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEAA31FD09A3200A482D0 /* README.md */,
+				2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */,
+				2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */,
+				2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */,
+				2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */,
+				2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */,
+				2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */,
+				2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */,
+				2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */,
+			);
+			path = SharedElements;
+			sourceTree = "<group>";
+		};
+		2D6CEA971FD0991D00A482D0 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEAB11FD09A8B00A482D0 /* README.md */,
+				2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */,
+				2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */,
+				2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */,
+				2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */,
+				2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */,
+				2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */,
+				2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */,
+				2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */,
+				2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */,
+				2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */,
+				2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		2D6CEA981FD0992700A482D0 /* Expressions */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEACD1FD09A9C00A482D0 /* README.md */,
+				2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */,
+				2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */,
+				2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */,
+				2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */,
+				2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */,
+				2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */,
+				2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */,
+				2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */,
+				2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */,
+				2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */,
+			);
+			path = Expressions;
+			sourceTree = "<group>";
+		};
+		2D6CEA991FD0993900A482D0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEAED1FD09ADB00A482D0 /* README.md */,
+				2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */,
+				2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2D6CEA9A1FD0994400A482D0 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEAE41FD09ABB00A482D0 /* README.md */,
+				2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */,
+				2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */,
+				2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */,
+				2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */,
+				2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		2D6CEAF11FD09B3200A482D0 /* ActionDataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEAF71FD09D4D00A482D0 /* README.md */,
+				2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */,
+				2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */,
+				2D6CEAF61FD09C9100A482D0 /* SharedElements */,
+				2D6CEAF51FD09C8100A482D0 /* Enumerations */,
+				2D6CEAF41FD09C7600A482D0 /* Protocols */,
+			);
+			path = ActionDataProviders;
+			sourceTree = "<group>";
+		};
+		2D6CEAF41FD09C7600A482D0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEB161FD09DCE00A482D0 /* README.md */,
+				2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */,
+				2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */,
+				2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2D6CEAF51FD09C8100A482D0 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEB0E1FD09D9300A482D0 /* README.md */,
+				2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */,
+				2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */,
+				2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		2D6CEAF61FD09C9100A482D0 /* SharedElements */ = {
+			isa = PBXGroup;
+			children = (
+				2D6CEB011FD09D7700A482D0 /* README.md */,
+				2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */,
+				2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */,
+				2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */,
+				2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */,
+				2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */,
+				2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */,
+			);
+			path = SharedElements;
+			sourceTree = "<group>";
+		};
+		2D6CEB2F1FD0A1B300A482D0 /* ActionDataTests */ = {
+			isa = PBXGroup;
+			children = (
+				2DB70D801FD0A2E50049BA1E /* SPONTests.swift */,
+				2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */,
+				2D6CEB321FD0A1B300A482D0 /* Info.plist */,
+				2DB70D7F1FD0A2E40049BA1E /* ActionDataTests-Bridging-Header.h */,
+			);
+			path = ActionDataTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -60,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D6CEA3E1FD092F200A482D0 /* ActionData.h in Headers */,
+				2D6CEAF31FD09C1400A482D0 /* Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,17 +563,42 @@
 			productReference = 2D6CEA391FD092F200A482D0 /* ActionData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2D6CEB2D1FD0A1B300A482D0 /* ActionDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D6CEB361FD0A1B300A482D0 /* Build configuration list for PBXNativeTarget "ActionDataTests" */;
+			buildPhases = (
+				2D6CEB2A1FD0A1B300A482D0 /* Sources */,
+				2D6CEB2B1FD0A1B300A482D0 /* Frameworks */,
+				2D6CEB2C1FD0A1B300A482D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2D6CEB351FD0A1B300A482D0 /* PBXTargetDependency */,
+			);
+			name = ActionDataTests;
+			productName = ActionDataTests;
+			productReference = 2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2D6CEA301FD092F200A482D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Appracatappra, LLC.";
 				TargetAttributes = {
 					2D6CEA381FD092F200A482D0 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
+						ProvisioningStyle = Automatic;
+					};
+					2D6CEB2D1FD0A1B300A482D0 = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -109,15 +613,39 @@
 			mainGroup = 2D6CEA2F1FD092F200A482D0;
 			productRefGroup = 2D6CEA3A1FD092F200A482D0 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D6CEA4D1FD0958800A482D0 /* Products */;
+					ProjectRef = 2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2D6CEA381FD092F200A482D0 /* ActionData */,
+				2D6CEB2D1FD0A1B300A482D0 /* ActionDataTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActionUtilities.framework;
+			remoteRef = 2D6CEA501FD0958800A482D0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2D6CEA371FD092F200A482D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D6CEB2C1FD0A1B300A482D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -131,10 +659,102 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6CEAA91FD09A3200A482D0 /* ADSQLColumnDefinition.swift in Sources */,
+				2D6CEAC51FD09A8C00A482D0 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D6CEA931FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
+				2D6CEA5E1FD0972B00A482D0 /* ADInstanceDictionary.swift in Sources */,
+				2D6CEADC1FD09A9D00A482D0 /* ADSQLBinaryExpression.swift in Sources */,
+				2D6CEA711FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
+				2D6CEA851FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
+				2D6CEA721FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2D6CEAD51FD09A9D00A482D0 /* ADSQLFunctionExpression.swift in Sources */,
+				2D6CEA781FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
+				2D6CEAD61FD09A9D00A482D0 /* ADSQLBetweenExpression.swift in Sources */,
+				2D6CEABF1FD09A8C00A482D0 /* ADSQLCreateTableInstruction.swift in Sources */,
+				2D6CEABE1FD09A8C00A482D0 /* ADSQLDeleteInstruction.swift in Sources */,
+				2D6CEB171FD09DCE00A482D0 /* ADDataCrossReference.swift in Sources */,
+				2D6CEA7A1FD097BF00A482D0 /* ADSPONDecoder.swift in Sources */,
+				2D6CEB0A1FD09D7700A482D0 /* ADColumnSchema.swift in Sources */,
+				2D6CEADE1FD09A9D00A482D0 /* ADSQLInExpression.swift in Sources */,
+				2D6CEB041FD09D7700A482D0 /* ADCrossReference.swift in Sources */,
+				2D6CEAC41FD09A8C00A482D0 /* ADSQLCreateViewInstruction.swift in Sources */,
+				2D6CEA6E1FD0979800A482D0 /* ADSPONReferencingEncoder.swift in Sources */,
+				2D6CEB191FD09DCE00A482D0 /* ADDataTable.swift in Sources */,
+				2D6CEADB1FD09A9D00A482D0 /* ADSQLLiteralExpression.swift in Sources */,
+				2D6CEAE51FD09ABB00A482D0 /* ADSQLColumnType.swift in Sources */,
+				2D6CEB091FD09D7700A482D0 /* ADDataStore.swift in Sources */,
+				2D6CEAC21FD09A8C00A482D0 /* ADSQLInsertInstruction.swift in Sources */,
+				2D6CEB071FD09D7700A482D0 /* ADTableStore.swift in Sources */,
+				2D6CEA621FD0972B00A482D0 /* ADRecord.swift in Sources */,
+				2D6CEAD91FD09A9D00A482D0 /* ADSQLForeignKeyExpression.swift in Sources */,
+				2D6CEB181FD09DCE00A482D0 /* ADDataProvider.swift in Sources */,
+				2D6CEAE81FD09ABC00A482D0 /* ADSQLConflictHandling.swift in Sources */,
+				2D6CEB051FD09D7700A482D0 /* ADUtilities.swift in Sources */,
+				2D6CEAAB1FD09A3200A482D0 /* ADSQLResultColumn.swift in Sources */,
+				2D6CEA921FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift in Sources */,
+				2D6CEA701FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift in Sources */,
+				2D6CEAC61FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift in Sources */,
+				2D6CEA9E1FD09A1700A482D0 /* ADSQLParser.swift in Sources */,
+				2D6CEA7C1FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
+				2D6CEAE91FD09ABC00A482D0 /* ADSQLKeyword.swift in Sources */,
+				2D6CEA861FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
+				2D6CEA871FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift in Sources */,
+				2D6CEAD71FD09A9D00A482D0 /* ADSQLUnaryExpression.swift in Sources */,
+				2D6CEAFB1FD09D4D00A482D0 /* ADSPONProvider.swift in Sources */,
+				2D6CEAC71FD09A8C00A482D0 /* ADSQLDropInstruction.swift in Sources */,
+				2D6CEA7B1FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift in Sources */,
+				2D6CEA6F1FD0979800A482D0 /* ADSPONEncoder.swift in Sources */,
+				2D6CEB101FD09D9300A482D0 /* ADSQLExecutionError.swift in Sources */,
+				2D6CEAC01FD09A8C00A482D0 /* ADSQLCreateTriggerInstruction.swift in Sources */,
+				2D6CEA891FD0982000A482D0 /* ADSQLEncoder.swift in Sources */,
+				2D6CEA901FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
+				2D6CEADA1FD09A9D00A482D0 /* ADSQLExpressionBuilder.swift in Sources */,
+				2D6CEA911FD0983200A482D0 /* ADSQLDecoder.swift in Sources */,
+				2D6CEA631FD0972B00A482D0 /* ADKey.swift in Sources */,
+				2D6CEADD1FD09A9D00A482D0 /* ADSQLCaseExpression.swift in Sources */,
+				2D6CEAE61FD09ABC00A482D0 /* ADSQLFunction.swift in Sources */,
+				2D6CEAEE1FD09ADB00A482D0 /* ADSQLInstruction.swift in Sources */,
+				2D6CEB061FD09D7700A482D0 /* ADTableSchema.swift in Sources */,
+				2D6CEA611FD0972B00A482D0 /* ADInstanceArray.swift in Sources */,
+				2D6CEAEF1FD09ADB00A482D0 /* ADSQLExpression.swift in Sources */,
+				2D6CEAE71FD09ABC00A482D0 /* ADSQLParseError.swift in Sources */,
+				2D6CEAD41FD09A9D00A482D0 /* ADSQLWhenExpression.swift in Sources */,
+				2D6CEA881FD0982000A482D0 /* ADSQLReferencingEncoder.swift in Sources */,
+				2D6CEA601FD0972B00A482D0 /* ADDecodingStorage.swift in Sources */,
+				2D6CEAC81FD09A8C00A482D0 /* ADSQLSelectInstruction.swift in Sources */,
+				2D6CEAAE1FD09A3200A482D0 /* ADSQLSetClause.swift in Sources */,
+				2D6CEB111FD09D9300A482D0 /* ADDataTableKeyType.swift in Sources */,
+				2D6CEAC31FD09A8C00A482D0 /* ADSQLTransaction.swift in Sources */,
+				2D6CEAB01FD09A3200A482D0 /* ADSQLTableConstraint.swift in Sources */,
+				2D6CEAAD1FD09A3200A482D0 /* ADSQLColumnConstraint.swift in Sources */,
+				2D6CEAAF1FD09A3200A482D0 /* ADSQLOrderByClause.swift in Sources */,
+				2D6CEA641FD0972B00A482D0 /* ADEncodingStorage.swift in Sources */,
+				2D6CEAAA1FD09A3200A482D0 /* ADSQLJoinClause.swift in Sources */,
+				2D6CEAA81FD09A3200A482D0 /* ADSQLParseQueue.swift in Sources */,
+				2D6CEAC11FD09A8C00A482D0 /* ADSQLCreateIndexInstruction.swift in Sources */,
+				2D6CEB0F1FD09D9300A482D0 /* ADDataProviderError.swift in Sources */,
+				2D6CEAFC1FD09D4D00A482D0 /* ADSQLiteProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D6CEB2A1FD0A1B300A482D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB70D821FD0A2E50049BA1E /* SPONTests.swift in Sources */,
+				2DB70D831FD0A2E50049BA1E /* SQLiteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D6CEB351FD0A1B300A482D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2D6CEA381FD092F200A482D0 /* ActionData */;
+			targetProxy = 2D6CEB341FD0A1B300A482D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2D6CEA3F1FD092F200A482D0 /* Debug */ = {
@@ -253,6 +873,30 @@
 		2D6CEA421FD092F200A482D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = ActionData/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionData;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D6CEA431FD092F200A482D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -269,24 +913,36 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Release;
 		};
-		2D6CEA431FD092F200A482D0 /* Release */ = {
+		2D6CEB371FD0A1B300A482D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ActionData/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = ActionDataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionData;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActionDataTests/ActionDataTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D6CEB381FD0A1B300A482D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				INFOPLIST_FILE = ActionDataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionDataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ActionDataTests/ActionDataTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -309,6 +965,15 @@
 			buildConfigurations = (
 				2D6CEA421FD092F200A482D0 /* Debug */,
 				2D6CEA431FD092F200A482D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D6CEB361FD0A1B300A482D0 /* Build configuration list for PBXNativeTarget "ActionDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D6CEB371FD0A1B300A482D0 /* Debug */,
+				2D6CEB381FD0A1B300A482D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
