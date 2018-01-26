@@ -6,772 +6,1264 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		2DCB83172018CF20009BEF01 /* Package iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2DCB831A2018CF20009BEF01 /* Build configuration list for PBXAggregateTarget "Package iOS" */;
+			buildPhases = (
+				2DCB831B2018CF26009BEF01 /* Make Universal Library */,
+				2DCB831C2018CFFB009BEF01 /* Build API Documnetation */,
+			);
+			dependencies = (
+			);
+			name = "Package iOS";
+			productName = "Package iOS";
+		};
+		2DCB831D2018D40D009BEF01 /* Package tvOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2DCB831E2018D40D009BEF01 /* Build configuration list for PBXAggregateTarget "Package tvOS" */;
+			buildPhases = (
+				2DCB83212018D411009BEF01 /* Make Universal Library */,
+				2DCB83222018D42F009BEF01 /* Build API Documnetation */,
+			);
+			dependencies = (
+			);
+			name = "Package tvOS";
+			productName = "Package tvOS";
+		};
+		2DCB83232018D46B009BEF01 /* Package macOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2DCB83242018D46B009BEF01 /* Build configuration list for PBXAggregateTarget "Package macOS" */;
+			buildPhases = (
+				2DCB83272018D48E009BEF01 /* Make Library */,
+				2DCB83282018D49F009BEF01 /* Build API Documentation */,
+			);
+			dependencies = (
+			);
+			name = "Package macOS";
+			productName = "Package macOS";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		2D6CEA3E1FD092F200A482D0 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6CEA3C1FD092F200A482D0 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D6CEA541FD0961900A482D0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */; };
-		2D6CEA5E1FD0972B00A482D0 /* ADInstanceDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */; };
-		2D6CEA601FD0972B00A482D0 /* ADDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */; };
-		2D6CEA611FD0972B00A482D0 /* ADInstanceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */; };
-		2D6CEA621FD0972B00A482D0 /* ADRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */; };
-		2D6CEA631FD0972B00A482D0 /* ADKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */; };
-		2D6CEA641FD0972B00A482D0 /* ADEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */; };
-		2D6CEA6E1FD0979800A482D0 /* ADSPONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */; };
-		2D6CEA6F1FD0979800A482D0 /* ADSPONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */; };
-		2D6CEA701FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */; };
-		2D6CEA711FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */; };
-		2D6CEA721FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */; };
-		2D6CEA781FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */; };
-		2D6CEA7A1FD097BF00A482D0 /* ADSPONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */; };
-		2D6CEA7B1FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */; };
-		2D6CEA7C1FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */; };
-		2D6CEA851FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */; };
-		2D6CEA861FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */; };
-		2D6CEA871FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */; };
-		2D6CEA881FD0982000A482D0 /* ADSQLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */; };
-		2D6CEA891FD0982000A482D0 /* ADSQLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */; };
-		2D6CEA901FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */; };
-		2D6CEA911FD0983200A482D0 /* ADSQLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */; };
-		2D6CEA921FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */; };
-		2D6CEA931FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */; };
-		2D6CEA9E1FD09A1700A482D0 /* ADSQLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */; };
-		2D6CEAA81FD09A3200A482D0 /* ADSQLParseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */; };
-		2D6CEAA91FD09A3200A482D0 /* ADSQLColumnDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */; };
-		2D6CEAAA1FD09A3200A482D0 /* ADSQLJoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */; };
-		2D6CEAAB1FD09A3200A482D0 /* ADSQLResultColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */; };
-		2D6CEAAD1FD09A3200A482D0 /* ADSQLColumnConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */; };
-		2D6CEAAE1FD09A3200A482D0 /* ADSQLSetClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */; };
-		2D6CEAAF1FD09A3200A482D0 /* ADSQLOrderByClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */; };
-		2D6CEAB01FD09A3200A482D0 /* ADSQLTableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */; };
-		2D6CEABE1FD09A8C00A482D0 /* ADSQLDeleteInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */; };
-		2D6CEABF1FD09A8C00A482D0 /* ADSQLCreateTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */; };
-		2D6CEAC01FD09A8C00A482D0 /* ADSQLCreateTriggerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */; };
-		2D6CEAC11FD09A8C00A482D0 /* ADSQLCreateIndexInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */; };
-		2D6CEAC21FD09A8C00A482D0 /* ADSQLInsertInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */; };
-		2D6CEAC31FD09A8C00A482D0 /* ADSQLTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */; };
-		2D6CEAC41FD09A8C00A482D0 /* ADSQLCreateViewInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */; };
-		2D6CEAC51FD09A8C00A482D0 /* ADSQLUpdateInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */; };
-		2D6CEAC61FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */; };
-		2D6CEAC71FD09A8C00A482D0 /* ADSQLDropInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */; };
-		2D6CEAC81FD09A8C00A482D0 /* ADSQLSelectInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */; };
-		2D6CEAD41FD09A9D00A482D0 /* ADSQLWhenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */; };
-		2D6CEAD51FD09A9D00A482D0 /* ADSQLFunctionExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */; };
-		2D6CEAD61FD09A9D00A482D0 /* ADSQLBetweenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */; };
-		2D6CEAD71FD09A9D00A482D0 /* ADSQLUnaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */; };
-		2D6CEAD91FD09A9D00A482D0 /* ADSQLForeignKeyExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */; };
-		2D6CEADA1FD09A9D00A482D0 /* ADSQLExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */; };
-		2D6CEADB1FD09A9D00A482D0 /* ADSQLLiteralExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */; };
-		2D6CEADC1FD09A9D00A482D0 /* ADSQLBinaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */; };
-		2D6CEADD1FD09A9D00A482D0 /* ADSQLCaseExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */; };
-		2D6CEADE1FD09A9D00A482D0 /* ADSQLInExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */; };
-		2D6CEAE51FD09ABB00A482D0 /* ADSQLColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */; };
-		2D6CEAE61FD09ABC00A482D0 /* ADSQLFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */; };
-		2D6CEAE71FD09ABC00A482D0 /* ADSQLParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */; };
-		2D6CEAE81FD09ABC00A482D0 /* ADSQLConflictHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */; };
-		2D6CEAE91FD09ABC00A482D0 /* ADSQLKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */; };
-		2D6CEAEE1FD09ADB00A482D0 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */; };
-		2D6CEAEF1FD09ADB00A482D0 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */; };
-		2D6CEAF31FD09C1400A482D0 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */; };
-		2D6CEAFB1FD09D4D00A482D0 /* ADSPONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */; };
-		2D6CEAFC1FD09D4D00A482D0 /* ADSQLiteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */; };
-		2D6CEB041FD09D7700A482D0 /* ADCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */; };
-		2D6CEB051FD09D7700A482D0 /* ADUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */; };
-		2D6CEB061FD09D7700A482D0 /* ADTableSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */; };
-		2D6CEB071FD09D7700A482D0 /* ADTableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */; };
-		2D6CEB091FD09D7700A482D0 /* ADDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */; };
-		2D6CEB0A1FD09D7700A482D0 /* ADColumnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */; };
-		2D6CEB0F1FD09D9300A482D0 /* ADDataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */; };
-		2D6CEB101FD09D9300A482D0 /* ADSQLExecutionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */; };
-		2D6CEB111FD09D9300A482D0 /* ADDataTableKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */; };
-		2D6CEB171FD09DCE00A482D0 /* ADDataCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */; };
-		2D6CEB181FD09DCE00A482D0 /* ADDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */; };
-		2D6CEB191FD09DCE00A482D0 /* ADDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */; };
-		2D6CEB1B1FD09E3C00A482D0 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */; };
-		2D6CEB331FD0A1B300A482D0 /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6CEA391FD092F200A482D0 /* ActionData.framework */; };
-		2DB70D821FD0A2E50049BA1E /* SPONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D801FD0A2E50049BA1E /* SPONTests.swift */; };
-		2DB70D831FD0A2E50049BA1E /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */; };
-		2DB70D851FD0A5BB0049BA1E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D841FD0A5BB0049BA1E /* README.md */; };
-		2DB70D881FD0A6A00049BA1E /* BuildUnifiedLibrary.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */; };
-		2DB70D891FD0A6A00049BA1E /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */; };
-		2DB70D8A1FD0B0220049BA1E /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */; };
+		2D709C9E2017F122009ADC2E /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D709C9D2017F122009ADC2E /* ActionUtilities.framework */; };
+		2D709CA02017F192009ADC2E /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D709C9F2017F192009ADC2E /* ActionUtilities.framework */; };
+		2D709CA22017F1E8009ADC2E /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D709CA12017F1E8009ADC2E /* ActionUtilities.framework */; };
+		2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7F02017DCB6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D92C7FF2017DCF6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7FD2017DCF6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D92C80C2017DD0A006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C80A2017DD0A006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D92C8132017DEE8006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8122017DEE8006598F3 /* libsqlite3.tbd */; };
+		2D92C8152017DF07006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8142017DF07006598F3 /* libsqlite3.tbd */; };
+		2D92C8172017DF3B006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8162017DF3B006598F3 /* libsqlite3.tbd */; };
+		2D92C81A2017DF73006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
+		2D92C81B2017DF74006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
+		2D92C81C2017DF75006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
+		2D92C81E2017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
+		2D92C81F2017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
+		2D92C8202017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
+		2D92C82D2017E038006598F3 /* ADDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8282017E02C006598F3 /* ADDecodingStorage.swift */; };
+		2D92C82E2017E038006598F3 /* ADEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82C2017E02C006598F3 /* ADEncodingStorage.swift */; };
+		2D92C82F2017E038006598F3 /* ADInstanceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8292017E02C006598F3 /* ADInstanceArray.swift */; };
+		2D92C8302017E038006598F3 /* ADInstanceDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8262017E02C006598F3 /* ADInstanceDictionary.swift */; };
+		2D92C8312017E038006598F3 /* ADKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82B2017E02C006598F3 /* ADKey.swift */; };
+		2D92C8322017E038006598F3 /* ADRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82A2017E02C006598F3 /* ADRecord.swift */; };
+		2D92C8332017E038006598F3 /* ADDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8282017E02C006598F3 /* ADDecodingStorage.swift */; };
+		2D92C8342017E038006598F3 /* ADEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82C2017E02C006598F3 /* ADEncodingStorage.swift */; };
+		2D92C8352017E038006598F3 /* ADInstanceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8292017E02C006598F3 /* ADInstanceArray.swift */; };
+		2D92C8362017E038006598F3 /* ADInstanceDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8262017E02C006598F3 /* ADInstanceDictionary.swift */; };
+		2D92C8372017E038006598F3 /* ADKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82B2017E02C006598F3 /* ADKey.swift */; };
+		2D92C8382017E038006598F3 /* ADRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82A2017E02C006598F3 /* ADRecord.swift */; };
+		2D92C8392017E039006598F3 /* ADDecodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8282017E02C006598F3 /* ADDecodingStorage.swift */; };
+		2D92C83A2017E039006598F3 /* ADEncodingStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82C2017E02C006598F3 /* ADEncodingStorage.swift */; };
+		2D92C83B2017E039006598F3 /* ADInstanceArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8292017E02C006598F3 /* ADInstanceArray.swift */; };
+		2D92C83C2017E039006598F3 /* ADInstanceDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8262017E02C006598F3 /* ADInstanceDictionary.swift */; };
+		2D92C83D2017E039006598F3 /* ADKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82B2017E02C006598F3 /* ADKey.swift */; };
+		2D92C83E2017E039006598F3 /* ADRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C82A2017E02C006598F3 /* ADRecord.swift */; };
+		2D92C8482017E084006598F3 /* ADSQLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8462017E07C006598F3 /* ADSQLEncoder.swift */; };
+		2D92C8492017E084006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8442017E07C006598F3 /* ADSQLKeyedEncodingContainer.swift */; };
+		2D92C84A2017E084006598F3 /* ADSQLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8452017E07C006598F3 /* ADSQLReferencingEncoder.swift */; };
+		2D92C84B2017E084006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8432017E07C006598F3 /* ADSQLSingleValueEncodingContainer.swift */; };
+		2D92C84C2017E084006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8422017E07C006598F3 /* ADSQLUnkeyedEncodingContainer.swift */; };
+		2D92C84D2017E085006598F3 /* ADSQLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8462017E07C006598F3 /* ADSQLEncoder.swift */; };
+		2D92C84E2017E085006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8442017E07C006598F3 /* ADSQLKeyedEncodingContainer.swift */; };
+		2D92C84F2017E085006598F3 /* ADSQLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8452017E07C006598F3 /* ADSQLReferencingEncoder.swift */; };
+		2D92C8502017E085006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8432017E07C006598F3 /* ADSQLSingleValueEncodingContainer.swift */; };
+		2D92C8512017E085006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8422017E07C006598F3 /* ADSQLUnkeyedEncodingContainer.swift */; };
+		2D92C8522017E086006598F3 /* ADSQLEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8462017E07C006598F3 /* ADSQLEncoder.swift */; };
+		2D92C8532017E086006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8442017E07C006598F3 /* ADSQLKeyedEncodingContainer.swift */; };
+		2D92C8542017E086006598F3 /* ADSQLReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8452017E07C006598F3 /* ADSQLReferencingEncoder.swift */; };
+		2D92C8552017E086006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8432017E07C006598F3 /* ADSQLSingleValueEncodingContainer.swift */; };
+		2D92C8562017E086006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8422017E07C006598F3 /* ADSQLUnkeyedEncodingContainer.swift */; };
+		2D92C85C2017E0D6006598F3 /* ADSQLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8582017E0CF006598F3 /* ADSQLDecoder.swift */; };
+		2D92C85D2017E0D6006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8592017E0CF006598F3 /* ADSQLKeyedDecodingContainer.swift */; };
+		2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8572017E0CF006598F3 /* ADSQLSingleValueDecodingContainer.swift */; };
+		2D92C85F2017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C85A2017E0CF006598F3 /* ADSQLUnkeyedDecodingContainer.swift */; };
+		2D92C8602017E0D6006598F3 /* ADSQLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8582017E0CF006598F3 /* ADSQLDecoder.swift */; };
+		2D92C8612017E0D6006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8592017E0CF006598F3 /* ADSQLKeyedDecodingContainer.swift */; };
+		2D92C8622017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8572017E0CF006598F3 /* ADSQLSingleValueDecodingContainer.swift */; };
+		2D92C8632017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C85A2017E0CF006598F3 /* ADSQLUnkeyedDecodingContainer.swift */; };
+		2D92C8642017E0D7006598F3 /* ADSQLDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8582017E0CF006598F3 /* ADSQLDecoder.swift */; };
+		2D92C8652017E0D7006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8592017E0CF006598F3 /* ADSQLKeyedDecodingContainer.swift */; };
+		2D92C8662017E0D7006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8572017E0CF006598F3 /* ADSQLSingleValueDecodingContainer.swift */; };
+		2D92C8672017E0D7006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C85A2017E0CF006598F3 /* ADSQLUnkeyedDecodingContainer.swift */; };
+		2D92C8712017E11A006598F3 /* ADSPONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86D2017E113006598F3 /* ADSPONEncoder.swift */; };
+		2D92C8722017E11A006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86E2017E113006598F3 /* ADSPONKeyedEncodingContainer.swift */; };
+		2D92C8732017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86C2017E112006598F3 /* ADSPONReferencingEncoder.swift */; };
+		2D92C8742017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8702017E113006598F3 /* ADSPONSingleValueEncodingContainer.swift */; };
+		2D92C8752017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86F2017E113006598F3 /* ADSPONUnkeyedEncodingContainer.swift */; };
+		2D92C8762017E11A006598F3 /* ADSPONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86D2017E113006598F3 /* ADSPONEncoder.swift */; };
+		2D92C8772017E11A006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86E2017E113006598F3 /* ADSPONKeyedEncodingContainer.swift */; };
+		2D92C8782017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86C2017E112006598F3 /* ADSPONReferencingEncoder.swift */; };
+		2D92C8792017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8702017E113006598F3 /* ADSPONSingleValueEncodingContainer.swift */; };
+		2D92C87A2017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86F2017E113006598F3 /* ADSPONUnkeyedEncodingContainer.swift */; };
+		2D92C87B2017E11B006598F3 /* ADSPONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86D2017E113006598F3 /* ADSPONEncoder.swift */; };
+		2D92C87C2017E11B006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86E2017E113006598F3 /* ADSPONKeyedEncodingContainer.swift */; };
+		2D92C87D2017E11B006598F3 /* ADSPONReferencingEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86C2017E112006598F3 /* ADSPONReferencingEncoder.swift */; };
+		2D92C87E2017E11B006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8702017E113006598F3 /* ADSPONSingleValueEncodingContainer.swift */; };
+		2D92C87F2017E11B006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C86F2017E113006598F3 /* ADSPONUnkeyedEncodingContainer.swift */; };
+		2D92C8852017E13A006598F3 /* ADSPONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8822017E134006598F3 /* ADSPONDecoder.swift */; };
+		2D92C8862017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8832017E134006598F3 /* ADSPONKeyedDecodingContainer.swift */; };
+		2D92C8872017E13A006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8802017E133006598F3 /* ADSPONSingleValueDecodingContainer.swift */; };
+		2D92C8882017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8842017E134006598F3 /* ADSPONUnkeyedDecodingContainer.swift */; };
+		2D92C8892017E13A006598F3 /* ADSPONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8822017E134006598F3 /* ADSPONDecoder.swift */; };
+		2D92C88A2017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8832017E134006598F3 /* ADSPONKeyedDecodingContainer.swift */; };
+		2D92C88B2017E13A006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8802017E133006598F3 /* ADSPONSingleValueDecodingContainer.swift */; };
+		2D92C88C2017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8842017E134006598F3 /* ADSPONUnkeyedDecodingContainer.swift */; };
+		2D92C88D2017E13B006598F3 /* ADSPONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8822017E134006598F3 /* ADSPONDecoder.swift */; };
+		2D92C88E2017E13B006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8832017E134006598F3 /* ADSPONKeyedDecodingContainer.swift */; };
+		2D92C88F2017E13B006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8802017E133006598F3 /* ADSPONSingleValueDecodingContainer.swift */; };
+		2D92C8902017E13B006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8842017E134006598F3 /* ADSPONUnkeyedDecodingContainer.swift */; };
+		2D92C8982017E1A5006598F3 /* ADSPONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8962017E19F006598F3 /* ADSPONProvider.swift */; };
+		2D92C8992017E1A5006598F3 /* ADSQLiteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */; };
+		2D92C89A2017E1A6006598F3 /* ADSPONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8962017E19F006598F3 /* ADSPONProvider.swift */; };
+		2D92C89B2017E1A6006598F3 /* ADSQLiteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */; };
+		2D92C89C2017E1A6006598F3 /* ADSPONProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8962017E19F006598F3 /* ADSPONProvider.swift */; };
+		2D92C89D2017E1A6006598F3 /* ADSQLiteProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */; };
+		2D92C8A52017E1C4006598F3 /* ADColumnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A42017E1BD006598F3 /* ADColumnSchema.swift */; };
+		2D92C8A62017E1C4006598F3 /* ADCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89E2017E1BD006598F3 /* ADCrossReference.swift */; };
+		2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A32017E1BD006598F3 /* ADDataStore.swift */; };
+		2D92C8A82017E1C4006598F3 /* ADTableSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A02017E1BD006598F3 /* ADTableSchema.swift */; };
+		2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A12017E1BD006598F3 /* ADTableStore.swift */; };
+		2D92C8AA2017E1C4006598F3 /* ADUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89F2017E1BD006598F3 /* ADUtilities.swift */; };
+		2D92C8AB2017E1C4006598F3 /* ADColumnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A42017E1BD006598F3 /* ADColumnSchema.swift */; };
+		2D92C8AC2017E1C4006598F3 /* ADCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89E2017E1BD006598F3 /* ADCrossReference.swift */; };
+		2D92C8AD2017E1C4006598F3 /* ADDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A32017E1BD006598F3 /* ADDataStore.swift */; };
+		2D92C8AE2017E1C4006598F3 /* ADTableSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A02017E1BD006598F3 /* ADTableSchema.swift */; };
+		2D92C8AF2017E1C4006598F3 /* ADTableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A12017E1BD006598F3 /* ADTableStore.swift */; };
+		2D92C8B02017E1C4006598F3 /* ADUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89F2017E1BD006598F3 /* ADUtilities.swift */; };
+		2D92C8B12017E1C5006598F3 /* ADColumnSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A42017E1BD006598F3 /* ADColumnSchema.swift */; };
+		2D92C8B22017E1C5006598F3 /* ADCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89E2017E1BD006598F3 /* ADCrossReference.swift */; };
+		2D92C8B32017E1C5006598F3 /* ADDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A32017E1BD006598F3 /* ADDataStore.swift */; };
+		2D92C8B42017E1C5006598F3 /* ADTableSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A02017E1BD006598F3 /* ADTableSchema.swift */; };
+		2D92C8B52017E1C5006598F3 /* ADTableStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8A12017E1BD006598F3 /* ADTableStore.swift */; };
+		2D92C8B62017E1C5006598F3 /* ADUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C89F2017E1BD006598F3 /* ADUtilities.swift */; };
+		2D92C8BB2017E1E6006598F3 /* ADDataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */; };
+		2D92C8BC2017E1E6006598F3 /* ADDataTableKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */; };
+		2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */; };
+		2D92C8BE2017E1E6006598F3 /* ADDataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */; };
+		2D92C8BF2017E1E6006598F3 /* ADDataTableKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */; };
+		2D92C8C02017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */; };
+		2D92C8C12017E1E7006598F3 /* ADDataProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */; };
+		2D92C8C22017E1E7006598F3 /* ADDataTableKeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */; };
+		2D92C8C32017E1E7006598F3 /* ADSQLExecutionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */; };
+		2D92C8C82017E200006598F3 /* ADDataCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C42017E1F9006598F3 /* ADDataCrossReference.swift */; };
+		2D92C8C92017E200006598F3 /* ADDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C52017E1F9006598F3 /* ADDataProvider.swift */; };
+		2D92C8CA2017E200006598F3 /* ADDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C62017E1F9006598F3 /* ADDataTable.swift */; };
+		2D92C8CB2017E201006598F3 /* ADDataCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C42017E1F9006598F3 /* ADDataCrossReference.swift */; };
+		2D92C8CC2017E201006598F3 /* ADDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C52017E1F9006598F3 /* ADDataProvider.swift */; };
+		2D92C8CD2017E201006598F3 /* ADDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C62017E1F9006598F3 /* ADDataTable.swift */; };
+		2D92C8CE2017E201006598F3 /* ADDataCrossReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C42017E1F9006598F3 /* ADDataCrossReference.swift */; };
+		2D92C8CF2017E201006598F3 /* ADDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C52017E1F9006598F3 /* ADDataProvider.swift */; };
+		2D92C8D02017E201006598F3 /* ADDataTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8C62017E1F9006598F3 /* ADDataTable.swift */; };
+		2D92C8DA2017E2AD006598F3 /* ADSQLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8D92017E2A7006598F3 /* ADSQLParser.swift */; };
+		2D92C8DB2017E2AD006598F3 /* ADSQLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8D92017E2A7006598F3 /* ADSQLParser.swift */; };
+		2D92C8DC2017E2AE006598F3 /* ADSQLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8D92017E2A7006598F3 /* ADSQLParser.swift */; };
+		2D92C8E62017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E22017E2C8006598F3 /* ADSQLColumnConstraint.swift */; };
+		2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DE2017E2C8006598F3 /* ADSQLColumnDefinition.swift */; };
+		2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DF2017E2C8006598F3 /* ADSQLJoinClause.swift */; };
+		2D92C8E92017E2CF006598F3 /* ADSQLOrderByClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E42017E2C8006598F3 /* ADSQLOrderByClause.swift */; };
+		2D92C8EA2017E2CF006598F3 /* ADSQLParseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DD2017E2C8006598F3 /* ADSQLParseQueue.swift */; };
+		2D92C8EB2017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E02017E2C8006598F3 /* ADSQLResultColumn.swift */; };
+		2D92C8EC2017E2CF006598F3 /* ADSQLSetClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E32017E2C8006598F3 /* ADSQLSetClause.swift */; };
+		2D92C8ED2017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E52017E2C8006598F3 /* ADSQLTableConstraint.swift */; };
+		2D92C8EE2017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E22017E2C8006598F3 /* ADSQLColumnConstraint.swift */; };
+		2D92C8EF2017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DE2017E2C8006598F3 /* ADSQLColumnDefinition.swift */; };
+		2D92C8F02017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DF2017E2C8006598F3 /* ADSQLJoinClause.swift */; };
+		2D92C8F12017E2CF006598F3 /* ADSQLOrderByClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E42017E2C8006598F3 /* ADSQLOrderByClause.swift */; };
+		2D92C8F22017E2CF006598F3 /* ADSQLParseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DD2017E2C8006598F3 /* ADSQLParseQueue.swift */; };
+		2D92C8F32017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E02017E2C8006598F3 /* ADSQLResultColumn.swift */; };
+		2D92C8F42017E2CF006598F3 /* ADSQLSetClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E32017E2C8006598F3 /* ADSQLSetClause.swift */; };
+		2D92C8F52017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E52017E2C8006598F3 /* ADSQLTableConstraint.swift */; };
+		2D92C8F62017E2D0006598F3 /* ADSQLColumnConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E22017E2C8006598F3 /* ADSQLColumnConstraint.swift */; };
+		2D92C8F72017E2D0006598F3 /* ADSQLColumnDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DE2017E2C8006598F3 /* ADSQLColumnDefinition.swift */; };
+		2D92C8F82017E2D0006598F3 /* ADSQLJoinClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DF2017E2C8006598F3 /* ADSQLJoinClause.swift */; };
+		2D92C8F92017E2D0006598F3 /* ADSQLOrderByClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E42017E2C8006598F3 /* ADSQLOrderByClause.swift */; };
+		2D92C8FA2017E2D0006598F3 /* ADSQLParseQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8DD2017E2C8006598F3 /* ADSQLParseQueue.swift */; };
+		2D92C8FB2017E2D0006598F3 /* ADSQLResultColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E02017E2C8006598F3 /* ADSQLResultColumn.swift */; };
+		2D92C8FC2017E2D0006598F3 /* ADSQLSetClause.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E32017E2C8006598F3 /* ADSQLSetClause.swift */; };
+		2D92C8FD2017E2D0006598F3 /* ADSQLTableConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8E52017E2C8006598F3 /* ADSQLTableConstraint.swift */; };
+		2D92C90A2017E2E8006598F3 /* ADSQLAlterTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9072017E2E1006598F3 /* ADSQLAlterTableInstruction.swift */; };
+		2D92C90B2017E2E8006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9022017E2E0006598F3 /* ADSQLCreateIndexInstruction.swift */; };
+		2D92C90C2017E2E8006598F3 /* ADSQLCreateTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9002017E2E0006598F3 /* ADSQLCreateTableInstruction.swift */; };
+		2D92C90D2017E2E8006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9012017E2E0006598F3 /* ADSQLCreateTriggerInstruction.swift */; };
+		2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9052017E2E1006598F3 /* ADSQLCreateViewInstruction.swift */; };
+		2D92C90F2017E2E8006598F3 /* ADSQLDeleteInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8FF2017E2E0006598F3 /* ADSQLDeleteInstruction.swift */; };
+		2D92C9102017E2E8006598F3 /* ADSQLDropInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9082017E2E1006598F3 /* ADSQLDropInstruction.swift */; };
+		2D92C9112017E2E8006598F3 /* ADSQLInsertInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9032017E2E1006598F3 /* ADSQLInsertInstruction.swift */; };
+		2D92C9122017E2E8006598F3 /* ADSQLSelectInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9092017E2E1006598F3 /* ADSQLSelectInstruction.swift */; };
+		2D92C9132017E2E8006598F3 /* ADSQLTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9042017E2E1006598F3 /* ADSQLTransaction.swift */; };
+		2D92C9142017E2E8006598F3 /* ADSQLUpdateInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9062017E2E1006598F3 /* ADSQLUpdateInstruction.swift */; };
+		2D92C9152017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9072017E2E1006598F3 /* ADSQLAlterTableInstruction.swift */; };
+		2D92C9162017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9022017E2E0006598F3 /* ADSQLCreateIndexInstruction.swift */; };
+		2D92C9172017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9002017E2E0006598F3 /* ADSQLCreateTableInstruction.swift */; };
+		2D92C9182017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9012017E2E0006598F3 /* ADSQLCreateTriggerInstruction.swift */; };
+		2D92C9192017E2E9006598F3 /* ADSQLCreateViewInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9052017E2E1006598F3 /* ADSQLCreateViewInstruction.swift */; };
+		2D92C91A2017E2E9006598F3 /* ADSQLDeleteInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8FF2017E2E0006598F3 /* ADSQLDeleteInstruction.swift */; };
+		2D92C91B2017E2E9006598F3 /* ADSQLDropInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9082017E2E1006598F3 /* ADSQLDropInstruction.swift */; };
+		2D92C91C2017E2E9006598F3 /* ADSQLInsertInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9032017E2E1006598F3 /* ADSQLInsertInstruction.swift */; };
+		2D92C91D2017E2E9006598F3 /* ADSQLSelectInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9092017E2E1006598F3 /* ADSQLSelectInstruction.swift */; };
+		2D92C91E2017E2E9006598F3 /* ADSQLTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9042017E2E1006598F3 /* ADSQLTransaction.swift */; };
+		2D92C91F2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9062017E2E1006598F3 /* ADSQLUpdateInstruction.swift */; };
+		2D92C9202017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9072017E2E1006598F3 /* ADSQLAlterTableInstruction.swift */; };
+		2D92C9212017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9022017E2E0006598F3 /* ADSQLCreateIndexInstruction.swift */; };
+		2D92C9222017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9002017E2E0006598F3 /* ADSQLCreateTableInstruction.swift */; };
+		2D92C9232017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9012017E2E0006598F3 /* ADSQLCreateTriggerInstruction.swift */; };
+		2D92C9242017E2E9006598F3 /* ADSQLCreateViewInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9052017E2E1006598F3 /* ADSQLCreateViewInstruction.swift */; };
+		2D92C9252017E2E9006598F3 /* ADSQLDeleteInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C8FF2017E2E0006598F3 /* ADSQLDeleteInstruction.swift */; };
+		2D92C9262017E2E9006598F3 /* ADSQLDropInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9082017E2E1006598F3 /* ADSQLDropInstruction.swift */; };
+		2D92C9272017E2E9006598F3 /* ADSQLInsertInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9032017E2E1006598F3 /* ADSQLInsertInstruction.swift */; };
+		2D92C9282017E2E9006598F3 /* ADSQLSelectInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9092017E2E1006598F3 /* ADSQLSelectInstruction.swift */; };
+		2D92C9292017E2E9006598F3 /* ADSQLTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9042017E2E1006598F3 /* ADSQLTransaction.swift */; };
+		2D92C92A2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9062017E2E1006598F3 /* ADSQLUpdateInstruction.swift */; };
+		2D92C9362017E306006598F3 /* ADSQLBetweenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92D2017E2FF006598F3 /* ADSQLBetweenExpression.swift */; };
+		2D92C9372017E306006598F3 /* ADSQLBinaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9332017E2FF006598F3 /* ADSQLBinaryExpression.swift */; };
+		2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9342017E2FF006598F3 /* ADSQLCaseExpression.swift */; };
+		2D92C9392017E306006598F3 /* ADSQLExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9312017E2FF006598F3 /* ADSQLExpressionBuilder.swift */; };
+		2D92C93A2017E306006598F3 /* ADSQLForeignKeyExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9302017E2FF006598F3 /* ADSQLForeignKeyExpression.swift */; };
+		2D92C93B2017E306006598F3 /* ADSQLFunctionExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92C2017E2FF006598F3 /* ADSQLFunctionExpression.swift */; };
+		2D92C93C2017E306006598F3 /* ADSQLInExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9352017E2FF006598F3 /* ADSQLInExpression.swift */; };
+		2D92C93D2017E306006598F3 /* ADSQLLiteralExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9322017E2FF006598F3 /* ADSQLLiteralExpression.swift */; };
+		2D92C93E2017E306006598F3 /* ADSQLUnaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92E2017E2FF006598F3 /* ADSQLUnaryExpression.swift */; };
+		2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92B2017E2FF006598F3 /* ADSQLWhenExpression.swift */; };
+		2D92C9402017E307006598F3 /* ADSQLBetweenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92D2017E2FF006598F3 /* ADSQLBetweenExpression.swift */; };
+		2D92C9412017E307006598F3 /* ADSQLBinaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9332017E2FF006598F3 /* ADSQLBinaryExpression.swift */; };
+		2D92C9422017E307006598F3 /* ADSQLCaseExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9342017E2FF006598F3 /* ADSQLCaseExpression.swift */; };
+		2D92C9432017E307006598F3 /* ADSQLExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9312017E2FF006598F3 /* ADSQLExpressionBuilder.swift */; };
+		2D92C9442017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9302017E2FF006598F3 /* ADSQLForeignKeyExpression.swift */; };
+		2D92C9452017E307006598F3 /* ADSQLFunctionExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92C2017E2FF006598F3 /* ADSQLFunctionExpression.swift */; };
+		2D92C9462017E307006598F3 /* ADSQLInExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9352017E2FF006598F3 /* ADSQLInExpression.swift */; };
+		2D92C9472017E307006598F3 /* ADSQLLiteralExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9322017E2FF006598F3 /* ADSQLLiteralExpression.swift */; };
+		2D92C9482017E307006598F3 /* ADSQLUnaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92E2017E2FF006598F3 /* ADSQLUnaryExpression.swift */; };
+		2D92C9492017E307006598F3 /* ADSQLWhenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92B2017E2FF006598F3 /* ADSQLWhenExpression.swift */; };
+		2D92C94A2017E307006598F3 /* ADSQLBetweenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92D2017E2FF006598F3 /* ADSQLBetweenExpression.swift */; };
+		2D92C94B2017E307006598F3 /* ADSQLBinaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9332017E2FF006598F3 /* ADSQLBinaryExpression.swift */; };
+		2D92C94C2017E307006598F3 /* ADSQLCaseExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9342017E2FF006598F3 /* ADSQLCaseExpression.swift */; };
+		2D92C94D2017E307006598F3 /* ADSQLExpressionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9312017E2FF006598F3 /* ADSQLExpressionBuilder.swift */; };
+		2D92C94E2017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9302017E2FF006598F3 /* ADSQLForeignKeyExpression.swift */; };
+		2D92C94F2017E307006598F3 /* ADSQLFunctionExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92C2017E2FF006598F3 /* ADSQLFunctionExpression.swift */; };
+		2D92C9502017E307006598F3 /* ADSQLInExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9352017E2FF006598F3 /* ADSQLInExpression.swift */; };
+		2D92C9512017E307006598F3 /* ADSQLLiteralExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9322017E2FF006598F3 /* ADSQLLiteralExpression.swift */; };
+		2D92C9522017E307006598F3 /* ADSQLUnaryExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92E2017E2FF006598F3 /* ADSQLUnaryExpression.swift */; };
+		2D92C9532017E307006598F3 /* ADSQLWhenExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C92B2017E2FF006598F3 /* ADSQLWhenExpression.swift */; };
+		2D92C95A2017E329006598F3 /* ADSQLColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9542017E322006598F3 /* ADSQLColumnType.swift */; };
+		2D92C95B2017E329006598F3 /* ADSQLConflictHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9572017E322006598F3 /* ADSQLConflictHandling.swift */; };
+		2D92C95C2017E329006598F3 /* ADSQLFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9552017E322006598F3 /* ADSQLFunction.swift */; };
+		2D92C95D2017E329006598F3 /* ADSQLKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9582017E322006598F3 /* ADSQLKeyword.swift */; };
+		2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9562017E322006598F3 /* ADSQLParseError.swift */; };
+		2D92C95F2017E329006598F3 /* ADSQLColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9542017E322006598F3 /* ADSQLColumnType.swift */; };
+		2D92C9602017E329006598F3 /* ADSQLConflictHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9572017E322006598F3 /* ADSQLConflictHandling.swift */; };
+		2D92C9612017E329006598F3 /* ADSQLFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9552017E322006598F3 /* ADSQLFunction.swift */; };
+		2D92C9622017E329006598F3 /* ADSQLKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9582017E322006598F3 /* ADSQLKeyword.swift */; };
+		2D92C9632017E329006598F3 /* ADSQLParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9562017E322006598F3 /* ADSQLParseError.swift */; };
+		2D92C9642017E32A006598F3 /* ADSQLColumnType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9542017E322006598F3 /* ADSQLColumnType.swift */; };
+		2D92C9652017E32A006598F3 /* ADSQLConflictHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9572017E322006598F3 /* ADSQLConflictHandling.swift */; };
+		2D92C9662017E32A006598F3 /* ADSQLFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9552017E322006598F3 /* ADSQLFunction.swift */; };
+		2D92C9672017E32A006598F3 /* ADSQLKeyword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9582017E322006598F3 /* ADSQLKeyword.swift */; };
+		2D92C9682017E32A006598F3 /* ADSQLParseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9562017E322006598F3 /* ADSQLParseError.swift */; };
+		2D92C96C2017E34C006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
+		2D92C96D2017E34C006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
+		2D92C96E2017E34C006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
+		2D92C96F2017E34C006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
+		2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
+		2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2D6CEA501FD0958800A482D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2D6CEA161FD07B2100A482D0;
-			remoteInfo = ActionUtilities;
-		};
-		2D6CEB341FD0A1B300A482D0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2D6CEA301FD092F200A482D0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D6CEA381FD092F200A482D0;
-			remoteInfo = ActionData;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		2D6CEA391FD092F200A482D0 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D6CEA3C1FD092F200A482D0 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
-		2D6CEA3D1FD092F200A482D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionUtilities.xcodeproj; path = ../ActionUtilities/ActionUtilities.xcodeproj; sourceTree = "<group>"; };
-		2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		2D6CEA551FD096C600A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADInstanceDictionary.swift; sourceTree = "<group>"; };
-		2D6CEA581FD0972B00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDecodingStorage.swift; sourceTree = "<group>"; };
-		2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADInstanceArray.swift; sourceTree = "<group>"; };
-		2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADRecord.swift; sourceTree = "<group>"; };
-		2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADKey.swift; sourceTree = "<group>"; };
-		2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADEncodingStorage.swift; sourceTree = "<group>"; };
-		2D6CEA651FD0978500A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA671FD0979700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONReferencingEncoder.swift; sourceTree = "<group>"; };
-		2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONEncoder.swift; sourceTree = "<group>"; };
-		2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA741FD097BF00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONDecoder.swift; sourceTree = "<group>"; };
-		2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA7D1FD0981400A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedEncodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLReferencingEncoder.swift; sourceTree = "<group>"; };
-		2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLEncoder.swift; sourceTree = "<group>"; };
-		2D6CEA841FD0982000A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDecoder.swift; sourceTree = "<group>"; };
-		2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
-		2D6CEA8F1FD0983200A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA9B1FD09A1700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParser.swift; sourceTree = "<group>"; };
-		2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParseQueue.swift; sourceTree = "<group>"; };
-		2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnDefinition.swift; sourceTree = "<group>"; };
-		2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLJoinClause.swift; sourceTree = "<group>"; };
-		2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLResultColumn.swift; sourceTree = "<group>"; };
-		2D6CEAA31FD09A3200A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnConstraint.swift; sourceTree = "<group>"; };
-		2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSetClause.swift; sourceTree = "<group>"; };
-		2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLOrderByClause.swift; sourceTree = "<group>"; };
-		2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLTableConstraint.swift; sourceTree = "<group>"; };
-		2D6CEAB11FD09A8B00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDeleteInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTableInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTriggerInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateIndexInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInsertInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLTransaction.swift; sourceTree = "<group>"; };
-		2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCreateViewInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUpdateInstruction.swift; sourceTree = "<group>"; };
-		2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLAlterTableInstruction.swift; sourceTree = "<group>"; };
-		2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLDropInstruction.swift; sourceTree = "<group>"; };
-		2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLSelectInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLWhenExpression.swift; sourceTree = "<group>"; };
-		2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLFunctionExpression.swift; sourceTree = "<group>"; };
-		2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLBetweenExpression.swift; sourceTree = "<group>"; };
-		2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLUnaryExpression.swift; sourceTree = "<group>"; };
-		2D6CEACD1FD09A9C00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLForeignKeyExpression.swift; sourceTree = "<group>"; };
-		2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExpressionBuilder.swift; sourceTree = "<group>"; };
-		2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLLiteralExpression.swift; sourceTree = "<group>"; };
-		2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLBinaryExpression.swift; sourceTree = "<group>"; };
-		2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLCaseExpression.swift; sourceTree = "<group>"; };
-		2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInExpression.swift; sourceTree = "<group>"; };
-		2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLColumnType.swift; sourceTree = "<group>"; };
-		2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLFunction.swift; sourceTree = "<group>"; };
-		2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLParseError.swift; sourceTree = "<group>"; };
-		2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLConflictHandling.swift; sourceTree = "<group>"; };
-		2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLKeyword.swift; sourceTree = "<group>"; };
-		2D6CEAE41FD09ABB00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLInstruction.swift; sourceTree = "<group>"; };
-		2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExpression.swift; sourceTree = "<group>"; };
-		2D6CEAED1FD09ADB00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		2D6CEAF71FD09D4D00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSPONProvider.swift; sourceTree = "<group>"; };
-		2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLiteProvider.swift; sourceTree = "<group>"; };
-		2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADCrossReference.swift; sourceTree = "<group>"; };
-		2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADUtilities.swift; sourceTree = "<group>"; };
-		2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADTableSchema.swift; sourceTree = "<group>"; };
-		2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADTableStore.swift; sourceTree = "<group>"; };
-		2D6CEB011FD09D7700A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataStore.swift; sourceTree = "<group>"; };
-		2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADColumnSchema.swift; sourceTree = "<group>"; };
-		2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataProviderError.swift; sourceTree = "<group>"; };
-		2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADSQLExecutionError.swift; sourceTree = "<group>"; };
-		2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataTableKeyType.swift; sourceTree = "<group>"; };
-		2D6CEB0E1FD09D9300A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataCrossReference.swift; sourceTree = "<group>"; };
-		2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataProvider.swift; sourceTree = "<group>"; };
-		2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADDataTable.swift; sourceTree = "<group>"; };
-		2D6CEB161FD09DCE00A482D0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D6CEB321FD0A1B300A482D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2DB70D7F1FD0A2E40049BA1E /* ActionDataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActionDataTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		2DB70D801FD0A2E50049BA1E /* SPONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPONTests.swift; sourceTree = "<group>"; };
-		2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
-		2DB70D841FD0A5BB0049BA1E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = BuildUnifiedLibrary.sh; sourceTree = "<group>"; };
-		2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = TrimFramework.sh; sourceTree = "<group>"; };
+		2D709C9D2017F122009ADC2E /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../GitHub/ActionUtilities/ActionUtilitiesFrameworks/iOS/ActionUtilities.framework; sourceTree = "<group>"; };
+		2D709C9F2017F192009ADC2E /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../GitHub/ActionUtilities/ActionUtilitiesFrameworks/tvOS/ActionUtilities.framework; sourceTree = "<group>"; };
+		2D709CA12017F1E8009ADC2E /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../GitHub/ActionUtilities/ActionUtilitiesFrameworks/macOS/ActionUtilities.framework; sourceTree = "<group>"; };
+		2D92C7ED2017DCB6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D92C7F02017DCB6006598F3 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
+		2D92C7F12017DCB6006598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D92C7FB2017DCF6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D92C7FD2017DCF6006598F3 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
+		2D92C7FE2017DCF6006598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D92C8082017DD0A006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D92C80A2017DD0A006598F3 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
+		2D92C80B2017DD0A006598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D92C8122017DEE8006598F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		2D92C8142017DF07006598F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.2.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
+		2D92C8162017DF3B006598F3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2D92C8182017DF6C006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8192017DF6C006598F3 /* TrimFramework.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = TrimFramework.sh; sourceTree = "<group>"; };
+		2D92C81D2017DFB9006598F3 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		2D92C8252017E012006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8262017E02C006598F3 /* ADInstanceDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADInstanceDictionary.swift; sourceTree = "<group>"; };
+		2D92C8272017E02C006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8282017E02C006598F3 /* ADDecodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDecodingStorage.swift; sourceTree = "<group>"; };
+		2D92C8292017E02C006598F3 /* ADInstanceArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADInstanceArray.swift; sourceTree = "<group>"; };
+		2D92C82A2017E02C006598F3 /* ADRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADRecord.swift; sourceTree = "<group>"; };
+		2D92C82B2017E02C006598F3 /* ADKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADKey.swift; sourceTree = "<group>"; };
+		2D92C82C2017E02C006598F3 /* ADEncodingStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADEncodingStorage.swift; sourceTree = "<group>"; };
+		2D92C8412017E06D006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8422017E07C006598F3 /* ADSQLUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8432017E07C006598F3 /* ADSQLSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8442017E07C006598F3 /* ADSQLKeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8452017E07C006598F3 /* ADSQLReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLReferencingEncoder.swift; sourceTree = "<group>"; };
+		2D92C8462017E07C006598F3 /* ADSQLEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLEncoder.swift; sourceTree = "<group>"; };
+		2D92C8472017E07D006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8572017E0CF006598F3 /* ADSQLSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8582017E0CF006598F3 /* ADSQLDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLDecoder.swift; sourceTree = "<group>"; };
+		2D92C8592017E0CF006598F3 /* ADSQLKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C85A2017E0CF006598F3 /* ADSQLUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C85B2017E0CF006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C86A2017E104006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C86B2017E112006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C86C2017E112006598F3 /* ADSPONReferencingEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONReferencingEncoder.swift; sourceTree = "<group>"; };
+		2D92C86D2017E113006598F3 /* ADSPONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONEncoder.swift; sourceTree = "<group>"; };
+		2D92C86E2017E113006598F3 /* ADSPONKeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C86F2017E113006598F3 /* ADSPONUnkeyedEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8702017E113006598F3 /* ADSPONSingleValueEncodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueEncodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8802017E133006598F3 /* ADSPONSingleValueDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONSingleValueDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8812017E133006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8822017E134006598F3 /* ADSPONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONDecoder.swift; sourceTree = "<group>"; };
+		2D92C8832017E134006598F3 /* ADSPONKeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONKeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8842017E134006598F3 /* ADSPONUnkeyedDecodingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONUnkeyedDecodingContainer.swift; sourceTree = "<group>"; };
+		2D92C8952017E19F006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8962017E19F006598F3 /* ADSPONProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSPONProvider.swift; sourceTree = "<group>"; };
+		2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLiteProvider.swift; sourceTree = "<group>"; };
+		2D92C89E2017E1BD006598F3 /* ADCrossReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCrossReference.swift; sourceTree = "<group>"; };
+		2D92C89F2017E1BD006598F3 /* ADUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADUtilities.swift; sourceTree = "<group>"; };
+		2D92C8A02017E1BD006598F3 /* ADTableSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableSchema.swift; sourceTree = "<group>"; };
+		2D92C8A12017E1BD006598F3 /* ADTableStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADTableStore.swift; sourceTree = "<group>"; };
+		2D92C8A22017E1BD006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8A32017E1BD006598F3 /* ADDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataStore.swift; sourceTree = "<group>"; };
+		2D92C8A42017E1BD006598F3 /* ADColumnSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADColumnSchema.swift; sourceTree = "<group>"; };
+		2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataProviderError.swift; sourceTree = "<group>"; };
+		2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLExecutionError.swift; sourceTree = "<group>"; };
+		2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataTableKeyType.swift; sourceTree = "<group>"; };
+		2D92C8BA2017E1DE006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8C42017E1F9006598F3 /* ADDataCrossReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataCrossReference.swift; sourceTree = "<group>"; };
+		2D92C8C52017E1F9006598F3 /* ADDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataProvider.swift; sourceTree = "<group>"; };
+		2D92C8C62017E1F9006598F3 /* ADDataTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADDataTable.swift; sourceTree = "<group>"; };
+		2D92C8C72017E1F9006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8D82017E2A7006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8D92017E2A7006598F3 /* ADSQLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLParser.swift; sourceTree = "<group>"; };
+		2D92C8DD2017E2C8006598F3 /* ADSQLParseQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLParseQueue.swift; sourceTree = "<group>"; };
+		2D92C8DE2017E2C8006598F3 /* ADSQLColumnDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLColumnDefinition.swift; sourceTree = "<group>"; };
+		2D92C8DF2017E2C8006598F3 /* ADSQLJoinClause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLJoinClause.swift; sourceTree = "<group>"; };
+		2D92C8E02017E2C8006598F3 /* ADSQLResultColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLResultColumn.swift; sourceTree = "<group>"; };
+		2D92C8E12017E2C8006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8E22017E2C8006598F3 /* ADSQLColumnConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLColumnConstraint.swift; sourceTree = "<group>"; };
+		2D92C8E32017E2C8006598F3 /* ADSQLSetClause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLSetClause.swift; sourceTree = "<group>"; };
+		2D92C8E42017E2C8006598F3 /* ADSQLOrderByClause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLOrderByClause.swift; sourceTree = "<group>"; };
+		2D92C8E52017E2C8006598F3 /* ADSQLTableConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLTableConstraint.swift; sourceTree = "<group>"; };
+		2D92C8FE2017E2E0006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C8FF2017E2E0006598F3 /* ADSQLDeleteInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLDeleteInstruction.swift; sourceTree = "<group>"; };
+		2D92C9002017E2E0006598F3 /* ADSQLCreateTableInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTableInstruction.swift; sourceTree = "<group>"; };
+		2D92C9012017E2E0006598F3 /* ADSQLCreateTriggerInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLCreateTriggerInstruction.swift; sourceTree = "<group>"; };
+		2D92C9022017E2E0006598F3 /* ADSQLCreateIndexInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLCreateIndexInstruction.swift; sourceTree = "<group>"; };
+		2D92C9032017E2E1006598F3 /* ADSQLInsertInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLInsertInstruction.swift; sourceTree = "<group>"; };
+		2D92C9042017E2E1006598F3 /* ADSQLTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLTransaction.swift; sourceTree = "<group>"; };
+		2D92C9052017E2E1006598F3 /* ADSQLCreateViewInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLCreateViewInstruction.swift; sourceTree = "<group>"; };
+		2D92C9062017E2E1006598F3 /* ADSQLUpdateInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLUpdateInstruction.swift; sourceTree = "<group>"; };
+		2D92C9072017E2E1006598F3 /* ADSQLAlterTableInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLAlterTableInstruction.swift; sourceTree = "<group>"; };
+		2D92C9082017E2E1006598F3 /* ADSQLDropInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLDropInstruction.swift; sourceTree = "<group>"; };
+		2D92C9092017E2E1006598F3 /* ADSQLSelectInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLSelectInstruction.swift; sourceTree = "<group>"; };
+		2D92C92B2017E2FF006598F3 /* ADSQLWhenExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLWhenExpression.swift; sourceTree = "<group>"; };
+		2D92C92C2017E2FF006598F3 /* ADSQLFunctionExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLFunctionExpression.swift; sourceTree = "<group>"; };
+		2D92C92D2017E2FF006598F3 /* ADSQLBetweenExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLBetweenExpression.swift; sourceTree = "<group>"; };
+		2D92C92E2017E2FF006598F3 /* ADSQLUnaryExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLUnaryExpression.swift; sourceTree = "<group>"; };
+		2D92C92F2017E2FF006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C9302017E2FF006598F3 /* ADSQLForeignKeyExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLForeignKeyExpression.swift; sourceTree = "<group>"; };
+		2D92C9312017E2FF006598F3 /* ADSQLExpressionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLExpressionBuilder.swift; sourceTree = "<group>"; };
+		2D92C9322017E2FF006598F3 /* ADSQLLiteralExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLLiteralExpression.swift; sourceTree = "<group>"; };
+		2D92C9332017E2FF006598F3 /* ADSQLBinaryExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLBinaryExpression.swift; sourceTree = "<group>"; };
+		2D92C9342017E2FF006598F3 /* ADSQLCaseExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLCaseExpression.swift; sourceTree = "<group>"; };
+		2D92C9352017E2FF006598F3 /* ADSQLInExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLInExpression.swift; sourceTree = "<group>"; };
+		2D92C9542017E322006598F3 /* ADSQLColumnType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLColumnType.swift; sourceTree = "<group>"; };
+		2D92C9552017E322006598F3 /* ADSQLFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLFunction.swift; sourceTree = "<group>"; };
+		2D92C9562017E322006598F3 /* ADSQLParseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLParseError.swift; sourceTree = "<group>"; };
+		2D92C9572017E322006598F3 /* ADSQLConflictHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLConflictHandling.swift; sourceTree = "<group>"; };
+		2D92C9582017E322006598F3 /* ADSQLKeyword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLKeyword.swift; sourceTree = "<group>"; };
+		2D92C9592017E322006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2D92C9692017E346006598F3 /* ADSQLInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLInstruction.swift; sourceTree = "<group>"; };
+		2D92C96A2017E346006598F3 /* ADSQLExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLExpression.swift; sourceTree = "<group>"; };
+		2D92C96B2017E346006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D6CEA351FD092F200A482D0 /* Frameworks */ = {
+		2D92C7E92017DCB6006598F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6CEB1B1FD09E3C00A482D0 /* ActionUtilities.framework in Frameworks */,
-				2D6CEA541FD0961900A482D0 /* libsqlite3.tbd in Frameworks */,
+				2D709C9E2017F122009ADC2E /* ActionUtilities.framework in Frameworks */,
+				2D92C8132017DEE8006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D6CEB2B1FD0A1B300A482D0 /* Frameworks */ = {
+		2D92C7F72017DCF6006598F3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6CEB331FD0A1B300A482D0 /* ActionData.framework in Frameworks */,
+				2D709CA02017F192009ADC2E /* ActionUtilities.framework in Frameworks */,
+				2D92C8152017DF07006598F3 /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D92C8042017DD0A006598F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D709CA22017F1E8009ADC2E /* ActionUtilities.framework in Frameworks */,
+				2D92C8172017DF3B006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D6CEA2F1FD092F200A482D0 = {
+		2D92C7E12017DC3C006598F3 = {
 			isa = PBXGroup;
 			children = (
-				2DB70D841FD0A5BB0049BA1E /* README.md */,
-				2DB70D861FD0A69F0049BA1E /* BuildUnifiedLibrary.sh */,
-				2DB70D871FD0A6A00049BA1E /* TrimFramework.sh */,
-				2D6CEA3B1FD092F200A482D0 /* ActionData */,
-				2D6CEB2F1FD0A1B300A482D0 /* ActionDataTests */,
-				2D6CEA3A1FD092F200A482D0 /* Products */,
-				2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */,
-				2D6CEA521FD095AD00A482D0 /* Frameworks */,
+				2D92C8182017DF6C006598F3 /* README.md */,
+				2D92C8192017DF6C006598F3 /* TrimFramework.sh */,
+				2D92C81D2017DFB9006598F3 /* Bridging-Header.h */,
+				2D92C8102017DD19006598F3 /* SharedCode */,
+				2D92C7EF2017DCB6006598F3 /* ActionData iOS */,
+				2D92C7FC2017DCF6006598F3 /* ActionData tvOS */,
+				2D92C8092017DD0A006598F3 /* ActionData macOS */,
+				2D92C7EE2017DCB6006598F3 /* Products */,
+				2D92C8112017DEE7006598F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2D6CEA3A1FD092F200A482D0 /* Products */ = {
+		2D92C7EE2017DCB6006598F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEA391FD092F200A482D0 /* ActionData.framework */,
-				2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2D6CEA3B1FD092F200A482D0 /* ActionData */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA441FD0947A00A482D0 /* ActionCodable */,
-				2D6CEAF11FD09B3200A482D0 /* ActionDataProviders */,
-				2D6CEA951FD098F000A482D0 /* ActionSQLParser */,
-				2D6CEA3C1FD092F200A482D0 /* ActionData.h */,
-				2D6CEAF21FD09C1300A482D0 /* Bridging-Header.h */,
-				2D6CEA3D1FD092F200A482D0 /* Info.plist */,
-			);
-			path = ActionData;
-			sourceTree = "<group>";
-		};
-		2D6CEA441FD0947A00A482D0 /* ActionCodable */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA551FD096C600A482D0 /* README.md */,
-				2D6CEA451FD094B000A482D0 /* SharedElements */,
-				2D6CEA471FD094DC00A482D0 /* SPON */,
-				2D6CEA461FD094C900A482D0 /* SQLite */,
-			);
-			path = ActionCodable;
-			sourceTree = "<group>";
-		};
-		2D6CEA451FD094B000A482D0 /* SharedElements */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA581FD0972B00A482D0 /* README.md */,
-				2D6CEA591FD0972B00A482D0 /* ADDecodingStorage.swift */,
-				2D6CEA5D1FD0972B00A482D0 /* ADEncodingStorage.swift */,
-				2D6CEA5A1FD0972B00A482D0 /* ADInstanceArray.swift */,
-				2D6CEA571FD0972B00A482D0 /* ADInstanceDictionary.swift */,
-				2D6CEA5C1FD0972B00A482D0 /* ADKey.swift */,
-				2D6CEA5B1FD0972B00A482D0 /* ADRecord.swift */,
-			);
-			path = SharedElements;
-			sourceTree = "<group>";
-		};
-		2D6CEA461FD094C900A482D0 /* SQLite */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA7D1FD0981400A482D0 /* README.md */,
-				2D6CEA4B1FD0952800A482D0 /* Encodable */,
-				2D6CEA4A1FD0951D00A482D0 /* Decodable */,
-			);
-			path = SQLite;
-			sourceTree = "<group>";
-		};
-		2D6CEA471FD094DC00A482D0 /* SPON */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA651FD0978500A482D0 /* README.md */,
-				2D6CEA481FD094FF00A482D0 /* Encodable */,
-				2D6CEA491FD0950B00A482D0 /* Decodable */,
-			);
-			path = SPON;
-			sourceTree = "<group>";
-		};
-		2D6CEA481FD094FF00A482D0 /* Encodable */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA671FD0979700A482D0 /* README.md */,
-				2D6CEA691FD0979700A482D0 /* ADSPONEncoder.swift */,
-				2D6CEA6A1FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift */,
-				2D6CEA681FD0979700A482D0 /* ADSPONReferencingEncoder.swift */,
-				2D6CEA6C1FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift */,
-				2D6CEA6B1FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift */,
-			);
-			path = Encodable;
-			sourceTree = "<group>";
-		};
-		2D6CEA491FD0950B00A482D0 /* Decodable */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA741FD097BF00A482D0 /* README.md */,
-				2D6CEA751FD097BF00A482D0 /* ADSPONDecoder.swift */,
-				2D6CEA761FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift */,
-				2D6CEA731FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift */,
-				2D6CEA771FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift */,
-			);
-			path = Decodable;
-			sourceTree = "<group>";
-		};
-		2D6CEA4A1FD0951D00A482D0 /* Decodable */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA8F1FD0983200A482D0 /* README.md */,
-				2D6CEA8C1FD0983200A482D0 /* ADSQLDecoder.swift */,
-				2D6CEA8D1FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift */,
-				2D6CEA8B1FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift */,
-				2D6CEA8E1FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift */,
-			);
-			path = Decodable;
-			sourceTree = "<group>";
-		};
-		2D6CEA4B1FD0952800A482D0 /* Encodable */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA841FD0982000A482D0 /* README.md */,
-				2D6CEA831FD0982000A482D0 /* ADSQLEncoder.swift */,
-				2D6CEA811FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift */,
-				2D6CEA821FD0982000A482D0 /* ADSQLReferencingEncoder.swift */,
-				2D6CEA801FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift */,
-				2D6CEA7F1FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift */,
-			);
-			path = Encodable;
-			sourceTree = "<group>";
-		};
-		2D6CEA4D1FD0958800A482D0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */,
+				2D92C7ED2017DCB6006598F3 /* ActionData.framework */,
+				2D92C7FB2017DCF6006598F3 /* ActionData.framework */,
+				2D92C8082017DD0A006598F3 /* ActionData.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D6CEA521FD095AD00A482D0 /* Frameworks */ = {
+		2D92C7EF2017DCB6006598F3 /* ActionData iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEA531FD095AD00A482D0 /* libsqlite3.tbd */,
+				2D92C7F02017DCB6006598F3 /* ActionData.h */,
+				2D92C7F12017DCB6006598F3 /* Info.plist */,
+			);
+			path = "ActionData iOS";
+			sourceTree = "<group>";
+		};
+		2D92C7FC2017DCF6006598F3 /* ActionData tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C7FD2017DCF6006598F3 /* ActionData.h */,
+				2D92C7FE2017DCF6006598F3 /* Info.plist */,
+			);
+			path = "ActionData tvOS";
+			sourceTree = "<group>";
+		};
+		2D92C8092017DD0A006598F3 /* ActionData macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C80A2017DD0A006598F3 /* ActionData.h */,
+				2D92C80B2017DD0A006598F3 /* Info.plist */,
+			);
+			path = "ActionData macOS";
+			sourceTree = "<group>";
+		};
+		2D92C8102017DD19006598F3 /* SharedCode */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C8D12017E21B006598F3 /* ActionSQLParser */,
+				2D92C8212017DFD3006598F3 /* ActionCodable */,
+				2D92C8912017E161006598F3 /* ActionDataProviders */,
+			);
+			path = SharedCode;
+			sourceTree = "<group>";
+		};
+		2D92C8112017DEE7006598F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D709C9D2017F122009ADC2E /* ActionUtilities.framework */,
+				2D709C9F2017F192009ADC2E /* ActionUtilities.framework */,
+				2D709CA12017F1E8009ADC2E /* ActionUtilities.framework */,
+				2D92C8162017DF3B006598F3 /* libsqlite3.tbd */,
+				2D92C8142017DF07006598F3 /* libsqlite3.tbd */,
+				2D92C8122017DEE8006598F3 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2D6CEA951FD098F000A482D0 /* ActionSQLParser */ = {
+		2D92C8212017DFD3006598F3 /* ActionCodable */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEA9B1FD09A1700A482D0 /* README.md */,
-				2D6CEA9C1FD09A1700A482D0 /* ADSQLParser.swift */,
-				2D6CEA961FD0990A00A482D0 /* SharedElements */,
-				2D6CEA971FD0991D00A482D0 /* Instructions */,
-				2D6CEA981FD0992700A482D0 /* Expressions */,
-				2D6CEA9A1FD0994400A482D0 /* Enumerations */,
-				2D6CEA991FD0993900A482D0 /* Protocols */,
+				2D92C8252017E012006598F3 /* README.md */,
+				2D92C8222017DFE8006598F3 /* SharedElements */,
+				2D92C8242017DFFD006598F3 /* SQLite */,
+				2D92C8232017DFF4006598F3 /* SPON */,
 			);
-			path = ActionSQLParser;
+			path = ActionCodable;
 			sourceTree = "<group>";
 		};
-		2D6CEA961FD0990A00A482D0 /* SharedElements */ = {
+		2D92C8222017DFE8006598F3 /* SharedElements */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEAA31FD09A3200A482D0 /* README.md */,
-				2D6CEAA41FD09A3200A482D0 /* ADSQLColumnConstraint.swift */,
-				2D6CEAA01FD09A3200A482D0 /* ADSQLColumnDefinition.swift */,
-				2D6CEAA11FD09A3200A482D0 /* ADSQLJoinClause.swift */,
-				2D6CEAA61FD09A3200A482D0 /* ADSQLOrderByClause.swift */,
-				2D6CEA9F1FD09A3200A482D0 /* ADSQLParseQueue.swift */,
-				2D6CEAA21FD09A3200A482D0 /* ADSQLResultColumn.swift */,
-				2D6CEAA51FD09A3200A482D0 /* ADSQLSetClause.swift */,
-				2D6CEAA71FD09A3200A482D0 /* ADSQLTableConstraint.swift */,
+				2D92C8272017E02C006598F3 /* README.md */,
+				2D92C8282017E02C006598F3 /* ADDecodingStorage.swift */,
+				2D92C82C2017E02C006598F3 /* ADEncodingStorage.swift */,
+				2D92C8292017E02C006598F3 /* ADInstanceArray.swift */,
+				2D92C8262017E02C006598F3 /* ADInstanceDictionary.swift */,
+				2D92C82B2017E02C006598F3 /* ADKey.swift */,
+				2D92C82A2017E02C006598F3 /* ADRecord.swift */,
 			);
 			path = SharedElements;
 			sourceTree = "<group>";
 		};
-		2D6CEA971FD0991D00A482D0 /* Instructions */ = {
+		2D92C8232017DFF4006598F3 /* SPON */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEAB11FD09A8B00A482D0 /* README.md */,
-				2D6CEABA1FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift */,
-				2D6CEAB51FD09A8B00A482D0 /* ADSQLCreateIndexInstruction.swift */,
-				2D6CEAB31FD09A8B00A482D0 /* ADSQLCreateTableInstruction.swift */,
-				2D6CEAB41FD09A8B00A482D0 /* ADSQLCreateTriggerInstruction.swift */,
-				2D6CEAB81FD09A8B00A482D0 /* ADSQLCreateViewInstruction.swift */,
-				2D6CEAB21FD09A8B00A482D0 /* ADSQLDeleteInstruction.swift */,
-				2D6CEABB1FD09A8C00A482D0 /* ADSQLDropInstruction.swift */,
-				2D6CEAB61FD09A8B00A482D0 /* ADSQLInsertInstruction.swift */,
-				2D6CEABC1FD09A8C00A482D0 /* ADSQLSelectInstruction.swift */,
-				2D6CEAB71FD09A8B00A482D0 /* ADSQLTransaction.swift */,
-				2D6CEAB91FD09A8B00A482D0 /* ADSQLUpdateInstruction.swift */,
+				2D92C86A2017E104006598F3 /* README.md */,
+				2D92C8692017E0F6006598F3 /* Encodable */,
+				2D92C8682017E0EE006598F3 /* Decodable */,
 			);
-			path = Instructions;
+			path = SPON;
 			sourceTree = "<group>";
 		};
-		2D6CEA981FD0992700A482D0 /* Expressions */ = {
+		2D92C8242017DFFD006598F3 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEACD1FD09A9C00A482D0 /* README.md */,
-				2D6CEACB1FD09A9C00A482D0 /* ADSQLBetweenExpression.swift */,
-				2D6CEAD11FD09A9C00A482D0 /* ADSQLBinaryExpression.swift */,
-				2D6CEAD21FD09A9C00A482D0 /* ADSQLCaseExpression.swift */,
-				2D6CEACF1FD09A9C00A482D0 /* ADSQLExpressionBuilder.swift */,
-				2D6CEACE1FD09A9C00A482D0 /* ADSQLForeignKeyExpression.swift */,
-				2D6CEACA1FD09A9C00A482D0 /* ADSQLFunctionExpression.swift */,
-				2D6CEAD31FD09A9D00A482D0 /* ADSQLInExpression.swift */,
-				2D6CEAD01FD09A9C00A482D0 /* ADSQLLiteralExpression.swift */,
-				2D6CEACC1FD09A9C00A482D0 /* ADSQLUnaryExpression.swift */,
-				2D6CEAC91FD09A9C00A482D0 /* ADSQLWhenExpression.swift */,
+				2D92C8412017E06D006598F3 /* README.md */,
+				2D92C83F2017E051006598F3 /* Encodable */,
+				2D92C8402017E05A006598F3 /* Decodable */,
 			);
-			path = Expressions;
+			path = SQLite;
 			sourceTree = "<group>";
 		};
-		2D6CEA991FD0993900A482D0 /* Protocols */ = {
+		2D92C83F2017E051006598F3 /* Encodable */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEAED1FD09ADB00A482D0 /* README.md */,
-				2D6CEAEC1FD09ADB00A482D0 /* ADSQLExpression.swift */,
-				2D6CEAEB1FD09ADB00A482D0 /* ADSQLInstruction.swift */,
+				2D92C8472017E07D006598F3 /* README.md */,
+				2D92C8462017E07C006598F3 /* ADSQLEncoder.swift */,
+				2D92C8442017E07C006598F3 /* ADSQLKeyedEncodingContainer.swift */,
+				2D92C8452017E07C006598F3 /* ADSQLReferencingEncoder.swift */,
+				2D92C8432017E07C006598F3 /* ADSQLSingleValueEncodingContainer.swift */,
+				2D92C8422017E07C006598F3 /* ADSQLUnkeyedEncodingContainer.swift */,
 			);
-			path = Protocols;
+			path = Encodable;
 			sourceTree = "<group>";
 		};
-		2D6CEA9A1FD0994400A482D0 /* Enumerations */ = {
+		2D92C8402017E05A006598F3 /* Decodable */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEAE41FD09ABB00A482D0 /* README.md */,
-				2D6CEADF1FD09ABB00A482D0 /* ADSQLColumnType.swift */,
-				2D6CEAE21FD09ABB00A482D0 /* ADSQLConflictHandling.swift */,
-				2D6CEAE01FD09ABB00A482D0 /* ADSQLFunction.swift */,
-				2D6CEAE31FD09ABB00A482D0 /* ADSQLKeyword.swift */,
-				2D6CEAE11FD09ABB00A482D0 /* ADSQLParseError.swift */,
+				2D92C85B2017E0CF006598F3 /* README.md */,
+				2D92C8582017E0CF006598F3 /* ADSQLDecoder.swift */,
+				2D92C8592017E0CF006598F3 /* ADSQLKeyedDecodingContainer.swift */,
+				2D92C8572017E0CF006598F3 /* ADSQLSingleValueDecodingContainer.swift */,
+				2D92C85A2017E0CF006598F3 /* ADSQLUnkeyedDecodingContainer.swift */,
 			);
-			path = Enumerations;
+			path = Decodable;
 			sourceTree = "<group>";
 		};
-		2D6CEAF11FD09B3200A482D0 /* ActionDataProviders */ = {
+		2D92C8682017E0EE006598F3 /* Decodable */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEAF71FD09D4D00A482D0 /* README.md */,
-				2D6CEAF81FD09D4D00A482D0 /* ADSPONProvider.swift */,
-				2D6CEAF91FD09D4D00A482D0 /* ADSQLiteProvider.swift */,
-				2D6CEAF61FD09C9100A482D0 /* SharedElements */,
-				2D6CEAF51FD09C8100A482D0 /* Enumerations */,
-				2D6CEAF41FD09C7600A482D0 /* Protocols */,
+				2D92C8812017E133006598F3 /* README.md */,
+				2D92C8822017E134006598F3 /* ADSPONDecoder.swift */,
+				2D92C8832017E134006598F3 /* ADSPONKeyedDecodingContainer.swift */,
+				2D92C8802017E133006598F3 /* ADSPONSingleValueDecodingContainer.swift */,
+				2D92C8842017E134006598F3 /* ADSPONUnkeyedDecodingContainer.swift */,
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
+		2D92C8692017E0F6006598F3 /* Encodable */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C86B2017E112006598F3 /* README.md */,
+				2D92C86D2017E113006598F3 /* ADSPONEncoder.swift */,
+				2D92C86E2017E113006598F3 /* ADSPONKeyedEncodingContainer.swift */,
+				2D92C86C2017E112006598F3 /* ADSPONReferencingEncoder.swift */,
+				2D92C8702017E113006598F3 /* ADSPONSingleValueEncodingContainer.swift */,
+				2D92C86F2017E113006598F3 /* ADSPONUnkeyedEncodingContainer.swift */,
+			);
+			path = Encodable;
+			sourceTree = "<group>";
+		};
+		2D92C8912017E161006598F3 /* ActionDataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C8952017E19F006598F3 /* README.md */,
+				2D92C8962017E19F006598F3 /* ADSPONProvider.swift */,
+				2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */,
+				2D92C8942017E189006598F3 /* SharedElements */,
+				2D92C8932017E17D006598F3 /* Enumerations */,
+				2D92C8922017E174006598F3 /* Protocols */,
 			);
 			path = ActionDataProviders;
 			sourceTree = "<group>";
 		};
-		2D6CEAF41FD09C7600A482D0 /* Protocols */ = {
+		2D92C8922017E174006598F3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEB161FD09DCE00A482D0 /* README.md */,
-				2D6CEB131FD09DCE00A482D0 /* ADDataCrossReference.swift */,
-				2D6CEB141FD09DCE00A482D0 /* ADDataProvider.swift */,
-				2D6CEB151FD09DCE00A482D0 /* ADDataTable.swift */,
+				2D92C8C72017E1F9006598F3 /* README.md */,
+				2D92C8C42017E1F9006598F3 /* ADDataCrossReference.swift */,
+				2D92C8C52017E1F9006598F3 /* ADDataProvider.swift */,
+				2D92C8C62017E1F9006598F3 /* ADDataTable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		2D6CEAF51FD09C8100A482D0 /* Enumerations */ = {
+		2D92C8932017E17D006598F3 /* Enumerations */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEB0E1FD09D9300A482D0 /* README.md */,
-				2D6CEB0B1FD09D9300A482D0 /* ADDataProviderError.swift */,
-				2D6CEB0D1FD09D9300A482D0 /* ADDataTableKeyType.swift */,
-				2D6CEB0C1FD09D9300A482D0 /* ADSQLExecutionError.swift */,
+				2D92C8BA2017E1DE006598F3 /* README.md */,
+				2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */,
+				2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */,
+				2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
 		};
-		2D6CEAF61FD09C9100A482D0 /* SharedElements */ = {
+		2D92C8942017E189006598F3 /* SharedElements */ = {
 			isa = PBXGroup;
 			children = (
-				2D6CEB011FD09D7700A482D0 /* README.md */,
-				2D6CEB031FD09D7700A482D0 /* ADColumnSchema.swift */,
-				2D6CEAFD1FD09D7700A482D0 /* ADCrossReference.swift */,
-				2D6CEB021FD09D7700A482D0 /* ADDataStore.swift */,
-				2D6CEAFF1FD09D7700A482D0 /* ADTableSchema.swift */,
-				2D6CEB001FD09D7700A482D0 /* ADTableStore.swift */,
-				2D6CEAFE1FD09D7700A482D0 /* ADUtilities.swift */,
+				2D92C8A22017E1BD006598F3 /* README.md */,
+				2D92C8A42017E1BD006598F3 /* ADColumnSchema.swift */,
+				2D92C89E2017E1BD006598F3 /* ADCrossReference.swift */,
+				2D92C8A32017E1BD006598F3 /* ADDataStore.swift */,
+				2D92C8A02017E1BD006598F3 /* ADTableSchema.swift */,
+				2D92C8A12017E1BD006598F3 /* ADTableStore.swift */,
+				2D92C89F2017E1BD006598F3 /* ADUtilities.swift */,
 			);
 			path = SharedElements;
 			sourceTree = "<group>";
 		};
-		2D6CEB2F1FD0A1B300A482D0 /* ActionDataTests */ = {
+		2D92C8D12017E21B006598F3 /* ActionSQLParser */ = {
 			isa = PBXGroup;
 			children = (
-				2DB70D801FD0A2E50049BA1E /* SPONTests.swift */,
-				2DB70D811FD0A2E50049BA1E /* SQLiteTests.swift */,
-				2D6CEB321FD0A1B300A482D0 /* Info.plist */,
-				2DB70D7F1FD0A2E40049BA1E /* ActionDataTests-Bridging-Header.h */,
+				2D92C8D82017E2A7006598F3 /* README.md */,
+				2D92C8D92017E2A7006598F3 /* ADSQLParser.swift */,
+				2D92C8D72017E27F006598F3 /* SharedElements */,
+				2D92C8D62017E274006598F3 /* Instructions */,
+				2D92C8D52017E26A006598F3 /* Expressions */,
+				2D92C8D42017E25D006598F3 /* Enumerations */,
+				2D92C8D22017E24B006598F3 /* Protocols */,
 			);
-			path = ActionDataTests;
+			path = ActionSQLParser;
+			sourceTree = "<group>";
+		};
+		2D92C8D22017E24B006598F3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C96B2017E346006598F3 /* README.md */,
+				2D92C96A2017E346006598F3 /* ADSQLExpression.swift */,
+				2D92C9692017E346006598F3 /* ADSQLInstruction.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2D92C8D42017E25D006598F3 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C9592017E322006598F3 /* README.md */,
+				2D92C9542017E322006598F3 /* ADSQLColumnType.swift */,
+				2D92C9572017E322006598F3 /* ADSQLConflictHandling.swift */,
+				2D92C9552017E322006598F3 /* ADSQLFunction.swift */,
+				2D92C9582017E322006598F3 /* ADSQLKeyword.swift */,
+				2D92C9562017E322006598F3 /* ADSQLParseError.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		2D92C8D52017E26A006598F3 /* Expressions */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C92F2017E2FF006598F3 /* README.md */,
+				2D92C92D2017E2FF006598F3 /* ADSQLBetweenExpression.swift */,
+				2D92C9332017E2FF006598F3 /* ADSQLBinaryExpression.swift */,
+				2D92C9342017E2FF006598F3 /* ADSQLCaseExpression.swift */,
+				2D92C9312017E2FF006598F3 /* ADSQLExpressionBuilder.swift */,
+				2D92C9302017E2FF006598F3 /* ADSQLForeignKeyExpression.swift */,
+				2D92C92C2017E2FF006598F3 /* ADSQLFunctionExpression.swift */,
+				2D92C9352017E2FF006598F3 /* ADSQLInExpression.swift */,
+				2D92C9322017E2FF006598F3 /* ADSQLLiteralExpression.swift */,
+				2D92C92E2017E2FF006598F3 /* ADSQLUnaryExpression.swift */,
+				2D92C92B2017E2FF006598F3 /* ADSQLWhenExpression.swift */,
+			);
+			path = Expressions;
+			sourceTree = "<group>";
+		};
+		2D92C8D62017E274006598F3 /* Instructions */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C8FE2017E2E0006598F3 /* README.md */,
+				2D92C9072017E2E1006598F3 /* ADSQLAlterTableInstruction.swift */,
+				2D92C9022017E2E0006598F3 /* ADSQLCreateIndexInstruction.swift */,
+				2D92C9002017E2E0006598F3 /* ADSQLCreateTableInstruction.swift */,
+				2D92C9012017E2E0006598F3 /* ADSQLCreateTriggerInstruction.swift */,
+				2D92C9052017E2E1006598F3 /* ADSQLCreateViewInstruction.swift */,
+				2D92C8FF2017E2E0006598F3 /* ADSQLDeleteInstruction.swift */,
+				2D92C9082017E2E1006598F3 /* ADSQLDropInstruction.swift */,
+				2D92C9032017E2E1006598F3 /* ADSQLInsertInstruction.swift */,
+				2D92C9092017E2E1006598F3 /* ADSQLSelectInstruction.swift */,
+				2D92C9042017E2E1006598F3 /* ADSQLTransaction.swift */,
+				2D92C9062017E2E1006598F3 /* ADSQLUpdateInstruction.swift */,
+			);
+			path = Instructions;
+			sourceTree = "<group>";
+		};
+		2D92C8D72017E27F006598F3 /* SharedElements */ = {
+			isa = PBXGroup;
+			children = (
+				2D92C8E12017E2C8006598F3 /* README.md */,
+				2D92C8E22017E2C8006598F3 /* ADSQLColumnConstraint.swift */,
+				2D92C8DE2017E2C8006598F3 /* ADSQLColumnDefinition.swift */,
+				2D92C8DF2017E2C8006598F3 /* ADSQLJoinClause.swift */,
+				2D92C8E42017E2C8006598F3 /* ADSQLOrderByClause.swift */,
+				2D92C8DD2017E2C8006598F3 /* ADSQLParseQueue.swift */,
+				2D92C8E02017E2C8006598F3 /* ADSQLResultColumn.swift */,
+				2D92C8E32017E2C8006598F3 /* ADSQLSetClause.swift */,
+				2D92C8E52017E2C8006598F3 /* ADSQLTableConstraint.swift */,
+			);
+			path = SharedElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D6CEA361FD092F200A482D0 /* Headers */ = {
+		2D92C7EA2017DCB6006598F3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6CEA3E1FD092F200A482D0 /* ActionData.h in Headers */,
-				2D6CEAF31FD09C1400A482D0 /* Bridging-Header.h in Headers */,
+				2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */,
+				2D92C81E2017DFB9006598F3 /* Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D92C7F82017DCF6006598F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D92C7FF2017DCF6006598F3 /* ActionData.h in Headers */,
+				2D92C81F2017DFB9006598F3 /* Bridging-Header.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D92C8052017DD0A006598F3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D92C80C2017DD0A006598F3 /* ActionData.h in Headers */,
+				2D92C8202017DFB9006598F3 /* Bridging-Header.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2D6CEA381FD092F200A482D0 /* ActionData */ = {
+		2D92C7EC2017DCB6006598F3 /* ActionData iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D6CEA411FD092F200A482D0 /* Build configuration list for PBXNativeTarget "ActionData" */;
+			buildConfigurationList = 2D92C7F32017DCB6006598F3 /* Build configuration list for PBXNativeTarget "ActionData iOS" */;
 			buildPhases = (
-				2D6CEA341FD092F200A482D0 /* Sources */,
-				2D6CEA351FD092F200A482D0 /* Frameworks */,
-				2D6CEA361FD092F200A482D0 /* Headers */,
-				2D6CEA371FD092F200A482D0 /* Resources */,
+				2D92C7E82017DCB6006598F3 /* Sources */,
+				2D92C7E92017DCB6006598F3 /* Frameworks */,
+				2D92C7EA2017DCB6006598F3 /* Headers */,
+				2D92C7EB2017DCB6006598F3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ActionData;
-			productName = ActionData;
-			productReference = 2D6CEA391FD092F200A482D0 /* ActionData.framework */;
+			name = "ActionData iOS";
+			productName = "ActionData iOS";
+			productReference = 2D92C7ED2017DCB6006598F3 /* ActionData.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2D6CEB2D1FD0A1B300A482D0 /* ActionDataTests */ = {
+		2D92C7FA2017DCF6006598F3 /* ActionData tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D6CEB361FD0A1B300A482D0 /* Build configuration list for PBXNativeTarget "ActionDataTests" */;
+			buildConfigurationList = 2D92C8002017DCF6006598F3 /* Build configuration list for PBXNativeTarget "ActionData tvOS" */;
 			buildPhases = (
-				2D6CEB2A1FD0A1B300A482D0 /* Sources */,
-				2D6CEB2B1FD0A1B300A482D0 /* Frameworks */,
-				2D6CEB2C1FD0A1B300A482D0 /* Resources */,
+				2D92C7F62017DCF6006598F3 /* Sources */,
+				2D92C7F72017DCF6006598F3 /* Frameworks */,
+				2D92C7F82017DCF6006598F3 /* Headers */,
+				2D92C7F92017DCF6006598F3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2D6CEB351FD0A1B300A482D0 /* PBXTargetDependency */,
 			);
-			name = ActionDataTests;
-			productName = ActionDataTests;
-			productReference = 2D6CEB2E1FD0A1B300A482D0 /* ActionDataTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
+			name = "ActionData tvOS";
+			productName = "ActionData tvOS";
+			productReference = 2D92C7FB2017DCF6006598F3 /* ActionData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2D92C8072017DD0A006598F3 /* ActionData macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D92C80D2017DD0A006598F3 /* Build configuration list for PBXNativeTarget "ActionData macOS" */;
+			buildPhases = (
+				2D92C8032017DD0A006598F3 /* Sources */,
+				2D92C8042017DD0A006598F3 /* Frameworks */,
+				2D92C8052017DD0A006598F3 /* Headers */,
+				2D92C8062017DD0A006598F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ActionData macOS";
+			productName = "ActionData macOS";
+			productReference = 2D92C8082017DD0A006598F3 /* ActionData.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2D6CEA301FD092F200A482D0 /* Project object */ = {
+		2D92C7E22017DC3C006598F3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
-				ORGANIZATIONNAME = "Appracatappra, LLC.";
+				LastUpgradeCheck = 0920;
 				TargetAttributes = {
-					2D6CEA381FD092F200A482D0 = {
-						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
+					2D92C7EC2017DCB6006598F3 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					2D6CEB2D1FD0A1B300A482D0 = {
-						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 0910;
+					2D92C7FA2017DCF6006598F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2D92C8072017DD0A006598F3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2DCB83172018CF20009BEF01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2DCB831D2018D40D009BEF01 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2DCB83232018D46B009BEF01 = {
+						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 2D6CEA331FD092F200A482D0 /* Build configuration list for PBXProject "ActionData" */;
+			buildConfigurationList = 2D92C7E52017DC3C006598F3 /* Build configuration list for PBXProject "ActionData" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2D6CEA2F1FD092F200A482D0;
-			productRefGroup = 2D6CEA3A1FD092F200A482D0 /* Products */;
+			mainGroup = 2D92C7E12017DC3C006598F3;
+			productRefGroup = 2D92C7EE2017DCB6006598F3 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2D6CEA4D1FD0958800A482D0 /* Products */;
-					ProjectRef = 2D6CEA4C1FD0958800A482D0 /* ActionUtilities.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				2D6CEA381FD092F200A482D0 /* ActionData */,
-				2D6CEB2D1FD0A1B300A482D0 /* ActionDataTests */,
+				2D92C7EC2017DCB6006598F3 /* ActionData iOS */,
+				2D92C7FA2017DCF6006598F3 /* ActionData tvOS */,
+				2D92C8072017DD0A006598F3 /* ActionData macOS */,
+				2DCB83172018CF20009BEF01 /* Package iOS */,
+				2DCB831D2018D40D009BEF01 /* Package tvOS */,
+				2DCB83232018D46B009BEF01 /* Package macOS */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		2D6CEA511FD0958800A482D0 /* ActionUtilities.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ActionUtilities.framework;
-			remoteRef = 2D6CEA501FD0958800A482D0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
-		2D6CEA371FD092F200A482D0 /* Resources */ = {
+		2D92C7EB2017DCB6006598F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB70D8A1FD0B0220049BA1E /* TrimFramework.sh in Resources */,
+				2D92C81A2017DF73006598F3 /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D6CEB2C1FD0A1B300A482D0 /* Resources */ = {
+		2D92C7F92017DCF6006598F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB70D891FD0A6A00049BA1E /* TrimFramework.sh in Resources */,
-				2DB70D881FD0A6A00049BA1E /* BuildUnifiedLibrary.sh in Resources */,
-				2DB70D851FD0A5BB0049BA1E /* README.md in Resources */,
+				2D92C81B2017DF74006598F3 /* TrimFramework.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D92C8062017DD0A006598F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D92C81C2017DF75006598F3 /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2DCB831B2018CF26009BEF01 /* Make Universal Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make Universal Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define Macros\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-iOS\nUNIVERSAL_TARGET=\"iOS\"\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}Frameworks/${UNIVERSAL_TARGET}\nDEVICE_OS=\"iphoneos\"\nDEVICE_SIMULATOR=\"iphonesimulator\"\nFRAMEWORK_VERSION=\"TRIAL_VERSION\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"";
+		};
+		2DCB831C2018CFFB009BEF01 /* Build API Documnetation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build API Documnetation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define macros\nAPI_TARGET=\"iOS\"\nAPI_OUTPUT=\"${PROJECT_DIR}/API/${API_TARGET}\"\nDEVICE_OS=\"iphoneos\"\nROOT_URL=\"http://appracatappra.com/api/actiondata/ios/\"\n\n# Make sure the output directory exists\nmkdir -p \"${API_OUTPUT}\"\n\n# Move to project directory\ncd \"${PROJECT_DIR}\"\n\n# Create documentation with Jazzy\njazzy --output \"${API_OUTPUT}\" --sdk ${DEVICE_OS} --clean --xcodebuild-arguments -target,\"${PROJECT_NAME} ${API_TARGET}\" --module ${PROJECT_NAME} --author \"Appracatappra, LLC\" --root-url \"${ROOT_URL}\"\n\n# Open project directory\nopen \"${API_OUTPUT}\"";
+		};
+		2DCB83212018D411009BEF01 /* Make Universal Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make Universal Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define Macros\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-iOS\nUNIVERSAL_TARGET=\"tvOS\"\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}Frameworks/${UNIVERSAL_TARGET}\nDEVICE_OS=\"appletvos\"\nDEVICE_SIMULATOR=\"appletvsimulator\"\nFRAMEWORK_VERSION=\"TRIAL_VERSION\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"";
+		};
+		2DCB83222018D42F009BEF01 /* Build API Documnetation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build API Documnetation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define macros\nAPI_TARGET=\"tvOS\"\nAPI_OUTPUT=\"${PROJECT_DIR}/API/${API_TARGET}\"\nDEVICE_OS=\"appletvos\"\nROOT_URL=\"http://appracatappra.com/api/actiondata/tvos/\"\n\n# Make sure the output directory exists\nmkdir -p \"${API_OUTPUT}\"\n\n# Move to project directory\ncd \"${PROJECT_DIR}\"\n\n# Create documentation with Jazzy\njazzy --output \"${API_OUTPUT}\" --sdk ${DEVICE_OS} --clean --xcodebuild-arguments -target,\"${PROJECT_NAME} ${API_TARGET}\" --module ${PROJECT_NAME} --author \"Appracatappra, LLC\" --root-url \"${ROOT_URL}\"\n\n# Open project directory\nopen \"${API_OUTPUT}\"";
+		};
+		2DCB83272018D48E009BEF01 /* Make Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Make Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define Macros\nUNIVERSAL_TARGET=\"macOS\"\nDEVICE_OS=\"macosx\"\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}Frameworks/${UNIVERSAL_TARGET}\nFRAMEWORK_VERSION=\"TRIAL_VERSION\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/${PROJECT_NAME}.framework\"\n\n# Step 3. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n";
+		};
+		2DCB83282018D49F009BEF01 /* Build API Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build API Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\n# Define macros\nAPI_TARGET=\"macOS\"\nAPI_OUTPUT=\"${PROJECT_DIR}/API/${API_TARGET}\"\nDEVICE_OS=\"macosx\"\nROOT_URL=\"http://appracatappra.com/api/actiondata/macos/\"\n\n# Make sure the output directory exists\nmkdir -p \"${API_OUTPUT}\"\n\n# Move to project directory\ncd \"${PROJECT_DIR}\"\n\n# Create documentation with Jazzy\njazzy --output \"${API_OUTPUT}\" --sdk ${DEVICE_OS} --clean --xcodebuild-arguments -target,\"${PROJECT_NAME} ${API_TARGET}\" --module ${PROJECT_NAME} --author \"Appracatappra, LLC\" --root-url \"${ROOT_URL}\"\n\n# Open project directory\nopen \"${API_OUTPUT}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2D6CEA341FD092F200A482D0 /* Sources */ = {
+		2D92C7E82017DCB6006598F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6CEAA91FD09A3200A482D0 /* ADSQLColumnDefinition.swift in Sources */,
-				2D6CEAC51FD09A8C00A482D0 /* ADSQLUpdateInstruction.swift in Sources */,
-				2D6CEA931FD0983200A482D0 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
-				2D6CEA5E1FD0972B00A482D0 /* ADInstanceDictionary.swift in Sources */,
-				2D6CEADC1FD09A9D00A482D0 /* ADSQLBinaryExpression.swift in Sources */,
-				2D6CEA711FD0979800A482D0 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
-				2D6CEA851FD0982000A482D0 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
-				2D6CEA721FD0979800A482D0 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
-				2D6CEAD51FD09A9D00A482D0 /* ADSQLFunctionExpression.swift in Sources */,
-				2D6CEA781FD097BF00A482D0 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
-				2D6CEAD61FD09A9D00A482D0 /* ADSQLBetweenExpression.swift in Sources */,
-				2D6CEABF1FD09A8C00A482D0 /* ADSQLCreateTableInstruction.swift in Sources */,
-				2D6CEABE1FD09A8C00A482D0 /* ADSQLDeleteInstruction.swift in Sources */,
-				2D6CEB171FD09DCE00A482D0 /* ADDataCrossReference.swift in Sources */,
-				2D6CEA7A1FD097BF00A482D0 /* ADSPONDecoder.swift in Sources */,
-				2D6CEB0A1FD09D7700A482D0 /* ADColumnSchema.swift in Sources */,
-				2D6CEADE1FD09A9D00A482D0 /* ADSQLInExpression.swift in Sources */,
-				2D6CEB041FD09D7700A482D0 /* ADCrossReference.swift in Sources */,
-				2D6CEAC41FD09A8C00A482D0 /* ADSQLCreateViewInstruction.swift in Sources */,
-				2D6CEA6E1FD0979800A482D0 /* ADSPONReferencingEncoder.swift in Sources */,
-				2D6CEB191FD09DCE00A482D0 /* ADDataTable.swift in Sources */,
-				2D6CEADB1FD09A9D00A482D0 /* ADSQLLiteralExpression.swift in Sources */,
-				2D6CEAE51FD09ABB00A482D0 /* ADSQLColumnType.swift in Sources */,
-				2D6CEB091FD09D7700A482D0 /* ADDataStore.swift in Sources */,
-				2D6CEAC21FD09A8C00A482D0 /* ADSQLInsertInstruction.swift in Sources */,
-				2D6CEB071FD09D7700A482D0 /* ADTableStore.swift in Sources */,
-				2D6CEA621FD0972B00A482D0 /* ADRecord.swift in Sources */,
-				2D6CEAD91FD09A9D00A482D0 /* ADSQLForeignKeyExpression.swift in Sources */,
-				2D6CEB181FD09DCE00A482D0 /* ADDataProvider.swift in Sources */,
-				2D6CEAE81FD09ABC00A482D0 /* ADSQLConflictHandling.swift in Sources */,
-				2D6CEB051FD09D7700A482D0 /* ADUtilities.swift in Sources */,
-				2D6CEAAB1FD09A3200A482D0 /* ADSQLResultColumn.swift in Sources */,
-				2D6CEA921FD0983200A482D0 /* ADSQLKeyedDecodingContainer.swift in Sources */,
-				2D6CEA701FD0979800A482D0 /* ADSPONKeyedEncodingContainer.swift in Sources */,
-				2D6CEAC61FD09A8C00A482D0 /* ADSQLAlterTableInstruction.swift in Sources */,
-				2D6CEA9E1FD09A1700A482D0 /* ADSQLParser.swift in Sources */,
-				2D6CEA7C1FD097BF00A482D0 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
-				2D6CEAE91FD09ABC00A482D0 /* ADSQLKeyword.swift in Sources */,
-				2D6CEA861FD0982000A482D0 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
-				2D6CEA871FD0982000A482D0 /* ADSQLKeyedEncodingContainer.swift in Sources */,
-				2D6CEAD71FD09A9D00A482D0 /* ADSQLUnaryExpression.swift in Sources */,
-				2D6CEAFB1FD09D4D00A482D0 /* ADSPONProvider.swift in Sources */,
-				2D6CEAC71FD09A8C00A482D0 /* ADSQLDropInstruction.swift in Sources */,
-				2D6CEA7B1FD097BF00A482D0 /* ADSPONKeyedDecodingContainer.swift in Sources */,
-				2D6CEA6F1FD0979800A482D0 /* ADSPONEncoder.swift in Sources */,
-				2D6CEB101FD09D9300A482D0 /* ADSQLExecutionError.swift in Sources */,
-				2D6CEAC01FD09A8C00A482D0 /* ADSQLCreateTriggerInstruction.swift in Sources */,
-				2D6CEA891FD0982000A482D0 /* ADSQLEncoder.swift in Sources */,
-				2D6CEA901FD0983200A482D0 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
-				2D6CEADA1FD09A9D00A482D0 /* ADSQLExpressionBuilder.swift in Sources */,
-				2D6CEA911FD0983200A482D0 /* ADSQLDecoder.swift in Sources */,
-				2D6CEA631FD0972B00A482D0 /* ADKey.swift in Sources */,
-				2D6CEADD1FD09A9D00A482D0 /* ADSQLCaseExpression.swift in Sources */,
-				2D6CEAE61FD09ABC00A482D0 /* ADSQLFunction.swift in Sources */,
-				2D6CEAEE1FD09ADB00A482D0 /* ADSQLInstruction.swift in Sources */,
-				2D6CEB061FD09D7700A482D0 /* ADTableSchema.swift in Sources */,
-				2D6CEA611FD0972B00A482D0 /* ADInstanceArray.swift in Sources */,
-				2D6CEAEF1FD09ADB00A482D0 /* ADSQLExpression.swift in Sources */,
-				2D6CEAE71FD09ABC00A482D0 /* ADSQLParseError.swift in Sources */,
-				2D6CEAD41FD09A9D00A482D0 /* ADSQLWhenExpression.swift in Sources */,
-				2D6CEA881FD0982000A482D0 /* ADSQLReferencingEncoder.swift in Sources */,
-				2D6CEA601FD0972B00A482D0 /* ADDecodingStorage.swift in Sources */,
-				2D6CEAC81FD09A8C00A482D0 /* ADSQLSelectInstruction.swift in Sources */,
-				2D6CEAAE1FD09A3200A482D0 /* ADSQLSetClause.swift in Sources */,
-				2D6CEB111FD09D9300A482D0 /* ADDataTableKeyType.swift in Sources */,
-				2D6CEAC31FD09A8C00A482D0 /* ADSQLTransaction.swift in Sources */,
-				2D6CEAB01FD09A3200A482D0 /* ADSQLTableConstraint.swift in Sources */,
-				2D6CEAAD1FD09A3200A482D0 /* ADSQLColumnConstraint.swift in Sources */,
-				2D6CEAAF1FD09A3200A482D0 /* ADSQLOrderByClause.swift in Sources */,
-				2D6CEA641FD0972B00A482D0 /* ADEncodingStorage.swift in Sources */,
-				2D6CEAAA1FD09A3200A482D0 /* ADSQLJoinClause.swift in Sources */,
-				2D6CEAA81FD09A3200A482D0 /* ADSQLParseQueue.swift in Sources */,
-				2D6CEAC11FD09A8C00A482D0 /* ADSQLCreateIndexInstruction.swift in Sources */,
-				2D6CEB0F1FD09D9300A482D0 /* ADDataProviderError.swift in Sources */,
-				2D6CEAFC1FD09D4D00A482D0 /* ADSQLiteProvider.swift in Sources */,
+				2D92C8862017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
+				2D92C85F2017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
+				2D92C8A52017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
+				2D92C8ED2017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */,
+				2D92C9132017E2E8006598F3 /* ADSQLTransaction.swift in Sources */,
+				2D92C85C2017E0D6006598F3 /* ADSQLDecoder.swift in Sources */,
+				2D92C8872017E13A006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
+				2D92C95C2017E329006598F3 /* ADSQLFunction.swift in Sources */,
+				2D92C8EA2017E2CF006598F3 /* ADSQLParseQueue.swift in Sources */,
+				2D92C90F2017E2E8006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
+				2D92C90C2017E2E8006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
+				2D92C93A2017E306006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
+				2D92C8742017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2D92C8E62017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
+				2D92C8A82017E1C4006598F3 /* ADTableSchema.swift in Sources */,
+				2D92C84C2017E084006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
+				2D92C8712017E11A006598F3 /* ADSPONEncoder.swift in Sources */,
+				2D92C8BC2017E1E6006598F3 /* ADDataTableKeyType.swift in Sources */,
+				2D92C84A2017E084006598F3 /* ADSQLReferencingEncoder.swift in Sources */,
+				2D92C8852017E13A006598F3 /* ADSPONDecoder.swift in Sources */,
+				2D92C9102017E2E8006598F3 /* ADSQLDropInstruction.swift in Sources */,
+				2D92C9392017E306006598F3 /* ADSQLExpressionBuilder.swift in Sources */,
+				2D92C9362017E306006598F3 /* ADSQLBetweenExpression.swift in Sources */,
+				2D92C95A2017E329006598F3 /* ADSQLColumnType.swift in Sources */,
+				2D92C93C2017E306006598F3 /* ADSQLInExpression.swift in Sources */,
+				2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */,
+				2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
+				2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
+				2D92C8EC2017E2CF006598F3 /* ADSQLSetClause.swift in Sources */,
+				2D92C82D2017E038006598F3 /* ADDecodingStorage.swift in Sources */,
+				2D92C8AA2017E1C4006598F3 /* ADUtilities.swift in Sources */,
+				2D92C8732017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */,
+				2D92C8482017E084006598F3 /* ADSQLEncoder.swift in Sources */,
+				2D92C8EB2017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */,
+				2D92C8302017E038006598F3 /* ADInstanceDictionary.swift in Sources */,
+				2D92C85D2017E0D6006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */,
+				2D92C8982017E1A5006598F3 /* ADSPONProvider.swift in Sources */,
+				2D92C9122017E2E8006598F3 /* ADSQLSelectInstruction.swift in Sources */,
+				2D92C93B2017E306006598F3 /* ADSQLFunctionExpression.swift in Sources */,
+				2D92C8752017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
+				2D92C8312017E038006598F3 /* ADKey.swift in Sources */,
+				2D92C93E2017E306006598F3 /* ADSQLUnaryExpression.swift in Sources */,
+				2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
+				2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
+				2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */,
+				2D92C90B2017E2E8006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
+				2D92C8882017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
+				2D92C82F2017E038006598F3 /* ADInstanceArray.swift in Sources */,
+				2D92C82E2017E038006598F3 /* ADEncodingStorage.swift in Sources */,
+				2D92C8C92017E200006598F3 /* ADDataProvider.swift in Sources */,
+				2D92C95B2017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
+				2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */,
+				2D92C9142017E2E8006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
+				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
+				2D92C90A2017E2E8006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
+				2D92C90D2017E2E8006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,
+				2D92C95D2017E329006598F3 /* ADSQLKeyword.swift in Sources */,
+				2D92C8CA2017E200006598F3 /* ADDataTable.swift in Sources */,
+				2D92C93D2017E306006598F3 /* ADSQLLiteralExpression.swift in Sources */,
+				2D92C8A62017E1C4006598F3 /* ADCrossReference.swift in Sources */,
+				2D92C9372017E306006598F3 /* ADSQLBinaryExpression.swift in Sources */,
+				2D92C84B2017E084006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
+				2D92C8E92017E2CF006598F3 /* ADSQLOrderByClause.swift in Sources */,
+				2D92C8722017E11A006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */,
+				2D92C8492017E084006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */,
+				2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */,
+				2D92C8992017E1A5006598F3 /* ADSQLiteProvider.swift in Sources */,
+				2D92C8C82017E200006598F3 /* ADDataCrossReference.swift in Sources */,
+				2D92C8BB2017E1E6006598F3 /* ADDataProviderError.swift in Sources */,
+				2D92C8DA2017E2AD006598F3 /* ADSQLParser.swift in Sources */,
+				2D92C9112017E2E8006598F3 /* ADSQLInsertInstruction.swift in Sources */,
+				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
+				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
+				2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D6CEB2A1FD0A1B300A482D0 /* Sources */ = {
+		2D92C7F62017DCF6006598F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB70D821FD0A2E50049BA1E /* SPONTests.swift in Sources */,
-				2DB70D831FD0A2E50049BA1E /* SQLiteTests.swift in Sources */,
+				2D92C88A2017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
+				2D92C8632017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
+				2D92C8AB2017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
+				2D92C8F52017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */,
+				2D92C91E2017E2E9006598F3 /* ADSQLTransaction.swift in Sources */,
+				2D92C8602017E0D6006598F3 /* ADSQLDecoder.swift in Sources */,
+				2D92C88B2017E13A006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
+				2D92C9612017E329006598F3 /* ADSQLFunction.swift in Sources */,
+				2D92C8F22017E2CF006598F3 /* ADSQLParseQueue.swift in Sources */,
+				2D92C91A2017E2E9006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
+				2D92C9172017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
+				2D92C9442017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
+				2D92C8792017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2D92C8EE2017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
+				2D92C8AE2017E1C4006598F3 /* ADTableSchema.swift in Sources */,
+				2D92C8512017E085006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
+				2D92C8762017E11A006598F3 /* ADSPONEncoder.swift in Sources */,
+				2D92C8BF2017E1E6006598F3 /* ADDataTableKeyType.swift in Sources */,
+				2D92C84F2017E085006598F3 /* ADSQLReferencingEncoder.swift in Sources */,
+				2D92C8892017E13A006598F3 /* ADSPONDecoder.swift in Sources */,
+				2D92C91B2017E2E9006598F3 /* ADSQLDropInstruction.swift in Sources */,
+				2D92C9432017E307006598F3 /* ADSQLExpressionBuilder.swift in Sources */,
+				2D92C9402017E307006598F3 /* ADSQLBetweenExpression.swift in Sources */,
+				2D92C95F2017E329006598F3 /* ADSQLColumnType.swift in Sources */,
+				2D92C9462017E307006598F3 /* ADSQLInExpression.swift in Sources */,
+				2D92C8AD2017E1C4006598F3 /* ADDataStore.swift in Sources */,
+				2D92C8EF2017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
+				2D92C8C02017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
+				2D92C8F42017E2CF006598F3 /* ADSQLSetClause.swift in Sources */,
+				2D92C8332017E038006598F3 /* ADDecodingStorage.swift in Sources */,
+				2D92C8B02017E1C4006598F3 /* ADUtilities.swift in Sources */,
+				2D92C8782017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */,
+				2D92C84D2017E085006598F3 /* ADSQLEncoder.swift in Sources */,
+				2D92C8F32017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */,
+				2D92C8362017E038006598F3 /* ADInstanceDictionary.swift in Sources */,
+				2D92C8612017E0D6006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */,
+				2D92C89A2017E1A6006598F3 /* ADSPONProvider.swift in Sources */,
+				2D92C91D2017E2E9006598F3 /* ADSQLSelectInstruction.swift in Sources */,
+				2D92C9452017E307006598F3 /* ADSQLFunctionExpression.swift in Sources */,
+				2D92C87A2017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
+				2D92C8372017E038006598F3 /* ADKey.swift in Sources */,
+				2D92C9482017E307006598F3 /* ADSQLUnaryExpression.swift in Sources */,
+				2D92C8622017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
+				2D92C8F02017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
+				2D92C96F2017E34C006598F3 /* ADSQLInstruction.swift in Sources */,
+				2D92C9162017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
+				2D92C88C2017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
+				2D92C8352017E038006598F3 /* ADInstanceArray.swift in Sources */,
+				2D92C8342017E038006598F3 /* ADEncodingStorage.swift in Sources */,
+				2D92C8CC2017E201006598F3 /* ADDataProvider.swift in Sources */,
+				2D92C9602017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
+				2D92C9492017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
+				2D92C91F2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D92C9632017E329006598F3 /* ADSQLParseError.swift in Sources */,
+				2D92C8382017E038006598F3 /* ADRecord.swift in Sources */,
+				2D92C9152017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
+				2D92C9182017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,
+				2D92C9622017E329006598F3 /* ADSQLKeyword.swift in Sources */,
+				2D92C8CD2017E201006598F3 /* ADDataTable.swift in Sources */,
+				2D92C9472017E307006598F3 /* ADSQLLiteralExpression.swift in Sources */,
+				2D92C8AC2017E1C4006598F3 /* ADCrossReference.swift in Sources */,
+				2D92C9412017E307006598F3 /* ADSQLBinaryExpression.swift in Sources */,
+				2D92C8502017E085006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
+				2D92C8F12017E2CF006598F3 /* ADSQLOrderByClause.swift in Sources */,
+				2D92C8772017E11A006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */,
+				2D92C84E2017E085006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */,
+				2D92C96E2017E34C006598F3 /* ADSQLExpression.swift in Sources */,
+				2D92C89B2017E1A6006598F3 /* ADSQLiteProvider.swift in Sources */,
+				2D92C8CB2017E201006598F3 /* ADDataCrossReference.swift in Sources */,
+				2D92C8BE2017E1E6006598F3 /* ADDataProviderError.swift in Sources */,
+				2D92C8DB2017E2AD006598F3 /* ADSQLParser.swift in Sources */,
+				2D92C91C2017E2E9006598F3 /* ADSQLInsertInstruction.swift in Sources */,
+				2D92C9422017E307006598F3 /* ADSQLCaseExpression.swift in Sources */,
+				2D92C9192017E2E9006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
+				2D92C8AF2017E1C4006598F3 /* ADTableStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D92C8032017DD0A006598F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D92C88E2017E13B006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
+				2D92C8672017E0D7006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
+				2D92C8B12017E1C5006598F3 /* ADColumnSchema.swift in Sources */,
+				2D92C8FD2017E2D0006598F3 /* ADSQLTableConstraint.swift in Sources */,
+				2D92C9292017E2E9006598F3 /* ADSQLTransaction.swift in Sources */,
+				2D92C8642017E0D7006598F3 /* ADSQLDecoder.swift in Sources */,
+				2D92C88F2017E13B006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
+				2D92C9662017E32A006598F3 /* ADSQLFunction.swift in Sources */,
+				2D92C8FA2017E2D0006598F3 /* ADSQLParseQueue.swift in Sources */,
+				2D92C9252017E2E9006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
+				2D92C9222017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
+				2D92C94E2017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
+				2D92C87E2017E11B006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2D92C8F62017E2D0006598F3 /* ADSQLColumnConstraint.swift in Sources */,
+				2D92C8B42017E1C5006598F3 /* ADTableSchema.swift in Sources */,
+				2D92C8562017E086006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
+				2D92C87B2017E11B006598F3 /* ADSPONEncoder.swift in Sources */,
+				2D92C8C22017E1E7006598F3 /* ADDataTableKeyType.swift in Sources */,
+				2D92C8542017E086006598F3 /* ADSQLReferencingEncoder.swift in Sources */,
+				2D92C88D2017E13B006598F3 /* ADSPONDecoder.swift in Sources */,
+				2D92C9262017E2E9006598F3 /* ADSQLDropInstruction.swift in Sources */,
+				2D92C94D2017E307006598F3 /* ADSQLExpressionBuilder.swift in Sources */,
+				2D92C94A2017E307006598F3 /* ADSQLBetweenExpression.swift in Sources */,
+				2D92C9642017E32A006598F3 /* ADSQLColumnType.swift in Sources */,
+				2D92C9502017E307006598F3 /* ADSQLInExpression.swift in Sources */,
+				2D92C8B32017E1C5006598F3 /* ADDataStore.swift in Sources */,
+				2D92C8F72017E2D0006598F3 /* ADSQLColumnDefinition.swift in Sources */,
+				2D92C8C32017E1E7006598F3 /* ADSQLExecutionError.swift in Sources */,
+				2D92C8FC2017E2D0006598F3 /* ADSQLSetClause.swift in Sources */,
+				2D92C8392017E039006598F3 /* ADDecodingStorage.swift in Sources */,
+				2D92C8B62017E1C5006598F3 /* ADUtilities.swift in Sources */,
+				2D92C87D2017E11B006598F3 /* ADSPONReferencingEncoder.swift in Sources */,
+				2D92C8522017E086006598F3 /* ADSQLEncoder.swift in Sources */,
+				2D92C8FB2017E2D0006598F3 /* ADSQLResultColumn.swift in Sources */,
+				2D92C83C2017E039006598F3 /* ADInstanceDictionary.swift in Sources */,
+				2D92C8652017E0D7006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */,
+				2D92C89C2017E1A6006598F3 /* ADSPONProvider.swift in Sources */,
+				2D92C9282017E2E9006598F3 /* ADSQLSelectInstruction.swift in Sources */,
+				2D92C94F2017E307006598F3 /* ADSQLFunctionExpression.swift in Sources */,
+				2D92C87F2017E11B006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
+				2D92C83D2017E039006598F3 /* ADKey.swift in Sources */,
+				2D92C9522017E307006598F3 /* ADSQLUnaryExpression.swift in Sources */,
+				2D92C8662017E0D7006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
+				2D92C8F82017E2D0006598F3 /* ADSQLJoinClause.swift in Sources */,
+				2D92C96D2017E34C006598F3 /* ADSQLInstruction.swift in Sources */,
+				2D92C9212017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
+				2D92C8902017E13B006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
+				2D92C83B2017E039006598F3 /* ADInstanceArray.swift in Sources */,
+				2D92C83A2017E039006598F3 /* ADEncodingStorage.swift in Sources */,
+				2D92C8CF2017E201006598F3 /* ADDataProvider.swift in Sources */,
+				2D92C9652017E32A006598F3 /* ADSQLConflictHandling.swift in Sources */,
+				2D92C9532017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
+				2D92C92A2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D92C9682017E32A006598F3 /* ADSQLParseError.swift in Sources */,
+				2D92C83E2017E039006598F3 /* ADRecord.swift in Sources */,
+				2D92C9202017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
+				2D92C9232017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,
+				2D92C9672017E32A006598F3 /* ADSQLKeyword.swift in Sources */,
+				2D92C8D02017E201006598F3 /* ADDataTable.swift in Sources */,
+				2D92C9512017E307006598F3 /* ADSQLLiteralExpression.swift in Sources */,
+				2D92C8B22017E1C5006598F3 /* ADCrossReference.swift in Sources */,
+				2D92C94B2017E307006598F3 /* ADSQLBinaryExpression.swift in Sources */,
+				2D92C8552017E086006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
+				2D92C8F92017E2D0006598F3 /* ADSQLOrderByClause.swift in Sources */,
+				2D92C87C2017E11B006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */,
+				2D92C8532017E086006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */,
+				2D92C96C2017E34C006598F3 /* ADSQLExpression.swift in Sources */,
+				2D92C89D2017E1A6006598F3 /* ADSQLiteProvider.swift in Sources */,
+				2D92C8CE2017E201006598F3 /* ADDataCrossReference.swift in Sources */,
+				2D92C8C12017E1E7006598F3 /* ADDataProviderError.swift in Sources */,
+				2D92C8DC2017E2AE006598F3 /* ADSQLParser.swift in Sources */,
+				2D92C9272017E2E9006598F3 /* ADSQLInsertInstruction.swift in Sources */,
+				2D92C94C2017E307006598F3 /* ADSQLCaseExpression.swift in Sources */,
+				2D92C9242017E2E9006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
+				2D92C8B52017E1C5006598F3 /* ADTableStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		2D6CEB351FD0A1B300A482D0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D6CEA381FD092F200A482D0 /* ActionData */;
-			targetProxy = 2D6CEB341FD0A1B300A482D0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		2D6CEA3F1FD092F200A482D0 /* Debug */ = {
+		2D92C7E62017DC3C006598F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "${PROJECT_NAME}";
+			};
+			name = Debug;
+		};
+		2D92C7E72017DC3C006598F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "${PROJECT_NAME}";
+			};
+			name = Release;
+		};
+		2D92C7F42017DCB6006598F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -801,11 +1293,18 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -820,18 +1319,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				INFOPLIST_FILE = "ActionData iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		2D6CEA401FD092F200A482D0 /* Release */ = {
+		2D92C7F52017DCB6006598F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -861,11 +1367,18 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/iOS";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -874,125 +1387,427 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				INFOPLIST_FILE = "ActionData iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2D6CEA421FD092F200A482D0 /* Debug */ = {
+		2D92C8012017DCF6006598F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ActionData/Info.plist;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/tvOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ActionData tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionData;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		2D6CEA431FD092F200A482D0 /* Release */ = {
+		2D92C8022017DCF6006598F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ActionData/Info.plist;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/tvOS";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ActionData tvOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionData;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2D6CEB371FD0A1B300A482D0 /* Debug */ = {
+		2D92C80E2017DD0A006598F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
-				INFOPLIST_FILE = ActionDataTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionDataTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ActionDataTests/ActionDataTests-Bridging-Header.h";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/macOS";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ActionData macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		2D6CEB381FD0A1B300A482D0 /* Release */ = {
+		2D92C80F2017DD0A006598F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "/Users/kmullins/Xcode\\ Projects/GitHub/ActionUtilities/ActionUtilitiesFrameworks/macOS";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "ActionData macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2DCB83182018CF20009BEF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
-				INFOPLIST_FILE = ActionDataTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appracatappra.ActionDataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "ActionDataTests/ActionDataTests-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2DCB83192018CF20009BEF01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2DCB831F2018D40D009BEF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2DCB83202018D40D009BEF01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2DCB83252018D46B009BEF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2DCB83262018D46B009BEF01 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y2HRRTRAA5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D6CEA331FD092F200A482D0 /* Build configuration list for PBXProject "ActionData" */ = {
+		2D92C7E52017DC3C006598F3 /* Build configuration list for PBXProject "ActionData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D6CEA3F1FD092F200A482D0 /* Debug */,
-				2D6CEA401FD092F200A482D0 /* Release */,
+				2D92C7E62017DC3C006598F3 /* Debug */,
+				2D92C7E72017DC3C006598F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D6CEA411FD092F200A482D0 /* Build configuration list for PBXNativeTarget "ActionData" */ = {
+		2D92C7F32017DCB6006598F3 /* Build configuration list for PBXNativeTarget "ActionData iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D6CEA421FD092F200A482D0 /* Debug */,
-				2D6CEA431FD092F200A482D0 /* Release */,
+				2D92C7F42017DCB6006598F3 /* Debug */,
+				2D92C7F52017DCB6006598F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D6CEB361FD0A1B300A482D0 /* Build configuration list for PBXNativeTarget "ActionDataTests" */ = {
+		2D92C8002017DCF6006598F3 /* Build configuration list for PBXNativeTarget "ActionData tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D6CEB371FD0A1B300A482D0 /* Debug */,
-				2D6CEB381FD0A1B300A482D0 /* Release */,
+				2D92C8012017DCF6006598F3 /* Debug */,
+				2D92C8022017DCF6006598F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D92C80D2017DD0A006598F3 /* Build configuration list for PBXNativeTarget "ActionData macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D92C80E2017DD0A006598F3 /* Debug */,
+				2D92C80F2017DD0A006598F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCB831A2018CF20009BEF01 /* Build configuration list for PBXAggregateTarget "Package iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCB83182018CF20009BEF01 /* Debug */,
+				2DCB83192018CF20009BEF01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCB831E2018D40D009BEF01 /* Build configuration list for PBXAggregateTarget "Package tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCB831F2018D40D009BEF01 /* Debug */,
+				2DCB83202018D40D009BEF01 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCB83242018D46B009BEF01 /* Build configuration list for PBXAggregateTarget "Package macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCB83252018D46B009BEF01 /* Debug */,
+				2DCB83262018D46B009BEF01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2D6CEA301FD092F200A482D0 /* Project object */;
+	rootObject = 2D92C7E22017DC3C006598F3 /* Project object */;
 }

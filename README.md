@@ -1,6 +1,8 @@
 # Action Data for Swift
 
-**Action Data** is a suite of  backend controls designed to add new app functionality and handle several common, complex development tasks quickly and easily.
+**Action Data** is a suite of backend controls designed to quickly and easily add support for several common databases and data formats (such as SQLite, JSON, XML and CloudKit) to your app.
+
+**Action Data** provides both light weight, low-level access to the data sources along with high level **Object Relationship Management** (ORM) support (using Swift 4's new `Codable`, `Encodable` and `Decodable` protocols.
 
 Created by developers, for developers. Appracatappra's controls are designed to be quickly added to your app's project with a minimum of code and effort, making it easy to add high-quality, professional features and functionality to your app without having to write tons of repetitive, boilerplate code.
 
@@ -113,7 +115,7 @@ class Group: ADDataTable {
 
 **Action Codable** also introduces support for the new **Swift Portable Object Notation** (SPON) data format that allows complex data models to be encoded in a portable text string that encodes not only property keys and data, but also includes type information about the encoded data. For example, using the `Address` struct above:
 
-```
+```swift
 @obj:Address<state$=`TX` city$=`Seabrook` addr1$=`25 Nasa Rd 1` zip$=`77586` addr2$=`Apt #123`>
 ```
 The portable, human-readable string format encodes values with a single character _type designator_ as follows:
@@ -125,7 +127,7 @@ The portable, human-readable string format encodes values with a single characte
 * `&` - Double
 * `*` - Embedded `NSData` or `Data` value
      
-     Additionally, embedded arrays will be in the `@array[...]` format and embedded dictionaries in the `@obj:type<...>` format.
+Additionally, embedded arrays will be in the `@array[...]` format and embedded dictionaries in the `@obj:type<...>` format.
 
 <a name="Action-Data-Providers"></a>
 ### Action Data Providers

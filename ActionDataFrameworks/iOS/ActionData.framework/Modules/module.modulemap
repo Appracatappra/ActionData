@@ -1,0 +1,11 @@
+framework module ActionData {
+  umbrella header "ActionData.h"
+
+  export *
+  module * { export * }
+}
+
+module ActionData.Swift {
+    header "ActionData-Swift.h"
+    requires objc
+}
