@@ -11,9 +11,12 @@ import Foundation
 /**
  Defines a passable dictionary of `ADRecord` values when encoding or decoding an Action Data class instance. `ADInstanceDictionary` also introduces support for the new **Swift Portable Object Notation** (SPON) data format that allows complex data models to be encoded in a portable text string that encodes not only property keys and data, but also includes type information about the encoded data. For example:
  
+ ## Example:
  ```swift
- @obj:Address<state$=`TX` city$=`Seabrook` addr1$=`25 Nasa Rd 1` zip$=`77586` addr2$=`Apt #123`>
+ let data = "@obj:Rectangle<left!=`0` bottom!=`0` right!=`0` top!=`0`>"
+ let dictionary = ADInstanceDictionary.decode(data)
  ```
+ 
  The portable, human-readable string format encodes values with a single character _type designator_ as follows:
  
  * `%` - Bool
@@ -61,6 +64,7 @@ public class ADInstanceDictionary {
         case inArrayValue
     }
     
+    // MARK: - Static Functions
     /**
      Converts a given value into a format that can be safely stored in an `ADInstanceDictionary` portable, human-readable string format.
      
@@ -87,7 +91,6 @@ public class ADInstanceDictionary {
      Takes a `ADInstanceDictionary` object stored in a portable, human-readable string format and converts it to a dictionary of the original values.
      
      ## Example:
-     
      ```swift
      let data = "@obj:Rectangle<left!=`0` bottom!=`0` right!=`0` top!=`0`>"
      let dictionary = ADInstanceDictionary.decode(data)

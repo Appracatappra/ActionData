@@ -160,6 +160,13 @@ public enum ADSQLKeyword: String {
      - Returns: The matching `ADSQLKeyword` if found, else returns `nil`.
      */
     static func get(fromString text: String) -> ADSQLKeyword? {
+        
+        // Is this an empty string?
+        if text == "" {
+            // Yes, return the semicolon to signify End-Of-Line.
+            return .semicolon
+        }
+        
         let value = text.uppercased()
         return ADSQLKeyword(rawValue: value)
     }

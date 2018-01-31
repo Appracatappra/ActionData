@@ -1255,6 +1255,13 @@ open class ADSQLiteProvider: ADDataProvider {
     /**
      Checks to see if the Swift object incoded in the give box has already been saved to the database.
      
+     ## Example:
+     ```swift
+     var category = Category()
+     category.id = 4
+     try found = ADSQLiteProvider.shared.hasRecord(category)
+     ```
+     
      - Parameter box: A `ADInstanceDictionary` holding an encoded Swift object.
      - Returns: `true` if the object is already in the database else returns false.
      */
@@ -1610,8 +1617,16 @@ open class ADSQLiteProvider: ADDataProvider {
         try endTransaction()
     }
     
-    /// Drops the underlying table from the SQLite database, completely removing all stored data in the table as well as the table itself.
-    /// - Warning: This command is **not** undable and should be used with caution!
+    /**
+     Drops the underlying table from the SQLite database, completely removing all stored data in the table as well as the table itself.
+     
+     ## Example:
+     ```swift
+     try ADSQLiteProvider.shared.dropTable(Category.self)
+     ```
+     
+     Warning: This command is **not** undable and should be used with caution!
+     */
     public func dropTable<T: ADDataTable>(_ type: T.Type) throws {
         let sql = "DROP TABLE IF EXISTS \(type.tableName)"
         try execute(sql)

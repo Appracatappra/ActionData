@@ -11,9 +11,12 @@ import Foundation
 /**
  Defines a passable array of values used as temporary storage when encoding or decoding an Action Data class. `ADInstanceArray` also introduces support for the new **Swift Portable Object Notation** (SPON) data format that allows complex data models to be encoded in a portable text string that encodes not only property keys and data, but also includes type information about the encoded data. For example:
  
+ ## Example:
  ```swift
- @array[1!,2!,3!,4!]
+ let data = "@array[1!, 2!, 3!, 4!]"
+ let array = ADInstanceArray.decode(data)
  ```
+ 
  The portable, human-readable string format encodes values with a single character _type designator_ as follows:
  
  * `%` - Bool

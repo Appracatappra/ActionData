@@ -14,7 +14,7 @@
     <a title="ADSQLColumnType Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">ActionData Docs</a> (78% documented)</p>
+        <p><a href="../index.html">ActionData Docs</a> (83% documented)</p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra%2Ecom%2Fapi%2Factiondata%2Ftvos%2Fdocsets%2FActionData%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
@@ -319,7 +319,7 @@
 
                 </div>
               </div>
-            <p>Defines the type of a column stored in a SQL data source.</p>
+            <p>Defines the type of a column stored in a SQL data source. Currently, these support the same data types as SQLite: <code>NULL</code>, <code>INTEGER</code>, <code>FLOAT</code>, <code>TEXT</code>, <code>BLOB</code>, <code>NONE</code>, <code>DATE</code> and <code>BOOLEAN</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -338,14 +338,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Database <code>NULL</code> is the same as a Swift <code>nil</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">nullType</span> <span class="o">=</span> <span class="s">"NULL"</span></code></pre>
 
                         </div>
                       </div>
@@ -369,14 +369,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds any type of Swift integer data types (<code>Int</code>, <code>UInt</code>, <code>Int32</code>, etc.)</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">integerType</span> <span class="o">=</span> <span class="s">"INTEGER"</span></code></pre>
 
                         </div>
                       </div>
@@ -400,14 +400,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds any Swift <code>Double</code> or <code>Float</code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">floatType</span> <span class="o">=</span> <span class="s">"FLOAT"</span></code></pre>
 
                         </div>
                       </div>
@@ -431,14 +431,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds any Swift <code>String</code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">textType</span> <span class="o">=</span> <span class="s">"TEXT"</span></code></pre>
 
                         </div>
                       </div>
@@ -462,14 +462,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds any Swift <code>Data</code> value. To store images, use the Action Utilities <code>toData()</code> method.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">blobType</span> <span class="o">=</span> <span class="s">"BLOB"</span></code></pre>
 
                         </div>
                       </div>
@@ -493,14 +493,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The database has an undefined type and can hold any type of Swift data.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">noneType</span> <span class="o">=</span> <span class="s">"NONE"</span></code></pre>
 
                         </div>
                       </div>
@@ -524,14 +524,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds a Swift <code>Date</code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">dateType</span> <span class="o">=</span> <span class="s">"DATE"</span></code></pre>
 
                         </div>
                       </div>
@@ -555,14 +555,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Holds a Swift <code>Bool</code> value.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ADSQLColumnType</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">boolType</span> <span class="o">=</span> <span class="s">"BOOLEAN"</span></code></pre>
 
                         </div>
                       </div>
@@ -679,7 +679,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-01-24)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-01-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

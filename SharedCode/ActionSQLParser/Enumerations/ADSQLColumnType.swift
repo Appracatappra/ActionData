@@ -8,15 +8,30 @@
 
 import Foundation
 
-/// Defines the type of a column stored in a SQL data source.
+/// Defines the type of a column stored in a SQL data source. Currently, these support the same data types as SQLite: `NULL`, `INTEGER`, `FLOAT`, `TEXT`, `BLOB`, `NONE`, `DATE` and `BOOLEAN`.
 public enum ADSQLColumnType: String {
+    /// Database `NULL` is the same as a Swift `nil`.
     case nullType = "NULL"
+    
+    /// Holds any type of Swift integer data types (`Int`, `UInt`, `Int32`, etc.)
     case integerType = "INTEGER"
+    
+    /// Holds any Swift `Double` or `Float` value.
     case floatType = "FLOAT"
+    
+    /// Holds any Swift `String` value.
     case textType = "TEXT"
+    
+    /// Holds any Swift `Data` value. To store images, use the Action Utilities `toData()` method.
     case blobType = "BLOB"
+    
+    /// The database has an undefined type and can hold any type of Swift data.
     case noneType = "NONE"
+    
+    /// Holds a Swift `Date` value.
     case dateType = "DATE"
+    
+    /// Holds a Swift `Bool` value.
     case boolType = "BOOLEAN"
     
     /**
