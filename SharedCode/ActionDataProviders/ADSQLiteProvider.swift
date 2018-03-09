@@ -160,6 +160,8 @@ open class ADSQLiteProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Close any open databases
@@ -262,6 +264,8 @@ open class ADSQLiteProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Save old database location
@@ -358,6 +362,8 @@ open class ADSQLiteProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Is the database open?

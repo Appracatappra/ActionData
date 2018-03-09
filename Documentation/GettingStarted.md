@@ -9,6 +9,7 @@ This guide is designed to help you get up and running with **Action Data** quick
 The following topics are covered:
 
 * [Adding Action Data to an App Project](#Adding-Action-Data-to-an-App-Project)
+* [Activating Your License](#Activating-Your-License)
 * [Component Documentation](#Component-Documentation)
 * [Frequently Asked Questions](#Frequently-Asked-Questions)
 * [Getting Support](#Getting-Support)
@@ -72,6 +73,19 @@ class ViewController: UIViewController {
 
 }
 ```
+
+<a name="Activating-Your-License"></a>
+## Activating Your License
+
+Before your copy of **Action Data** can be successfully used in any of your app projects, it will need to be activated using the [Activate License](http://appracatappra.com/checkout/activate-license/) form on the Appracatappra website. 
+
+The activation process needs to only be done once and will result in an **Activation Key** that you will need to use with the `AppracatappraLicenseManager` built into the **Action Data** suite.
+
+Failure to add your activation information to the `AppracatappraLicenseManager` **before** using any **Action Data** will result in the following Toast popup message being displayed:
+
+> Unlicensed Appracatappra Product
+
+Please see the **Activating Your License** documentation that shipped with your purchase for the full details.
 
 <a name="Component-Documentation"></a>
 ## Component Documentation

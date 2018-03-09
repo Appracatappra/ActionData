@@ -148,6 +148,8 @@ open class ADSPONProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Close any open databases
@@ -240,6 +242,8 @@ open class ADSPONProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Close any open databases
@@ -309,6 +313,8 @@ open class ADSPONProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Is the database open?
@@ -381,6 +387,8 @@ open class ADSPONProvider: ADDataProvider {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Attempt to persist before closing.

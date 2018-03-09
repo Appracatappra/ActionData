@@ -162,6 +162,8 @@ public class ADSPONEncoder: Encoder {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONEncoder Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         storage.typeName = String.typeName(of: value)

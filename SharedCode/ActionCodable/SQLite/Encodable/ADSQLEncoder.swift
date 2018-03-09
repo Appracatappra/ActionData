@@ -162,6 +162,8 @@ public class ADSQLEncoder: Encoder {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLEncoder Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         storage.typeName = String.typeName(of: value)

@@ -122,6 +122,8 @@ public class ADSQLParser {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLParser Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Parse the input string

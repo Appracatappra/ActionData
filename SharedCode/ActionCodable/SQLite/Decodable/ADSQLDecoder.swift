@@ -189,6 +189,8 @@ public class ADSQLDecoder: Decoder {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSQLDecoder Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Ensure data is of a valid type

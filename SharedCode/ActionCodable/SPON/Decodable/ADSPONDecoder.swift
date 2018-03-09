@@ -189,6 +189,8 @@ public class ADSPONDecoder: Decoder {
         
         #if TRIAL_VERSION
             ACNotify.showMessage(text: "Appracatappra ADSPONDecoder Trial")
+        #else
+            AppracatappraLicenseManager.validateLicense()
         #endif
         
         // Ensure data is of a valid type
