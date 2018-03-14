@@ -6,7 +6,7 @@
 	<dict>
 		<key>Resources/Info.plist</key>
 		<data>
-		K+sbYkySwkVCfNrk+T0nzeWRo4U=
+		s4Q/Aef5SpfTiVbEmfw1xLRAu2A=
 		</data>
 		<key>Resources/TrimFramework.sh</key>
 		<data>
@@ -40,7 +40,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			lEnWXAYVfIWoGuhEcbrl80+PVas+M5zW2j7zUQahaTs=
+			+VbTL4DTDl7BqKhJl8fxSM4u6v6KJklbFJ2iyptGya4=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -54,7 +54,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZyUAe0xOIEULuqtGFKNbnAGrEjH/Q0FlNxHBxxC7jlo=
+			ltVFE/typf+mqCspbz3KQrKlduSO7D7Pq3vPupNVFfo=
 			</data>
 		</dict>
 		<key>Resources/TrimFramework.sh</key>
