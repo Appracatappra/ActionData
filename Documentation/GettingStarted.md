@@ -8,18 +8,28 @@ This guide is designed to help you get up and running with **Action Data** quick
 
 The following topics are covered:
 
+* [Installing Action Data](#Installing-Action-Data)
 * [Adding Action Data to an App Project](#Adding-Action-Data-to-an-App-Project)
 * [Activating Your License](#Activating-Your-License)
 * [Component Documentation](#Component-Documentation)
 * [Frequently Asked Questions](#Frequently-Asked-Questions)
 * [Getting Support](#Getting-Support)
 
+<a name="Installing-Action-Data"></a>
+## Installing Action Data
+
+Before you can use the **Action Data** suite in your Xcode Swift app projects you will need to install the framework in the `/Library/Frameworks/ActionData/` directory of your development computer. Double-click the `ActionDataInstaller.pkg` file to start the installation process:
+
+![](Images/Install01.png)
+
+Follow the on-screen instruction to complete the install. 
+
 <a name="Adding-Action-Data-to-an-App-Project"></a>
 ## Adding Action Data to an App Project
 
 Our components were designed to be quickly added to your app's project with a minimum of code, making it easy to add high-quality, professional features and functionality to your apps.
 
-**NOTICE:** In addition to installing the **Action Data** framework, you will need to install the required **Action Utilities** framework that is available for free [here](http://appracatappra.com/products/action-utilities/).
+**NOTICE:** In addition to adding the **Action Data** framework, you will need to add the required **Action Utilities** framework your Swift app projects. The **Action Utilities** framework was automatically installed along with the **Action Data** framework in the `/Library/Frameworks/` directory of your development computer.
 
 In **Xcode**, do the following:
 
@@ -27,23 +37,19 @@ In **Xcode**, do the following:
 2. Select the **Project** in the **Project Navigator**, select the **General** tab and scroll down to the **Embedded Binaries** section:
 
 	![](Images/Intro01.png)
-3. In **Finder**, open the folder where you unzipped the `ActionUtilitiesFrameworks.zip` file and select the appropriate framework version:
+3. In **Finder**, navigate to the `/Library/Frameworks/ActionUtilities/` directory :
 
 	![](Images/Intro02.png)
-4. Drag the framework into the **Embedded Binaries** section in **Xcode**.
-5. Select **Copy items if needed** and click the **Finish** button:
+4. Open the folder that matches the type of app that you are building (for example, `iOS` for an iOS app project) and drag the framework into the **Embedded Binaries** section in **Xcode**:
 
 	![](Images/Intro03.png)
-6. Return to **Finder**, open the folder where you unzipped the `ActionDataFrameworks.zip` file and select the appropriate framework version:
-
-	![](Images/Intro02B.png)
-7. Drag the framework into the **Embedded Binaries** section in **Xcode**.
-8. Select **Copy items if needed** and click the **Finish** button:
-
-	![](Images/Intro03.png)
-9. The both frameworks will be added to both the **Embedded Binaries** and the **Linked Frameworks and Libraries** sections:
+5. You can either choose to use the framework from its default location or copy it into your app's project (by selecting **Copy items if needed**). Click the **Finish** button to complete the install:
 
 	![](Images/Intro04.png)
+6. The framework will be added to both the **Embedded Binaries** and the **Linked Frameworks and Libraries** sections:
+
+	![](Images/Intro05.png)
+7. Repeat Steps 2-5 to add the **Action Data** framework.
 
 You are now ready to use the **Action Data** suite in your app project. Include the `import ActionData` statement at the top of any class you want use a component from. For example:
 
@@ -85,7 +91,7 @@ Failure to add your activation information to the `AppracatappraLicenseManager` 
 
 > Unlicensed Appracatappra Product
 
-Please see the **Activating Your License** documentation that shipped with your purchase for the full details.
+Please see the **Activating Your License** documentation that shipped with your purchase for the full details. Trail versions of our frameworks do not require an Activation Key and can be used as-is in you app projects.
 
 <a name="Component-Documentation"></a>
 ## Component Documentation
@@ -101,7 +107,7 @@ Additionally, each tool in the **Action Data Suite** has a fully documented API,
 <a name="Frequently-Asked-Questions"></a>
 ## Frequently Asked Questions
 
-The following is a list of frequently asked **Action Utilities** questions:
+The following is a list of frequently asked **Action Data** questions:
 
 * **Can I use Action Data on multiple projects?**
 

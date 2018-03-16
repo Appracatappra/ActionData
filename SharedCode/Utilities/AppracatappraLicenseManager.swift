@@ -165,7 +165,7 @@ public class AppracatappraLicenseManager {
             i += 1
         }
         
-        // Return zero failure
-        return 0;
+        // Return minus 1 failure
+        return -1;
     }
 }
