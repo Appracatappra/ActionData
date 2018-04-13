@@ -49,9 +49,17 @@
 		2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
 		2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
 		2D08FBF220519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
-		2D18FC5F205C0DB2001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */; };
+		2D18FC5F205C0DB2001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2D18FC61205C0DC0001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */; };
 		2D18FC66205C0DED001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */; };
+		2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */; };
+		2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */; };
+		2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */; };
+		2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706A3208111D3007601FF /* ADBoundStepper.swift */; };
+		2D7706A6208115F7007601FF /* ADBoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706A5208115F7007601FF /* ADBoundImageView.swift */; };
+		2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B020811CA5007601FF /* ADBoundTextView.swift */; };
+		2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B2208120AF007601FF /* ADBoundWebView.swift */; };
+		2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */; };
 		2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7F02017DCB6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D92C7FF2017DCF6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7FD2017DCF6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D92C80C2017DD0A006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C80A2017DD0A006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -299,6 +307,14 @@
 		2DCC5C50201B699E003D221C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C4F201B699E003D221C /* Person.swift */; };
 		2DCC5C52201B69F0003D221C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C51201B69F0003D221C /* Group.swift */; };
 		2DCC5C54201B6B20003D221C /* SPONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C53201B6B20003D221C /* SPONTests.swift */; };
+		2DE9F44B207FCC7400180131 /* ADBoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */; };
+		2DE9F44C207FCC7400180131 /* ADBoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */; };
+		2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44D207FD6B000180131 /* ADBindable.swift */; };
+		2DE9F44F207FD6B000180131 /* ADBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44D207FD6B000180131 /* ADBindable.swift */; };
+		2DE9F48E207FE95600180131 /* ADBoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F48D207FE95600180131 /* ADBoundLabel.swift */; };
+		2DE9F48F207FE95600180131 /* ADBoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F48D207FE95600180131 /* ADBoundLabel.swift */; };
+		2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F490207FF47900180131 /* ADBoundTextField.swift */; };
+		2DE9F492207FF47900180131 /* ADBoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F490207FF47900180131 /* ADBoundTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,6 +332,14 @@
 		2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/iOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/tvOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/macOS/ActionUtilities.framework; sourceTree = "<group>"; };
+		2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSlider.swift; sourceTree = "<group>"; };
+		2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSwitch.swift; sourceTree = "<group>"; };
+		2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundProgressView.swift; sourceTree = "<group>"; };
+		2D7706A3208111D3007601FF /* ADBoundStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundStepper.swift; sourceTree = "<group>"; };
+		2D7706A5208115F7007601FF /* ADBoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundImageView.swift; sourceTree = "<group>"; };
+		2D7706B020811CA5007601FF /* ADBoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextView.swift; sourceTree = "<group>"; };
+		2D7706B2208120AF007601FF /* ADBoundWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundWebView.swift; sourceTree = "<group>"; };
+		2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSegmentedControl.swift; sourceTree = "<group>"; };
 		2D92C7ED2017DCB6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92C7F02017DCB6006598F3 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
 		2D92C7F12017DCB6006598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -435,6 +459,10 @@
 		2DCC5C4F201B699E003D221C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2DCC5C51201B69F0003D221C /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		2DCC5C53201B6B20003D221C /* SPONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPONTests.swift; sourceTree = "<group>"; };
+		2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundViewController.swift; sourceTree = "<group>"; };
+		2DE9F44D207FD6B000180131 /* ADBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindable.swift; sourceTree = "<group>"; };
+		2DE9F48D207FE95600180131 /* ADBoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundLabel.swift; sourceTree = "<group>"; };
+		2DE9F490207FF47900180131 /* ADBoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +569,7 @@
 		2D92C8102017DD19006598F3 /* SharedCode */ = {
 			isa = PBXGroup;
 			children = (
+				2DE9F449207FCC4F00180131 /* DataBinding */,
 				2D08FBEE20519CA8008A5449 /* Utilities */,
 				2D92C8D12017E21B006598F3 /* ActionSQLParser */,
 				2D92C8212017DFD3006598F3 /* ActionCodable */,
@@ -821,6 +850,25 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		2DE9F449207FCC4F00180131 /* DataBinding */ = {
+			isa = PBXGroup;
+			children = (
+				2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */,
+				2DE9F44D207FD6B000180131 /* ADBindable.swift */,
+				2DE9F48D207FE95600180131 /* ADBoundLabel.swift */,
+				2DE9F490207FF47900180131 /* ADBoundTextField.swift */,
+				2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */,
+				2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */,
+				2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */,
+				2D7706A3208111D3007601FF /* ADBoundStepper.swift */,
+				2D7706A5208115F7007601FF /* ADBoundImageView.swift */,
+				2D7706B020811CA5007601FF /* ADBoundTextView.swift */,
+				2D7706B2208120AF007601FF /* ADBoundWebView.swift */,
+				2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */,
+			);
+			path = DataBinding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -933,7 +981,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				TargetAttributes = {
 					2D92C7EC2017DCB6006598F3 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1117,16 +1165,19 @@
 				2D92C8862017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
 				2D92C85F2017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8A52017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
+				2DE9F48E207FE95600180131 /* ADBoundLabel.swift in Sources */,
 				2D92C8ED2017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */,
 				2D92C9132017E2E8006598F3 /* ADSQLTransaction.swift in Sources */,
 				2D92C85C2017E0D6006598F3 /* ADSQLDecoder.swift in Sources */,
 				2D92C8872017E13A006598F3 /* ADSPONSingleValueDecodingContainer.swift in Sources */,
 				2D92C95C2017E329006598F3 /* ADSQLFunction.swift in Sources */,
 				2D92C8EA2017E2CF006598F3 /* ADSQLParseQueue.swift in Sources */,
+				2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */,
 				2D92C90F2017E2E8006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
 				2D92C90C2017E2E8006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
 				2D92C93A2017E306006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8742017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */,
 				2D92C8E62017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
 				2D92C8A82017E1C4006598F3 /* ADTableSchema.swift in Sources */,
 				2D92C84C2017E084006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
@@ -1142,14 +1193,18 @@
 				2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */,
 				2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
 				2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
+				2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */,
+				2DE9F44B207FCC7400180131 /* ADBoundViewController.swift in Sources */,
 				2D92C8EC2017E2CF006598F3 /* ADSQLSetClause.swift in Sources */,
 				2D92C82D2017E038006598F3 /* ADDecodingStorage.swift in Sources */,
 				2D92C8AA2017E1C4006598F3 /* ADUtilities.swift in Sources */,
+				2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */,
 				2D92C8732017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */,
 				2D92C8482017E084006598F3 /* ADSQLEncoder.swift in Sources */,
 				2D92C8EB2017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */,
 				2D92C8302017E038006598F3 /* ADInstanceDictionary.swift in Sources */,
 				2D92C85D2017E0D6006598F3 /* ADSQLKeyedDecodingContainer.swift in Sources */,
+				2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */,
 				2D92C8982017E1A5006598F3 /* ADSPONProvider.swift in Sources */,
 				2D92C9122017E2E8006598F3 /* ADSQLSelectInstruction.swift in Sources */,
 				2D92C93B2017E306006598F3 /* ADSQLFunctionExpression.swift in Sources */,
@@ -1158,7 +1213,9 @@
 				2D92C93E2017E306006598F3 /* ADSQLUnaryExpression.swift in Sources */,
 				2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
 				2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
+				2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */,
 				2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */,
+				2D7706A6208115F7007601FF /* ADBoundImageView.swift in Sources */,
 				2D92C90B2017E2E8006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
 				2D92C8882017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
 				2D92C82F2017E038006598F3 /* ADInstanceArray.swift in Sources */,
@@ -1166,7 +1223,9 @@
 				2D92C8C92017E200006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C95B2017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
 				2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */,
+				2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */,
 				2D92C9142017E2E8006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */,
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
@@ -1188,6 +1247,7 @@
 				2D92C8DA2017E2AD006598F3 /* ADSQLParser.swift in Sources */,
 				2D92C9112017E2E8006598F3 /* ADSQLInsertInstruction.swift in Sources */,
 				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
+				2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */,
 				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
 				2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */,
 			);
@@ -1200,6 +1260,7 @@
 				2D92C88A2017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
 				2D92C8632017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8AB2017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
+				2DE9F48F207FE95600180131 /* ADBoundLabel.swift in Sources */,
 				2D92C8F52017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */,
 				2D92C91E2017E2E9006598F3 /* ADSQLTransaction.swift in Sources */,
 				2D92C8602017E0D6006598F3 /* ADSQLDecoder.swift in Sources */,
@@ -1210,6 +1271,7 @@
 				2D92C9172017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
 				2D92C9442017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8792017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
+				2DE9F44F207FD6B000180131 /* ADBindable.swift in Sources */,
 				2D92C8EE2017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
 				2D92C8AE2017E1C4006598F3 /* ADTableSchema.swift in Sources */,
 				2D92C8512017E085006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
@@ -1225,6 +1287,7 @@
 				2D92C8AD2017E1C4006598F3 /* ADDataStore.swift in Sources */,
 				2D92C8EF2017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
 				2D92C8C02017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
+				2DE9F44C207FCC7400180131 /* ADBoundViewController.swift in Sources */,
 				2D92C8F42017E2CF006598F3 /* ADSQLSetClause.swift in Sources */,
 				2D92C8332017E038006598F3 /* ADDecodingStorage.swift in Sources */,
 				2D92C8B02017E1C4006598F3 /* ADUtilities.swift in Sources */,
@@ -1249,6 +1312,7 @@
 				2D92C8CC2017E201006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C9602017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
 				2D92C9492017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
+				2DE9F492207FF47900180131 /* ADBoundTextField.swift in Sources */,
 				2D92C91F2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
 				2D92C9632017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
@@ -1389,6 +1453,33 @@
 		2D92C7E62017DC3C006598F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "${PROJECT_NAME}";
 			};
 			name = Debug;
@@ -1396,7 +1487,33 @@
 		2D92C7E72017DC3C006598F3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				PRODUCT_NAME = "${PROJECT_NAME}";
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
@@ -1429,7 +1546,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1458,7 +1575,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ActionData iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1503,7 +1620,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1526,7 +1643,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "ActionData iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appracatappra.${PROJECT_NAME}";
@@ -1711,7 +1828,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1786,7 +1903,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1827,6 +1944,7 @@
 		2DCB83182018CF20009BEF01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1836,6 +1954,7 @@
 		2DCB83192018CF20009BEF01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1845,6 +1964,7 @@
 		2DCB831F2018D40D009BEF01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1854,6 +1974,7 @@
 		2DCB83202018D40D009BEF01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1863,6 +1984,7 @@
 		2DCB83252018D46B009BEF01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1872,6 +1994,7 @@
 		2DCB83262018D46B009BEF01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y2HRRTRAA5;
 				PRODUCT_NAME = "$(TARGET_NAME)";

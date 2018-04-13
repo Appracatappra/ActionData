@@ -334,6 +334,8 @@ public class ADUtilities {
                 return (value != 0)
             case .textType:
                 return "\(value)"
+            case .integerType:
+                return value
             default:
                 break
             }
@@ -348,6 +350,8 @@ public class ADUtilities {
                 return (value != 0)
             case .textType:
                 return "\(value)"
+            case .floatType:
+                return value
             default:
                 break
             }
@@ -362,6 +366,8 @@ public class ADUtilities {
                 return value ? 1 : 0
             case .textType:
                 return "\(value)"
+            case .boolType:
+                return value
             default:
                 break
             }
@@ -376,6 +382,8 @@ public class ADUtilities {
                 return "true,on,yes".contains(value.lowercased())
             case .floatType:
                 return Float(value)!
+            case .textType:
+                return value
             default:
                 break
             }
