@@ -83,6 +83,15 @@ import Foundation
     */
     @IBInspectable public var dataPath: String = ""
     
+    /// Provides a link to the `ADBoundViewController` that the control is bound to.
+    public weak var controller: ADBoundViewController?
+    
+    /**
+     Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
+     - Remark: You should never set or change this number yourself, this value will be managed by the `ADBoundViewController` and is used to handle form and keyboard events.
+    */
+    public var formID: Int = -1
+    
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     public var isMutable: Bool {
         get {return false}
@@ -93,6 +102,7 @@ import Foundation
         super.init(coder: aDecoder)
     }
     
+    // MARK: - Functions
     /**
      Sets the value of the label from the given value. If the value is an `Int` or `Float` it will be converted to a string. If the value is a `Bool` it will be converted to the string values of `true` or `false`.
      

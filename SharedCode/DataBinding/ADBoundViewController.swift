@@ -71,11 +71,60 @@ open class ADBoundViewController: UIViewController {
     /// An array of all bound controls discovered in the View and Subview controlled by this `ADBoundViewController`.
     private var controls: [ADBindable] = []
     
+    /// Create an array of keyboard notification events.
+    private let keyboardNotifications: [Notification.Name] = [
+        .UIKeyboardWillShow,
+        .UIKeyboardWillHide,
+        .UIKeyboardWillChangeFrame
+        ]
+    
+    /// Holds the frame for the onscreen keyboard.
+    private var keyboardFrame: CGRect?
+    
+    /// Holds the size of the keyboard when it is displayed.
+    private var keyboardOffset: CGFloat = 0.0
+    
+    /// Holds the position of the next text field or view that is coming into focus.
+    private var fieldPosition: CGFloat = 0.0
+    
+    /// `true` if the attached view has been moved up to expose a field that would typically be under the onscreen keyboard, `false` if not.
+    private var viewMovedToExposeField: Bool = false
+    
     // MARK: - Computed Properties
     /**
      A `ADRecord` representing the attached data model as a set of key/value pairs where the key is the name of the field that the value was read from or is writtne to.
     */
     public var record: ADRecord = [:]
+    
+    /**
+     Sets the text of the **Previous** button for `ADBoundTextField` and `ADBoundTextView` controls that show the previous and next accessory buttons.
+    */
+    @IBInspectable public var prevButtonText: String = "<"
+    
+    /**
+     Sets the image of the **Previous** button for `ADBoundTextField` and `ADBoundTextView` controls that show the previous and next accessory buttons.
+     */
+    @IBInspectable public var prevButtonImage: UIImage?
+    
+    /**
+     Sets the text of the **Next** button for `ADBoundTextField` and `ADBoundTextView` controls that show the previous and next accessory buttons.
+     */
+    @IBInspectable public var nextButtonText: String = ">"
+    
+    /**
+     Sets the image of the **Next** button for `ADBoundTextField` and `ADBoundTextView` controls that show the previous and next accessory buttons.
+     */
+    @IBInspectable public var nextButtonImage: UIImage?
+    
+    /**
+     Sets the text of the **Done** button for `ADBoundTextField` and `ADBoundTextView` controls that show the done accessory button.
+     */
+    @IBInspectable public var doneButtonText: String = "Done"
+    
+    /**
+     Sets the image of the **Done** button for `ADBoundTextField` and `ADBoundTextView` controls that show the done accessory button.
+     */
+    @IBInspectable public var doneButtonImage: UIImage?
     
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
@@ -221,7 +270,13 @@ open class ADBoundViewController: UIViewController {
     private func scanView(_ parentView: UIView) {
         // Scan all subviews
         for view in parentView.subviews {
-            if let boundControl = view as? ADBindable {
+            if var boundControl = view as? ADBindable {
+                // Attach control to this controller
+                boundControl.controller = self
+                
+                // Assign a form ID to the control
+                boundControl.formID = controls.count
+                
                 // Add the control to the collection of known controls
                 controls.append(boundControl)
                 
@@ -237,9 +292,14 @@ open class ADBoundViewController: UIViewController {
     private func setBoundValues() {
         // Process all controls
         for control in controls {
-            // Does the dictionary contain the key?
-            if let data = record[control.dataPath] {
-                control.setValue(data)
+            do {
+                // Attempt to get value for path
+                if let value = try ADBoundPathProcessor.evaluate(path: control.dataPath, against: record) {
+                    control.setValue(value)
+                }
+            } catch {
+                // Output processing error
+                print("Error evaluating path `\(control.dataPath)`: \(error)")
             }
         }
     }
@@ -283,15 +343,199 @@ open class ADBoundViewController: UIViewController {
         }
     }
     
+    /**
+     Called by a `ADBoundTextField` or `ADBoundTextView` when it becomes first responder to see if the field is under the onscreen keyboard. If the field is under the keyboard, the field will be moved to expose the keyboard. If the view has already been moved and the field is not under the keyboard, the view will be moved back to its original position.
+     
+     - Parameter fieldFrame: The `GCRect` of the text field or view that has just gained focus.
+    */
+    public func moveViewToExposeField(withFrame fieldFrame: CGRect) {
+        
+        // Calculate the position of the field
+        fieldPosition = fieldFrame.minY + fieldFrame.height
+        
+        // Move the view to avoid the keyboard if required.
+        moveViewIfNeeded(animated: true)
+    }
+    
+    /**
+     Called by a `ADBoundTextField` or `ADBoundTextView` to see if another `ADBoundTextField` or `ADBoundTextView` is in a higher location on the form.
+     
+     - Parameter id: The form ID of the control performing the check.
+     - Returns: `true` if there is a previous text field or view, else returns `false`.
+    */
+    public func hasPrevTextFieldOrView(beforeField id: Int) -> Bool {
+        var n = id - 1
+        
+        // Scan from requested location
+        while n > 0 {
+            // Get the requested field
+            let field = controls[n]
+            
+            // Found?
+            if field is ADBoundTextField || field is ADBoundTextView {
+                // Yes
+                return true
+            }
+            
+            // Decrement
+            n -= 1
+        }
+        
+        // Not found
+        return false
+    }
+    
+    /**
+     Called by a `ADBoundTextField` or `ADBoundTextView` to see if another `ADBoundTextField` or `ADBoundTextView` is in a lower location on the form.
+     
+     - Parameter id: The form ID of the control performing the check.
+     - Returns: `true` if there is a next text field or view, else returns `false`.
+    */
+    public func hasNextTextFieldOrView(afterField id: Int) -> Bool {
+        
+        // Scan from requested location
+        for n in (id + 1)..<controls.count {
+            // Get the requested field
+            let field = controls[n]
+            
+            // Found?
+            if field is ADBoundTextField || field is ADBoundTextView {
+                // Yes
+                return true
+            }
+        }
+        
+        // Not found
+        return false
+    }
+    
+    /**
+     Called by a `ADBoundTextField` or `ADBoundTextView` to move to a previous text field or view.
+     
+     - Parameter id: The form ID of the control performing the move.
+    */
+    public func moveToPrevTextFieldOrView(beforeField id: Int) {
+        var n = id - 1
+        
+        // Scan from requested location
+        while n > 0 {
+            // Get the requested field
+            let control = controls[n]
+            
+            // Found?
+            if let field = control as? ADBoundTextField {
+                // Move focus here
+                field.becomeFirstResponder()
+            } else if let view = control as? ADBoundTextView {
+                // Move focus here
+                view.becomeFirstResponder()
+            }
+            
+            // Decrement
+            n -= 1
+        }
+        
+    }
+    
+    /**
+     Called by a `ADBoundTextField` or `ADBoundTextView` to move to a next text field or view.
+     
+     - Parameter id: The form ID of the control performing the move.
+     */
+    public func moveToNextTextFieldOrView(afterField id: Int) {
+        
+        // Scan from requested location
+        for n in (id + 1)..<controls.count {
+            // Get the requested field
+            let control = controls[n]
+            
+            // Found?
+            if let field = control as? ADBoundTextField {
+                // Move focus here
+                field.becomeFirstResponder()
+            } else if let view = control as? ADBoundTextView {
+                // Move focus here
+                view.becomeFirstResponder()
+            }
+        }
+    }
+    
+    /**
+     Moves the underlying `view` attached to this `ADBoundViewController` if the currently selected field is covered by the onscreen keyboard or moves the view back into its normal position when a new field is selected that does not need the view shifted.
+    */
+    private func moveViewIfNeeded(animated: Bool) {
+        // Get the current top location of the keyboard
+        guard let keyboardTop = keyboardFrame?.origin.y else {
+            return
+        }
+        
+        // Does the view need to be moved in response to the keyboard event?
+        if fieldPosition >= keyboardTop {
+            // Yes, move the form's view up to expose the field.
+            viewMovedToExposeField = true
+            let newLocation = CGRect(x: view.frame.minX, y: 0.0 - keyboardOffset, width: view.frame.width, height: view.frame.height)
+            if animated {
+                UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
+                    self.view.frame = newLocation
+                }.startAnimation()
+            } else {
+                view.frame = newLocation
+            }
+        } else if viewMovedToExposeField {
+            // Yes, move the view back to its normal location.
+            viewMovedToExposeField = false
+            let newLocation = CGRect(x: view.frame.minX, y: 0.0, width: view.frame.width, height: view.frame.height)
+            fieldPosition = 0.0
+            if animated {
+                UIViewPropertyAnimator(duration: 0.5, curve: .easeInOut) {
+                    self.view.frame = newLocation
+                    }.startAnimation()
+            } else {
+                view.frame = newLocation
+            }
+        }
+    }
+    
+    /**
+     Called before the onscreen keyboard is shown, hidden or its `frame` changes size.
+     
+     - Parameter notification: Holds information about the keyboard notification event.
+    */
+    @objc func keyboardEventNotified(notification: Notification) {
+        guard let userInfo = notification.userInfo else { return }
+        
+        // Get the current keyboard information and calculate the height of the keyboard from the bottom of the screen.
+        keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        keyboardOffset = UIScreen.main.bounds.height - keyboardFrame!.origin.y
+        
+        // Move the view to avoid the keyboard if required.
+        moveViewIfNeeded(animated: false)
+    }
+    
     // MARK: - Override Methods
     /**
-     Scans the View and SubView controlled by this `ADBoundViewController` for any controls conforming to the `ADBindable` protocol.
+     Scans the View and SubView controlled by this `ADBoundViewController` for any controls conforming to the `ADBindable` protocol and monitors any keyboard events.
     */
-    open override func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Monitor keyboard events
+        keyboardNotifications.forEach {
+            NotificationCenter.default.addObserver(self, selector: #selector(keyboardEventNotified), name: $0, object: nil)
+        }
         
         // Scan for any bound elements in this view
         scanView(view)
     }
     
+    /**
+     Stops monitoring keyboard events
+    */
+    override open func viewWillDisappear(_ animated: Bool) {
+        
+        // Stop monitoring keyboard events
+        keyboardNotifications.forEach {
+            NotificationCenter.default.removeObserver(self, name: $0, object: nil)
+        }
+    }
 }

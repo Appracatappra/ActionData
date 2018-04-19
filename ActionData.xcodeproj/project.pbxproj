@@ -297,6 +297,7 @@
 		2D92C96F2017E34C006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
 		2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
 		2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
+		2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */; };
 		2DCC5C3C201B6728003D221C /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C7ED2017DCB6006598F3 /* ActionData.framework */; };
 		2DCC5C43201B682B003D221C /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C42201B682B003D221C /* SQLiteTests.swift */; };
 		2DCC5C46201B688E003D221C /* CategoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C45201B688E003D221C /* CategoryUsage.swift */; };
@@ -448,6 +449,7 @@
 		2D92C9692017E346006598F3 /* ADSQLInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLInstruction.swift; sourceTree = "<group>"; };
 		2D92C96A2017E346006598F3 /* ADSQLExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLExpression.swift; sourceTree = "<group>"; };
 		2D92C96B2017E346006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundPathProcessor.swift; sourceTree = "<group>"; };
 		2DCC5C37201B6728003D221C /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCC5C3B201B6728003D221C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCC5C42201B682B003D221C /* SQLiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				2D7706B020811CA5007601FF /* ADBoundTextView.swift */,
 				2D7706B2208120AF007601FF /* ADBoundWebView.swift */,
 				2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */,
+				2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */,
 			);
 			path = DataBinding;
 			sourceTree = "<group>";
@@ -1212,6 +1215,7 @@
 				2D92C8312017E038006598F3 /* ADKey.swift in Sources */,
 				2D92C93E2017E306006598F3 /* ADSQLUnaryExpression.swift in Sources */,
 				2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
+				2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */,
 				2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
 				2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */,
 				2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */,

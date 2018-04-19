@@ -90,6 +90,15 @@ import WebKit
      */
     @IBInspectable public var dataPath: String = ""
     
+    /// Provides a link to the `ADBoundViewController` that the control is bound to.
+    public weak var controller: ADBoundViewController?
+    
+    /**
+     Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
+     - Remark: You should never set or change this number yourself, this value will be managed by the `ADBoundViewController` and is used to handle form and keyboard events.
+     */
+    public var formID: Int = -1
+    
     /// If `true` the `dataPath` property contains raw HTML that needs to be displayed, if `false` the `dataPath` contains a URL to display.
     @IBInspectable public var containsHTML: Bool = false
     

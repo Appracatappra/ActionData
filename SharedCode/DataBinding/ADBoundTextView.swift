@@ -42,7 +42,7 @@ import Foundation
  myTextView.dataPath = "description"
  ```
  */
-open class ADBoundTextView: UITextView, ADBindable {
+open class ADBoundTextView: UITextView, UITextViewDelegate, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.
@@ -83,6 +83,21 @@ open class ADBoundTextView: UITextView, ADBindable {
      */
     @IBInspectable public var dataPath: String = ""
     
+    /// If `true` a **Done** accessory button will be displayed along with the onscreen keyboard when this view is edited.
+    @IBInspectable public var showDoneButton: Bool = true
+    
+    /// If `true` **Previous** and **Next** accessory buttons will be displayed along with the onscreen keyboard when this view is edited.
+    @IBInspectable public var showPrevNextButtons: Bool = true
+    
+    /// Provides a link to the `ADBoundViewController` that the control is bound to.
+    public weak var controller: ADBoundViewController?
+    
+    /**
+     Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
+     - Remark: You should never set or change this number yourself, this value will be managed by the `ADBoundViewController` and is used to handle form and keyboard events.
+     */
+    public var formID: Int = -1
+    
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     public var isMutable: Bool {
         get {return isEditable}
@@ -91,7 +106,12 @@ open class ADBoundTextView: UITextView, ADBindable {
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        // Mark self as delegate
+        self.delegate = self
     }
+    
+    // MARK: - Functions
     
     /**
      Sets the value of the text view from the given value. If the value is an `Int` or `Float` it will be converted to a string. If the value is a `Bool` it will be converted to the string values of `true` or `false`.
@@ -119,5 +139,140 @@ open class ADBoundTextView: UITextView, ADBindable {
         } else {
             return ""
         }
+    }
+    
+    /**
+     Create an accessory toolbar with the required previous, next and/or done buttons and attaches it to this field. This toolbar will be displayed along with the onscreen toolbar.
+     */
+    private func buildAccessoryView() {
+        // Create new toolbar
+        let toolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        toolbar.barStyle = .default
+        toolbar.items = []
+        
+        // Has previous and next buttons?
+        if showPrevNextButtons {
+            // Add previous button
+            let prev: UIBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(self.previousButtonAction))
+            toolbar.items?.append(prev)
+            
+            // Add next button
+            let next: UIBarButtonItem = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(self.nextButtonAction))
+            toolbar.items?.append(next)
+            
+            // Configure buttons
+            if let bindEngine = controller {
+                // Setup Prev button.
+                prev.title = bindEngine.prevButtonText
+                prev.image = bindEngine.prevButtonImage
+                
+                // Setup the Next button
+                next.title = bindEngine.nextButtonText
+                next.image = bindEngine.nextButtonImage
+                
+                // Enabled?
+                prev.isEnabled = bindEngine.hasPrevTextFieldOrView(beforeField: formID)
+                next.isEnabled = bindEngine.hasNextTextFieldOrView(afterField: formID)
+            }
+        }
+        
+        // Has done button?
+        if showDoneButton {
+            // Add space
+            let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            toolbar.items?.append(flexSpace)
+            
+            // Add done button
+            let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+            toolbar.items?.append(done)
+            
+            // Configure button
+            if let bindEngine = controller {
+                done.title = bindEngine.doneButtonText
+                done.image = bindEngine.doneButtonImage
+            }
+        }
+        
+        // Attach toolbar to self
+        toolbar.sizeToFit()
+        self.inputAccessoryView = toolbar
+    }
+    
+    /**
+     Moves to the previous text field or view when the use taps the **Previous** button on the toolbar attached to the keyboard.
+     */
+    @objc private func previousButtonAction() {
+        // Take action
+        if let bindEngine = controller {
+            bindEngine.moveToPrevTextFieldOrView(beforeField: formID)
+        }
+    }
+    
+    /**
+     Moves to the next text field or view when the use taps the **Previous** button on the toolbar attached to the keyboard.
+     */
+    @objc private func nextButtonAction() {
+        // Take action
+        if let bindEngine = controller {
+            bindEngine.moveToNextTextFieldOrView(afterField: formID)
+        }
+    }
+    
+    /**
+     Closes the keyboard when the use taps the **Done** button on the toolbar attached to the keyboard.
+     */
+    @objc private func doneButtonAction()
+    {
+        self.resignFirstResponder()
+    }
+    
+    // MARK: - Delegate Functions
+    public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        // Requires accessories?
+        if showPrevNextButtons || showDoneButton {
+            // Build the required accessory view
+            buildAccessoryView()
+        } else {
+            // Remove accessories
+            self.inputAccessoryView = nil
+        }
+        
+        // Allow editing
+        return true
+    }
+    
+    public func textViewDidBeginEditing(_ textView: UITextView) {
+        // Move field into view if needed
+        if let bindEngine = controller {
+            bindEngine.moveViewToExposeField(withFrame: frame)
+        }
+    }
+    
+    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+        return true
+    }
+    
+    public func textViewDidEndEditing(_ textView: UITextView) {
+        
+    }
+    
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        return true
+    }
+    
+    public func textViewDidChange(_ textView: UITextView) {
+        
+    }
+    
+    public func textViewDidChangeSelection(_ textView: UITextView) {
+        
+    }
+    
+    public func textView(_ textView: UITextView, shouldInteractWith textAttachment: NSTextAttachment, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        return true
+    }
+    
+    public func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        return true
     }
 }

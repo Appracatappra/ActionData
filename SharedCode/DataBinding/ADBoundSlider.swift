@@ -85,6 +85,18 @@ import Foundation
      */
     @IBInspectable public var dataPath: String = ""
     
+    /// If `true` this slider cause the parent `ADBoundViewController` to update the form as the value of the slider changes.
+    @IBInspectable public var liveUpdate: Bool = false
+    
+    /// Provides a link to the `ADBoundViewController` that the control is bound to.
+    public weak var controller: ADBoundViewController?
+    
+    /**
+     Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
+     - Remark: You should never set or change this number yourself, this value will be managed by the `ADBoundViewController` and is used to handle form and keyboard events.
+     */
+    public var formID: Int = -1
+    
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     public var isMutable: Bool {
         get {return true}
@@ -93,6 +105,24 @@ import Foundation
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        // Watch value chage
+        addTarget(self, action: #selector(sliderValueChanged(sender:)), for: UIControlEvents.valueChanged)
+    }
+    
+    // MARK: - Functions
+    /**
+     Handles the value of the slider being changed.
+     
+     - Parameter sender: The slider that was changed.
+    */
+    @objc internal func sliderValueChanged(sender : UISlider) {
+        // Is the control live updating?
+        if liveUpdate {
+            if let bindEngine = controller {
+                bindEngine.refreshDisplay()
+            }
+        }
     }
     
     /**

@@ -15,6 +15,12 @@ public protocol ADBindable {
     /// Defines the name of a field from the bound data model that will be used to populate the control. If the control is editable, this is also the field that the value will be written back to.
     var dataPath: String {get set}
     
+    /// Provides a link to the `ADBoundViewController` that the control is bound to.
+    var controller: ADBoundViewController? {get set}
+    
+    /// Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
+    var formID: Int {get set}
+    
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     var isMutable: Bool {get}
     
