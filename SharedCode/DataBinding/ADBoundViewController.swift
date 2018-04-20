@@ -117,14 +117,24 @@ open class ADBoundViewController: UIViewController {
     @IBInspectable public var nextButtonImage: UIImage?
     
     /**
-     Sets the text of the **Done** button for `ADBoundTextField` and `ADBoundTextView` controls that show the done accessory button.
+     Sets the text of the **Done** button for `ADBoundTextField`, `ADBoundTextPicker` and `ADBoundTextView` controls that show the done accessory button.
      */
     @IBInspectable public var doneButtonText: String = "Done"
     
     /**
-     Sets the image of the **Done** button for `ADBoundTextField` and `ADBoundTextView` controls that show the done accessory button.
+     Sets the image of the **Done** button for `ADBoundTextField`, `ADBoundTextPicker` and `ADBoundTextView` controls that show the done accessory button.
      */
     @IBInspectable public var doneButtonImage: UIImage?
+    
+    /**
+     Sets the text of the **Cancel** button for `ADBoundTextPicker` control that show the cancel accessory button.
+     */
+    @IBInspectable public var cancelButtonText: String = "Cancel"
+    
+    /**
+     Sets the image of the **Cancel** button for `ADBoundTextPicker` control that show the cancel accessory button.
+     */
+    @IBInspectable public var cancelButtonImage: UIImage?
     
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
@@ -292,6 +302,7 @@ open class ADBoundViewController: UIViewController {
     private func setBoundValues() {
         // Process all controls
         for control in controls {
+            // Set value
             do {
                 // Attempt to get value for path
                 if let value = try ADBoundPathProcessor.evaluate(path: control.dataPath, against: record) {
@@ -299,7 +310,29 @@ open class ADBoundViewController: UIViewController {
                 }
             } catch {
                 // Output processing error
-                print("Error evaluating path `\(control.dataPath)`: \(error)")
+                print("Error evaluating value path `\(control.dataPath)`: \(error)")
+            }
+            
+            // Set enabled state
+            do {
+                // Attempt to get value for path
+                if let value = try ADBoundPathProcessor.evaluate(path: control.enabledPath, against: record) {
+                    control.setEnabledState(value)
+                }
+            } catch {
+                // Output processing error
+                print("Error evaluating enabled state path `\(control.dataPath)`: \(error)")
+            }
+            
+            // Set hidden state
+            do {
+                // Attempt to get value for path
+                if let value = try ADBoundPathProcessor.evaluate(path: control.hiddenPath, against: record) {
+                    control.setHiddenState(value)
+                }
+            } catch {
+                // Output processing error
+                print("Error evaluating enabled state path `\(control.dataPath)`: \(error)")
             }
         }
     }

@@ -1,8 +1,8 @@
 //
-//  ADBoundTextField.swift
-//  ActionData
+//  ADBoundTextPicker.swift
+//  ActionData iOS
 //
-//  Created by Kevin Mullins on 4/12/18.
+//  Created by Kevin Mullins on 4/20/18.
 //
 
 import Foundation
@@ -42,7 +42,19 @@ import Foundation
  myTextField.dataPath = "name"
  ```
  */
-open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
+open class ADBoundTextPicker: UITextField, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, ADBindable {
+    
+    
+    
+    // MARK: - Private Variables
+    /// Holds the backing data for the string of available options that can be set in Interface Builder.
+    private var availableOptions = "One,Two,Three"
+    
+    /// Holds the built in data picker that will be used to select a new value from.
+    private var valuePicker: UIPickerView?
+    
+    /// Holds the currently selected value.
+    private var selectedValue: String?
     
     // MARK: - Computed Properties
     
@@ -84,6 +96,21 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
      - remark: The case and name of the field specified in the `dataPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
      */
     @IBInspectable public var dataPath: String = ""
+    
+    /// Sets the title that is displayed over the picker view.
+    @IBInspectable public var title: String = ""
+    
+    /// Defines a comma separated list of options that will be displayed in the attached picker controller for the user to select from. Updating this property will automatically update the `optionList` property.
+    @IBInspectable public var optionValues: String {
+        get { return availableOptions}
+        set {
+            // Save value
+            availableOptions = newValue
+            
+            // Update the tied list of options
+            optionList = availableOptions.components(separatedBy: ",")
+        }
+    }
     
     /**
      The name of the field from the date model or forumla (using SQL syntax) used to set the enabled state from.
@@ -167,15 +194,6 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     /// If `true` this text view cause the parent `ADBoundViewController` to update the form when the value changes. Works with the `onEndEdit` property, if it's `true` the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.
     @IBInspectable public var liveUpdate: Bool = false
     
-    /// Works with the `liveUpdate` property, if it's `true` the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.
-    @IBInspectable public var onEndEdit: Bool = true
-    
-    /// If `true` a **Done** accessory button will be displayed along with the onscreen keyboard when this field is edited.
-    @IBInspectable public var showDoneButton: Bool = true
-    
-    /// If `true` **Previous** and **Next** accessory buttons will be displayed along with the onscreen keyboard when this field is edited.
-    @IBInspectable public var showPrevNextButtons: Bool = true
-    
     /// Provides a link to the `ADBoundViewController` that the control is bound to.
     public weak var controller: ADBoundViewController?
     
@@ -189,6 +207,9 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     public var isMutable: Bool {
         get {return true}
     }
+    
+    /// Gets or sets the list of options that will be displayed in the picker view when the users edits the field.
+    public var optionList: [String] = ["One", "Two", "Three"]
     
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
@@ -260,55 +281,51 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     }
     
     /**
-     Create an accessory toolbar with the required previous, next and/or done buttons and attaches it to this field. This toolbar will be displayed along with the onscreen toolbar.
-    */
+     Creates the picker and toolbar that will be attached to the field when the user selects to edit it.
+     */
     private func buildAccessoryView() {
+        // Create the required picker view
+        valuePicker = UIPickerView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 216))
+        valuePicker!.delegate = self
+        valuePicker!.dataSource = self
+        valuePicker!.backgroundColor = UIColor.white
+        
+        // Attach to textview
+        inputView = valuePicker
+        
         // Create new toolbar
         let toolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         toolbar.barStyle = .default
         toolbar.items = []
         
-        // Has previous and next buttons?
-        if showPrevNextButtons {
-            // Add previous button
-            let prev: UIBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: #selector(self.previousButtonAction))
-            toolbar.items?.append(prev)
-            
-            // Add next button
-            let next: UIBarButtonItem = UIBarButtonItem(title: ">", style: .plain, target: self, action: #selector(self.nextButtonAction))
-            toolbar.items?.append(next)
-            
-            // Configure buttons
-            if let bindEngine = controller {
-                // Setup Prev button.
-                prev.title = bindEngine.prevButtonText
-                prev.image = bindEngine.prevButtonImage
-                
-                // Setup the Next button
-                next.title = bindEngine.nextButtonText
-                next.image = bindEngine.nextButtonImage
-                
-                // Enabled?
-                prev.isEnabled = bindEngine.hasPrevTextFieldOrView(beforeField: formID)
-                next.isEnabled = bindEngine.hasNextTextFieldOrView(afterField: formID)
-            }
-        }
+        // Add done button
+        let cancel: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelButtonAction))
+        toolbar.items?.append(cancel)
         
-        // Has done button?
-        if showDoneButton {
-            // Add space
-            let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-            toolbar.items?.append(flexSpace)
+        // Add space
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolbar.items?.append(flexSpace)
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 250, height: 40))
+        label.text = title
+        label.font = UIFont(name: "System", size: CGFloat(8))
+        label.textAlignment = .center
+        let lableItem = UIBarButtonItem(customView: label)
+        toolbar.items?.append(lableItem)
+        
+        toolbar.items?.append(flexSpace)
+        
+        // Add done button
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+        toolbar.items?.append(done)
+        
+        // Configure button
+        if let bindEngine = controller {
+            done.title = bindEngine.doneButtonText
+            done.image = bindEngine.doneButtonImage
             
-            // Add done button
-            let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
-            toolbar.items?.append(done)
-            
-            // Configure button
-            if let bindEngine = controller {
-                done.title = bindEngine.doneButtonText
-                done.image = bindEngine.doneButtonImage
-            }
+            cancel.title = bindEngine.cancelButtonText
+            cancel.image = bindEngine.cancelButtonImage
         }
         
         // Attach toolbar to self
@@ -317,43 +334,42 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     }
     
     /**
-     Moves to the previous text field or view when the use taps the **Previous** button on the toolbar attached to the keyboard.
-    */
-    @objc private func previousButtonAction() {
-        // Take action
-        if let bindEngine = controller {
-            bindEngine.moveToPrevTextFieldOrView(beforeField: formID)
-        }
-    }
-    
-    /**
-     Moves to the next text field or view when the use taps the **Previous** button on the toolbar attached to the keyboard.
+     Closes the picker when the use taps the **Cancel** button on the toolbar attached to the picker.
      */
-    @objc private func nextButtonAction() {
-        // Take action
-        if let bindEngine = controller {
-            bindEngine.moveToNextTextFieldOrView(afterField: formID)
-        }
-    }
-    
-    /**
-     Closes the keyboard when the use taps the **Done** button on the toolbar attached to the keyboard.
-    */
-    @objc private func doneButtonAction()
-    {
+    @objc private func cancelButtonAction() {
+        // Reset the selected value
+        selectedValue = text
+        
+        // Close the picker
         self.resignFirstResponder()
     }
     
-    // MARK: - Delegate Functions
-    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        // Requires accessories?
-        if showPrevNextButtons || showDoneButton {
-            // Build the required accessory view
-            buildAccessoryView()
-        } else {
-            // Remove accessories
-            self.inputAccessoryView = nil
+    /**
+     Closes the picker and sets the new value when the use taps the **Done** button on the toolbar attached to the picker.
+     */
+    @objc private func doneButtonAction()
+    {
+        // Set the value to the new value selected
+        text = selectedValue
+        
+        // Is the control live updating?
+        if liveUpdate {
+            if let bindEngine = controller {
+                bindEngine.refreshDisplay()
+            }
         }
+        
+        // Close the picker
+        self.resignFirstResponder()
+    }
+    
+    // MARK: - Text View Delegate Functions
+    public func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        // Build and attache the input picker
+        buildAccessoryView()
+        
+        // Save the current value
+        selectedValue = text
         
         // Allow edit to take place.
         return true
@@ -364,15 +380,22 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
         if let bindEngine = controller {
             bindEngine.moveViewToExposeField(withFrame: frame)
         }
+        
+        // Auto pick the currently selected item
+        if let currentValue = text {
+            var n = 0
+            for option in optionList {
+                if currentValue == option {
+                    valuePicker?.selectRow(n, inComponent: 0, animated: false)
+                    break
+                }
+                n += 1
+            }
+        }
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        // Is the control live updating?
-        if liveUpdate {
-            if let bindEngine = controller {
-                bindEngine.refreshDisplay()
-            }
-        }
+        
     }
     
     public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
@@ -380,21 +403,10 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        // Is the control live updating?
-        if liveUpdate {
-            if let bindEngine = controller {
-                bindEngine.refreshDisplay()
-            }
-        }
+        
     }
     
     public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        // Live updating on value change?
-        if liveUpdate && !onEndEdit {
-            if let bindEngine = controller {
-                bindEngine.refreshDisplay()
-            }
-        }
         
         // Always allow change
         return true
@@ -406,5 +418,26 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
+    }
+    
+    // MARK: - Picker Data Source Delegate
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return optionList.count
+    }
+    
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        // Return the requested option
+        return optionList[row]
+    }
+    
+    // MARK: - Picker View Delegate
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // Save selected value
+        selectedValue = optionList[row]
     }
 }

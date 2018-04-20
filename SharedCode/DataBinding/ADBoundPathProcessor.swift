@@ -112,6 +112,50 @@ public class ADBoundPathProcessor {
         case inOrderBy
     }
     
+    /**
+     Evaluates a given **Value Path** from a `ADBindable` control against an `ADRecord` and returns the result of the valuation. The **Value Path** can be either the name of a field from the record or a formula in a syntax simular to a SQL `SELECT` or `WHERE` clause.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Bind the label to the name field
+     myLabel.dataPath = "'Category: ' + name"
+     
+     // Get the value of the path
+     let value  = ADBoundPathProcessor.evaluate(path: myLabel.dataPath, against: myBoundViewController.record)
+     ```
+     
+     - Parameters:
+         - path: The name of a field from the given record or a formula (in SQL syntax) to evaluate against the record.
+         - record: A `ADRecord` containing the data to evaulate against.
+     
+     - Returns: The results of the valuation or `nil`.
+     */
     public static func evaluate(path: String, against record: ADRecord) throws -> Any? {
         
         // Anything to process

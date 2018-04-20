@@ -379,7 +379,7 @@ public class ADUtilities {
             case .integerType:
                 return Int(value)!
             case .boolType:
-                return "true,on,yes".contains(value.lowercased())
+                return "true,on,yes,1".contains(value.lowercased())
             case .floatType:
                 return Float(value)!
             case .textType:

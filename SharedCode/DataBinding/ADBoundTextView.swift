@@ -83,6 +83,91 @@ open class ADBoundTextView: UITextView, UITextViewDelegate, ADBindable {
      */
     @IBInspectable public var dataPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the enabled state from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Bind the text view to the enabled field
+     myTextView.enabledPath = "enabled"
+     ```
+     
+     - remark: The case and name of the field specified in the `enabledPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var enabledPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the hidden state from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the hidden state based on a formula.
+     myTextView.hiddenPath = "quantity > 0"
+     ```
+     
+     - remark: The case and name of the field specified in the `hiddenPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var hiddenPath: String = ""
+    
+    /// If `true` this text view cause the parent `ADBoundViewController` to update the form when the value changes. Works with the `onEndEdit` property, if it's `true` the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.
+    @IBInspectable public var liveUpdate: Bool = false
+    
+    /// Works with the `liveUpdate` property, if it's `true` the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.
+    @IBInspectable public var onEndEdit: Bool = true
+    
     /// If `true` a **Done** accessory button will be displayed along with the onscreen keyboard when this view is edited.
     @IBInspectable public var showDoneButton: Bool = true
     
@@ -124,7 +209,40 @@ open class ADBoundTextView: UITextView, UITextViewDelegate, ADBindable {
             let label = try ADUtilities.cast(value, to: .textType) as! String
             text = label
         } catch {
-            print("BINDING ERROR: Unable to set value from data path `\(dataPath)`.")
+            print("BINDING ERROR: Unable to set text view value from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the enabled state of the control from the given value. If the value is an `Int` or `Float`, `0` and `1` will be converted to `false` and `true`. If the value is a `String`, "yes", "on", "true", "1" will be converted to `true`, all other values will result in `false`.
+     
+     - Parameter value: The value to set the enabled state from.
+     - Remark: For a text view, **enabled** is mapped to **editable**.
+     */
+    public func setEnabledState(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let state = try ADUtilities.cast(value, to: .boolType) as! Bool
+            isEditable = state
+        } catch {
+            print("BINDING ERROR: Unable to set text view enabled state from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the hidden state of the control from the given value. If the value is an `Int` or `Float`, `0` and `1` will be converted to `false` and `true`. If the value is a `String`, "yes", "on", "true", "1" will be converted to `true`, all other values will result in `false`.
+     
+     - Parameter value: The value to set the enabled state from.
+     */
+    public func setHiddenState(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let state = try ADUtilities.cast(value, to: .boolType) as! Bool
+            isHidden = state
+        } catch {
+            print("BINDING ERROR: Unable to set text view hidden state from data path `\(dataPath)`.")
         }
     }
     
@@ -253,7 +371,12 @@ open class ADBoundTextView: UITextView, UITextViewDelegate, ADBindable {
     }
     
     public func textViewDidEndEditing(_ textView: UITextView) {
-        
+        // Is the control live updating?
+        if liveUpdate {
+            if let bindEngine = controller {
+                bindEngine.refreshDisplay()
+            }
+        }
     }
     
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
@@ -261,7 +384,12 @@ open class ADBoundTextView: UITextView, UITextViewDelegate, ADBindable {
     }
     
     public func textViewDidChange(_ textView: UITextView) {
-        
+        // Live updating on value change?
+        if liveUpdate && !onEndEdit {
+            if let bindEngine = controller {
+                bindEngine.refreshDisplay()
+            }
+        }
     }
     
     public func textViewDidChangeSelection(_ textView: UITextView) {

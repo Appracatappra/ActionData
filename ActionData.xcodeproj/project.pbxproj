@@ -55,6 +55,7 @@
 		2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */; };
 		2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */; };
 		2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */; };
+		2D71E315208A4EC300E0C68E /* ADBoundTextPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D71E314208A4EC300E0C68E /* ADBoundTextPicker.swift */; };
 		2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706A3208111D3007601FF /* ADBoundStepper.swift */; };
 		2D7706A6208115F7007601FF /* ADBoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706A5208115F7007601FF /* ADBoundImageView.swift */; };
 		2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B020811CA5007601FF /* ADBoundTextView.swift */; };
@@ -336,6 +337,7 @@
 		2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSlider.swift; sourceTree = "<group>"; };
 		2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSwitch.swift; sourceTree = "<group>"; };
 		2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundProgressView.swift; sourceTree = "<group>"; };
+		2D71E314208A4EC300E0C68E /* ADBoundTextPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextPicker.swift; sourceTree = "<group>"; };
 		2D7706A3208111D3007601FF /* ADBoundStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundStepper.swift; sourceTree = "<group>"; };
 		2D7706A5208115F7007601FF /* ADBoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundImageView.swift; sourceTree = "<group>"; };
 		2D7706B020811CA5007601FF /* ADBoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextView.swift; sourceTree = "<group>"; };
@@ -867,6 +869,7 @@
 				2D7706B020811CA5007601FF /* ADBoundTextView.swift */,
 				2D7706B2208120AF007601FF /* ADBoundWebView.swift */,
 				2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */,
+				2D71E314208A4EC300E0C68E /* ADBoundTextPicker.swift */,
 				2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */,
 			);
 			path = DataBinding;
@@ -1253,6 +1256,7 @@
 				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
 				2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */,
 				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
+				2D71E315208A4EC300E0C68E /* ADBoundTextPicker.swift in Sources */,
 				2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
