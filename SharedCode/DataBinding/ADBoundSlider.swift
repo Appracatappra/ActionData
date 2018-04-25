@@ -164,6 +164,126 @@ import Foundation
      */
     @IBInspectable public var hiddenPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the minimum track tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySlider.minColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `minColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var minColorPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the maximum track tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySlider.maxColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `maxColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var maxColorPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the thumb tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySlider.thumbColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `thumbColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var thumbColorPath: String = ""
+    
     /// If `true` this slider cause the parent `ADBoundViewController` to update the form as the value of the slider changes.
     @IBInspectable public var liveUpdate: Bool = false
     
@@ -249,6 +369,94 @@ import Foundation
             isHidden = state
         } catch {
             print("BINDING ERROR: Unable to set slider hidden state from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the minimum track color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the minimum track color from.
+     */
+    public func setMinColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            minimumTrackTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set minimum track color from data path `\(minColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets the maximum track color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setMaxColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            maximumTrackTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set maximum track color from data path `\(maxColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets the thumb color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setThumbColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            thumbTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set text color from data path `\(thumbColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        // Set min color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: minColorPath, against: data) {
+                setMinColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating minimum color path `\(minColorPath)`: \(error)")
+        }
+        
+        // Set maximum color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: maxColorPath, against: data) {
+                setMaxColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating maximum color path `\(maxColorPath)`: \(error)")
+        }
+        
+        // Set thumb color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: thumbColorPath, against: data) {
+                setThumbColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating thumb color path `\(thumbColorPath)`: \(error)")
         }
     }
     

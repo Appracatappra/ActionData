@@ -164,6 +164,46 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
      */
     @IBInspectable public var hiddenPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the text color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     myTextField.colorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `colorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var colorPath: String = ""
+    
     /// If `true` this text view cause the parent `ADBoundViewController` to update the form when the value changes. Works with the `onEndEdit` property, if it's `true` the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.
     @IBInspectable public var liveUpdate: Bool = false
     
@@ -175,6 +215,24 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     
     /// If `true` **Previous** and **Next** accessory buttons will be displayed along with the onscreen keyboard when this field is edited.
     @IBInspectable public var showPrevNextButtons: Bool = true
+    
+    /// If `true` this `ADBoundTextField` will resign first responder and close the onscreen keyboard when the **Return** key is tapped.
+    @IBInspectable public var closeOnReturn: Bool = false
+    
+    /// Defines the type of formatter that will be used to format the value of this text field before it is displayed to the user. The currently supported formats are "number", "masked" or "date".
+    @IBInspectable public var formatType: String = ""
+    
+    /// Works with the `formatType` property to format the value that is displayed to the user based on the pattern given in this string. For example, "$###,###.00" for a number or "mm/dd/yyyy" for a date.
+    @IBInspectable public var formatPattern: String = ""
+    
+    /// Built-in number formatter used with the `formatType` and `formatPattern` properties to automatically format numeric values.
+    public var numberFormatter = NumberFormatter()
+    
+    /// Built-in date formatted used with the `formatType` and `formatPattern` properties to automatically format date/time values.
+    public var dateFormatter = DateFormatter()
+    
+    /// Built-in masked string formatter used with the `formatType` and `formatPattern` properties to automatically format string values.
+    public var maskedFormatter = ADMaskedStringFormatter()
     
     /// Provides a link to the `ADBoundViewController` that the control is bound to.
     public weak var controller: ADBoundViewController?
@@ -196,6 +254,10 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
         
         // Mark self as delegate
         self.delegate = self
+        
+        // Configure formatters
+        numberFormatter.locale = Locale(identifier: Locale.current.identifier)
+        dateFormatter.locale = Locale(identifier: Locale.current.identifier)
     }
     
     // MARK: - Functions
@@ -207,8 +269,33 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     public func setValue(_ value: Any) {
         // Try to convert to needed value
         do {
-            let label = try ADUtilities.cast(value, to: .textType) as! String
-            text = label
+            // Take action based on the type of format
+            switch formatType.lowercased() {
+            case "number":
+                // Attempt to format as a number
+                numberFormatter.negativeFormat = formatPattern
+                numberFormatter.positiveFormat = formatPattern
+                
+                let val = try ADUtilities.cast(value, to: .floatType) as! Float
+                text = numberFormatter.string(from: NSNumber(value: val))
+            case "masked":
+                // Set format
+                maskedFormatter.formatString = formatPattern
+                
+                // Apply format
+                let val = try ADUtilities.cast(value, to: .textType) as! String
+                text = maskedFormatter.applyFormat(to: val)
+            case "date":
+                // Attempt to format as a date
+                dateFormatter.dateFormat = formatPattern
+                
+                let dt = try ADUtilities.cast(value, to: .dateType) as! Date
+                text = dateFormatter.string(from: dt)
+            default:
+                // Use raw value
+                let label = try ADUtilities.cast(value, to: .textType) as! String
+                text = label
+            }
         } catch {
             print("BINDING ERROR: Unable to set text field value from data path `\(dataPath)`.")
         }
@@ -247,13 +334,60 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     }
     
     /**
+     Sets the text color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setTextColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            textColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set text color from data path `\(colorPath)`.")
+        }
+    }
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        // Set text color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: colorPath, against: data) {
+                setTextColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating text color path `\(colorPath)`: \(error)")
+        }
+    }
+    
+    /**
      Returns the value of the text field.
      
      - Returns: The value of the text Field as a `String`.
      */
     public func getValue() -> Any {
         if let value = text  {
-            return value
+            switch formatType.lowercased() {
+            case "number":
+                if let num = numberFormatter.number(from: value) {
+                    return num
+                } else {
+                    return 0
+                }
+            case "masked":
+                return maskedFormatter.removeFormat(from: value)
+            default:
+                // Non-formatted, return as-is
+                return value
+            }
+            
         } else {
             return ""
         }
@@ -405,6 +539,14 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable {
     }
     
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Should we resign first responder?
+        if closeOnReturn {
+            // Yes, stop editing and close the onscreen keyboard
+            resignFirstResponder()
+        }
+        
+        // Allow return
         return true
     }
 }

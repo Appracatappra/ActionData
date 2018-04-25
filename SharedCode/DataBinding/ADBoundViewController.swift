@@ -332,8 +332,11 @@ open class ADBoundViewController: UIViewController {
                 }
             } catch {
                 // Output processing error
-                print("Error evaluating enabled state path `\(control.dataPath)`: \(error)")
+                print("Error evaluating hidden state path `\(control.dataPath)`: \(error)")
             }
+            
+            // Set any states specific to the give control
+            control.setControlSpecificStates(against: record)
         }
     }
     

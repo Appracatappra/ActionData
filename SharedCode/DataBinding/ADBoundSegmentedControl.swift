@@ -162,6 +162,46 @@ import Foundation
      */
     @IBInspectable public var hiddenPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySegmentedControl.colorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `colorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var colorPath: String = ""
+    
     /// If `true` this segmented control causes the parent `ADBoundViewController` to update the form as the value changes.
     @IBInspectable public var liveUpdate: Bool = false
     
@@ -264,6 +304,40 @@ import Foundation
             isHidden = state
         } catch {
             print("BINDING ERROR: Unable to set segmented control hidden state from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the tint color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setTintColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            tintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set tint color from data path `\(colorPath)`.")
+        }
+    }
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        // Set tint color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: colorPath, against: data) {
+                setTintColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating tint color path `\(colorPath)`: \(error)")
         }
     }
     

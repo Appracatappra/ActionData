@@ -253,6 +253,15 @@ import WebKit
     }
     
     /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        
+    }
+    
+    /**
      Returns the backing data for the web view as either the URL or the raw HTML being displayed.
      
      - Returns: The backing data for the web view as a `String`.

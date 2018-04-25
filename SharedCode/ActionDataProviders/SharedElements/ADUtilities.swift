@@ -382,12 +382,49 @@ public class ADUtilities {
                 return "true,on,yes,1".contains(value.lowercased())
             case .floatType:
                 return Float(value)!
+            case .colorType:
+                #if os(macOS)
+                if let color = NSColor(fromHex: value) {
+                    return color
+                }
+                #else
+                if let color = UIColor(fromHex: value) {
+                    return color
+                }
+                #endif
             case .textType:
                 return value
             default:
                 break
             }
         }
+        
+        // Color cast
+        #if os(macOS)
+        if let value = input as? NSColor {
+            switch type {
+            case .textType:
+                // Convert to hex value
+                return value.toHex()
+            case .colorType:
+                return value
+            default:
+                break
+            }
+        }
+        #else
+        if let value = input as? UIColor {
+            switch type {
+            case .textType:
+                // Convert to hex value
+                return value.toHex()
+            case .colorType:
+                return value
+            default:
+                break
+            }
+        }
+        #endif
         
         throw ADSQLExecutionError.syntaxError(message: "Unable to cast `\(input)` to \(type).")
     }

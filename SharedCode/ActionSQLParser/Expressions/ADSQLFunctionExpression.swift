@@ -237,6 +237,17 @@ public class ADSQLFunctionExpression: ADSQLExpression {
             default:
                 throw ADSQLExecutionError.syntaxError(message: "Function RANDOM takes between 0 and 2 parameters but received \(params).")
             }
+        case .compare:
+            try ensureParameterCount(equals: 3)
+            if let c1 = values[0] as? Bool {
+                if c1 {
+                    // Return the true value
+                    return values[1]
+                } else {
+                    // Return the false value
+                    return values[2]
+                }
+            }
         case .coalesce:
             for value in values {
                 if value != nil {

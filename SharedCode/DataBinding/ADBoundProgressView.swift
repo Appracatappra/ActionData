@@ -171,6 +171,86 @@ import Foundation
      */
     @IBInspectable public var hiddenPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the progress tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     myProgress.progressColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `progressColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var progressColorPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the track tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     myProgress.trackColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `trackColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var trackColorPath: String = ""
+    
     /// Provides a link to the `ADBoundViewController` that the control is bound to.
     public weak var controller: ADBoundViewController?
     
@@ -264,6 +344,67 @@ import Foundation
             isHidden = state
         } catch {
             print("BINDING ERROR: Unable to set progress view hidden state from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the progress color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the minimum track color from.
+     */
+    public func setProgressColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            progressTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set progress color from data path `\(progressColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets the track color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setTrackColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            trackTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set track color from data path `\(trackColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        // Set progress color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: progressColorPath, against: data) {
+                setProgressColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating progress color path `\(progressColorPath)`: \(error)")
+        }
+        
+        // Set track color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: trackColorPath, against: data) {
+                setTrackColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating track color path `\(trackColorPath)`: \(error)")
         }
     }
     

@@ -99,6 +99,9 @@ public enum ADSQLFunction: String {
     /// Handles an internal check operation.
     case check = "@check"
     
+    // MARK: - Custom Functions
+    case compare = "compare"
+    
     // MARK: - Initializers
     /**
      Attempts to return a function type for the given string value.

@@ -162,6 +162,126 @@ import Foundation
      */
     @IBInspectable public var hiddenPath: String = ""
     
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the on tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySwitch.onColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `onColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var onColorPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the off tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySwitch.offColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `offColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var offColorPath: String = ""
+    
+    /**
+     The name of the field from the date model or forumla (using SQL syntax) used to set the thumb tint color from.
+     
+     ## Example:
+     ```swift
+     // Given the following class
+     class Category: ADDataTable {
+     
+         enum CategoryType: String, Codable {
+             case local
+             case web
+         }
+     
+         static var tableName = "Categories"
+         static var primaryKey = "id"
+         static var primaryKeyType: ADDataTableKeyType = .computedInt
+     
+         var id = 0
+         var added = Date()
+         var name = ""
+         var description = ""
+         var enabled = true
+         var quantity = 0
+         var highlightColor = UIColor.white.toHex()
+         var type: CategoryType = .local
+         var icon: Data = UIImage().toData()
+     
+         required init() {
+     
+         }
+     }
+     
+     // Set the text color based on a formula.
+     mySwitch.thumbColorPath = "highlightColor"
+     ```
+     
+     - remark: The case and name of the field specified in the `thumbColorPath` property must match the case and name from the data model bound to the `ADBoundViewController`. Optionally, the value can be a forumla using a subset of the SQL syntax.
+     */
+    @IBInspectable public var thumbColorPath: String = ""
+    
     /// If `true` this switch cause the parent `ADBoundViewController` to update the form as the value changes.
     @IBInspectable public var liveUpdate: Bool = false
     
@@ -247,6 +367,94 @@ import Foundation
             isHidden = state
         } catch {
             print("BINDING ERROR: Unable to set switch hidden state from data path `\(dataPath)`.")
+        }
+    }
+    
+    /**
+     Sets the on color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the minimum track color from.
+     */
+    public func setOnColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            onTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set on color from data path `\(onColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets the off color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setOffColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            tintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set off color from data path `\(offColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets the thumb color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form `#RRGGBBAA`.
+     
+     - Parameter value: The value to set the text color from.
+     */
+    public func setThumbColor(_ value: Any) {
+        // Try to convert to needed value
+        do {
+            // Force the value to a boolean
+            let color = try ADUtilities.cast(value, to: .colorType) as! UIColor
+            thumbTintColor = color
+        } catch {
+            print("BINDING ERROR: Unable to set text color from data path `\(thumbColorPath)`.")
+        }
+    }
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+     */
+    public func setControlSpecificStates(against data: ADRecord) {
+        // Set on color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: onColorPath, against: data) {
+                setOnColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating minimum color path `\(onColorPath)`: \(error)")
+        }
+        
+        // Set off color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: offColorPath, against: data) {
+                setOffColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating maximum color path `\(offColorPath)`: \(error)")
+        }
+        
+        // Set thumb color
+        do {
+            // Attempt to get value for path
+            if let value = try ADBoundPathProcessor.evaluate(path: thumbColorPath, against: data) {
+                setThumbColor(value)
+            }
+        } catch {
+            // Output processing error
+            print("Error evaluating thumb color path `\(thumbColorPath)`: \(error)")
         }
     }
     

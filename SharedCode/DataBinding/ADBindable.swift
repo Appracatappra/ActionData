@@ -50,6 +50,13 @@ public protocol ADBindable {
      - Parameter value: The value to set the control to.
      */
     func setHiddenState(_ value: Any)
+    
+    /**
+     Sets any control specific bound states (such as colors) with the values from the given `ADRecord`.
+     
+     - Parameter data: The raw data to bind the additional states to.
+    */
+    func setControlSpecificStates(against data: ADRecord)
 
     /**
      Gets the value from the bound control in the native type that the control handles. For example: `String` for a `UITextField`.

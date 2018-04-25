@@ -61,6 +61,8 @@
 		2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B020811CA5007601FF /* ADBoundTextView.swift */; };
 		2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B2208120AF007601FF /* ADBoundWebView.swift */; };
 		2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */; };
+		2D87F335208F92B600393187 /* ADMaskedFormatPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */; };
+		2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */; };
 		2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7F02017DCB6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D92C7FF2017DCF6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7FD2017DCF6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D92C80C2017DD0A006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C80A2017DD0A006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -343,6 +345,8 @@
 		2D7706B020811CA5007601FF /* ADBoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextView.swift; sourceTree = "<group>"; };
 		2D7706B2208120AF007601FF /* ADBoundWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundWebView.swift; sourceTree = "<group>"; };
 		2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSegmentedControl.swift; sourceTree = "<group>"; };
+		2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedFormatPattern.swift; sourceTree = "<group>"; };
+		2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedStringFormatter.swift; sourceTree = "<group>"; };
 		2D92C7ED2017DCB6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D92C7F02017DCB6006598F3 /* ActionData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionData.h; sourceTree = "<group>"; };
 		2D92C7F12017DCB6006598F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -512,6 +516,8 @@
 			isa = PBXGroup;
 			children = (
 				2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */,
+				2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */,
+				2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1197,6 +1203,7 @@
 				2D92C95A2017E329006598F3 /* ADSQLColumnType.swift in Sources */,
 				2D92C93C2017E306006598F3 /* ADSQLInExpression.swift in Sources */,
 				2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */,
+				2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */,
 				2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
 				2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
 				2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */,
@@ -1227,6 +1234,7 @@
 				2D92C8882017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
 				2D92C82F2017E038006598F3 /* ADInstanceArray.swift in Sources */,
 				2D92C82E2017E038006598F3 /* ADEncodingStorage.swift in Sources */,
+				2D87F335208F92B600393187 /* ADMaskedFormatPattern.swift in Sources */,
 				2D92C8C92017E200006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C95B2017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
 				2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */,

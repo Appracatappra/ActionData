@@ -22,6 +22,9 @@ public enum ADSQLColumnType: String {
     /// Holds any Swift `String` value.
     case textType = "TEXT"
     
+    /// Holds a color definition as a text string in the form `#RRGGBBAA`.
+    case colorType = "COLOR"
+    
     /// Holds any Swift `Data` value. To store images, use the Action Utilities `toData()` method.
     case blobType = "BLOB"
     
@@ -61,6 +64,8 @@ public enum ADSQLColumnType: String {
             return .dateType
         case "bool", "boolean":
             return .boolType
+        case "color":
+            return .colorType
         default:
             // Not a known type
             return nil
@@ -92,6 +97,8 @@ public enum ADSQLColumnType: String {
             self = .dateType
         case "bool", "boolean":
             self = .boolType
+        case "color":
+            self = .colorType
         default:
             // Default to no type
             self = .noneType
