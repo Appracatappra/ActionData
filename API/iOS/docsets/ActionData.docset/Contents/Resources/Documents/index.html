@@ -31,6 +31,45 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/ADBoundImageView.html">ADBoundImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundLabel.html">ADBoundLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundPathProcessor.html">ADBoundPathProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundProgressView.html">ADBoundProgressView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSegmentedControl.html">ADBoundSegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSlider.html">ADBoundSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundStepper.html">ADBoundStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSwitch.html">ADBoundSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextField.html">ADBoundTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextPicker.html">ADBoundTextPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextView.html">ADBoundTextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundViewController.html">ADBoundViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundWebView.html">ADBoundWebView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ADColumnSchema.html">ADColumnSchema</a>
               </li>
               <li class="nav-group-task">
@@ -41,6 +80,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ADInstanceDictionary.html">ADInstanceDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADMaskedStringFormatter.html">ADMaskedStringFormatter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ADSPONDecoder.html">ADSPONDecoder</a>
@@ -159,7 +201,7 @@
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vv">SQLITE_DATE</a>
+                <a href="Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vvp">SQLITE_DATE</a>
               </li>
             </ul>
           </li>
@@ -171,6 +213,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ADDataTableKeyType.html">ADDataTableKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ADMaskedFormatPattern.html">ADMaskedFormatPattern</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ADSQLColumnType.html">ADSQLColumnType</a>
@@ -195,6 +240,9 @@
           <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ADBindable.html">ADBindable</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/ADDataCrossReference.html">ADDataCrossReference</a>
               </li>
@@ -327,6 +375,7 @@
 <p><strong>Action Data</strong> adds the following functionality:</p>
 
 <ul>
+<li><a href="#Action-Data-Binding">Action Data Binding</a> - Allows you to bind values from a data model (any class or structure that conforms to the <code>Codable</code> protocol) to a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> and the controller will automatically populate any control that conforms to the <code><a href="Protocols/ADBindable.html">ADBindable</a></code> protocol with the values from the model.</li>
 <li><a href="#Action-Codable">Action Codable</a> - Uses Swift 4&rsquo;s new <code>Codable</code>, <code>Encodable</code> and <code>Decodable</code> protocols to move information between your data models and our portable <code><a href="Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a></code> and <code><a href="Typealiases.html#/s:10ActionData11ADRecordSeta">ADRecordSet</a></code> formats.
 
 <ul>
@@ -334,6 +383,78 @@
 </ul></li>
 <li><a href="#Action-Data-Providers">Action Data Providers</a> - Provides light weight, low-level access and high-level <strong>Object Relationship Management</strong> (ORM) support to several common databases and data formats such as SQLite, JSON, XML, SPON and CloudKit.</li>
 <li><a href="#Action-SQL-Parser">Action SQL Parser</a> - Provides the ability to parse text containing one or more SQL commands into an <strong>Action Data SQL Document Object Model</strong> (DOM) and is used to provide SQL support for data sources that don&rsquo;t support SQL natively (such as CloudKit and JSON).</li>
+</ul>
+
+<p><a name="Action-Data-Binding"></a></p>
+<h2 id='action-data-binding' class='heading'>Action Data Binding</h2>
+
+<p>A <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> provides a method to attach it to a data model (any Swift class or structure that conforms to the <code>Codable</code> protocol) and any control conforming to the <code><a href="Protocols/ADBindable.html">ADBindable</a></code> protocol on any <strong>View</strong> or <strong>SubView</strong> will automatically be populated with the values from the data model based on the <code>dataPath</code> property of the control. The <code>dataPath</code> must match the name and case of a field on the attached data model or be a formula using a SQL like syntax.</p>
+
+<p>By using the <code>setDataModel</code> function to set the model and automatically populate the fields, you to not need to create <strong>Actions</strong> or <strong>Outlets</strong> for the individual controls. The <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> will automatically handle the reading and writing of properties for you.</p>
+
+<p>For any <code><a href="Protocols/ADBindable.html">ADBindable</a></code> control that is editable, calling the <code>getDataModel</code> function will return the values from the controls on the <strong>View</strong> and <strong>SubViews</strong>. These will be written to the field of the data model as specified by the <code>dataPath</code> property of the control, as a result, a formula should not be used for the <code>dataPath</code> of any field that is readable.</p>
+
+<p>For any field that requires onscreen keyboard support, the <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> will automatically handle keyboard events such as moving fields hidden by the keyboard so they are visible and moving them back after they lose focus. Accessory tools can be automatically added to the keyboard to move between the text entry fields and to close the keyboard based on options for each control. These buttons can be customized using the <code>prevButtonText</code>, <code>prevButtonImage</code>, <code>nextButtonText</code>, <code>nextButtonImage</code>, <code>doneButtonText</code> and <code>doneButtonImage</code> properties of the <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code>.</p>
+
+<p>The <code><a href="Classes/ADBoundTextPicker.html">ADBoundTextPicker</a></code> control has an embedded picker view that will be handled automatically by the <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> in a similar fashion as th onscreen keyboard. If the field is covered by the picker, it will be moved automatically to be shown and moved back when the picker is closed. An accessory toolbar will be added to the picker that can be customized with the <code>cancelButtonText</code>, <code>cancelButtonImage</code>, <code>doneButtonText</code> and <code>doneButtonImage</code> properties of the <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code>.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+     <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+         <span class="k">case</span> <span class="n">local</span>
+         <span class="k">case</span> <span class="n">web</span>
+     <span class="p">}</span>
+
+     <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+     <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+     <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+     <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+     <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+     <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+     <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+     <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+     <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+     <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+     <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+     <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+     <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Populate any control on the View with values from the data model</span>
+<span class="k">let</span> <span class="nv">category</span> <span class="o">=</span> <span class="kt">Category</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Swift File"</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="s">"A file containing swift source code."</span><span class="p">)</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="nf">setDataModel</span><span class="p">(</span><span class="n">category</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to set data model"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Read the vaules back from the controls</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">category</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">getDataModel</span><span class="p">(</span><span class="kt">Category</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Category Description: </span><span class="se">\(</span><span class="n">category</span><span class="o">.</span><span class="n">description</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Unable to read data model"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>The following bindable controls are available:</p>
+
+<ul>
+<li><strong>ADBoundLabel</strong> - Creates a label that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the label from or supply a formula in a SQL like syntax.</li>
+<li><strong>ADBoundTextField</strong> - Creates a text field that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text field from or use a formula in a SQL like syntax.</li>
+<li><strong>ADBoundSlider</strong> - Creates a slider that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the slider&rsquo;s value from or use a formula in a SQL like syntax.</li>
+<li><strong>ADBoundSwitch</strong> - Creates a switch that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the switch from or a formula in a SQL like syntax.</li>
+<li><strong>ADBoundProgressView</strong> - Creates a progress view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the progress from or a formula in a SQL like syntax.</li>
+<li><strong>ADBoundStepper</strong> - Creates a stepper that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the stepper&rsquo;s value from or a formula in a SQL like syntax.</li>
+<li><strong>ADBoundImageView</strong> - Creates an image view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the image view from or a formula in a SQL like syntax.</li>
+<li><strong>ADBoundTextView</strong> - Creates a text view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text view from or a formula in a SQL like syntax.</li>
+<li><strong>ADBoundWebView</strong> - Creates a web view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to use as the URL or the HTML data to display in the web view. Use the <code>containsHTML</code> property to decide if the <code>dataPath</code> contains a <code>URL</code> or <code>HTML</code> data.</li>
+<li><strong>ADBoundSegmentedControl</strong> - Creates a segmented control that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to select the segment from or use a formula in a SQL like syntax. Use the <code>byTitle</code> property to decide if the segment is selected by title or integer position.</li>
+<li><strong>ADBoundTextPicker</strong> - Creates a text field that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text field from or use a formula in a SQL like syntax. Includes a builtin picker control used to select the value from a list of available values.</li>
 </ul>
 
 <p><a name="Action-Codable"></a></p>
@@ -504,7 +625,7 @@ CREATE TABLE IF NOT EXISTS parts
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-03-16)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-04-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

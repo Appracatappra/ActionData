@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- User Interface controls that conform to this protocol can be added to a `ADBoundViewController` view and their value will be automatically set and returned to a data model conforming to the `Codable` protocol based on the field specified in the `dataPath` property.
+ User Interface controls that conform to this protocol can be added to a `ADBoundViewController` **Views** or **SubViews** and their values will be automatically set and returned to a data model conforming to the `Codable` protocol based on the field or formula in a SQL like syntax specified in the `dataPath` property.
  */
 public protocol ADBindable {
     
@@ -22,7 +22,7 @@ public protocol ADBindable {
     var hiddenPath: String {get set}
     
     /// Provides a link to the `ADBoundViewController` that the control is bound to.
-    var controller: ADBoundViewController? {get set}
+    var controller: ADBindingController? {get set}
     
     /// Provides a unique ID that is assigned to the control when it is bound to a `ADBoundViewController`.
     var formID: Int {get set}
@@ -31,21 +31,21 @@ public protocol ADBindable {
     var isMutable: Bool {get}
     
     /**
-     Populates the control with the given value. The value will automatically be case to the correct type for the given control.
+     Populates the control with the given value. The value will automatically be cast to the correct type for the given control.
      
      - Parameter value: The value to set the control to.
     */
     func setValue(_ value: Any)
     
     /**
-     Sets the enabled/disabled state of the control with the value of the field from the bound data model or forumla.
+     Sets the enabled/disabled state of the control with the value of the field from the bound data model or formula.
      
      - Parameter value: The value to set the control to.
     */
     func setEnabledState(_ value: Any)
     
     /**
-     Sets the visible state of the control with the value of the field from the bound data model or forumla.
+     Sets the visible state of the control with the value of the field from the bound data model or formula.
      
      - Parameter value: The value to set the control to.
      */

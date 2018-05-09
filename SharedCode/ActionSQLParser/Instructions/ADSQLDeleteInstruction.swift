@@ -17,6 +17,6 @@ public struct ADSQLDeleteInstruction: ADSQLInstruction {
     /// The name of the table that rows will be deleted from.
     public var tableName: String = ""
     
-    /// An optional WHERE clause used to determine the rows of the table to delete. If `nil` all rows in thetable will be deleted.
+    /// An optional WHERE clause used to determine the rows of the table to delete. If `nil` all rows in the table will be deleted.
     public var whereExpression: ADSQLExpression?
 }

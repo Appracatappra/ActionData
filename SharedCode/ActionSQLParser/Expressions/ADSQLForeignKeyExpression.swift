@@ -49,7 +49,7 @@ public class ADSQLForeignKeyExpression: ADSQLExpression {
     /// A list of columns that compose the key.
     public var columnNames: [String] = []
     
-    /// If `true`, the foreign key is modified when the parent row is modified.
+    /// The action to take when the foreign key is modified when the parent row is modified.
     public var onModify = OnModify.ignore
     
     /// The action to take when modifying a foreign key value.

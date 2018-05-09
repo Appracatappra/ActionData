@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADBoundTextPicker Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ADBoundTextPicker" class="dashAnchor"></a>
+    <a title="ADBoundTextPicker Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ActionData Docs</a> (83% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra%2Ecom%2Fapi%2Factiondata%2Fios%2Fdocsets%2FActionData%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ActionData Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ADBoundTextPicker Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundImageView.html">ADBoundImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundLabel.html">ADBoundLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundPathProcessor.html">ADBoundPathProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundProgressView.html">ADBoundProgressView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSegmentedControl.html">ADBoundSegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSlider.html">ADBoundSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundStepper.html">ADBoundStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSwitch.html">ADBoundSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextField.html">ADBoundTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextPicker.html">ADBoundTextPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextView.html">ADBoundTextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundViewController.html">ADBoundViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundWebView.html">ADBoundWebView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADColumnSchema.html">ADColumnSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADDataStore.html">ADDataStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADInstanceArray.html">ADInstanceArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADInstanceDictionary.html">ADInstanceDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADMaskedStringFormatter.html">ADMaskedStringFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder.html">ADSPONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder/DateDecodingStrategy.html">– DateDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder/DataDecodingStrategy.html">– DataDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder.html">ADSPONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONProvider.html">ADSPONProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBetweenExpression.html">ADSQLBetweenExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBinaryExpression.html">ADSQLBinaryExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBinaryExpression/BinaryOperation.html">– BinaryOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLCaseExpression.html">ADSQLCaseExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder.html">ADSQLDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder/DateDecodingStrategy.html">– DateDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder/DataDecodingStrategy.html">– DataDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder.html">ADSQLEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLExpressionBuilder.html">ADSQLExpressionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression.html">ADSQLForeignKeyExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression/OnModify.html">– OnModify</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression/ModifyAction.html">– ModifyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLFunctionExpression.html">ADSQLFunctionExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLInExpression.html">ADSQLInExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLJoinClause.html">ADSQLJoinClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLJoinClause/JoinType.html">– JoinType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLLiteralExpression.html">ADSQLLiteralExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLParser.html">ADSQLParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLUnaryExpression.html">ADSQLUnaryExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLUnaryExpression/UnaryOperation.html">– UnaryOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLWhenExpression.html">ADSQLWhenExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLiteProvider.html">ADSQLiteProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADTableSchema.html">ADTableSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADTableStore.html">ADTableStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities.html">ADUtilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities/Comparison.html">– Comparison</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities/Operation.html">– Operation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppracatappraLicenseManager.html">AppracatappraLicenseManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vvp">SQLITE_DATE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ADDataProviderError.html">ADDataProviderError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADDataTableKeyType.html">ADDataTableKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADMaskedFormatPattern.html">ADMaskedFormatPattern</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLColumnType.html">ADSQLColumnType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLConflictHandling.html">ADSQLConflictHandling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLExecutionError.html">ADSQLExecutionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLFunction.html">ADSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLKeyword.html">ADSQLKeyword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLParseError.html">ADSQLParseError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ADBindable.html">ADBindable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataCrossReference.html">ADDataCrossReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataProvider.html">ADDataProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataTable.html">ADDataTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADSQLExpression.html">ADSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10ActionData16ADSQLInstructionP">ADSQLInstruction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ADCrossReference.html">ADCrossReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLAlterTableInstruction.html">ADSQLAlterTableInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnConstraint.html">ADSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnConstraint/ColumnConstraintType.html">– ColumnConstraintType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnDefinition.html">ADSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateIndexInstruction.html">ADSQLCreateIndexInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTableInstruction.html">ADSQLCreateTableInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction.html">ADSQLCreateTriggerInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction/WhenToTrigger.html">– WhenToTrigger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction/TriggerType.html">– TriggerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateViewInstruction.html">ADSQLCreateViewInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDeleteInstruction.html">ADSQLDeleteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDropInstruction.html">ADSQLDropInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDropInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLInsertInstruction.html">ADSQLInsertInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLInsertInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLOrderByClause.html">ADSQLOrderByClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLOrderByClause/Order.html">– Order</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLResultColumn.html">ADSQLResultColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLSelectInstruction.html">ADSQLSelectInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLSetClause.html">ADSQLSetClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTableConstraint.html">ADSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTableConstraint/TableConstraintType.html">– TableConstraintType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTransactionInstruction.html">ADSQLTransactionInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTransactionInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLUpdateInstruction.html">ADSQLUpdateInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLUpdateInstruction/Action.html">– Action</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10ActionData11ADRecordSeta">ADRecordSet</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ADBoundTextPicker</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Creates a text field that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text field from or use a formula in a SQL like syntax. Includes a builtin picker control used to select the value from a list of available values.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"name"</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Computed%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Computed Properties" class="dashAnchor"></a>
+                <a href="#/Computed%20Properties">
+                  <h3 class="section-name">Computed Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)dataPath"></a>
+                    <a name="//apple_ref/swift/Property/dataPath" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)dataPath">dataPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the field from the date model or formula (in the SQL syntax) used to populate the value from.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"name"</span>
+</code></pre>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    The case and name of the field specified in the <code>dataPath</code> property must match the case and name from the data model bound to the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code>. Optionally, the value can be a forumla using a subset of the SQL syntax.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">dataPath</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)title"></a>
+                    <a name="//apple_ref/swift/Property/title" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)title">title</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the title that is displayed over the picker view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)optionValues"></a>
+                    <a name="//apple_ref/swift/Property/optionValues" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)optionValues">optionValues</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines a comma separated list of options that will be displayed in the attached picker controller for the user to select from. Updating this property will automatically update the <code><a href="../Classes/ADBoundTextPicker.html#/s:10ActionData17ADBoundTextPickerC10optionListSaySSGvp">optionList</a></code> property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">optionValues</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)enabledPath"></a>
+                    <a name="//apple_ref/swift/Property/enabledPath" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)enabledPath">enabledPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the field from the date model or forumla (using SQL syntax) used to set the enabled state from.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the text field to the enabled field</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">enabledPath</span> <span class="o">=</span> <span class="s">"enabled"</span>
+</code></pre>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    The case and name of the field specified in the <code>enabledPath</code> property must match the case and name from the data model bound to the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code>. Optionally, the value can be a forumla using a subset of the SQL syntax.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">enabledPath</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)hiddenPath"></a>
+                    <a name="//apple_ref/swift/Property/hiddenPath" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)hiddenPath">hiddenPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the field from the date model or forumla (using SQL syntax) used to set the hidden state from.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">quantity</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Set the hidden state based on a formula.</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">hiddenPath</span> <span class="o">=</span> <span class="s">"quantity &gt; 0"</span>
+</code></pre>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    The case and name of the field specified in the <code>hiddenPath</code> property must match the case and name from the data model bound to the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code>. Optionally, the value can be a forumla using a subset of the SQL syntax.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">hiddenPath</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)colorPath"></a>
+                    <a name="//apple_ref/swift/Property/colorPath" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)colorPath">colorPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the field from the date model or forumla (using SQL syntax) used to set the text color from.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">quantity</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Set the text color based on a formula.</span>
+<span class="n">myTextPicker</span><span class="o">.</span><span class="n">colorPath</span> <span class="o">=</span> <span class="s">"highlightColor"</span>
+</code></pre>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    The case and name of the field specified in the <code>colorPath</code> property must match the case and name from the data model bound to the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code>. Optionally, the value can be a forumla using a subset of the SQL syntax.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">colorPath</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)liveUpdate"></a>
+                    <a name="//apple_ref/swift/Property/liveUpdate" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(py)liveUpdate">liveUpdate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>true</code> this text view cause the parent <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code> to update the form when the value changes. Works with the <code>onEndEdit</code> property, if it&rsquo;s <code>true</code> the change will only be sent when the user finishes editing the field, else the change will be sent on individual character changes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBInspectable</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">liveUpdate</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC10controllerAA0C14ViewControllerCSgXwvp"></a>
+                    <a name="//apple_ref/swift/Property/controller" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC10controllerAA0C14ViewControllerCSgXwvp">controller</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides a link to the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code> that the control is bound to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">controller</span><span class="p">:</span> <span class="kt"><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC6formIDSivp"></a>
+                    <a name="//apple_ref/swift/Property/formID" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC6formIDSivp">formID</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provides a unique ID that is assigned to the control when it is bound to a <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code>.</p>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    You should never set or change this number yourself, this value will be managed by the <code><a href="../Classes/ADBoundViewController.html">ADBoundViewController</a></code> and is used to handle form and keyboard events.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">formID</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC9isMutableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isMutable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC9isMutableSbvp">isMutable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the value of the control can be edited by the user, else returns <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isMutable</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC10optionListSaySSGvp"></a>
+                    <a name="//apple_ref/swift/Property/optionList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC10optionListSaySSGvp">optionList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gets or sets the list of options that will be displayed in the picker view when the users edits the field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">optionList</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">"One"</span><span class="p">,</span> <span class="s">"Two"</span><span class="p">,</span> <span class="s">"Three"</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)initWithCoder:"></a>
+                    <a name="//apple_ref/swift/Method/init(coder:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)initWithCoder:">init(coder:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions"></a>
+                <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
+                <a href="#/Functions">
+                  <h3 class="section-name">Functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC8setValueyypF"></a>
+                    <a name="//apple_ref/swift/Method/setValue(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC8setValueyypF">setValue(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the value of the text field from the given value. If the value is an <code>Int</code> or <code>Float</code> it will be converted to a string. If the value is a <code>Bool</code> it will be converted to the string values of <code>true</code> or <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to set the text field to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC15setEnabledStateyypF"></a>
+                    <a name="//apple_ref/swift/Method/setEnabledState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC15setEnabledStateyypF">setEnabledState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the enabled state of the control from the given value. If the value is an <code>Int</code> or <code>Float</code>, <code>0</code> and <code>1</code> will be converted to <code>false</code> and <code>true</code>. If the value is a <code>String</code>, <q>yes</q>, <q>on</q>, <q>true</q>, <q>1</q> will be converted to <code>true</code>, all other values will result in <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setEnabledState</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to set the enabled state from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC14setHiddenStateyypF"></a>
+                    <a name="//apple_ref/swift/Method/setHiddenState(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC14setHiddenStateyypF">setHiddenState(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the hidden state of the control from the given value. If the value is an <code>Int</code> or <code>Float</code>, <code>0</code> and <code>1</code> will be converted to <code>false</code> and <code>true</code>. If the value is a <code>String</code>, <q>yes</q>, <q>on</q>, <q>true</q>, <q>1</q> will be converted to <code>true</code>, all other values will result in <code>false</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setHiddenState</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to set the enabled state from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC03setD5ColoryypF"></a>
+                    <a name="//apple_ref/swift/Method/setTextColor(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC03setD5ColoryypF">setTextColor(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets the text color from the given value. If the value is a string, this routine will assume it holds a hex color specification in the form <code>#RRGGBBAA</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setTextColor</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to set the text color from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC24setControlSpecificStatesys10DictionaryVySSypG7against_tF"></a>
+                    <a name="//apple_ref/swift/Method/setControlSpecificStates(against:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC24setControlSpecificStatesys10DictionaryVySSypG7against_tF">setControlSpecificStates(against:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets any control specific bound states (such as colors) with the values from the given <code><a href="../Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setControlSpecificStates</span><span class="p">(</span><span class="n">against</span> <span class="nv">data</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The raw data to bind the additional states to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData17ADBoundTextPickerC8getValueypyF"></a>
+                    <a name="//apple_ref/swift/Method/getValue()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData17ADBoundTextPickerC8getValueypyF">getValue()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the value of the text field.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The value of the text Field as a <code>String</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Text%20View%20Delegate%20Functions"></a>
+                <a name="//apple_ref/swift/Section/Text View Delegate Functions" class="dashAnchor"></a>
+                <a href="#/Text%20View%20Delegate%20Functions">
+                  <h3 class="section-name">Text View Delegate Functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldBeginEditing:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldShouldBeginEditing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldBeginEditing:">textFieldShouldBeginEditing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidBeginEditing:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldDidBeginEditing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidBeginEditing:">textFieldDidBeginEditing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidEndEditing:reason:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldDidEndEditing(_:reason:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidEndEditing:reason:">textFieldDidEndEditing(_:reason:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldEndEditing:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldShouldEndEditing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldEndEditing:">textFieldShouldEndEditing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidEndEditing:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldDidEndEditing(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldDidEndEditing:">textFieldDidEndEditing(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textField:shouldChangeCharactersInRange:replacementString:"></a>
+                    <a name="//apple_ref/swift/Method/textField(_:shouldChangeCharactersIn:replacementString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textField:shouldChangeCharactersInRange:replacementString:">textField(_:shouldChangeCharactersIn:replacementString:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldClear:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldShouldClear(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldClear:">textFieldShouldClear(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldReturn:"></a>
+                    <a name="//apple_ref/swift/Method/textFieldShouldReturn(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)textFieldShouldReturn:">textFieldShouldReturn(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Picker%20Data%20Source%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Picker Data Source Delegate" class="dashAnchor"></a>
+                <a href="#/Picker%20Data%20Source%20Delegate">
+                  <h3 class="section-name">Picker Data Source Delegate</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)numberOfComponentsInPickerView:"></a>
+                    <a name="//apple_ref/swift/Method/numberOfComponents(in:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)numberOfComponentsInPickerView:">numberOfComponents(in:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:numberOfRowsInComponent:"></a>
+                    <a name="//apple_ref/swift/Method/pickerView(_:numberOfRowsInComponent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:numberOfRowsInComponent:">pickerView(_:numberOfRowsInComponent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:titleForRow:forComponent:"></a>
+                    <a name="//apple_ref/swift/Method/pickerView(_:titleForRow:forComponent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:titleForRow:forComponent:">pickerView(_:titleForRow:forComponent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Picker%20View%20Delegate"></a>
+                <a name="//apple_ref/swift/Section/Picker View Delegate" class="dashAnchor"></a>
+                <a href="#/Picker%20View%20Delegate">
+                  <h3 class="section-name">Picker View Delegate</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:didSelectRow:inComponent:"></a>
+                    <a name="//apple_ref/swift/Method/pickerView(_:didSelectRow:inComponent:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker(im)pickerView:didSelectRow:inComponent:">pickerView(_:didSelectRow:inComponent:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-04-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

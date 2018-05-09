@@ -23,7 +23,7 @@ public struct ADSQLColumnDefinition {
     /// The type of information stored in the column as defined by a `ADSQLColumnType`.
     public var type: ADSQLColumnType = .noneType
     
-    /// A list of optional constraints for the column
+    /// A list of optional constraints for the column.
     public var constraints: [ADSQLColumnConstraint] = []
     
     // MARK: - Initializers

@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/SharedCode/ActionSQLParser/Enumerations/ADSQLFunction.swift",
+      "line": 103,
+      "symbol": "ADSQLFunction.compare",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/SharedCode/ActionSQLParser/Enumerations/ADSQLKeyword.swift",
       "line": 13,
       "symbol": "ADSQLKeyword.abortKey",

@@ -1,6 +1,286 @@
 {
   "warnings": [
     {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundImageView.swift",
+      "line": 221,
+      "symbol": "ADBoundImageView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundProgressView.swift",
+      "line": 297,
+      "symbol": "ADBoundProgressView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundSegmentedControl.swift",
+      "line": 226,
+      "symbol": "ADBoundSegmentedControl.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundSlider.swift",
+      "line": 305,
+      "symbol": "ADBoundSlider.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundStepper.swift",
+      "line": 225,
+      "symbol": "ADBoundStepper.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundSwitch.swift",
+      "line": 303,
+      "symbol": "ADBoundSwitch.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 252,
+      "symbol": "ADBoundTextField.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 482,
+      "symbol": "ADBoundTextField.textFieldShouldBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 496,
+      "symbol": "ADBoundTextField.textFieldDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 503,
+      "symbol": "ADBoundTextField.textFieldDidEndEditing(_:reason:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 512,
+      "symbol": "ADBoundTextField.textFieldShouldEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 516,
+      "symbol": "ADBoundTextField.textFieldDidEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 525,
+      "symbol": "ADBoundTextField.textField(_:shouldChangeCharactersIn:replacementString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 537,
+      "symbol": "ADBoundTextField.textFieldShouldClear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextField.swift",
+      "line": 541,
+      "symbol": "ADBoundTextField.textFieldShouldReturn(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 255,
+      "symbol": "ADBoundTextPicker.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 441,
+      "symbol": "ADBoundTextPicker.textFieldShouldBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 452,
+      "symbol": "ADBoundTextPicker.textFieldDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 471,
+      "symbol": "ADBoundTextPicker.textFieldDidEndEditing(_:reason:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 475,
+      "symbol": "ADBoundTextPicker.textFieldShouldEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 479,
+      "symbol": "ADBoundTextPicker.textFieldDidEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 483,
+      "symbol": "ADBoundTextPicker.textField(_:shouldChangeCharactersIn:replacementString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 489,
+      "symbol": "ADBoundTextPicker.textFieldShouldClear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 493,
+      "symbol": "ADBoundTextPicker.textFieldShouldReturn(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 498,
+      "symbol": "ADBoundTextPicker.numberOfComponents(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 502,
+      "symbol": "ADBoundTextPicker.pickerView(_:numberOfRowsInComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 506,
+      "symbol": "ADBoundTextPicker.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextPicker.swift",
+      "line": 513,
+      "symbol": "ADBoundTextPicker.pickerView(_:didSelectRow:inComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 235,
+      "symbol": "ADBoundTextView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 432,
+      "symbol": "ADBoundTextView.textViewShouldBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 446,
+      "symbol": "ADBoundTextView.textViewDidBeginEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 453,
+      "symbol": "ADBoundTextView.textViewShouldEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 457,
+      "symbol": "ADBoundTextView.textViewDidEndEditing(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 466,
+      "symbol": "ADBoundTextView.textView(_:shouldChangeTextIn:replacementText:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 470,
+      "symbol": "ADBoundTextView.textViewDidChange(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 479,
+      "symbol": "ADBoundTextView.textViewDidChangeSelection(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 483,
+      "symbol": "ADBoundTextView.textView(_:shouldInteractWith:in:interaction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundTextView.swift",
+      "line": 487,
+      "symbol": "ADBoundTextView.textView(_:shouldInteractWith:in:interaction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/ActionData iOS/DataBinding/ADBoundWebView.swift",
+      "line": 190,
+      "symbol": "ADBoundWebView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/SharedCode/ActionSQLParser/Enumerations/ADSQLFunction.swift",
+      "line": 103,
+      "symbol": "ADSQLFunction.compare",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/kmullins/Xcode Projects/GitHub/ActionData/SharedCode/ActionSQLParser/Enumerations/ADSQLKeyword.swift",
       "line": 13,
       "symbol": "ADSQLKeyword.abortKey",

@@ -271,7 +271,7 @@
 									<key>PATH_TYPE</key>
 									<integer>0</integer>
 									<key>PERMISSIONS</key>
-									<integer>493</integer>
+									<integer>1005</integer>
 									<key>TYPE</key>
 									<integer>1</integer>
 									<key>UID</key>
@@ -443,7 +443,7 @@
 				<key>TREAT_MISSING_FILES_AS_WARNING</key>
 				<false/>
 				<key>VERSION</key>
-				<integer>4</integer>
+				<integer>5</integer>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -463,12 +463,14 @@
 				<false/>
 				<key>PAYLOAD_SIZE</key>
 				<integer>-1</integer>
+				<key>REFERENCE_PATH</key>
+				<string></string>
 				<key>RELOCATABLE</key>
 				<false/>
 				<key>USE_HFS+_COMPRESSION</key>
 				<false/>
 				<key>VERSION</key>
-				<string>01.01.00</string>
+				<string>01.02.00</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
@@ -742,7 +744,7 @@
 									<key>PATH_TYPE</key>
 									<integer>0</integer>
 									<key>PERMISSIONS</key>
-									<integer>493</integer>
+									<integer>1005</integer>
 									<key>TYPE</key>
 									<integer>1</integer>
 									<key>UID</key>
@@ -914,7 +916,7 @@
 				<key>TREAT_MISSING_FILES_AS_WARNING</key>
 				<false/>
 				<key>VERSION</key>
-				<integer>4</integer>
+				<integer>5</integer>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -934,6 +936,8 @@
 				<false/>
 				<key>PAYLOAD_SIZE</key>
 				<integer>-1</integer>
+				<key>REFERENCE_PATH</key>
+				<string></string>
 				<key>RELOCATABLE</key>
 				<false/>
 				<key>USE_HFS+_COMPRESSION</key>
@@ -1160,6 +1164,15 @@
 					</dict>
 				</array>
 			</dict>
+		</dict>
+		<key>PROJECT_REQUIREMENTS</key>
+		<dict>
+			<key>LIST</key>
+			<array/>
+			<key>RESOURCES</key>
+			<array/>
+			<key>ROOT_VOLUME_ONLY</key>
+			<false/>
 		</dict>
 		<key>PROJECT_SETTINGS</key>
 		<dict>

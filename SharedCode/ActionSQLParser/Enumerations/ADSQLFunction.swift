@@ -100,6 +100,7 @@ public enum ADSQLFunction: String {
     case check = "@check"
     
     // MARK: - Custom Functions
+    /// Performs a comparison and returns one value if the comparison is `true` and another if it is `false`.
     case compare = "compare"
     
     // MARK: - Initializers

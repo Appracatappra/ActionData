@@ -52,6 +52,13 @@
 		2D18FC5F205C0DB2001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		2D18FC61205C0DC0001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */; };
 		2D18FC66205C0DED001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */; };
+		2D23420A209B51810034FDC6 /* ADValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234209209B51810034FDC6 /* ADValidatable.swift */; };
+		2D234214209B831C0034FDC6 /* ADBoundTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234213209B831C0034FDC6 /* ADBoundTableSection.swift */; };
+		2D234216209B87690034FDC6 /* ADBindingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234215209B87690034FDC6 /* ADBindingController.swift */; };
+		2D234218209B90300034FDC6 /* ADBoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234217209B90300034FDC6 /* ADBoundTableViewController.swift */; };
+		2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */; };
+		2D23421C209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */; };
+		2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */; };
 		2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */; };
 		2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */; };
 		2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */; };
@@ -312,13 +319,10 @@
 		2DCC5C52201B69F0003D221C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C51201B69F0003D221C /* Group.swift */; };
 		2DCC5C54201B6B20003D221C /* SPONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C53201B6B20003D221C /* SPONTests.swift */; };
 		2DE9F44B207FCC7400180131 /* ADBoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */; };
-		2DE9F44C207FCC7400180131 /* ADBoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */; };
 		2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44D207FD6B000180131 /* ADBindable.swift */; };
-		2DE9F44F207FD6B000180131 /* ADBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44D207FD6B000180131 /* ADBindable.swift */; };
 		2DE9F48E207FE95600180131 /* ADBoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F48D207FE95600180131 /* ADBoundLabel.swift */; };
-		2DE9F48F207FE95600180131 /* ADBoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F48D207FE95600180131 /* ADBoundLabel.swift */; };
 		2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F490207FF47900180131 /* ADBoundTextField.swift */; };
-		2DE9F492207FF47900180131 /* ADBoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F490207FF47900180131 /* ADBoundTextField.swift */; };
+		2DFAF694209CA76C003C0A06 /* ADBoundTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAF693209CA76C003C0A06 /* ADBoundTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -336,6 +340,13 @@
 		2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/iOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/tvOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/macOS/ActionUtilities.framework; sourceTree = "<group>"; };
+		2D234209209B51810034FDC6 /* ADValidatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADValidatable.swift; sourceTree = "<group>"; };
+		2D234213209B831C0034FDC6 /* ADBoundTableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableSection.swift; sourceTree = "<group>"; };
+		2D234215209B87690034FDC6 /* ADBindingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingController.swift; sourceTree = "<group>"; };
+		2D234217209B90300034FDC6 /* ADBoundTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewController.swift; sourceTree = "<group>"; };
+		2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewCell.swift; sourceTree = "<group>"; };
+		2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewDataSource.swift; sourceTree = "<group>"; };
+		2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingDataSource.swift; sourceTree = "<group>"; };
 		2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSlider.swift; sourceTree = "<group>"; };
 		2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSwitch.swift; sourceTree = "<group>"; };
 		2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundProgressView.swift; sourceTree = "<group>"; };
@@ -471,6 +482,7 @@
 		2DE9F44D207FD6B000180131 /* ADBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindable.swift; sourceTree = "<group>"; };
 		2DE9F48D207FE95600180131 /* ADBoundLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundLabel.swift; sourceTree = "<group>"; };
 		2DE9F490207FF47900180131 /* ADBoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextField.swift; sourceTree = "<group>"; };
+		2DFAF693209CA76C003C0A06 /* ADBoundTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +564,7 @@
 		2D92C7EF2017DCB6006598F3 /* ActionData iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2DE1C4192092379C00B85FB2 /* DataBinding */,
 				2D92C7F02017DCB6006598F3 /* ActionData.h */,
 				2D92C7F12017DCB6006598F3 /* Info.plist */,
 			);
@@ -860,11 +873,10 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		2DE9F449207FCC4F00180131 /* DataBinding */ = {
+		2DE1C4192092379C00B85FB2 /* DataBinding */ = {
 			isa = PBXGroup;
 			children = (
 				2DE9F44A207FCC7400180131 /* ADBoundViewController.swift */,
-				2DE9F44D207FD6B000180131 /* ADBindable.swift */,
 				2DE9F48D207FE95600180131 /* ADBoundLabel.swift */,
 				2DE9F490207FF47900180131 /* ADBoundTextField.swift */,
 				2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */,
@@ -876,7 +888,23 @@
 				2D7706B2208120AF007601FF /* ADBoundWebView.swift */,
 				2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */,
 				2D71E314208A4EC300E0C68E /* ADBoundTextPicker.swift */,
+				2D234217209B90300034FDC6 /* ADBoundTableViewController.swift */,
+				2DFAF693209CA76C003C0A06 /* ADBoundTableView.swift */,
+				2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */,
+				2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */,
+			);
+			path = DataBinding;
+			sourceTree = "<group>";
+		};
+		2DE9F449207FCC4F00180131 /* DataBinding */ = {
+			isa = PBXGroup;
+			children = (
+				2D234215209B87690034FDC6 /* ADBindingController.swift */,
+				2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */,
+				2DE9F44D207FD6B000180131 /* ADBindable.swift */,
 				2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */,
+				2D234209209B51810034FDC6 /* ADValidatable.swift */,
+				2D234213209B831C0034FDC6 /* ADBoundTableSection.swift */,
 			);
 			path = DataBinding;
 			sourceTree = "<group>";
@@ -1204,7 +1232,9 @@
 				2D92C93C2017E306006598F3 /* ADSQLInExpression.swift in Sources */,
 				2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */,
 				2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */,
+				2D234218209B90300034FDC6 /* ADBoundTableViewController.swift in Sources */,
 				2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
+				2D23421C209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift in Sources */,
 				2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
 				2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */,
 				2DE9F44B207FCC7400180131 /* ADBoundViewController.swift in Sources */,
@@ -1213,6 +1243,7 @@
 				2D92C8AA2017E1C4006598F3 /* ADUtilities.swift in Sources */,
 				2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */,
 				2D92C8732017E11A006598F3 /* ADSPONReferencingEncoder.swift in Sources */,
+				2D23420A209B51810034FDC6 /* ADValidatable.swift in Sources */,
 				2D92C8482017E084006598F3 /* ADSQLEncoder.swift in Sources */,
 				2D92C8EB2017E2CF006598F3 /* ADSQLResultColumn.swift in Sources */,
 				2D92C8302017E038006598F3 /* ADInstanceDictionary.swift in Sources */,
@@ -1237,13 +1268,16 @@
 				2D87F335208F92B600393187 /* ADMaskedFormatPattern.swift in Sources */,
 				2D92C8C92017E200006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C95B2017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
+				2D234214209B831C0034FDC6 /* ADBoundTableSection.swift in Sources */,
 				2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */,
 				2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */,
 				2D92C9142017E2E8006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
+				2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */,
 				2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */,
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
+				2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */,
 				2D92C90A2017E2E8006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
 				2D92C90D2017E2E8006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,
 				2D92C95D2017E329006598F3 /* ADSQLKeyword.swift in Sources */,
@@ -1254,6 +1288,7 @@
 				2D92C84B2017E084006598F3 /* ADSQLSingleValueEncodingContainer.swift in Sources */,
 				2D92C8E92017E2CF006598F3 /* ADSQLOrderByClause.swift in Sources */,
 				2D92C8722017E11A006598F3 /* ADSPONKeyedEncodingContainer.swift in Sources */,
+				2D234216209B87690034FDC6 /* ADBindingController.swift in Sources */,
 				2D92C8492017E084006598F3 /* ADSQLKeyedEncodingContainer.swift in Sources */,
 				2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */,
 				2D92C8992017E1A5006598F3 /* ADSQLiteProvider.swift in Sources */,
@@ -1262,6 +1297,7 @@
 				2D92C8DA2017E2AD006598F3 /* ADSQLParser.swift in Sources */,
 				2D92C9112017E2E8006598F3 /* ADSQLInsertInstruction.swift in Sources */,
 				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
+				2DFAF694209CA76C003C0A06 /* ADBoundTableView.swift in Sources */,
 				2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */,
 				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
 				2D71E315208A4EC300E0C68E /* ADBoundTextPicker.swift in Sources */,
@@ -1276,7 +1312,6 @@
 				2D92C88A2017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
 				2D92C8632017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8AB2017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
-				2DE9F48F207FE95600180131 /* ADBoundLabel.swift in Sources */,
 				2D92C8F52017E2CF006598F3 /* ADSQLTableConstraint.swift in Sources */,
 				2D92C91E2017E2E9006598F3 /* ADSQLTransaction.swift in Sources */,
 				2D92C8602017E0D6006598F3 /* ADSQLDecoder.swift in Sources */,
@@ -1287,7 +1322,6 @@
 				2D92C9172017E2E9006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
 				2D92C9442017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8792017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
-				2DE9F44F207FD6B000180131 /* ADBindable.swift in Sources */,
 				2D92C8EE2017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
 				2D92C8AE2017E1C4006598F3 /* ADTableSchema.swift in Sources */,
 				2D92C8512017E085006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
@@ -1303,7 +1337,6 @@
 				2D92C8AD2017E1C4006598F3 /* ADDataStore.swift in Sources */,
 				2D92C8EF2017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
 				2D92C8C02017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
-				2DE9F44C207FCC7400180131 /* ADBoundViewController.swift in Sources */,
 				2D92C8F42017E2CF006598F3 /* ADSQLSetClause.swift in Sources */,
 				2D92C8332017E038006598F3 /* ADDecodingStorage.swift in Sources */,
 				2D92C8B02017E1C4006598F3 /* ADUtilities.swift in Sources */,
@@ -1328,7 +1361,6 @@
 				2D92C8CC2017E201006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C9602017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
 				2D92C9492017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
-				2DE9F492207FF47900180131 /* ADBoundTextField.swift in Sources */,
 				2D92C91F2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
 				2D92C9632017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,

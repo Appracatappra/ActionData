@@ -31,6 +31,45 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Classes/ADBoundImageView.html">ADBoundImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundLabel.html">ADBoundLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundPathProcessor.html">ADBoundPathProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundProgressView.html">ADBoundProgressView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSegmentedControl.html">ADBoundSegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSlider.html">ADBoundSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundStepper.html">ADBoundStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundSwitch.html">ADBoundSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextField.html">ADBoundTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextPicker.html">ADBoundTextPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundTextView.html">ADBoundTextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundViewController.html">ADBoundViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADBoundWebView.html">ADBoundWebView</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ADColumnSchema.html">ADColumnSchema</a>
               </li>
               <li class="nav-group-task">
@@ -41,6 +80,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ADInstanceDictionary.html">ADInstanceDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ADMaskedStringFormatter.html">ADMaskedStringFormatter</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ADSPONDecoder.html">ADSPONDecoder</a>
@@ -159,7 +201,7 @@
             <a href="Global Variables.html">Global Variables</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vv">SQLITE_DATE</a>
+                <a href="Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vvp">SQLITE_DATE</a>
               </li>
             </ul>
           </li>
@@ -171,6 +213,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ADDataTableKeyType.html">ADDataTableKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ADMaskedFormatPattern.html">ADMaskedFormatPattern</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/ADSQLColumnType.html">ADSQLColumnType</a>
@@ -195,6 +240,9 @@
           <li class="nav-group-name">
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/ADBindable.html">ADBindable</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Protocols/ADDataCrossReference.html">ADDataCrossReference</a>
               </li>
@@ -356,6 +404,68 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundLabel"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundLabel">ADBoundLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a label that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the label from or supply a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"name"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundLabel.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10ActionData12ADSQLDecoderC"></a>
                     <a name="//apple_ref/swift/Class/ADSQLDecoder" class="dashAnchor"></a>
                     <a class="token" href="#/s:10ActionData12ADSQLDecoderC">ADSQLDecoder</a>
@@ -416,6 +526,69 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADSQLDecoder</span><span class="p">:</span> <span class="kt">Decoder</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundSlider"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundSlider" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundSlider">ADBoundSlider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a slider that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the slider&rsquo;s value from or use a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">percentage</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the slider to the percentage field</span>
+<span class="n">mySlider</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"percentage"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundSlider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundSlider</span><span class="p">:</span> <span class="kt">UISlider</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -791,6 +964,205 @@ CREATE TABLE IF NOT EXISTS parts
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterC"></a>
+                    <a name="//apple_ref/swift/Class/ADMaskedStringFormatter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterC">ADMaskedStringFormatter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>ADMaskedStringFormatter</code> takes a formatting string and applies it as a mask to a given string value. For example, applying format string <code>(###) ###-####</code> to <code>8085551212</code> would result in <code>(808) 555-1212</code>. A <code>ADMaskedStringFormatter</code> can also be used to remove a format from a string, using the example above, given <code>(808) 555-1212</code> would result in <code>8085551212</code>.</p>
+<h2 id='supported-format-characters' class='heading'>Supported Format Characters</h2>
+
+<ul>
+<li><strong>#</strong> - An optional number (0-9). If a number is available at the current character location, the number is emitted, else a space (<code></code>) will be emitted.</li>
+<li><strong>0</strong> - A fixed number (0-9). If a number is available at the current character location, the number is emitted, else a zero (<code>0</code>) will be emitted.</li>
+<li><strong>X</strong> - An uppercased letter (A-Z). If a letter is available, it will be converted to upper case and emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>x</strong> - A lowercased letter (a-z). If a letter is available, it will be converted to lower case and emitted, else a space (<code></code>) is emitted.</li>
+<li>***** - Any letter (A-Z or a-z). If a letter is available, it will be emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>_</strong> - Any character. No matter what the character is, it will be emitted as-is.</li>
+<li>*<em>\*</em> - Escapes the next character and includes it in the formatted output. Use <code>\\</code> to include a <code>\\</code>, <code>#</code>, <code>0</code>, <code>X</code>, <code>x</code>, <code>*</code> or <code>_</code> character in the output.</li>
+</ul>
+
+<p>Any other character in the format string will be output as-is in the formatted string.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/ADMaskedStringFormatter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADMaskedStringFormatter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundStepper"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundStepper" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundStepper">ADBoundStepper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a stepper that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the stepper&rsquo;s value from or a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">percentage</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the stepper to the percentage field</span>
+<span class="n">myStepper</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"percentage"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundStepper.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundStepper</span><span class="p">:</span> <span class="kt">UIStepper</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundViewController"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundViewController">ADBoundViewController</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>ADBoundViewController</code> provides a method to attach it to a data model (any Swift class or structure that conforms to the <code>Codable</code> protocol) and any control conforming to the <code><a href="Protocols/ADBindable.html">ADBindable</a></code> protocol on any <strong>View</strong> or <strong>SubView</strong> will automatically be populated with the values from the data model based on the <code>dataPath</code> property of the control. The <code>dataPath</code> must match the name and case of a field on the attached data model or be a formula using a SQL like syntax.</p>
+
+<p>By using the <code>setDataModel</code> function to set the model and automatically populate the fields, you to not need to create <strong>Actions</strong> or <strong>Outlets</strong> for the individual controls. The <code>ADBoundViewController</code> will automatically handle the reading and writing of properties for you.</p>
+
+<p>For any <code><a href="Protocols/ADBindable.html">ADBindable</a></code> control that is editable, calling the <code>getDataModel</code> function will return the values from the controls on the <strong>View</strong> and <strong>SubViews</strong>. These will be written to the field of the data model as specified by the <code>dataPath</code> property of the control, as a result, a formula should not be used for the <code>dataPath</code> of any field that is readable.</p>
+
+<p>For any field that requires onscreen keyboard support, the <code>ADBoundViewController</code> will automatically handle keyboard events such as moving fields hidden by the keyboard so they are visible and moving them back after they lose focus. Accessory tools can be automatically added to the keyboard to move between the text entry fields and to close the keyboard based on options for each control. These buttons can be customized using the <code>prevButtonText</code>, <code>prevButtonImage</code>, <code>nextButtonText</code>, <code>nextButtonImage</code>, <code>doneButtonText</code> and <code>doneButtonImage</code> properties of the <code>ADBoundViewController</code>.</p>
+
+<p>The <code><a href="Classes/ADBoundTextPicker.html">ADBoundTextPicker</a></code> control has an embedded picker view that will be handled automatically by the <code>ADBoundViewController</code> in a similar fashion as th onscreen keyboard. If the field is covered by the picker, it will be moved automatically to be shown and moved back when the picker is closed. An accessory toolbar will be added to the picker that can be customized with the <code>cancelButtonText</code>, <code>cancelButtonImage</code>, <code>doneButtonText</code> and <code>doneButtonImage</code> properties of the <code>ADBoundViewController</code>.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Populate any control on the View with values from the data model</span>
+<span class="k">let</span> <span class="nv">category</span> <span class="o">=</span> <span class="kt">Category</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Swift File"</span><span class="p">,</span> <span class="nv">description</span><span class="p">:</span> <span class="s">"A file containing swift source code."</span><span class="p">)</span>
+<span class="k">do</span> <span class="p">{</span>
+   <span class="k">try</span> <span class="nf">setDataModel</span><span class="p">(</span><span class="n">category</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+   <span class="nf">print</span><span class="p">(</span><span class="s">"Failed to set data model"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Read the vaules back from the controls</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">category</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">getDataModel</span><span class="p">(</span><span class="kt">Category</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Category Description: </span><span class="se">\(</span><span class="n">category</span><span class="o">.</span><span class="n">description</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+   <span class="nf">print</span><span class="p">(</span><span class="s">"Unable to read data model"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundViewController.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundViewController</span><span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10ActionData11ADUtilitiesC"></a>
                     <a name="//apple_ref/swift/Class/ADUtilities" class="dashAnchor"></a>
                     <a class="token" href="#/s:10ActionData11ADUtilitiesC">ADUtilities</a>
@@ -810,6 +1182,69 @@ CREATE TABLE IF NOT EXISTS parts
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADUtilities</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundWebView"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundWebView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundWebView">ADBoundWebView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a web view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to use as the URL or the HTML data to display in the web view. Use the <code>containsHTML</code> property to decide if the <code>dataPath</code> contains a <code>URL</code> or <code>HTML</code> data.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">url</span> <span class="o">=</span> <span class="s">"http://google.com"</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the web view to the url field</span>
+<span class="n">myWebView</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"url"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundWebView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundWebView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -942,6 +1377,68 @@ CREATE TABLE IF NOT EXISTS parts
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundSegmentedControl"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundSegmentedControl" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundSegmentedControl">ADBoundSegmentedControl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a segmented control that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to select the segment from or use a formula in a SQL like syntax. Use the <code>byTitle</code> property to decide if the segment is selected by title or integer position.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the segemented control to the type field</span>
+<span class="n">mySegment</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"type"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundSegmentedControl.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundSegmentedControl</span><span class="p">:</span> <span class="kt">UISegmentedControl</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10ActionData14ADSPONProviderC"></a>
                     <a name="//apple_ref/swift/Class/ADSPONProvider" class="dashAnchor"></a>
                     <a class="token" href="#/s:10ActionData14ADSPONProviderC">ADSPONProvider</a>
@@ -1060,6 +1557,71 @@ CREATE TABLE IF NOT EXISTS parts
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10ActionData20ADBoundPathProcessorC"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundPathProcessor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData20ADBoundPathProcessorC">ADBoundPathProcessor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>ADBoundPathProcessor</code> evaluates a given <strong>Value Path</strong> from a <code><a href="Protocols/ADBindable.html">ADBindable</a></code> control against an <code><a href="Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a></code> and returns the result of the valuation. The <strong>Value Path</strong> can be either the name of a field from the record or a formula in a syntax simular to a SQL <code>SELECT</code> or <code>WHERE</code> clause.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myLabel</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"'Category: ' + name"</span>
+
+<span class="c1">// Get the value of the path</span>
+<span class="k">let</span> <span class="nv">value</span>  <span class="o">=</span> <span class="kt">ADBoundPathProcessor</span><span class="o">.</span><span class="nf">evaluate</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="n">myLabel</span><span class="o">.</span><span class="n">dataPath</span><span class="p">,</span> <span class="nv">against</span><span class="p">:</span> <span class="n">myBoundViewController</span><span class="o">.</span><span class="n">record</span><span class="p">)</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundPathProcessor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADBoundPathProcessor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10ActionData15ADSQLJoinClauseC"></a>
                     <a name="//apple_ref/swift/Class/ADSQLJoinClause" class="dashAnchor"></a>
                     <a class="token" href="#/s:10ActionData15ADSQLJoinClauseC">ADSQLJoinClause</a>
@@ -1079,6 +1641,131 @@ CREATE TABLE IF NOT EXISTS parts
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADSQLJoinClause</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundProgressView"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundProgressView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundProgressView">ADBoundProgressView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a progress view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the progress from or a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">percentage</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the progress to the percentage field</span>
+<span class="n">myProgress</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"percentage"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundProgressView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundProgressView</span><span class="p">:</span> <span class="kt">UIProgressView</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundImageView"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundImageView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundImageView">ADBoundImageView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an image view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the image view from or a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the image view to the icon field</span>
+<span class="n">myImage</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"icon"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundImageView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundImageView</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1160,6 +1847,130 @@ CREATE TABLE IF NOT EXISTS parts
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADSQLWhenExpression</span><span class="p">:</span> <span class="kt"><a href="Protocols/ADSQLExpression.html">ADSQLExpression</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextField"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundTextField" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextField">ADBoundTextField</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a text field that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text field from or use a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"name"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundTextField.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextView"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundTextView" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextView">ADBoundTextView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a text view that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text view from or a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the text view to the description field</span>
+<span class="n">myTextView</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"description"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundTextView.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextView</span><span class="p">:</span> <span class="kt">UITextView</span><span class="p">,</span> <span class="kt">UITextViewDelegate</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1403,6 +2214,130 @@ CREATE TABLE IF NOT EXISTS parts
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundSwitch"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundSwitch" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundSwitch">ADBoundSwitch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a switch that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the switch from or a formula in a SQL like syntax.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the switch to the enabled field</span>
+<span class="n">mySwitch</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"enabled"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundSwitch.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">@IBDesignable</span> <span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundSwitch</span><span class="p">:</span> <span class="kt">UISwitch</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@ActionData@objc(cs)ADBoundTextPicker"></a>
+                    <a name="//apple_ref/swift/Class/ADBoundTextPicker" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@ActionData@objc(cs)ADBoundTextPicker">ADBoundTextPicker</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a text field that can be bound to a value from a data model that conforms to the <code>Codable</code> protocol when placed on a <code><a href="Classes/ADBoundViewController.html">ADBoundViewController</a></code> view. Use the <code>dataPath</code> property to specify the field from the bound data model to populate the text field from or use a formula in a SQL like syntax. Includes a builtin picker control used to select the value from a list of available values.</p>
+<h2 id='example' class='heading'>Example:</h2>
+<pre class="highlight swift"><code><span class="c1">// Given the following class</span>
+<span class="kd">class</span> <span class="kt">Category</span><span class="p">:</span> <span class="kt">ADDataTable</span> <span class="p">{</span>
+
+    <span class="kd">enum</span> <span class="kt">CategoryType</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">Codable</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">local</span>
+        <span class="k">case</span> <span class="n">web</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">tableName</span> <span class="o">=</span> <span class="s">"Categories"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKey</span> <span class="o">=</span> <span class="s">"id"</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">primaryKeyType</span><span class="p">:</span> <span class="kt">ADDataTableKeyType</span> <span class="o">=</span> <span class="o">.</span><span class="n">computedInt</span>
+
+    <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">var</span> <span class="nv">added</span> <span class="o">=</span> <span class="kt">Date</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">name</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">""</span>
+    <span class="k">var</span> <span class="nv">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="k">var</span> <span class="nv">highlightColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span><span class="o">.</span><span class="nf">toHex</span><span class="p">()</span>
+    <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">CategoryType</span> <span class="o">=</span> <span class="o">.</span><span class="n">local</span>
+    <span class="k">var</span> <span class="nv">icon</span><span class="p">:</span> <span class="kt">Data</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span><span class="o">.</span><span class="nf">toData</span><span class="p">()</span>
+
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Bind the label to the name field</span>
+<span class="n">myTextField</span><span class="o">.</span><span class="n">dataPath</span> <span class="o">=</span> <span class="s">"name"</span>
+</code></pre>
+
+                        <a href="Classes/ADBoundTextPicker.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ADBoundTextPicker</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="kt">UITextFieldDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDelegate</span><span class="p">,</span> <span class="kt">UIPickerViewDataSource</span><span class="p">,</span> <span class="kt"><a href="Protocols/ADBindable.html">ADBindable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10ActionData12ADTableStoreC"></a>
                     <a name="//apple_ref/swift/Class/ADTableStore" class="dashAnchor"></a>
                     <a class="token" href="#/s:10ActionData12ADTableStoreC">ADTableStore</a>
@@ -1438,7 +2373,7 @@ CREATE TABLE IF NOT EXISTS parts
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-03-16)</p>
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-04-26)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

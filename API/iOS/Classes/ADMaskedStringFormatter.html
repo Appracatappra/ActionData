@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ADMaskedStringFormatter Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/ADMaskedStringFormatter" class="dashAnchor"></a>
+    <a title="ADMaskedStringFormatter Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">ActionData Docs</a> (83% documented)</p>
+        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fappracatappra%2Ecom%2Fapi%2Factiondata%2Fios%2Fdocsets%2FActionData%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">ActionData Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        ADMaskedStringFormatter Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundImageView.html">ADBoundImageView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundLabel.html">ADBoundLabel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundPathProcessor.html">ADBoundPathProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundProgressView.html">ADBoundProgressView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSegmentedControl.html">ADBoundSegmentedControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSlider.html">ADBoundSlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundStepper.html">ADBoundStepper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundSwitch.html">ADBoundSwitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextField.html">ADBoundTextField</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextPicker.html">ADBoundTextPicker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundTextView.html">ADBoundTextView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundViewController.html">ADBoundViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADBoundWebView.html">ADBoundWebView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADColumnSchema.html">ADColumnSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADDataStore.html">ADDataStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADInstanceArray.html">ADInstanceArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADInstanceDictionary.html">ADInstanceDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADMaskedStringFormatter.html">ADMaskedStringFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder.html">ADSPONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder/DateDecodingStrategy.html">– DateDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONDecoder/DataDecodingStrategy.html">– DataDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder.html">ADSPONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSPONProvider.html">ADSPONProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBetweenExpression.html">ADSQLBetweenExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBinaryExpression.html">ADSQLBinaryExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLBinaryExpression/BinaryOperation.html">– BinaryOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLCaseExpression.html">ADSQLCaseExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder.html">ADSQLDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder/DateDecodingStrategy.html">– DateDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLDecoder/DataDecodingStrategy.html">– DataDecodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder.html">ADSQLEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLExpressionBuilder.html">ADSQLExpressionBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression.html">ADSQLForeignKeyExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression/OnModify.html">– OnModify</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLForeignKeyExpression/ModifyAction.html">– ModifyAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLFunctionExpression.html">ADSQLFunctionExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLInExpression.html">ADSQLInExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLJoinClause.html">ADSQLJoinClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLJoinClause/JoinType.html">– JoinType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLLiteralExpression.html">ADSQLLiteralExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLParser.html">ADSQLParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLUnaryExpression.html">ADSQLUnaryExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLUnaryExpression/UnaryOperation.html">– UnaryOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLWhenExpression.html">ADSQLWhenExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADSQLiteProvider.html">ADSQLiteProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADTableSchema.html">ADTableSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADTableStore.html">ADTableStore</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities.html">ADUtilities</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities/Comparison.html">– Comparison</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ADUtilities/Operation.html">– Operation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AppracatappraLicenseManager.html">AppracatappraLicenseManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:10ActionData11SQLITE_DATEs5Int32Vvp">SQLITE_DATE</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ADDataProviderError.html">ADDataProviderError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADDataTableKeyType.html">ADDataTableKeyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADMaskedFormatPattern.html">ADMaskedFormatPattern</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLColumnType.html">ADSQLColumnType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLConflictHandling.html">ADSQLConflictHandling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLExecutionError.html">ADSQLExecutionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLFunction.html">ADSQLFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLKeyword.html">ADSQLKeyword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ADSQLParseError.html">ADSQLParseError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ADBindable.html">ADBindable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataCrossReference.html">ADDataCrossReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataProvider.html">ADDataProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADDataTable.html">ADDataTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ADSQLExpression.html">ADSQLExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10ActionData16ADSQLInstructionP">ADSQLInstruction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ADCrossReference.html">ADCrossReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLAlterTableInstruction.html">ADSQLAlterTableInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnConstraint.html">ADSQLColumnConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnConstraint/ColumnConstraintType.html">– ColumnConstraintType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLColumnDefinition.html">ADSQLColumnDefinition</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateIndexInstruction.html">ADSQLCreateIndexInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTableInstruction.html">ADSQLCreateTableInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction.html">ADSQLCreateTriggerInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction/WhenToTrigger.html">– WhenToTrigger</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateTriggerInstruction/TriggerType.html">– TriggerType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLCreateViewInstruction.html">ADSQLCreateViewInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDeleteInstruction.html">ADSQLDeleteInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDropInstruction.html">ADSQLDropInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLDropInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLInsertInstruction.html">ADSQLInsertInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLInsertInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLOrderByClause.html">ADSQLOrderByClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLOrderByClause/Order.html">– Order</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLResultColumn.html">ADSQLResultColumn</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLSelectInstruction.html">ADSQLSelectInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLSetClause.html">ADSQLSetClause</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTableConstraint.html">ADSQLTableConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTableConstraint/TableConstraintType.html">– TableConstraintType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTransactionInstruction.html">ADSQLTransactionInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLTransactionInstruction/Action.html">– Action</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLUpdateInstruction.html">ADSQLUpdateInstruction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ADSQLUpdateInstruction/Action.html">– Action</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10ActionData8ADRecorda">ADRecord</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10ActionData11ADRecordSeta">ADRecordSet</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>ADMaskedStringFormatter</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ADMaskedStringFormatter</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>ADMaskedStringFormatter</code> takes a formatting string and applies it as a mask to a given string value. For example, applying format string <code>(###) ###-####</code> to <code>8085551212</code> would result in <code>(808) 555-1212</code>. A <code>ADMaskedStringFormatter</code> can also be used to remove a format from a string, using the example above, given <code>(808) 555-1212</code> would result in <code>8085551212</code>.</p>
+<h2 id='supported-format-characters' class='heading'>Supported Format Characters</h2>
+
+<ul>
+<li><strong>#</strong> - An optional number (0-9). If a number is available at the current character location, the number is emitted, else a space (<code></code>) will be emitted.</li>
+<li><strong>0</strong> - A fixed number (0-9). If a number is available at the current character location, the number is emitted, else a zero (<code>0</code>) will be emitted.</li>
+<li><strong>X</strong> - An uppercased letter (A-Z). If a letter is available, it will be converted to upper case and emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>x</strong> - A lowercased letter (a-z). If a letter is available, it will be converted to lower case and emitted, else a space (<code></code>) is emitted.</li>
+<li>***** - Any letter (A-Z or a-z). If a letter is available, it will be emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>_</strong> - Any character. No matter what the character is, it will be emitted as-is.</li>
+<li>*<em>\*</em> - Escapes the next character and includes it in the formatted output. Use <code>\\</code> to include a <code>\\</code>, <code>#</code>, <code>0</code>, <code>X</code>, <code>x</code>, <code>*</code> or <code>_</code> character in the output.</li>
+</ul>
+
+<p>Any other character in the format string will be output as-is in the formatted string.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Computed%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Computed Properties" class="dashAnchor"></a>
+                <a href="#/Computed%20Properties">
+                  <h3 class="section-name">Computed Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterC06formatD0SSvp"></a>
+                    <a name="//apple_ref/swift/Property/formatString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterC06formatD0SSvp">formatString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines the mask that will be applied to a given string to create the formatted output.</p>
+<h2 id='supported-format-characters' class='heading'>Supported Format Characters</h2>
+
+<ul>
+<li><strong>#</strong> - An optional number (0-9). If a number is available at the current character location, the number is emitted, else a space (<code></code>) will be emitted.</li>
+<li><strong>0</strong> - A fixed number (0-9). If a number is available at the current character location, the number is emitted, else a zero (<code>0</code>) will be emitted.</li>
+<li><strong>X</strong> - An uppercased letter (A-Z). If a letter is available, it will be converted to upper case and emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>x</strong> - A lowercased letter (a-z). If a letter is available, it will be converted to lower case and emitted, else a space (<code></code>) is emitted.</li>
+<li>***** - Any letter (A-Z or a-z). If a letter is available, it will be emitted, else a space (<code></code>) is emitted.</li>
+<li><strong>_</strong> - Any character. No matter what the character is, it will be emitted as-is.</li>
+<li>*<em>\*</em> - Escapes the next character and includes it in the formatted output. Use <code>\\</code> to include a <code>\\</code>, <code>#</code>, <code>0</code>, <code>X</code>, <code>x</code>, <code>*</code> or <code>_</code> character in the output.</li>
+</ul>
+
+<p>Any other character in the format string will be output as-is in the formatted string.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">formatString</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterC17validForLastInputSbvp"></a>
+                    <a name="//apple_ref/swift/Property/validForLastInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterC17validForLastInputSbvp">validForLastInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the input string given to the <code>applyFormat</code> function can be properly formatted against the pattern in the <code><a href="../Classes/ADMaskedStringFormatter.html#/s:10ActionData23ADMaskedStringFormatterC06formatD0SSvp">formatString</a></code> property.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">valid</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">validForLastInput</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">validForLastInput</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterCACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterCACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a new instance of the <code>ADMaskedStringFormatter</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions"></a>
+                <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
+                <a href="#/Functions">
+                  <h3 class="section-name">Functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterC11applyFormatS2S2to_tF"></a>
+                    <a name="//apple_ref/swift/Method/applyFormat(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterC11applyFormatS2S2to_tF">applyFormat(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Applies the <code><a href="../Classes/ADMaskedStringFormatter.html#/s:10ActionData23ADMaskedStringFormatterC06formatD0SSvp">formatString</a></code> to the given string to return a formatted string.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">valid</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">validForLastInput</span>
+</code></pre>
+<div class="aside aside-remark">
+    <p class="aside-title">Remark</p>
+    <p>Sets the <code><a href="../Classes/ADMaskedStringFormatter.html#/s:10ActionData23ADMaskedStringFormatterC17validForLastInputSbvp">validForLastInput</a></code> to <code>true</code> if the format was successfully applied, else it is set to <code>false</code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">applyFormat</span><span class="p">(</span><span class="n">to</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to format.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The given string with the format applied to it.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10ActionData23ADMaskedStringFormatterC12removeFormatS2S4from_tF"></a>
+                    <a name="//apple_ref/swift/Method/removeFormat(from:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10ActionData23ADMaskedStringFormatterC12removeFormatS2S4from_tF">removeFormat(from:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Strips the format specified in the <code><a href="../Classes/ADMaskedStringFormatter.html#/s:10ActionData23ADMaskedStringFormatterC06formatD0SSvp">formatString</a></code> property from the given string and returns the unformatted value.</p>
+<h2 id='example' class='heading'>Example</h2>
+<pre class="highlight swift"><code><span class="c1">// Configure formatter</span>
+<span class="k">let</span> <span class="nv">formatter</span> <span class="o">=</span> <span class="kt">ADMaskedStringFormatter</span><span class="p">()</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">formatString</span> <span class="o">=</span> <span class="s">"(###) ###-####"</span>
+
+<span class="c1">// Convert output</span>
+<span class="k">let</span> <span class="nv">output</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">applyFormat</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="s">"8085551212"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">valid</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">validForLastInput</span>
+
+<span class="c1">// Strip format</span>
+<span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="nf">removeFormat</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="n">output</span><span class="p">)</span>
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeFormat</span><span class="p">(</span><span class="n">from</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>text</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The value to remove the formatting from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The input string with the formatting removed.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external">Appracatappra, LLC</a>. All rights reserved. (Last updated: 2018-04-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
