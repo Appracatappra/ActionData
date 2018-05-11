@@ -46,6 +46,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8020A4D90400045146 /* ADBindingDetailController.swift */; };
+		2D008D8320A4DE8A00045146 /* ADBoundTableViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */; };
 		2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
 		2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
 		2D08FBF220519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
@@ -336,6 +338,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D008D8020A4D90400045146 /* ADBindingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingDetailController.swift; sourceTree = "<group>"; };
+		2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewDetailController.swift; sourceTree = "<group>"; };
 		2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppracatappraLicenseManager.swift; sourceTree = "<group>"; };
 		2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/iOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/tvOS/ActionUtilities.framework; sourceTree = "<group>"; };
@@ -892,6 +896,7 @@
 				2DFAF693209CA76C003C0A06 /* ADBoundTableView.swift */,
 				2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */,
 				2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */,
+				2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */,
 			);
 			path = DataBinding;
 			sourceTree = "<group>";
@@ -900,6 +905,7 @@
 			isa = PBXGroup;
 			children = (
 				2D234215209B87690034FDC6 /* ADBindingController.swift */,
+				2D008D8020A4D90400045146 /* ADBindingDetailController.swift */,
 				2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */,
 				2DE9F44D207FD6B000180131 /* ADBindable.swift */,
 				2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */,
@@ -1275,6 +1281,7 @@
 				2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */,
 				2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */,
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
+				2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */,
 				2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
 				2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */,
@@ -1299,6 +1306,7 @@
 				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
 				2DFAF694209CA76C003C0A06 /* ADBoundTableView.swift in Sources */,
 				2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */,
+				2D008D8320A4DE8A00045146 /* ADBoundTableViewDetailController.swift in Sources */,
 				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
 				2D71E315208A4EC300E0C68E /* ADBoundTextPicker.swift in Sources */,
 				2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */,

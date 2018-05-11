@@ -323,17 +323,17 @@ open class ADBoundViewController: UIViewController, ADBindingController {
                 
                 // Add the control to the collection of known controls
                 controls.append(boundControl)
-                
-                // Check for any sub controls
-                scanView(view)
             }
+            
+            // Check for any sub controls
+            scanView(view)
         }
     }
     
     /**
      Takes the values from the `record` property and writes them to any control in the `controls` array where the `dataPath` matches the name of a key from the `record` dictionary.
     */
-    private func setBoundValues() {
+    internal func setBoundValues() {
         // Process all controls
         for control in controls {
             // Set value
@@ -377,7 +377,7 @@ open class ADBoundViewController: UIViewController, ADBindingController {
     /**
      Reads the value of any editable control in the `controls` array into the `record` property where the `dataPath` matches a key in the `record` dictionary.
     */
-    private func getBoundValues() {
+    internal func getBoundValues() {
         // Process all controls
         for control in controls {
             // Can the controls value be edited?

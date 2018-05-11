@@ -44,7 +44,7 @@ import WebKit
  myWebView.dataPath = "url"
  ```
  */
-@IBDesignable open class ADBoundWebView: WKWebView, ADBindable {
+open class ADBoundWebView: WKWebView, ADBindable {
     
     // MARK: - Private Variables
     /// Contains the URL or the raw HTML being displayed

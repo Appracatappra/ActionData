@@ -66,6 +66,12 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
     /// If `true`, the data source is currently providing filtered results based on a user search.
     private var insideOfSearch = false
     
+    /// Saves the last search term.
+    private var lastSearchTerm = ""
+    
+    /// Saves the last search scope.
+    private var lastSearchScope = ""
+    
     // MARK: - Computed Properties
     /**
      Provides the data for the `ADBoundTableViewDataSource` as an array of Swfit objects conforming to the `Codeable` protocol.
@@ -158,12 +164,22 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
         if buildBoundCell {
             // Attempt to retrieve a Bound Table View Cell first
             if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? ADBoundTableViewCell {
+                // Link to new cell
+                cell.dataSource = self
+                cell.indexPath = index
+                
                 // Return new cell
                 return cell
             }
             
             // Create generic bound cell
             let cell = ADBoundTableViewCell(style: .default, reuseIdentifier: reuseIdentifier)
+            
+            // Link to new cell
+            cell.dataSource = self
+            cell.indexPath = index
+            
+            // Return new cell
             return cell
         } else {
             // Attempt to retrieve a generic cell first
@@ -272,6 +288,14 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
     }
     
     /**
+     Reruns the last search filter.
+    */
+    public func filterData() {
+        // Reruns the last filter
+        filterData(onSearchText: lastSearchTerm, scope: lastSearchScope)
+    }
+    
+    /**
      Filters the data displayed in the Bound Table based on the field (specified by the `searchPath` property of the `ADBoundTableView`) containing the given search text and being within the optional scope.
      
      - Parameters:
@@ -281,6 +305,10 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
     public func filterData(onSearchText text: String, scope: String = "") {
         // Clear section data
         sections = [:]
+        
+        // Save the last search criteria
+        lastSearchTerm = text
+        lastSearchScope = scope
         
         // Are we attached to a bound view?
         if let boundTableView = parentTableView {
@@ -360,6 +388,122 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
         
         // Filtering data
         insideOfSearch = true
+    }
+    
+    /**
+     Retrieves any edits to the data representing a Swift object being handled by this Data Source.
+     
+     - Parameter cell: The `ADBoundTableViewCell` holding the edited record.
+     */
+    public func retrieveEditedRecord(from entity: ADBindingController & ADBindingDetailController) {
+        
+        // Handle any errors
+        do {
+            // Pull the edited data back into an object
+            let item = try entity.getDataModel(T.self)
+            
+            // Get reference to index path
+            if let indexPath = entity.indexPath {
+                // Are we attached to a bound view?
+                if let boundTableView = parentTableView {
+                    // Is the table using grouping?
+                    if boundTableView.groupData || insideOfSearch {
+                        // Convert keys to array
+                        let keyArray = [String](sections.keys)
+                        
+                        // Get the section
+                        let section = sections[keyArray[indexPath.section]]!
+                        
+                        // Get the row in the source data
+                        let row = section.index[indexPath.row]
+                        
+                        // Replace the source row with the new data
+                        data[row] = item
+                        
+                        // Do we need to reload?
+                        if entity.forceReload {
+                            // Yes
+                            if insideOfSearch {
+                                filterData()
+                            } else {
+                                reloadData()
+                            }
+                        }
+                        
+                        // Finished
+                        return
+                    }
+                }
+                
+                // Default to replacing source data directly
+                data[indexPath.row] = item
+                
+                // Do we need to reload?
+                if entity.forceReload {
+                    // Yes
+                    if insideOfSearch {
+                        filterData()
+                    } else {
+                        reloadData()
+                    }
+                }
+            } else {
+                // Adding new record
+                data.append(item)
+                
+                // We have to force a refresh here since a new item has been added.
+                if insideOfSearch {
+                    filterData()
+                } else {
+                    reloadData()
+                }
+            }
+        } catch {
+            // Log error
+            print("Unable to retrieve edited record from cell at \(String(describing: entity.indexPath)): \(error)")
+        }
+    }
+    
+    /**
+     Returns the raw record for the given index path.
+     
+     - Parameter indexPath: The path to the data to return the record for.
+     
+     - Returns: The `ADRecord` representation of the data for the given path.
+     */
+    public func retrieveRecord(for indexPath: IndexPath) -> ADRecord {
+        var row = indexPath.row
+        
+        // Trap any errors
+        do {
+            // Are we attached to a bound view?
+            if let boundTableView = parentTableView {
+                // Is the table using grouping?
+                if boundTableView.groupData || insideOfSearch {
+                    // Convert keys to array
+                    let keyArray = [String](sections.keys)
+                    
+                    // Get the section
+                    let section = sections[keyArray[indexPath.section]]!
+                    
+                    // Get the row in the source data
+                    row = section.index[indexPath.row]
+                }
+            }
+            
+            // Convert the data to a model
+            let model = try encoder.encode(data[row])
+            if let data = model as? ADRecord {
+                // Return converted data
+                return data
+            }
+        } catch {
+            // Log error
+            print("Unable to retrieve record for index: \(indexPath)")
+        }
+        
+        // Unable to convert model, return empty record
+        return [:]
     }
     
     /**
@@ -522,5 +666,165 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
         
         // Default to the raw data count
         return data.count
+    }
+    
+    /**
+     Tests if the given cell can be deleted from the given table view.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - indexPath: The path to the row to edit.
+     
+     - Returns: `true` if the cell can be deleted, else returns `false`.
+    */
+    public func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        
+        // Are we attached to a bound view?
+        if let boundTableView = parentTableView {
+         // Do we allow for deleting?
+            return boundTableView.canDeleteRows
+        }
+        
+        // Default to no
+        return false
+    }
+    
+    /**
+     Sets the editing style for the given row in the given table view.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - indexPath: The path to the row to edit.
+     
+     - Returns: `none` if the row does not support editing or `delete` if it does.
+     
+     - Remark: The `ADBoundTableViewDataSource` currently only supports deleting and not inserting rows.
+    */
+    public func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        
+        // Are we attached to a bound view?
+        if let boundTableView = parentTableView {
+            // Do we allow rows to be deleted?
+            return boundTableView.canDeleteRows ? UITableViewCellEditingStyle.delete : UITableViewCellEditingStyle.none
+        }
+        
+        // Default to nothing
+        return UITableViewCellEditingStyle.none
+    }
+    
+    /**
+     Handles the editing of a given row in a given table view.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - editingStyle: The type of edit that is being performed.
+     - indexPath: The path to the row being edited.
+     
+     - Remark: The `ADBoundTableViewDataSource` currently only supports deleting and not inserting rows.
+    */
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Take action based o nthe editing style
+        switch editingStyle {
+        case .delete:
+            // Are we attached to a bound view?
+            if let boundTableView = parentTableView {
+                // Is the table using grouping?
+                if boundTableView.groupData || insideOfSearch {
+                    // Convert keys to array
+                    let keyArray = [String](sections.keys)
+                    
+                    // Get the section containing the data reference
+                    if let section = sections[keyArray[indexPath.section]] {
+                        // Get the index at the given section
+                        let index = section.index[indexPath.row]
+                        
+                        // Remove the source data
+                        data.remove(at: index)
+                        
+                        // Finish deletion
+                        reloadData()
+                        return
+                    }
+                }
+            }
+            
+            // Default to removing source data
+            data.remove(at: indexPath.row)
+            
+            // Finish deletion
+            reloadData()
+        default:
+            // Ignore all other cases
+            break
+        }
+    }
+    
+    /**
+     Tests if the given row can be moved inside of the given table view.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - indexPath: The path to the row to move.
+     
+     - Returns: `true` if the row can be moved, else `false`.
+    */
+    public func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        
+        // Are we attached to a bound view?
+        if let boundTableView = parentTableView {
+            // Do we allow for moving rows?
+            return boundTableView.canReorderRows
+        }
+        
+        // Default to no
+        return false
+    }
+    
+    /**
+     Moves a row from one location to another within a the given table.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - sourceIndexPath: The path to the row to move.
+     - destinationIndexPath: The path to move the row to.
+    */
+    public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        // Are we attached to a bound view?
+        if let boundTableView = parentTableView {
+            // Is the table using grouping?
+            if boundTableView.groupData || insideOfSearch {
+                // Convert keys to array
+                let keyArray = [String](sections.keys)
+                
+                // Get the section to swap locations from and the indexes to the real data
+                let sourceSection = sections[keyArray[sourceIndexPath.section]]!
+                let sourceIndex = sourceSection.index[sourceIndexPath.row]
+                
+                let destinationSection = sections[keyArray[destinationIndexPath.section]]!
+                let destinationIndex = destinationSection.index[destinationIndexPath.row]
+                
+                // Swap data locations
+                let temp = data[sourceIndex]
+                data.remove(at: sourceIndex)
+                data.insert(temp, at: destinationIndex)
+                
+                // Did we move data between sections?
+                if sourceIndexPath.section != destinationIndexPath.section {
+                    // Yes, we need to force the data source to reload
+                    reloadData()
+                }
+                
+                // Finished
+                return
+            }
+        }
+        
+        // Default to swapping source data
+        let temp = data[sourceIndexPath.row]
+        data.remove(at: sourceIndexPath.row)
+        data.insert(temp, at: destinationIndexPath.row)
     }
 }

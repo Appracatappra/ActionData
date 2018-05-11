@@ -42,7 +42,7 @@ import Foundation
  mySegment.dataPath = "type"
  ```
  */
-@IBDesignable open class ADBoundSegmentedControl: UISegmentedControl, ADBindable {
+open class ADBoundSegmentedControl: UISegmentedControl, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.

@@ -43,7 +43,7 @@ import ActionUtilities
  myImage.dataPath = "icon"
  ```
  */
-@IBDesignable open class ADBoundImageView: UIImageView, ADBindable {
+open class ADBoundImageView: UIImageView, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.

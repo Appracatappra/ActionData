@@ -128,6 +128,12 @@ open class ADBoundTableView: UITableView {
     /// Specifies the optional footer shown at the bottom of the search results for this table. `$0` in the text will be replaced with the total number of items in the data source. `$1` in the text will be replaced with the total number of items matching to search term.
     @IBInspectable public var searchFooter: String = ""
     
+    /// If `true` and the Table View is in the edit mode, the user can drag rows to reorder them.
+    @IBInspectable public var canReorderRows: Bool = false
+    
+    /// If `true` and the Table View is in the edit mode, the user can delete rows from the table.
+    @IBInspectable public var canDeleteRows: Bool = false
+    
     // MARK: - Initializers
     /// Initializes a new instance of the `ADBoundTableView`.
     required public init?(coder aDecoder: NSCoder) {
@@ -137,6 +143,7 @@ open class ADBoundTableView: UITableView {
         initialize()
     }
     
+    /// Initializes a new instance of the `ADBoundTableView`.
     public override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         

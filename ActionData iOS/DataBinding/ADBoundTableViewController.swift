@@ -8,22 +8,37 @@
 import Foundation
 
 /**
- The `ADBoundTableViewController` includes several convenience features when working with a `ADBoundTableView` such as return a pre-cast version of the controlled table view.
+ The `ADBoundTableViewController` includes several convenience features when working with a `ADBoundTableView` such as return a pre-cast version of the controlled table view, automatically handling pull to refresh and handling searching table data.
  */
 open class ADBoundTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     // MARK: - Private Variables
+    /// A private instance of the pull-to-refresh control.
     private let refresher = UIRefreshControl()
     
+    /// A private instance of the search controller.
     private let searchController = UISearchController(searchResultsController: nil)
     
+    /// `true` if the controlled Table View has already been loaded into memory, else `false`.
     private var tableViewLoaded = false
+    
+    /// Holds the last cell selected from the table view or `nil` if no cell is selected.
+    private var lastSelectedIndexPath: IndexPath? = nil
+    
+    /// Holds the data for a new item being added to the table.
+    private var newItemRecord: ADRecord = [:]
     
     // MARK: - Public Properties
     /// If the table view being controlled by this view controller is a `ADBoundTableView` return it, else return `nil`.
     public var boundTableView: ADBoundTableView? {
         // Try to return the bound controller
         return tableView as? ADBoundTableView
+    }
+    
+    /// If the table view being controlled by this view controller is a `ADBoundTableView` and its Data Source is a `ADBindingDataSource` return it, else return `nil`.
+    public var boundDataSource: ADBindingDataSource? {
+        // Try to return the bound data source
+        return boundTableView?.dataSource as? ADBindingDataSource
     }
     
     /**
@@ -71,6 +86,12 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    /**
+     If `true`, the table will automatically display and handle the search controller to allow the user to search for data. The following properties of the `ADBoundTableView` control the search process and results:
+     
+     * `searchPath` - Defines the field that will be used for filtering results. This field (or the result of a formula) must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
+     * `searchScopePath` - In addition to the search text, the results can be limited to a give scope (if the `searchScopeBar` property of the `ADBoundTableViewController` is `true`). This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
+    */
     @IBInspectable public var searchTable: Bool = false {
         didSet {
             // Is the table view loaded?
@@ -86,6 +107,9 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    /**
+     If the `searchScopeBar` property of the `ADBoundTableViewController` is `true`, this text will be the placeholder that is displayed in the Search Bar before the user enters any text.
+    */
     @IBInspectable public var searchPlaceholderText: String = "" {
         didSet {
             // Set placeholder text
@@ -93,6 +117,14 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    /**
+     If the `searchScopeBar` property of the `ADBoundTableViewController` is `true` and this property is `true`, a scope bar will be displayed allowing the user to limit results to a given scope in addition to the search text entered. The following properties of the `ADBoundTableView` control the search process and results:
+     
+     * `searchPath` - Defines the field that will be used for filtering results. This field (or the result of a formula) must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
+     * `searchScopePath` - This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
+     
+     The `searchScopeOptions` of the `ADBoundTableViewController` provides a comma-separated list of values that will be used to present the options.
+    */
     @IBInspectable public var searchScopeBar: Bool = false {
         didSet {
             // Is scope bar enabled?
@@ -108,6 +140,9 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    /**
+     If the `searchScopeBar` and `searchScopeBar` properties of the `ADBoundTableViewController` are `true`, this property provides a comma-separated list of values that will be used to generate the Scope Buttons in the Scope Bar.
+    */
     @IBInspectable public var searchScopeOptions: String = "" {
         didSet {
             // Is scope bar enabled?
@@ -121,13 +156,24 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         }
     }
     
+    /**
+     If the `searchScopeBar`, `searchScopeBar` and `searchFirstOptionAll` properties of the `ADBoundTableViewController` are `true`, the first option in the Scope Bar (as populated from the `searchScopeOptions` property) will be treated as an **Any** or **All** property and will include all scopes in the search results.
+    */
     @IBInspectable public var searchFirstOptionAll: Bool = false
     
+    /// If this table view displays a detail view when a table cell is selected, this property specifies the Identifier of the segue used to display the detail view. The default value is `showDetail`.
+    @IBInspectable public var detailSegueIdentifier: String = "showDetail"
+    
+    /// If the user can add new items to the table, this property specifies the segue that will be called to display the detailed view when a new item is created.
+    @IBInspectable public var addItemSegueIedntifier: String = ""
+    
+    /// Returns `true` if the Search Bar is empty, else returns `false`
     public var searchBarIsEmpty: Bool {
         // Returns true if the text is empty or nil
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    /// Returns the text of the currently selected Scope Bar button. If the `searchFirstOptionAll` and the first button is selected, the empty string is returned (`""`).
     public var searchScopeSelected: String {
         // Is the scope bar being used?
         if searchScopeBar {
@@ -166,6 +212,43 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     // MARK: - Functions
+    /**
+     If you are going to add a new item to the table and you need to display the detail view when the item is added, call this method to prepare the controller to display the details. You must specify the segue used to display the Detail View in the `addItemSegueIedntifier` property before calling this function. When the data model has been prepared, the Detail View will automatically be displayed.
+     
+     ## Example:
+     ```swift
+     // Create a new instance and pass it to the Table Controller.
+     let category = Category(name: "Untitled", description: "New category.")
+     do {
+        try prepareToAddNewItem(category)
+     } catch {
+        print("Failed to set data model")
+     }
+     ```
+     
+     - Parameter value: A Swift Class or Struct conforming to the `Encodable` protocol.
+    */
+    public func prepareToAddNewItem<T:Encodable>(_ value: T) throws {
+        let encoder = ADSQLEncoder()
+        let model = try encoder.encode(value)
+        if let data = model as? ADRecord {
+            // Save model data
+            newItemRecord = data
+            
+            // Was a segue defined?
+            if addItemSegueIedntifier == "" {
+                // No, report issue to developer
+                print("Unable to open Detail View for new item because the `addItemSegueIedntifier` has not been defined.")
+            } else {
+                // Display detail view
+                performSegue(withIdentifier: addItemSegueIedntifier, sender: self)
+            }
+        }
+    }
+    
+    /**
+     Handles the Table View initially being loaded into memory.
+    */
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -240,7 +323,72 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         refresher.endRefreshing()
     }
     
+    /**
+     Prepares for a segure to take place. If the destination is a `ADBoundTableViewDetailController` and the Segue Identifier matches the `detailSegueIdentifier` property, the Detail View will be loaded with the data from the last table cell selected. If the Segue Identifier matches the `addItemSegueIedntifier` property, the data from the last `prepareToAddNewItem` function call will be used to populate the Detail View.
+     
+     - Parameters:
+     - segue: The segue that is about to be preformed.
+     - sender: The object that is the source of the segue launch.
+    */
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the segue ID.
+        if let identifier = segue.identifier {
+            // Take action based on the ID.
+            if identifier == detailSegueIdentifier {
+                // Heading towards a detail view controller?
+                if let detailView = segue.destination as? ADBoundTableViewDetailController {
+                    // Get data source
+                    if let dataSource = boundDataSource {
+                        // Get index
+                        if let indexPath = lastSelectedIndexPath {
+                            // Configure detail view.
+                            detailView.dataSource = dataSource
+                            detailView.indexPath = indexPath
+                            detailView.record = dataSource.retrieveRecord(for: indexPath)
+                        }
+                    }
+                }
+            } else if identifier == addItemSegueIedntifier {
+                // Heading towards a detail view controller?
+                if let detailView = segue.destination as? ADBoundTableViewDetailController {
+                    // Get data source
+                    if let dataSource = boundDataSource {
+                        // Configure detail view.
+                        detailView.dataSource = dataSource
+                        detailView.indexPath = nil
+                        detailView.record = newItemRecord
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - UITableViewDelegate
+    /**
+     Traks when a new cell will be selected in the table and stores this cell being selected so it can be used to populate the detail view.
+     
+     - Parameters:
+     - tableView: The parent Table View.
+     - indexPath: The path to the cell being selected.
+     
+     - Returns: The path to the cell that should be selected or `nil` if no cell should be selected.
+    */
+    open override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        
+        // Save the path to the cell being selected.
+        lastSelectedIndexPath = indexPath
+        
+        // Don't alter selection
+        return indexPath
+    }
+    
+    
     // MARK: - UISearchResultsUpdating
+    /**
+     Handles updating the search results when the user enters text into the Search Bar.
+     
+     - Parameter searchController: The parent controller performing the search.
+    */
     public func updateSearchResults(for searchController: UISearchController) {
         // Can we access the data source?
         if let dataSource = boundTableView?.dataSource as? ADBindingDataSource {
@@ -259,6 +407,13 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     // MARK: - UISearchBarDelegate
+    /**
+     Handles the user selecting a new button from the Scope Bar.
+     
+     - Parameters:
+     - searchBar: The parent Search Bar handling the search process.
+     - selectedScope: The new scope selected by the user.
+    */
     public func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
         // Can we access the data source?
         if let dataSource = boundTableView?.dataSource as? ADBindingDataSource {

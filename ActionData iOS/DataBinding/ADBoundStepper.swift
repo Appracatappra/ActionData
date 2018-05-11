@@ -43,7 +43,7 @@ import Foundation
  myStepper.dataPath = "percentage"
  ```
  */
-@IBDesignable open class ADBoundStepper: UIStepper, ADBindable {
+open class ADBoundStepper: UIStepper, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.

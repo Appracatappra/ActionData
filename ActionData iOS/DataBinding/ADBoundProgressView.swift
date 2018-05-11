@@ -43,7 +43,7 @@ import Foundation
  myProgress.dataPath = "percentage"
  ```
  */
-@IBDesignable open class ADBoundProgressView: UIProgressView, ADBindable {
+open class ADBoundProgressView: UIProgressView, ADBindable {
     
     // MARK: - Private variables
     /// The minimum value for the progress.

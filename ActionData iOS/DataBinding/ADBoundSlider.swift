@@ -43,7 +43,7 @@ import Foundation
  mySlider.dataPath = "percentage"
  ```
  */
-@IBDesignable open class ADBoundSlider: UISlider, ADBindable {
+open class ADBoundSlider: UISlider, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.

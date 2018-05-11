@@ -42,7 +42,7 @@ import Foundation
  mySwitch.dataPath = "enabled"
  ```
  */
-@IBDesignable open class ADBoundSwitch: UISwitch, ADBindable {
+open class ADBoundSwitch: UISwitch, ADBindable {
     
     /**
      The name of the field from the date model used to populate the value from.

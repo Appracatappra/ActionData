@@ -21,4 +21,20 @@ public protocol ADBindingDataSource {
      - scope: The optional scope to search on.
     */
     func filterData(onSearchText text: String, scope: String)
+    
+    /**
+     Retrieves any edits to the data representing a Swift object being handled by this Data Source.
+     
+     - Parameter entity: The Binding Controller holding the edited record.
+    */
+    func retrieveEditedRecord(from entity: ADBindingController & ADBindingDetailController)
+    
+    /**
+     Returns the raw record for the given index path.
+     
+     - Parameter indexPath: The path to the data to return the record for.
+     
+     - Returns: The `ADRecord` representation of the data for the given path.
+    */
+    func retrieveRecord(for indexPath: IndexPath) -> ADRecord
 }

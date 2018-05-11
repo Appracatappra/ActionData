@@ -42,7 +42,7 @@ import Foundation
  myLabel.dataPath = "name"
  ```
  */
-@IBDesignable open class ADBoundLabel: UILabel, ADBindable {
+open class ADBoundLabel: UILabel, ADBindable {
     
     /**
      The name of the field from the date model or formula (using SQL syntax) used to populate the value from.
