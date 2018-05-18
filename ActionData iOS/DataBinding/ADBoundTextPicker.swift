@@ -248,6 +248,9 @@ open class ADBoundTextPicker: UITextField, UITextFieldDelegate, UIPickerViewDele
         get {return true}
     }
     
+    /// If this bindable control is inside of a Sub View, this value is used to calculate the "physical" top of the control on the form. This value is used to determin if the control is being covered by the keyboard and if it should be moved. This value should never be set directly by the developer, it is automatically calculated by the `ADBindingController`.
+    public var topOfFormOffset: Float = 0
+    
     /// Gets or sets the list of options that will be displayed in the picker view when the users edits the field.
     public var optionList: [String] = ["One", "Two", "Three"]
     
@@ -458,7 +461,7 @@ open class ADBoundTextPicker: UITextField, UITextFieldDelegate, UIPickerViewDele
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         // Move field into view if needed
         if let bindEngine = controller {
-            bindEngine.moveViewToExposeField(withFrame: frame)
+            bindEngine.moveViewToExposeField(withFrame: frame, andOffset: topOfFormOffset)
         }
         
         // Auto pick the currently selected item

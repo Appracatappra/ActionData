@@ -110,9 +110,11 @@ public protocol ADBindingController {
     /**
      Called by a `ADBoundTextField` or `ADBoundTextView` when it becomes first responder to see if the field is under the onscreen keyboard. If the field is under the keyboard, the field will be moved to expose the keyboard. If the view has already been moved and the field is not under the keyboard, the view will be moved back to its original position.
      
-     - Parameter fieldFrame: The `GCRect` of the text field or view that has just gained focus.
+     - Parameters:
+     - fieldFrame: The `GCRect` of the text field or view that has just gained focus.
+     - topOffset: The offset to the top of the containing form for bound controls that are inside of a Sub View.
      */
-    func moveViewToExposeField(withFrame fieldFrame: CGRect)
+    func moveViewToExposeField(withFrame fieldFrame: CGRect, andOffset topOffset: Float)
     
     /**
      Called by a `ADBoundTextField` or `ADBoundTextView` to see if another `ADBoundTextField` or `ADBoundTextView` is in a higher location on the form.

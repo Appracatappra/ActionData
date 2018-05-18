@@ -43,7 +43,52 @@ import ActionUtilities
  myImage.dataPath = "icon"
  ```
  */
-open class ADBoundImageView: UIImageView, ADBindable {
+open class ADBoundImageView: UIImageView, ADBindable, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - Private Variables
+    /// If `true`, the control is enabled, else it is not.
+    private var isEnabled: Bool = true
+    
+    /// Holds the image picker for this image viewer.
+    private var imagePicker = UIImagePickerController()
+    
+    /// Holds the source of a editable image view's image.
+    private var imageSourceType = UIImagePickerControllerSourceType.photoLibrary
+    
+    // MARK: - Computed Properties
+    /// If `true`, the user can select a new image when the user taps the control.
+    @IBInspectable public var isEditable: Bool = false {
+        didSet {
+            // Allow the user to interact with the control.
+            isUserInteractionEnabled = isEditable
+        }
+    }
+    
+    /// If `true` this switch cause the parent `ADBoundViewController` to update the form as the value changes.
+    @IBInspectable public var liveUpdate: Bool = false
+    
+    /**
+     If this `ADBoundImageView` is editable, this property defines the source of the new image as one of the following values:
+     
+     * **Camera** - Allows the user to take a picture using the device's camera.
+     * **Camera Roll** - Allows the user to select a picture from their camera roll.
+     * **Photo Library** - Allows the user to select a pciture from their photo library. This is the default action.
+    */
+    @IBInspectable public var imageSource: String = "Photo Library" {
+        didSet {
+            switch imageSource.lowercased() {
+            case "camera":
+                imageSourceType = .camera
+            case "camera roll":
+                imageSourceType = .savedPhotosAlbum
+            default:
+                imageSourceType = .photoLibrary
+            }
+        }
+    }
+    
+    /// If `true` and this `ADBoundImageView` is editable, the user can move and crop the new image after selecting it.
+    @IBInspectable public var canCropImage: Bool = false
     
     /**
      The name of the field from the date model used to populate the value from.
@@ -214,12 +259,18 @@ open class ADBoundImageView: UIImageView, ADBindable {
     
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     public var isMutable: Bool {
-        get {return false}
+        get {return isEditable}
     }
+    
+    /// If this bindable control is inside of a Sub View, this value is used to calculate the "physical" top of the control on the form. This value is used to determin if the control is being covered by the keyboard and if it should be moved. This value should never be set directly by the developer, it is automatically calculated by the `ADBindingController`.
+    public var topOfFormOffset: Float = 0
     
     // MARK: - Initializers
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        
+        // Set self as image picker delegate
+        imagePicker.delegate = self
     }
     
     // MARK: - Deinitialization
@@ -330,4 +381,84 @@ open class ADBoundImageView: UIImageView, ADBindable {
         }
     }
     
+    /**
+     Handles the user starting a touch operation.
+     
+     - Parameters:
+     - touches: An array of touches to handle.
+     - event: The event that started the touch.
+    */
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        // Is the control editable and enabled?
+        if isEditable && isEnabled {
+            // Yes, Are we connected to a parent controller
+            if let viewController = controller as? UIViewController {
+                // Are we selecting from the camera?
+                if imageSourceType == .camera {
+                    // Yes, is the camera present?
+                    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                        // Configure picker
+                        imagePicker.sourceType = imageSourceType
+                        imagePicker.allowsEditing = canCropImage
+                        imagePicker.modalPresentationStyle = .overFullScreen
+                        
+                        // Yes, present the controller.
+                        viewController.present(imagePicker, animated: true, completion: nil)
+                    }
+                } else {
+                    // No, can we select from a photo library?
+                    if UIImagePickerController.isSourceTypeAvailable(imageSourceType) {
+                        // Configure picker
+                        imagePicker.sourceType = imageSourceType
+                        imagePicker.allowsEditing = canCropImage
+                        
+                        // Are we running on an iPad device?
+                        if HardwareInformation.isPad {
+                            // Yes, we need to present this controller in a popover.
+                            imagePicker.modalPresentationStyle = .popover
+                            imagePicker.popoverPresentationController?.sourceRect = self.bounds
+                            imagePicker.popoverPresentationController?.sourceView = self
+                            viewController.present(imagePicker, animated: true, completion: nil)
+                        } else {
+                            // No, just present the controller.
+                            imagePicker.modalPresentationStyle = .overFullScreen
+                            viewController.present(imagePicker, animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        var newImage: UIImage? = nil
+        
+        // Get image from results.
+        if canCropImage {
+            newImage = info[UIImagePickerControllerEditedImage] as? UIImage
+        } else {
+            newImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        }
+        
+        // Run on main UI thread
+        DispatchQueue.main.async(execute: {() -> Void in
+            
+            // Set image
+            self.image = newImage
+            
+            // Is the control live updating?
+            if self.liveUpdate {
+                if let bindEngine = self.controller {
+                    bindEngine.refreshDisplay()
+                }
+            }
+            
+        })
+        
+        // Close picker
+        picker.dismiss(animated: true, completion: nil)
+    }
 }

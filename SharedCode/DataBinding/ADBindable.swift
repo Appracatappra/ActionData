@@ -30,6 +30,9 @@ public protocol ADBindable {
     /// Returns `true` if the value of the control can be edited by the user, else returns `false`.
     var isMutable: Bool {get}
     
+    /// If this bindable control is inside of a Sub View, this value is used to calculate the "physical" top of the control on the form. This value is used to determin if the control is being covered by the keyboard and if it should be moved. This value should never be set directly by the developer, it is automatically calculated by the `ADBindingController`.
+    var topOfFormOffset: Float {get set}
+    
     /**
      Populates the control with the given value. The value will automatically be cast to the correct type for the given control.
      

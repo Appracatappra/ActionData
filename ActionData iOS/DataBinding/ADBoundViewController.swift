@@ -309,9 +309,11 @@ open class ADBoundViewController: UIViewController, ADBindingController {
     /**
      Scans the **View** and **SubViews** controlled by this `ADBoundViewController` for any control conforming to the `ADBindable` protocol and collects them in the `controls` array.
      
-     - Parameter parentView: The View to scan for controls.
+     - Parameters:
+     - parentView: The View to scan for controls.
+     - top: The top location of the parent, containing view.
     */
-    private func scanView(_ parentView: UIView) {
+    private func scanView(_ parentView: UIView, top: Float) {
         // Scan all subviews
         for view in parentView.subviews {
             if var boundControl = view as? ADBindable {
@@ -321,12 +323,18 @@ open class ADBoundViewController: UIViewController, ADBindingController {
                 // Assign a form ID to the control
                 boundControl.formID = controls.count
                 
+                // Set the top offset
+                boundControl.topOfFormOffset = top
+                
                 // Add the control to the collection of known controls
                 controls.append(boundControl)
             }
             
+            // Calculate top location
+            let viewTop = top + Float(view.frame.minY)
+            
             // Check for any sub controls
-            scanView(view)
+            scanView(view, top: viewTop)
         }
     }
     
@@ -416,12 +424,14 @@ open class ADBoundViewController: UIViewController, ADBindingController {
     /**
      Called by a `ADBoundTextField` or `ADBoundTextView` when it becomes first responder to see if the field is under the onscreen keyboard. If the field is under the keyboard, the field will be moved to expose the keyboard. If the view has already been moved and the field is not under the keyboard, the view will be moved back to its original position.
      
-     - Parameter fieldFrame: The `GCRect` of the text field or view that has just gained focus.
+     - Parameters:
+     - fieldFrame: The `GCRect` of the text field or view that has just gained focus.
+     - topOffset: The offset to the top of the containing form for bound controls that are inside of a Sub View.
     */
-    public func moveViewToExposeField(withFrame fieldFrame: CGRect) {
+    public func moveViewToExposeField(withFrame fieldFrame: CGRect, andOffset topOffset: Float) {
         
         // Calculate the position of the field
-        fieldPosition = fieldFrame.minY + fieldFrame.height
+        fieldPosition = CGFloat(topOffset) + fieldFrame.minY + fieldFrame.height
         
         // Move the view to avoid the keyboard if required.
         moveViewIfNeeded(animated: true)
@@ -595,7 +605,7 @@ open class ADBoundViewController: UIViewController, ADBindingController {
         }
         
         // Scan for any bound elements in this view
-        scanView(view)
+        scanView(view, top: 0.0)
     }
     
     /**
