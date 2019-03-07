@@ -101,7 +101,8 @@ class ADSQLParseQueue {
         queue = []
         
         // Process all characters in the SQL command
-        for c in sql.characters {
+        // KKM - changed from sql.characters
+        for c in sql {
             let char = String(c)
             
             // Take action based on character and state.

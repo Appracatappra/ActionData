@@ -74,7 +74,7 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
     
     // MARK: - Computed Properties
     /**
-     Provides the data for the `ADBoundTableViewDataSource` as an array of Swfit objects conforming to the `Codeable` protocol.
+     Provides the data for the `ADBoundTableViewDataSource` as an array of Swift objects conforming to the `Codeable` protocol.
      
      ## Example:
      ```swift

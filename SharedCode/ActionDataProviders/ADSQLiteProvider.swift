@@ -191,11 +191,14 @@ open class ADSQLiteProvider: ADDataProvider {
             }
         #else
             // Get path to the Documents directory
-            let docDir = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+            //let docDir = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
+            var docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         #endif
         
         // Default path to the Document directory
-        path = (docDir as NSString).appendingPathComponent(fileName)
+        docDir.appendPathComponent(fileName)
+        
+        var path = docDir.absoluteString 
         
         // Opening from the app's bundle?
         if fromBundle {
@@ -232,6 +235,7 @@ open class ADSQLiteProvider: ADDataProvider {
         if error != SQLITE_OK {
             // Open failed, close DB and fail
             sqlite3_close(db)
+            print("SQLite database error: \(error)")
             throw ADDataProviderError.unableToOpenDataSource
         }
         

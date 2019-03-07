@@ -54,4 +54,7 @@ public enum ADDataProviderError: Error {
     
     /// While attempting to create or update a table schema, the data provider encountered a `nil` value. Use either the `register` or `update` functions with a fully populated **default value class instance** (with all values set to a default, non-nil value) to create or update the table schema. `message` contains the details of the given failure.
     case missingRequiredValue(message: String)
+    
+    /// While reading a value from a CloudKit record, the data provider was unable to move that value forward.
+    case unableToConvertValue(message: String)
 }

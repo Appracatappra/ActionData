@@ -1,16 +1,13 @@
 //
-//  ADBoundTableViewController.swift
+//  ADBoundSQLTableViewController.swift
 //  ActionData iOS
 //
-//  Created by Kevin Mullins on 5/3/18.
+//  Created by Kevin Mullins on 5/23/18.
 //
 
 import Foundation
 
-/**
- The `ADBoundTableViewController` includes several convenience features when working with a `ADBoundTableView` such as return a pre-cast version of the controlled table view, automatically handling pull to refresh and handling searching table data.
- */
-open class ADBoundTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
+open class ADBoundSQLTableViewController: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
     // MARK: - Private Variables
     /// A private instance of the pull-to-refresh control.
@@ -29,25 +26,22 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     private var newItemRecord: ADRecord = [:]
     
     // MARK: - Computed Properties
-    /// If the table view being controlled by this view controller is a `ADBoundTableView` return it, else return `nil`.
-    public var boundTableView: ADBoundTableView? {
+    /// If the table view being controlled by this view controller is a `ADBoundSQLTableView` return it, else return `nil`.
+    public var boundTableView: ADBoundSQLTableView? {
         // Try to return the bound table
-        return tableView as? ADBoundTableView
+        return tableView as? ADBoundSQLTableView
     }
     
-    /// If the table view being controlled by this view controller is a `ADBoundTableView` and its Data Source is a `ADBindingDataSource` return it, else return `nil`.
-    public var boundDataSource: ADBindingDataSource? {
-        // Try to return the bound data source
-        return boundTableView?.dataSource as? ADBindingDataSource
-    }
+    /// If the table view being controlled by this view controller is a `ADBoundTableView`, gets or sets the Data Source for the table's data and attaches it to the Table View.
+    public var boundDataSource: ADBoundSQLTableViewDataSource = ADBoundSQLTableViewDataSource()
     
     /**
-     If `true`, a Refresh Control will be added to the table view that will allow the user to pull to refresh the data source. You should override the `refreshBoundData` function and call the `reloadData` function on your `ADBoundTableViewDataSource` in response.
+     If `true`, a Refresh Control will be added to the table view that will allow the user to pull to refresh the data source. You should override the `refreshBoundData` function and call the `reloadData` function on your `ADBoundSQLTableViewDataSource` in response.
      
      ## Example:
      ```swift
      // Create storage for the table's data
-     let info = ADBoundTableViewDataSource<Category>()
+     let info = ADBoundSQLTableViewDataSource()
      
      override func refreshBoundData() {
          // Refresh the data source and stop refresh
@@ -55,7 +49,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
          finishedRefreshingData()
      }
      ```
-    */
+     */
     @IBInspectable public var pullToRefresh: Bool = false {
         didSet {
             // Has the table view already been loaded?
@@ -87,11 +81,11 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     /**
-     If `true`, the table will automatically display and handle the search controller to allow the user to search for data. The following properties of the `ADBoundTableView` control the search process and results:
+     If `true`, the table will automatically display and handle the search controller to allow the user to search for data. The following properties of the `ADBoundSQLTableView` control the search process and results:
      
-     * `searchPath` - Defines the field that will be used for filtering results. This field (or the result of a formula) must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
-     * `searchScopePath` - In addition to the search text, the results can be limited to a give scope (if the `searchScopeBar` property of the `ADBoundTableViewController` is `true`). This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
-    */
+     * `searchField` - Defines the field that will be used for filtering results. This field must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
+     * `searchScopeField` - In addition to the search text, the results can be limited to a give scope (if the `searchScopeBar` property of the `ADBoundSQLTableViewController` is `true`). This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
+     */
     @IBInspectable public var searchTable: Bool = false {
         didSet {
             // Is the table view loaded?
@@ -108,8 +102,8 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     /**
-     If the `searchScopeBar` property of the `ADBoundTableViewController` is `true`, this text will be the placeholder that is displayed in the Search Bar before the user enters any text.
-    */
+     If the `searchScopeBar` property of the `ADBoundSQLTableViewController` is `true`, this text will be the placeholder that is displayed in the Search Bar before the user enters any text.
+     */
     @IBInspectable public var searchPlaceholderText: String = "" {
         didSet {
             // Set placeholder text
@@ -118,13 +112,13 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     /**
-     If the `searchScopeBar` property of the `ADBoundTableViewController` is `true` and this property is `true`, a scope bar will be displayed allowing the user to limit results to a given scope in addition to the search text entered. The following properties of the `ADBoundTableView` control the search process and results:
+     If the `searchScopeBar` property of the `ADBoundSQLTableViewController` is `true` and this property is `true`, a scope bar will be displayed allowing the user to limit results to a given scope in addition to the search text entered. The following properties of the `ADBoundSQLTableView` control the search process and results:
      
-     * `searchPath` - Defines the field that will be used for filtering results. This field (or the result of a formula) must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
-     * `searchScopePath` - This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
+     * `searchField` - Defines the field that will be used for filtering results. This field must contain the users search text to be displayed in the results list. Searching in non-case sensetive.
+     * `searchScopeField` - This specifies the field that is used to match the scope. Scope matching is non-case sensetive.
      
-     The `searchScopeOptions` of the `ADBoundTableViewController` provides a comma-separated list of values that will be used to present the options.
-    */
+     The `searchScopeOptions` of the `ADBoundSQLTableViewController` provides a comma-separated list of values that will be used to present the options.
+     */
     @IBInspectable public var searchScopeBar: Bool = false {
         didSet {
             // Is scope bar enabled?
@@ -141,8 +135,8 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     /**
-     If the `searchScopeBar` and `searchScopeBar` properties of the `ADBoundTableViewController` are `true`, this property provides a comma-separated list of values that will be used to generate the Scope Buttons in the Scope Bar.
-    */
+     If the `searchScopeBar` and `searchScopeBar` properties of the `ADBoundSQLTableViewController` are `true`, this property provides a comma-separated list of values that will be used to generate the Scope Buttons in the Scope Bar.
+     */
     @IBInspectable public var searchScopeOptions: String = "" {
         didSet {
             // Is scope bar enabled?
@@ -157,8 +151,8 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     }
     
     /**
-     If the `searchScopeBar`, `searchScopeBar` and `searchFirstOptionAll` properties of the `ADBoundTableViewController` are `true`, the first option in the Scope Bar (as populated from the `searchScopeOptions` property) will be treated as an **Any** or **All** property and will include all scopes in the search results.
-    */
+     If the `searchScopeBar`, `searchScopeBar` and `searchFirstOptionAll` properties of the `ADBoundSQLTableViewController` are `true`, the first option in the Scope Bar (as populated from the `searchScopeOptions` property) will be treated as an **Any** or **All** property and will include all scopes in the search results.
+     */
     @IBInspectable public var searchFirstOptionAll: Bool = false
     
     /// If this table view displays a detail view when a table cell is selected, this property specifies the Identifier of the segue used to display the detail view. The default value is `showDetail`.
@@ -227,7 +221,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
      ```
      
      - Parameter value: A Swift Class or Struct conforming to the `Encodable` protocol.
-    */
+     */
     public func prepareToAddNewItem<T:Encodable>(_ value: T) throws {
         let encoder = ADSQLEncoder()
         let model = try encoder.encode(value)
@@ -248,7 +242,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
     
     /**
      Handles the Table View initially being loaded into memory.
-    */
+     */
     open override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -264,6 +258,8 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
             navigationItem.searchController = searchController
         }
         
+        // TODO: Attach Data Source
+        
         // The view has loaded
         tableViewLoaded = true
     }
@@ -274,7 +270,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
      ## Example:
      ```swift
      // Create storage for the table's data
-     let info = ADBoundTableViewDataSource<Category>()
+     let info = ADBoundSQLTableViewDataSource()
      
      override func refreshBoundData() {
          // Refresh the data source and stop refresh
@@ -282,20 +278,17 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
          finishedRefreshingData()
      }
      ```
-    */
+     */
     @objc open func refreshBoundData() {
-        // Can we access the data source?
-        if let dataSource = boundTableView?.dataSource as? ADBindingDataSource {
-            // Any search term?
-            if searchBarIsEmpty {
-                // No, display all data
-                dataSource.reloadData()
-            } else {
-                // Get search text
-                if let text = searchController.searchBar.text {
-                    // Ask data source to filter on text
-                    dataSource.filterData(onSearchText: text, scope: "")
-                }
+        // Any search term?
+        if searchBarIsEmpty {
+            // No, display all data
+            boundDataSource.reloadData()
+        } else {
+            // Get search text
+            if let text = searchController.searchBar.text {
+                // Ask data source to filter on text
+                boundDataSource.filterData(onSearchText: text, scope: "")
             }
         }
         
@@ -309,7 +302,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
      ## Example:
      ```swift
      // Create storage for the table's data
-     let info = ADBoundTableViewDataSource<Category>()
+     let info = ADBoundSQLTableViewDataSource()
      
      override func refreshBoundData() {
          // Refresh the data source and stop refresh
@@ -317,19 +310,19 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
          finishedRefreshingData()
      }
      ```
-    */
+     */
     open func finishedRefreshingData() {
         // Tell refresh control we are done
         refresher.endRefreshing()
     }
     
     /**
-     Prepares for a segure to take place. If the destination is a `ADBoundTableViewDetailController` and the Segue Identifier matches the `detailSegueIdentifier` property, the Detail View will be loaded with the data from the last table cell selected. If the Segue Identifier matches the `addItemSegueIedntifier` property, the data from the last `prepareToAddNewItem` function call will be used to populate the Detail View.
+     Prepares for a segure to take place. If the destination is a `ADBoundSQLTableViewDetailController` and the Segue Identifier matches the `detailSegueIdentifier` property, the Detail View will be loaded with the data from the last table cell selected. If the Segue Identifier matches the `addItemSegueIedntifier` property, the data from the last `prepareToAddNewItem` function call will be used to populate the Detail View.
      
      - Parameters:
      - segue: The segue that is about to be preformed.
      - sender: The object that is the source of the segue launch.
-    */
+     */
     open override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the segue ID.
         if let identifier = segue.identifier {
@@ -337,27 +330,21 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
             if identifier == detailSegueIdentifier {
                 // Heading towards a detail view controller?
                 if let detailView = segue.destination as? ADBoundTableViewDetailController {
-                    // Get data source
-                    if let dataSource = boundDataSource {
-                        // Get index
-                        if let indexPath = lastSelectedIndexPath {
-                            // Configure detail view.
-                            detailView.dataSource = dataSource
-                            detailView.indexPath = indexPath
-                            detailView.record = dataSource.retrieveRecord(for: indexPath)
-                        }
+                    // Get index
+                    if let indexPath = lastSelectedIndexPath {
+                        // Configure detail view.
+                        detailView.dataSource = boundDataSource
+                        detailView.indexPath = indexPath
+                        detailView.record = boundDataSource.retrieveRecord(for: indexPath)
                     }
                 }
             } else if identifier == addItemSegueIedntifier {
                 // Heading towards a detail view controller?
                 if let detailView = segue.destination as? ADBoundTableViewDetailController {
-                    // Get data source
-                    if let dataSource = boundDataSource {
-                        // Configure detail view.
-                        detailView.dataSource = dataSource
-                        detailView.indexPath = nil
-                        detailView.record = newItemRecord
-                    }
+                    // Configure detail view.
+                    detailView.dataSource = boundDataSource
+                    detailView.indexPath = nil
+                    detailView.record = newItemRecord
                 }
             }
         }
@@ -372,7 +359,7 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
      - indexPath: The path to the cell being selected.
      
      - Returns: The path to the cell that should be selected or `nil` if no cell should be selected.
-    */
+     */
     open override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         
         // Save the path to the cell being selected.
@@ -382,26 +369,22 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
         return indexPath
     }
     
-    
     // MARK: - UISearchResultsUpdating
     /**
      Handles updating the search results when the user enters text into the Search Bar.
      
      - Parameter searchController: The parent controller performing the search.
-    */
+     */
     public func updateSearchResults(for searchController: UISearchController) {
-        // Can we access the data source?
-        if let dataSource = boundTableView?.dataSource as? ADBindingDataSource {
-            // Any search term?
-            if searchBarIsEmpty {
-                // No, display all data
-                dataSource.reloadData()
-            } else {
-                // Get search text
-                if let text = searchController.searchBar.text {
-                    // Ask data source to filter on text
-                    dataSource.filterData(onSearchText: text, scope: searchScopeSelected)
-                }
+        // Any search term?
+        if searchBarIsEmpty {
+            // No, display all data
+            boundDataSource.reloadData()
+        } else {
+            // Get search text
+            if let text = searchController.searchBar.text {
+                // Ask data source to filter on text
+                boundDataSource.filterData(onSearchText: text, scope: searchScopeSelected)
             }
         }
     }
@@ -413,15 +396,12 @@ open class ADBoundTableViewController: UITableViewController, UISearchResultsUpd
      - Parameters:
      - searchBar: The parent Search Bar handling the search process.
      - selectedScope: The new scope selected by the user.
-    */
+     */
     public func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-        // Can we access the data source?
-        if let dataSource = boundTableView?.dataSource as? ADBindingDataSource {
-            // Get the search text
-            let text = searchController.searchBar.text ?? ""
-            
-            // Ask data source to filter on text
-            dataSource.filterData(onSearchText: text, scope: searchScopeSelected)
-        }
+        // Get the search text
+        let text = searchController.searchBar.text ?? ""
+        
+        // Ask data source to filter on text
+        boundDataSource.filterData(onSearchText: text, scope: searchScopeSelected)
     }
 }

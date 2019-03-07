@@ -61,6 +61,12 @@
 		2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */; };
 		2D23421C209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */; };
 		2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */; };
+		2D548639222DA76C00184231 /* ADiCloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D548638222DA76C00184231 /* ADiCloudProvider.swift */; };
+		2D54863A222DA7A500184231 /* ADiCloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D548638222DA76C00184231 /* ADiCloudProvider.swift */; };
+		2D54863B222DA7B100184231 /* ADiCloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D548638222DA76C00184231 /* ADiCloudProvider.swift */; };
+		2D54863D222DAC0000184231 /* ADiCloudDatabaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */; };
+		2D54863E222DAF0100184231 /* ADiCloudDatabaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */; };
+		2D54863F222DAF0200184231 /* ADiCloudDatabaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */; };
 		2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */; };
 		2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */; };
 		2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */; };
@@ -310,6 +316,11 @@
 		2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
 		2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
 		2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */; };
+		2DAE7DA120B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA020B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift */; };
+		2DAE7DA320B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA220B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift */; };
+		2DAE7DA520B5E01500DDEFD4 /* ADBoundSQLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA420B5E01500DDEFD4 /* ADBoundSQLTableView.swift */; };
+		2DAE7DA720B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA620B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift */; };
+		2DAE7DA920B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA820B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift */; };
 		2DCC5C3C201B6728003D221C /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C7ED2017DCB6006598F3 /* ActionData.framework */; };
 		2DCC5C43201B682B003D221C /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C42201B682B003D221C /* SQLiteTests.swift */; };
 		2DCC5C46201B688E003D221C /* CategoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C45201B688E003D221C /* CategoryUsage.swift */; };
@@ -351,6 +362,8 @@
 		2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewCell.swift; sourceTree = "<group>"; };
 		2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewDataSource.swift; sourceTree = "<group>"; };
 		2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingDataSource.swift; sourceTree = "<group>"; };
+		2D548638222DA76C00184231 /* ADiCloudProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADiCloudProvider.swift; sourceTree = "<group>"; };
+		2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADiCloudDatabaseType.swift; sourceTree = "<group>"; };
 		2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSlider.swift; sourceTree = "<group>"; };
 		2D64C5DD2081017F0030D5D8 /* ADBoundSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSwitch.swift; sourceTree = "<group>"; };
 		2D64C5DF2081036A0030D5D8 /* ADBoundProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundProgressView.swift; sourceTree = "<group>"; };
@@ -471,6 +484,11 @@
 		2D92C96A2017E346006598F3 /* ADSQLExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADSQLExpression.swift; sourceTree = "<group>"; };
 		2D92C96B2017E346006598F3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundPathProcessor.swift; sourceTree = "<group>"; };
+		2DAE7DA020B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSQLTableViewDataSource.swift; sourceTree = "<group>"; };
+		2DAE7DA220B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSQLTableViewController.swift; sourceTree = "<group>"; };
+		2DAE7DA420B5E01500DDEFD4 /* ADBoundSQLTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSQLTableView.swift; sourceTree = "<group>"; };
+		2DAE7DA620B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSQLTableViewCell.swift; sourceTree = "<group>"; };
+		2DAE7DA820B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSQLTableViewDetailController.swift; sourceTree = "<group>"; };
 		2DCC5C37201B6728003D221C /* iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCC5C3B201B6728003D221C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCC5C42201B682B003D221C /* SQLiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteTests.swift; sourceTree = "<group>"; };
@@ -718,6 +736,7 @@
 			children = (
 				2D92C8952017E19F006598F3 /* README.md */,
 				2D92C8962017E19F006598F3 /* ADSPONProvider.swift */,
+				2D548638222DA76C00184231 /* ADiCloudProvider.swift */,
 				2D92C8972017E19F006598F3 /* ADSQLiteProvider.swift */,
 				2D92C8942017E189006598F3 /* SharedElements */,
 				2D92C8932017E17D006598F3 /* Enumerations */,
@@ -744,6 +763,7 @@
 				2D92C8B72017E1DE006598F3 /* ADDataProviderError.swift */,
 				2D92C8B92017E1DE006598F3 /* ADDataTableKeyType.swift */,
 				2D92C8B82017E1DE006598F3 /* ADSQLExecutionError.swift */,
+				2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */,
 			);
 			path = Enumerations;
 			sourceTree = "<group>";
@@ -897,6 +917,11 @@
 				2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */,
 				2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */,
 				2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */,
+				2DAE7DA220B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift */,
+				2DAE7DA420B5E01500DDEFD4 /* ADBoundSQLTableView.swift */,
+				2DAE7DA620B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift */,
+				2DAE7DA020B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift */,
+				2DAE7DA820B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift */,
 			);
 			path = DataBinding;
 			sourceTree = "<group>";
@@ -1035,6 +1060,7 @@
 					};
 					2D92C7FA2017DCF6006598F3 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					2D92C8072017DD0A006598F3 = {
@@ -1208,6 +1234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAE7DA120B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift in Sources */,
 				2D92C8862017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
 				2D92C85F2017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8A52017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
@@ -1221,6 +1248,7 @@
 				2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */,
 				2D92C90F2017E2E8006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
 				2D92C90C2017E2E8006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
+				2DAE7DA520B5E01500DDEFD4 /* ADBoundSQLTableView.swift in Sources */,
 				2D92C93A2017E306006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8742017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
 				2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */,
@@ -1231,6 +1259,8 @@
 				2D92C8BC2017E1E6006598F3 /* ADDataTableKeyType.swift in Sources */,
 				2D92C84A2017E084006598F3 /* ADSQLReferencingEncoder.swift in Sources */,
 				2D92C8852017E13A006598F3 /* ADSPONDecoder.swift in Sources */,
+				2D548639222DA76C00184231 /* ADiCloudProvider.swift in Sources */,
+				2D54863D222DAC0000184231 /* ADiCloudDatabaseType.swift in Sources */,
 				2D92C9102017E2E8006598F3 /* ADSQLDropInstruction.swift in Sources */,
 				2D92C9392017E306006598F3 /* ADSQLExpressionBuilder.swift in Sources */,
 				2D92C9362017E306006598F3 /* ADSQLBetweenExpression.swift in Sources */,
@@ -1257,6 +1287,7 @@
 				2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */,
 				2D92C8982017E1A5006598F3 /* ADSPONProvider.swift in Sources */,
 				2D92C9122017E2E8006598F3 /* ADSQLSelectInstruction.swift in Sources */,
+				2DAE7DA320B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift in Sources */,
 				2D92C93B2017E306006598F3 /* ADSQLFunctionExpression.swift in Sources */,
 				2D92C8752017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
 				2D92C8312017E038006598F3 /* ADKey.swift in Sources */,
@@ -1264,6 +1295,7 @@
 				2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
 				2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */,
 				2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
+				2DAE7DA920B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift in Sources */,
 				2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */,
 				2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */,
 				2D7706A6208115F7007601FF /* ADBoundImageView.swift in Sources */,
@@ -1283,6 +1315,7 @@
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */,
 				2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
+				2DAE7DA720B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
 				2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */,
 				2D92C90A2017E2E8006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
@@ -1331,6 +1364,7 @@
 				2D92C9442017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8792017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
 				2D92C8EE2017E2CF006598F3 /* ADSQLColumnConstraint.swift in Sources */,
+				2D54863A222DA7A500184231 /* ADiCloudProvider.swift in Sources */,
 				2D92C8AE2017E1C4006598F3 /* ADTableSchema.swift in Sources */,
 				2D92C8512017E085006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
 				2D92C8762017E11A006598F3 /* ADSPONEncoder.swift in Sources */,
@@ -1365,6 +1399,7 @@
 				2D92C9162017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
 				2D92C88C2017E13A006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8352017E038006598F3 /* ADInstanceArray.swift in Sources */,
+				2D54863E222DAF0100184231 /* ADiCloudDatabaseType.swift in Sources */,
 				2D92C8342017E038006598F3 /* ADEncodingStorage.swift in Sources */,
 				2D92C8CC2017E201006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C9602017E329006598F3 /* ADSQLConflictHandling.swift in Sources */,
@@ -1414,6 +1449,7 @@
 				2D92C94E2017E307006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C87E2017E11B006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
 				2D92C8F62017E2D0006598F3 /* ADSQLColumnConstraint.swift in Sources */,
+				2D54863B222DA7B100184231 /* ADiCloudProvider.swift in Sources */,
 				2D92C8B42017E1C5006598F3 /* ADTableSchema.swift in Sources */,
 				2D92C8562017E086006598F3 /* ADSQLUnkeyedEncodingContainer.swift in Sources */,
 				2D92C87B2017E11B006598F3 /* ADSPONEncoder.swift in Sources */,
@@ -1448,6 +1484,7 @@
 				2D92C9212017E2E9006598F3 /* ADSQLCreateIndexInstruction.swift in Sources */,
 				2D92C8902017E13B006598F3 /* ADSPONUnkeyedDecodingContainer.swift in Sources */,
 				2D92C83B2017E039006598F3 /* ADInstanceArray.swift in Sources */,
+				2D54863F222DAF0200184231 /* ADiCloudDatabaseType.swift in Sources */,
 				2D92C83A2017E039006598F3 /* ADEncodingStorage.swift in Sources */,
 				2D92C8CF2017E201006598F3 /* ADDataProvider.swift in Sources */,
 				2D92C9652017E32A006598F3 /* ADSQLConflictHandling.swift in Sources */,
@@ -1780,7 +1817,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1846,7 +1883,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
 				VALIDATE_PRODUCT = YES;

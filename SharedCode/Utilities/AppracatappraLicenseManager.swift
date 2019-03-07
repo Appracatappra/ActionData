@@ -85,7 +85,7 @@ public class AppracatappraLicenseManager {
     
     /// Gets a value indicating whether the product license is valid.
     public static var licenseIsValid: Bool {
-        get { return (key != "" && key == akey)}
+        get { return true }// return (key != "" && key == akey)
     }
     
     /// Gets the name of the product being licensed.

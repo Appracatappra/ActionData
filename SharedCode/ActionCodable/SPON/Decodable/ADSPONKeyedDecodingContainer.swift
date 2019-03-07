@@ -26,7 +26,7 @@ struct ADSPONKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerProtoco
     
     /// Returns all of the keys for the object being decoded.
     var allKeys: [Key] {
-        return container.keys.flatMap { Key(stringValue: $0) }
+        return container.keys.compactMap { Key(stringValue: $0) }
     }
     
     // MARK: - Initializers
