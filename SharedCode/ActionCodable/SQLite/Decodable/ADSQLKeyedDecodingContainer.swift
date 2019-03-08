@@ -77,7 +77,11 @@ struct ADSQLKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerProtocol
         }
         
         decoder.codingPath.append(key)
-        defer { decoder.codingPath.removeLast() }
+        defer {
+            if decoder.codingPath.count > 0 {
+                decoder.codingPath.removeLast()
+            }
+        }
         
         guard let value = try decoder.unbox(entry, as: Bool.self) else {
             throw DecodingError.valueNotFound(type, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Expected \(type) value but found null instead."))
@@ -371,7 +375,11 @@ struct ADSQLKeyedDecodingContainer<K: CodingKey>: KeyedDecodingContainerProtocol
         }
         
         decoder.codingPath.append(key)
-        defer { decoder.codingPath.removeLast() }
+        defer {
+            if decoder.codingPath.count > 0 {
+                decoder.codingPath.removeLast()
+            }
+        }
         
         guard let value = try decoder.unbox(entry, as: T.self) else {
             throw DecodingError.valueNotFound(type, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Expected \(type) value but found null instead."))
