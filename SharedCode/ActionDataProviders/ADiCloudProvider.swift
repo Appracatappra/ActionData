@@ -138,7 +138,7 @@ open class ADiCloudProvider {
     */
     public func lastIntID(forTable table: String, withKey primaryKey: String) throws -> Int {
         
-        return 0
+        return UserDefaults.standard.integer(forKey: "ClouKitAutoIncVal")
     }
     
     /**
