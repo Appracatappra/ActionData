@@ -39,12 +39,6 @@ open class ADiCloudProvider {
     }
     
     // MARK: - Private properties
-    /// Internal encoder for database records.
-    private let encoder = ADSQLEncoder()
-    
-    /// Internal decoder for database records.
-    private let decoder = ADSQLDecoder()
-    
     /// Internal access to the iCloud container that is currently open.
     private var iCloudContainer:CKContainer? = nil
     
@@ -229,7 +223,7 @@ open class ADiCloudProvider {
         
         // Build a new instance of the record and encode it
         let instance = type.init()
-        var record = try encoder.encode(instance) as! ADRecord
+        var record = try ADSQLEncoder().encode(instance) as! ADRecord
         
         // Take action based on the primary key type
         switch type.primaryKeyType {
@@ -248,7 +242,7 @@ open class ADiCloudProvider {
         }
         
         // Convert back into a class and return
-        return try decoder.decode(type, from: record)
+        return try ADSQLDecoder().decode(type, from: record)
     }
     
     /**
@@ -375,7 +369,7 @@ open class ADiCloudProvider {
         }
         
         // Try to encode record
-        if var data = try encoder.encode(value) as? ADRecord {
+        if var data = try ADSQLEncoder().encode(value) as? ADRecord {
             if var key = data[baseType.primaryKey] {
                 // Has a key been specified?
                 if isUndefined(key: key) {
@@ -445,7 +439,7 @@ open class ADiCloudProvider {
         }
         
         // Try to encode record
-        if let data = try encoder.encode(value) as? ADRecord {
+        if let data = try ADSQLEncoder().encode(value) as? ADRecord {
             if let key = data[baseType.primaryKey] {
                 // Assemble key
                 let recordKey = CKRecord.ID(recordName: uniqueKey(baseType, forPrimaryKeyValue: key))
@@ -525,7 +519,7 @@ open class ADiCloudProvider {
             } else if let record = record {
                 do {
                     if let data = try self?.buildADRecord(from: record) {
-                        let item = try self?.decoder.decode(type, from: data)
+                        let item = try ADSQLDecoder().decode(type, from: data)
                         completionHandler(item, nil)
                     }
                 } catch {
@@ -575,11 +569,11 @@ open class ADiCloudProvider {
                     var rows:[T] = []
                     
                     // Process all rows
+                    let decoder = ADSQLDecoder()
                     for record in records {
                         if let data = try self?.buildADRecord(from: record) {
-                            if let item = try self?.decoder.decode(type, from: data) {
-                                rows.append(item)
-                            }
+                            let item = try decoder.decode(type, from: data)
+                            rows.append(item)
                         }
                     }
                     

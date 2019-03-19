@@ -84,9 +84,6 @@
 		2D92C8132017DEE8006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8122017DEE8006598F3 /* libsqlite3.tbd */; };
 		2D92C8152017DF07006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8142017DF07006598F3 /* libsqlite3.tbd */; };
 		2D92C8172017DF3B006598F3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C8162017DF3B006598F3 /* libsqlite3.tbd */; };
-		2D92C81A2017DF73006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
-		2D92C81B2017DF74006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
-		2D92C81C2017DF75006598F3 /* TrimFramework.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D92C8192017DF6C006598F3 /* TrimFramework.sh */; };
 		2D92C81E2017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
 		2D92C81F2017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
 		2D92C8202017DFB9006598F3 /* Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C81D2017DFB9006598F3 /* Bridging-Header.h */; };
@@ -1113,7 +1110,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D92C81A2017DF73006598F3 /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1121,7 +1117,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D92C81B2017DF74006598F3 /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1129,7 +1124,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D92C81C2017DF75006598F3 /* TrimFramework.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1819,7 +1813,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1885,7 +1879,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
