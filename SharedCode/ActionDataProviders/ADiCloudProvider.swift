@@ -21,9 +21,62 @@ open class ADiCloudProvider {
     /// Defines a type alias returned from a call to a CloudKit database function.
     public typealias CloudKitRecordSetCompletionHandler = ([CKRecord]?,Error?) -> Void
     
+    // MARK: - Static Functions
+    /**
+     Displayes an error alert to the user when error occurrs trying to read, write or delete from CloudKit.
+     
+     - Parameters:
+         - controller: The `UIViewController` to display the alert in.
+         - action: The action that was trying to be performed.
+         - dbError: The Error that was initially thrown.
+    */
+    public static func showCloudKitErrorAlert(in controller:UIViewController?, for action:String, with dbError:Error) {
+        
+        // Ensure we have a proper view controller
+        guard let controller = controller else {return}
+        
+        // Attempt to get the CloudKit account status.
+        CKContainer.default().accountStatus { (accountStatus, error) in
+            var cloudKitAccountStatus:CKAccountStatus = .couldNotDetermine
+            var description = ""
+            
+            if let error = error {
+                // Unable to check status
+                cloudKitAccountStatus = .couldNotDetermine
+                print("Unable to determine the user's CloudKit account status: \(error)")
+            } else {
+                // Save status
+                cloudKitAccountStatus = accountStatus
+            }
+            
+            switch cloudKitAccountStatus {
+            case .available:
+                description = "The following error occurred while trying to access your iCloud database: \(dbError)"
+            case .couldNotDetermine, .noAccount:
+                description = "You must be logged into an iCloud account in Setting before Media Marquee save, load or delete items."
+            case .restricted:
+                description = "Your iCloud account doesn't have the required rights to write to you iCloud Database."
+            }
+            
+            DispatchQueue.main.async {
+                let alertController = UIAlertController(title: "Unable to \(action)", message: description, preferredStyle: .alert)
+                
+                let action = UIAlertAction(title: "OK", style: .default) { (action) in
+                }
+                alertController.addAction(action)
+                
+                controller.present(alertController, animated: true, completion: nil)
+            }
+        }
+        
+    }
+    
     // MARK: - Static Properties
-    /// Provides access to a common, shared instance of the `ADiCloudProvider`. For app's that are working with a single iCloud database, they can use this instance instead of creating their own instance of a `ADiCloudProvider`.
+    /// Provides access to a common, shared instance of the `ADiCloudProvider`. For app's that are working with a single private iCloud database, they can use this instance instead of creating their own instance of a `ADiCloudProvider`.
     public static let shared = ADiCloudProvider()
+    
+    /// Provides access to a common, shared instance of the `ADiCloudProvider`. For app's that are working with a single public iCloud database, they can use this instance instead of creating their own instance of a `ADiCloudProvider`.
+    public static let sharedPublic = ADiCloudProvider()
     
     /// The current value of an auto incrementing integer key used for CloudKit records.
     public static var autoIncrementingKeyValue:Int {
@@ -382,7 +435,8 @@ open class ADiCloudProvider {
                 }
                 
                 // Assemble the required record
-                let record = try buildCloudKitRecord(for: baseType.tableName, from: data, with: uniqueKey(baseType, forPrimaryKeyValue: key))
+                let cloudkitKey = uniqueKey(baseType, forPrimaryKeyValue: key)
+                let record = try buildCloudKitRecord(for: baseType.tableName, from: data, with: cloudkitKey)
                 
                 // Attempt to save record to database.
                 iCloudDatabase?.save(record) { record, error in
@@ -391,7 +445,7 @@ open class ADiCloudProvider {
                         handler(record, error)
                     } else if let err = error {
                         // Report error
-                        print(err)
+                        print("Unable to save `\(cloudkitKey)` to \(baseType.tableName): \(err)")
                     }
                 }
             } else {
@@ -417,10 +471,18 @@ open class ADiCloudProvider {
     public func update<T: ADDataTable>(_ value: T, completionHandler:CloudKitRecordCompletionHandler? = nil) throws {
         
         // Nuke record first
-        try delete(value)
-        
-        // Now save a new copy
-        try save(value, completionHandler: completionHandler)
+        try delete(value) { id, error in
+            if let error = error {
+                let baseType = type(of: value)
+                
+                // Report error
+                print("Unable to delete record from \(baseType.tableName) before performing an update: \(error)")
+            } else {
+                // Now save a new copy
+                try? self.save(value, completionHandler: completionHandler)
+            }
+        }
+    
     }
     
     /**
@@ -442,7 +504,8 @@ open class ADiCloudProvider {
         if let data = try ADSQLEncoder().encode(value) as? ADRecord {
             if let key = data[baseType.primaryKey] {
                 // Assemble key
-                let recordKey = CKRecord.ID(recordName: uniqueKey(baseType, forPrimaryKeyValue: key))
+                let cloudkitKey = uniqueKey(baseType, forPrimaryKeyValue: key)
+                let recordKey = CKRecord.ID(recordName: cloudkitKey)
                 
                 // Attempt to nuke record
                 iCloudDatabase?.delete(withRecordID: recordKey) { recordID, error in
@@ -451,7 +514,7 @@ open class ADiCloudProvider {
                         handler(recordID, error)
                     } else if let err = error {
                         // Report error
-                        print(err)
+                        print("Unable to delete `\(cloudkitKey)` to \(baseType.tableName): \(err)")
                     }
                 }
             } else {
@@ -541,6 +604,7 @@ open class ADiCloudProvider {
          - query: The query used to find the records. Send in "*" to return all rows.
          - parameters: A list of parameters used in the query string.
          - completionHandler: The completion handler that gets called during the object load.
+     - Remark: Use `%@` for value objects such as strings, numbers, and dates. Use `%K` for the name of a field. This substitution variable indicates that the substituted string should be used to look up a field name.
      */
     public func loadRows<T: ADDataTable>(ofType type: T.Type, matchingQuery query: String, withParameters parameters: [Any]? = nil, completionHandler:@escaping ([T]?, Error?) -> Void) throws {
         
