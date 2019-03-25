@@ -360,16 +360,23 @@ public class ADSQLFunctionExpression: ADSQLExpression {
      - Returns: The string with the white space characters removed.
     */
     private func ltrim(_ value: String) -> String {
-        var sets = ""
-        var chars = value.characters
+        let sets = "\u{020}\u{009}\u{00A}\u{00D}\u{000}\u{00B}"
+        var trimmed = ""
+        var trimming = true
         
-        sets.append("\u{020}\u{009}\u{00A}\u{00D}\u{000}\u{00B}")
-        
-        while let first = chars.first, sets.characters.contains(first) {
-            chars.removeFirst()
+        for character in value {
+            if trimming {
+                if !sets.contains(character) {
+                   trimmed += "\(character)"
+                    trimming = false
+                }
+            } else {
+                trimmed += "\(character)"
+            }
         }
         
-        return String(chars)
+        // Return the trimmed string
+        return trimmed
     }
     
     /**
@@ -387,16 +394,29 @@ public class ADSQLFunctionExpression: ADSQLExpression {
      - Returns: The string with the white space characters removed.
      */
     private func rtrim(_ value: String) -> String {
-        var sets = ""
-        var chars = value.characters
+        let sets = "\u{020}\u{009}\u{00A}\u{00D}\u{000}\u{00B}"
+        var trimmed = ""
+        var trimming = true
+        let chars = Array(value)
         
-        sets.append("\u{020}\u{009}\u{00A}\u{00D}\u{000}\u{00B}")
-        
-        while let last = chars.first, sets.characters.contains(last) {
-            chars.removeLast()
+        var n = value.count - 1
+        while n >= 0 {
+            let character = chars[n]
+            if trimming {
+                if !sets.contains(character) {
+                    trimmed += "\(character)"
+                    trimming = false
+                }
+            } else {
+                trimmed += "\(character)"
+            }
+            
+            // Decrement
+            n -= 1
         }
         
-        return String(chars)
+        // Return the trimmed string
+        return trimmed
     }
     
     /**
