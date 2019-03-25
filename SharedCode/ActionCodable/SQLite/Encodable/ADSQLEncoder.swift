@@ -160,12 +160,6 @@ public class ADSQLEncoder: Encoder {
      */
     public func encode<T:Encodable>(_ value: T) throws -> Any {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLEncoder Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         storage.typeName = String.typeName(of: value)
         try value.encode(to: self)
         let topLevel = storage.popContainer()

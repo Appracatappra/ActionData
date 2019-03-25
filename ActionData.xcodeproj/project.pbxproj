@@ -48,12 +48,6 @@
 /* Begin PBXBuildFile section */
 		2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8020A4D90400045146 /* ADBindingDetailController.swift */; };
 		2D008D8320A4DE8A00045146 /* ADBoundTableViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */; };
-		2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
-		2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
-		2D08FBF220519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */; };
-		2D18FC5F205C0DB2001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		2D18FC61205C0DC0001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */; };
-		2D18FC66205C0DED001F93E6 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */; };
 		2D23420A209B51810034FDC6 /* ADValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234209209B51810034FDC6 /* ADValidatable.swift */; };
 		2D234214209B831C0034FDC6 /* ADBoundTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234213209B831C0034FDC6 /* ADBoundTableSection.swift */; };
 		2D234216209B87690034FDC6 /* ADBindingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234215209B87690034FDC6 /* ADBindingController.swift */; };
@@ -76,6 +70,9 @@
 		2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B020811CA5007601FF /* ADBoundTextView.swift */; };
 		2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B2208120AF007601FF /* ADBoundWebView.swift */; };
 		2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */; };
+		2D86228822490D140012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228122490CD10012943A /* ActionUtilities.framework */; };
+		2D86228B22490D3A0012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228522490CD10012943A /* ActionUtilities.framework */; };
+		2D86228C22490D430012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228722490CD10012943A /* ActionUtilities.framework */; };
 		2D87F335208F92B600393187 /* ADMaskedFormatPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */; };
 		2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */; };
 		2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7F02017DCB6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -336,6 +333,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2D86228022490CD10012943A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA0094B2017B3C4004A5F55;
+			remoteInfo = "ActionUtilities iOS";
+		};
+		2D86228222490CD10012943A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA009592017B3E3004A5F55;
+			remoteInfo = "ActionUtilities watchOS";
+		};
+		2D86228422490CD10012943A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA009662017B401004A5F55;
+			remoteInfo = "ActionUtilities tvOS";
+		};
+		2D86228622490CD10012943A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2DA009732017B433004A5F55;
+			remoteInfo = "ActionUtilities macOS";
+		};
 		2DCC5C3D201B6728003D221C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2D92C7E22017DC3C006598F3 /* Project object */;
@@ -348,7 +373,6 @@
 /* Begin PBXFileReference section */
 		2D008D8020A4D90400045146 /* ADBindingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingDetailController.swift; sourceTree = "<group>"; };
 		2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewDetailController.swift; sourceTree = "<group>"; };
-		2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppracatappraLicenseManager.swift; sourceTree = "<group>"; };
 		2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/iOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/tvOS/ActionUtilities.framework; sourceTree = "<group>"; };
 		2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActionUtilities.framework; path = ../../../../../Library/Frameworks/ActionUtilities/macOS/ActionUtilities.framework; sourceTree = "<group>"; };
@@ -370,6 +394,8 @@
 		2D7706B020811CA5007601FF /* ADBoundTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTextView.swift; sourceTree = "<group>"; };
 		2D7706B2208120AF007601FF /* ADBoundWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundWebView.swift; sourceTree = "<group>"; };
 		2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSegmentedControl.swift; sourceTree = "<group>"; };
+		2D86227422490BC20012943A /* License.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
+		2D86227522490CD10012943A /* ActionUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionUtilities.xcodeproj; path = ../ActionUtilities/ActionUtilities.xcodeproj; sourceTree = "<group>"; };
 		2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedFormatPattern.swift; sourceTree = "<group>"; };
 		2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedStringFormatter.swift; sourceTree = "<group>"; };
 		2D92C7ED2017DCB6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -509,7 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D18FC5F205C0DB2001F93E6 /* ActionUtilities.framework in Frameworks */,
+				2D86228822490D140012943A /* ActionUtilities.framework in Frameworks */,
 				2D92C8132017DEE8006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -518,7 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D18FC61205C0DC0001F93E6 /* ActionUtilities.framework in Frameworks */,
+				2D86228B22490D3A0012943A /* ActionUtilities.framework in Frameworks */,
 				2D92C8152017DF07006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +553,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D18FC66205C0DED001F93E6 /* ActionUtilities.framework in Frameworks */,
+				2D86228C22490D430012943A /* ActionUtilities.framework in Frameworks */,
 				2D92C8172017DF3B006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,16 +572,28 @@
 		2D08FBEE20519CA8008A5449 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2D08FBEF20519CFF008A5449 /* AppracatappraLicenseManager.swift */,
 				2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */,
 				2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		2D86227622490CD10012943A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D86228122490CD10012943A /* ActionUtilities.framework */,
+				2D86228322490CD10012943A /* ActionUtilities.framework */,
+				2D86228522490CD10012943A /* ActionUtilities.framework */,
+				2D86228722490CD10012943A /* ActionUtilities.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2D92C7E12017DC3C006598F3 = {
 			isa = PBXGroup;
 			children = (
+				2D86227522490CD10012943A /* ActionUtilities.xcodeproj */,
+				2D86227422490BC20012943A /* License.md */,
 				2D92C8182017DF6C006598F3 /* README.md */,
 				2D92C8192017DF6C006598F3 /* TrimFramework.sh */,
 				2D92C81D2017DFB9006598F3 /* Bridging-Header.h */,
@@ -1092,6 +1130,12 @@
 			mainGroup = 2D92C7E12017DC3C006598F3;
 			productRefGroup = 2D92C7EE2017DCB6006598F3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D86227622490CD10012943A /* Products */;
+					ProjectRef = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2D92C7EC2017DCB6006598F3 /* ActionData iOS */,
@@ -1104,6 +1148,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2D86228122490CD10012943A /* ActionUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActionUtilities.framework;
+			remoteRef = 2D86228022490CD10012943A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D86228322490CD10012943A /* ActionUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActionUtilities.framework;
+			remoteRef = 2D86228222490CD10012943A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D86228522490CD10012943A /* ActionUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActionUtilities.framework;
+			remoteRef = 2D86228422490CD10012943A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D86228722490CD10012943A /* ActionUtilities.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ActionUtilities.framework;
+			remoteRef = 2D86228622490CD10012943A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2D92C7EB2017DCB6006598F3 /* Resources */ = {
@@ -1308,7 +1383,6 @@
 				2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */,
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */,
-				2D08FBF020519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2DAE7DA720B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
 				2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */,
@@ -1400,7 +1474,6 @@
 				2D92C9492017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
 				2D92C91F2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
 				2D92C9632017E329006598F3 /* ADSQLParseError.swift in Sources */,
-				2D08FBF120519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2D92C8382017E038006598F3 /* ADRecord.swift in Sources */,
 				2D92C9152017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
 				2D92C9182017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,
@@ -1485,7 +1558,6 @@
 				2D92C9532017E307006598F3 /* ADSQLWhenExpression.swift in Sources */,
 				2D92C92A2017E2E9006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
 				2D92C9682017E32A006598F3 /* ADSQLParseError.swift in Sources */,
-				2D08FBF220519CFF008A5449 /* AppracatappraLicenseManager.swift in Sources */,
 				2D92C83E2017E039006598F3 /* ADRecord.swift in Sources */,
 				2D92C9202017E2E9006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
 				2D92C9232017E2E9006598F3 /* ADSQLCreateTriggerInstruction.swift in Sources */,

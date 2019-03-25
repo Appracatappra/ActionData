@@ -120,12 +120,6 @@ public class ADSQLParser {
         var ifNotExists = false
         var makeTemporary = false
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLParser Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Parse the input string
         try ADSQLParseQueue.shared.parse(sql)
         

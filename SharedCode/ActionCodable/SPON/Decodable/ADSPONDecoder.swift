@@ -187,12 +187,6 @@ public class ADSPONDecoder: Decoder {
      */
     public func decode<T : Decodable>(_ type: T.Type, from data: String) throws -> T {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSPONDecoder Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Ensure data is of a valid type
         if data.prefix(4) != "@obj" && data.prefix(7) != "@array[" {
             throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [], debugDescription: "The given data was not valid SPON."))

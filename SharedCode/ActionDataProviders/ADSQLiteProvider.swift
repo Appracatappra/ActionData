@@ -158,12 +158,6 @@ open class ADSQLiteProvider: ADDataProvider {
      */
     public func openSource(_ fileName: String, fromBundle: Bool = false, readOnly: Bool = false) throws {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Close any open databases
         if isOpen {
             try closeSource()
@@ -266,12 +260,6 @@ open class ADSQLiteProvider: ADDataProvider {
     */
     public func saveSource(_ filename: String) throws {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Save old database location
         let oldPath = path
         
@@ -363,12 +351,6 @@ open class ADSQLiteProvider: ADDataProvider {
      ```
      */
     public func closeSource() throws {
-        
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLiteProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
         
         // Is the database open?
         if isOpen {

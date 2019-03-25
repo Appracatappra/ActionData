@@ -187,12 +187,6 @@ public class ADSQLDecoder: Decoder {
      */
     public func decode<T : Decodable>(_ type: T.Type, from data: Any) throws -> T {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSQLDecoder Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Ensure data is of a valid type
         guard let topLevel = ADSQLDecoder.sqlObject(in: data) else {
             throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [], debugDescription: "The given data was not valid SQL."))

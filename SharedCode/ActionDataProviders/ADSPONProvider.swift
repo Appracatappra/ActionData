@@ -146,12 +146,6 @@ open class ADSPONProvider: ADDataProvider {
      */
     public func openSource(_ fileName: String, fromBundle: Bool = false, readOnly: Bool = false) throws {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Close any open databases
         if isOpen {
             try closeSource()
@@ -240,12 +234,6 @@ open class ADSPONProvider: ADDataProvider {
      */
     public func createSource(_ filename: String) throws {
         
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
-        
         // Close any open databases
         if isOpen {
             try closeSource()
@@ -310,12 +298,6 @@ open class ADSPONProvider: ADDataProvider {
      - Remark: The `saveSource` method is typically used to save a SPON database created with the `createSource("")` method call. After calling `saveSource` the `persist` method can be called to save further database changes to disk.
     */
     public func saveSource(_ filename: String) throws {
-        
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
         
         // Is the database open?
         if !isOpen {
@@ -384,12 +366,6 @@ open class ADSPONProvider: ADDataProvider {
      ```
      */
     public func closeSource() throws {
-        
-        #if TRIAL_VERSION
-            ACNotify.showMessage(text: "Appracatappra ADSPONProvider Trial")
-        #else
-            AppracatappraLicenseManager.validateLicense()
-        #endif
         
         // Attempt to persist before closing.
         try persist()
