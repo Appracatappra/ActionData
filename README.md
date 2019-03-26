@@ -6,6 +6,14 @@
 
 Created by developers, for developers. Appracatappra's controls are designed to be quickly added to your app's project with a minimum of code and effort, making it easy to add high-quality, professional features and functionality to your app without having to write tons of repetitive, boilerplate code.
 
+## Using Action Data
+
+**Action Data** requires the **Action Utilities** framework to be added to your project as well. The easiest way to accomplish this download the source code for both frameworks from GitHub and drag the `ActionUtilities.xcodeproj` and `ActionData.xcodeproj` project files under your project's hierarchy in Xcode.
+
+Additionally you should add the `ActionData.framework` and `ActionUtilities.framework` files to the your project's **Embedded Binaries** under the **General** tab in Xcode:
+
+![](Images/Install01.png)
+
 ## What's Included
 
 **Action Data** adds the following functionality:

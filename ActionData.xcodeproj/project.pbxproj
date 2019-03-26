@@ -70,9 +70,9 @@
 		2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B020811CA5007601FF /* ADBoundTextView.swift */; };
 		2D7706B3208120AF007601FF /* ADBoundWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B2208120AF007601FF /* ADBoundWebView.swift */; };
 		2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */; };
-		2D86228822490D140012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228122490CD10012943A /* ActionUtilities.framework */; };
-		2D86228B22490D3A0012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228522490CD10012943A /* ActionUtilities.framework */; };
-		2D86228C22490D430012943A /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D86228722490CD10012943A /* ActionUtilities.framework */; };
+		2D81FBC5224A77F60053CA66 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D882250224A71B1003CA6F1 /* ActionUtilities.framework */; };
+		2D81FBC6224A77FD0053CA66 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D882256224A71B1003CA6F1 /* ActionUtilities.framework */; };
+		2D81FC2B224A7B980053CA66 /* ActionUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D882254224A71B1003CA6F1 /* ActionUtilities.framework */; };
 		2D87F335208F92B600393187 /* ADMaskedFormatPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */; };
 		2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */; };
 		2D92C7F22017DCB6006598F3 /* ActionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D92C7F02017DCB6006598F3 /* ActionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -333,30 +333,30 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2D86228022490CD10012943A /* PBXContainerItemProxy */ = {
+		2D88224F224A71B1003CA6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			containerPortal = 2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2DA0094B2017B3C4004A5F55;
 			remoteInfo = "ActionUtilities iOS";
 		};
-		2D86228222490CD10012943A /* PBXContainerItemProxy */ = {
+		2D882251224A71B1003CA6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			containerPortal = 2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2DA009592017B3E3004A5F55;
 			remoteInfo = "ActionUtilities watchOS";
 		};
-		2D86228422490CD10012943A /* PBXContainerItemProxy */ = {
+		2D882253224A71B1003CA6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			containerPortal = 2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2DA009662017B401004A5F55;
 			remoteInfo = "ActionUtilities tvOS";
 		};
-		2D86228622490CD10012943A /* PBXContainerItemProxy */ = {
+		2D882255224A71B1003CA6F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+			containerPortal = 2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 2DA009732017B433004A5F55;
 			remoteInfo = "ActionUtilities macOS";
@@ -383,6 +383,7 @@
 		2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewCell.swift; sourceTree = "<group>"; };
 		2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundTableViewDataSource.swift; sourceTree = "<group>"; };
 		2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBindingDataSource.swift; sourceTree = "<group>"; };
+		2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionUtilities.xcodeproj; path = "/Users/kmullins/Xcode Projects/GitHub/MediaMarquee/../ActionUtilities/ActionUtilities.xcodeproj"; sourceTree = "<absolute>"; };
 		2D548638222DA76C00184231 /* ADiCloudProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADiCloudProvider.swift; sourceTree = "<group>"; };
 		2D54863C222DAC0000184231 /* ADiCloudDatabaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADiCloudDatabaseType.swift; sourceTree = "<group>"; };
 		2D64C5DB2080FD6C0030D5D8 /* ADBoundSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSlider.swift; sourceTree = "<group>"; };
@@ -395,7 +396,6 @@
 		2D7706B2208120AF007601FF /* ADBoundWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundWebView.swift; sourceTree = "<group>"; };
 		2D7706B420813143007601FF /* ADBoundSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoundSegmentedControl.swift; sourceTree = "<group>"; };
 		2D86227422490BC20012943A /* License.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
-		2D86227522490CD10012943A /* ActionUtilities.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ActionUtilities.xcodeproj; path = ../ActionUtilities/ActionUtilities.xcodeproj; sourceTree = "<group>"; };
 		2D87F334208F92B600393187 /* ADMaskedFormatPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedFormatPattern.swift; sourceTree = "<group>"; };
 		2D87F336208F976B00393187 /* ADMaskedStringFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADMaskedStringFormatter.swift; sourceTree = "<group>"; };
 		2D92C7ED2017DCB6006598F3 /* ActionData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActionData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -535,7 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D86228822490D140012943A /* ActionUtilities.framework in Frameworks */,
+				2D81FBC5224A77F60053CA66 /* ActionUtilities.framework in Frameworks */,
 				2D92C8132017DEE8006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -544,7 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D86228B22490D3A0012943A /* ActionUtilities.framework in Frameworks */,
+				2D81FC2B224A7B980053CA66 /* ActionUtilities.framework in Frameworks */,
 				2D92C8152017DF07006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +553,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D86228C22490D430012943A /* ActionUtilities.framework in Frameworks */,
+				2D81FBC6224A77FD0053CA66 /* ActionUtilities.framework in Frameworks */,
 				2D92C8172017DF3B006598F3 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -578,13 +578,13 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		2D86227622490CD10012943A /* Products */ = {
+		2D882245224A71B1003CA6F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D86228122490CD10012943A /* ActionUtilities.framework */,
-				2D86228322490CD10012943A /* ActionUtilities.framework */,
-				2D86228522490CD10012943A /* ActionUtilities.framework */,
-				2D86228722490CD10012943A /* ActionUtilities.framework */,
+				2D882250224A71B1003CA6F1 /* ActionUtilities.framework */,
+				2D882252224A71B1003CA6F1 /* ActionUtilities.framework */,
+				2D882254224A71B1003CA6F1 /* ActionUtilities.framework */,
+				2D882256224A71B1003CA6F1 /* ActionUtilities.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -592,7 +592,6 @@
 		2D92C7E12017DC3C006598F3 = {
 			isa = PBXGroup;
 			children = (
-				2D86227522490CD10012943A /* ActionUtilities.xcodeproj */,
 				2D86227422490BC20012943A /* License.md */,
 				2D92C8182017DF6C006598F3 /* README.md */,
 				2D92C8192017DF6C006598F3 /* TrimFramework.sh */,
@@ -662,6 +661,7 @@
 			isa = PBXGroup;
 			children = (
 				2D18FC5E205C0DB2001F93E6 /* ActionUtilities.framework */,
+				2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */,
 				2D18FC60205C0DC0001F93E6 /* ActionUtilities.framework */,
 				2D18FC65205C0DED001F93E6 /* ActionUtilities.framework */,
 				2D92C8162017DF3B006598F3 /* libsqlite3.tbd */,
@@ -1133,8 +1133,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2D86227622490CD10012943A /* Products */;
-					ProjectRef = 2D86227522490CD10012943A /* ActionUtilities.xcodeproj */;
+					ProductGroup = 2D882245224A71B1003CA6F1 /* Products */;
+					ProjectRef = 2D474B8E224A6FE8004E08FE /* ActionUtilities.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1151,32 +1151,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2D86228122490CD10012943A /* ActionUtilities.framework */ = {
+		2D882250224A71B1003CA6F1 /* ActionUtilities.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ActionUtilities.framework;
-			remoteRef = 2D86228022490CD10012943A /* PBXContainerItemProxy */;
+			remoteRef = 2D88224F224A71B1003CA6F1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2D86228322490CD10012943A /* ActionUtilities.framework */ = {
+		2D882252224A71B1003CA6F1 /* ActionUtilities.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ActionUtilities.framework;
-			remoteRef = 2D86228222490CD10012943A /* PBXContainerItemProxy */;
+			remoteRef = 2D882251224A71B1003CA6F1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2D86228522490CD10012943A /* ActionUtilities.framework */ = {
+		2D882254224A71B1003CA6F1 /* ActionUtilities.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ActionUtilities.framework;
-			remoteRef = 2D86228422490CD10012943A /* PBXContainerItemProxy */;
+			remoteRef = 2D882253224A71B1003CA6F1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2D86228722490CD10012943A /* ActionUtilities.framework */ = {
+		2D882256224A71B1003CA6F1 /* ActionUtilities.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ActionUtilities.framework;
-			remoteRef = 2D86228622490CD10012943A /* PBXContainerItemProxy */;
+			remoteRef = 2D882255224A71B1003CA6F1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1225,7 +1225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\n# Define Macros\nRELEASE_TYPE=\"\"\nFRAMEWORK_VERSION=\"NOTRIAL_VERSION\"\n\nUNIVERSAL_TARGET=\"iOS\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-${UNIVERSAL_TARGET}\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}${RELEASE_TYPE}/${UNIVERSAL_TARGET}\nDEVICE_OS=\"iphoneos\"\nDEVICE_SIMULATOR=\"iphonesimulator\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"";
+			shellScript = "#!/bin/sh\n\n# Define Macros\nRELEASE_TYPE=\"\"\nFRAMEWORK_VERSION=\"NOTRIAL_VERSION\"\n\nUNIVERSAL_TARGET=\"iOS\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-${UNIVERSAL_TARGET}\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}${RELEASE_TYPE}/${UNIVERSAL_TARGET}\nDEVICE_OS=\"iphoneos\"\nDEVICE_SIMULATOR=\"iphonesimulator\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"\n";
 		};
 		2DCB831C2018CFFB009BEF01 /* Build API Documnetation */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1253,7 +1253,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh\n\n# Define Macros\nRELEASE_TYPE=\"\"\nFRAMEWORK_VERSION=\"NOTRIAL_VERSION\"\n\nUNIVERSAL_TARGET=\"tvOS\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-${UNIVERSAL_TARGET}\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}${RELEASE_TYPE}/${UNIVERSAL_TARGET}\nDEVICE_OS=\"appletvos\"\nDEVICE_SIMULATOR=\"appletvsimulator\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"";
+			shellScript = "#!/bin/sh\n\n# Define Macros\nRELEASE_TYPE=\"\"\nFRAMEWORK_VERSION=\"NOTRIAL_VERSION\"\n\nUNIVERSAL_TARGET=\"tvOS\"\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal-${UNIVERSAL_TARGET}\nUNIVERSAL_FRAMEWORKFOLDER=${PROJECT_NAME}${RELEASE_TYPE}/${UNIVERSAL_TARGET}\nDEVICE_OS=\"appletvos\"\nDEVICE_SIMULATOR=\"appletvsimulator\"\n\n# Make sure the output directories exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\nmkdir -p \"${UNIVERSAL_FRAMEWORKFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\n# See: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xcodebuild.1.html\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk ${DEVICE_OS}  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\nxcodebuild -target \"${PROJECT_NAME} ${UNIVERSAL_TARGET}\" VALID_ARCHS=\"x86_64 i386\" -configuration ${CONFIGURATION} -sdk ${DEVICE_SIMULATOR} ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" OTHER_SWIFT_FLAGS=\"-D ${FRAMEWORK_VERSION}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\nfi\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_SIMULATOR}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-${DEVICE_OS}/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# Step 6. Convenience step to open the project's directory in Finder\n# open \"${UNIVERSAL_FRAMEWORKFOLDER}/\"\n\n# KKM - Testing\n# open \"${UNIVERSAL_OUTPUTFOLDER}\"\n";
 		};
 		2DCB83222018D42F009BEF01 /* Build API Documnetation */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1859,7 +1859,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks/ActionUtilities/tvOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1933,7 +1933,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks/ActionUtilities/tvOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
