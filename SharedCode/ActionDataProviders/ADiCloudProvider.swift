@@ -715,6 +715,7 @@ open class ADiCloudProvider {
         
         // Handle a record being returned
         operation.recordFetchedBlock = { [weak self] record in
+            //print("Record fetched")
             do {
                 if let data = try self?.buildADRecord(from: record) {
                     let item = try decoder.decode(type, from: data)
@@ -727,6 +728,7 @@ open class ADiCloudProvider {
         
         // Handle the query completing
         operation.queryCompletionBlock = { [weak self] (cursor, error) in
+            //print("Completing query with results: \(cursor) - \(error)")
             if let error = error {
                 // Pass error on to handler
                 completionHandler(nil, error)
@@ -739,6 +741,8 @@ open class ADiCloudProvider {
             }
         }
         
+        // Execute the query
+        iCloudDatabase?.add(operation)
     }
     
     /**
@@ -795,5 +799,8 @@ open class ADiCloudProvider {
                 completionHandler(rows, nil)
             }
         }
+        
+        // Execute the query
+        iCloudDatabase?.add(operation)
     }
 }
