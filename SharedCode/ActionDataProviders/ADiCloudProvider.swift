@@ -78,7 +78,13 @@ open class ADiCloudProvider {
     /// Provides access to a common, shared instance of the `ADiCloudProvider`. For app's that are working with a single public iCloud database, they can use this instance instead of creating their own instance of a `ADiCloudProvider`.
     public static let sharedPublic = ADiCloudProvider()
     
-    /// The current value of an auto incrementing integer key used for CloudKit records.
+    /**
+     The current value of an auto incrementing integer key used for CloudKit records.
+     
+     HACK: This is currently just a quick fix hack and needs to be written to correctly get the required value.
+     
+     - Returns: An integer value for the next available auto incrementing key.
+    */
     public static var autoIncrementingKeyValue:Int {
         get { return UserDefaults.standard.integer(forKey: "ClouKitAutoIncVal")}
         set {
@@ -98,6 +104,12 @@ open class ADiCloudProvider {
     /// Internal access to the iCloud database that is currently open.
     private var iCloudDatabase:CKDatabase? = nil
     
+    /// Holds the cursor returned from a large data pull.
+    private var continuationCursor:CKQueryOperation.Cursor? = nil
+    
+    /// Holds the number of results that will be returned for a continuation query.
+    private var continuationLimit:Int = CKQueryOperation.maximumResults
+    
     /// Returns `true` if the data provider can write to the currently open SQLite database, else returns `false`.
     public private(set) var isReadOnly: Bool = false
     
@@ -108,6 +120,11 @@ open class ADiCloudProvider {
     /// Returns `true` if a SQLite database currently open in the data provider, else returns `false`.
     public var isOpen: Bool {
         return (iCloudDatabase != nil)
+    }
+    
+    /// Are there more rows waiting after performing a fetch of records that resulted in a large number of records being returned?
+    public var hasMoreRows:Bool {
+        return (continuationCursor != nil)
     }
     
     // MARK: - Constructors
@@ -597,7 +614,7 @@ open class ADiCloudProvider {
     }
     
     /**
-     Loads any objects of the given type matching the given query.
+     Loads any objects of the given type matching the given query. Use `loadRows` over `getRows` when you know a query will return a small number of records or if you don't want to limit the number of rows returned.
      
      - Parameters:
          - type: The type of object to return.
@@ -653,5 +670,128 @@ open class ADiCloudProvider {
             }
         }
         
+    }
+    
+    /**
+     Loads any objects of the given type matching the given query up to the given limit. Use `getRows` over `loadRows` when the resulting dataset returned could be larger than the maximum number of records that CloudKit will return in a single query or if you wish to limit the number of rows returned. See: https://www.hackingwithswift.com/read/33/6/reading-from-icloud-with-cloudkit-ckqueryoperation-and-nspredicate
+     
+     - Parameters:
+         - type: The type of object to return.
+         - query: The query used to find the records. Send in "*" to return all rows.
+         - parameters: A list of parameters used in the query string.
+         - limit: The maximum number of rows to return. The default is the maximum number of rows that CloudKit will return.
+         - completionHandler: The completion handler that gets called during the object load.
+     - Remark: Use `%@` for value objects such as strings, numbers, and dates. Use `%K` for the name of a field. This substitution variable indicates that the substituted string should be used to look up a field name.
+    */
+    public func getRows<T: ADDataTable>(ofType type: T.Type, matchingQuery query: String, withParameters parameters: [Any]? = nil, limit:Int = CKQueryOperation.maximumResults, completionHandler:@escaping ([T]?, Error?) -> Void) throws {
+        
+        // Ensure the database is open
+        guard isOpen else {
+            throw ADDataProviderError.dataSourceNotOpen
+        }
+        
+        // Clear continuation cursor
+        continuationCursor = nil
+        
+        // Create storage for the returned records
+        var rows:[T] = []
+        let decoder = ADSQLDecoder()
+        
+        // Assemble search predicate
+        var predicate = NSPredicate(value: true)
+        if query != "*" {
+            predicate = NSPredicate(format: query, argumentArray: parameters)
+        }
+        
+        // Assemble query
+        let iCloudQuery = CKQuery(recordType: type.tableName, predicate: predicate)
+        
+        // Assemble query operation
+        let operation = CKQueryOperation(query: iCloudQuery)
+        operation.resultsLimit = limit
+        continuationLimit = limit
+        
+        // Handle a record being returned
+        operation.recordFetchedBlock = { [weak self] record in
+            do {
+                if let data = try self?.buildADRecord(from: record) {
+                    let item = try decoder.decode(type, from: data)
+                    rows.append(item)
+                }
+            } catch {
+                print("Error decoding CKRecord: \(error)")
+            }
+        }
+        
+        // Handle the query completing
+        operation.queryCompletionBlock = { [weak self] (cursor, error) in
+            if let error = error {
+                // Pass error on to handler
+                completionHandler(nil, error)
+            } else {
+                // Save continuation cursor
+                self?.continuationCursor = cursor
+                
+                // Pass retrieved data back to caller
+                completionHandler(rows, nil)
+            }
+        }
+        
+    }
+    
+    /**
+     After performing a `getRows` call, if the `hasMoreRows` property is `true` use this function to return the remaining rows.
+     
+     - Parameters:
+         - type: The type of object to return.
+         - completionHandler: The completion handler that gets called during the object load.
+     
+     - Remark: If the `hasMoreRows` property is still `true` after calling this function, there were still more rows than could be returned in a single call. You can continue to call `getRemainingRows` until `hasMoreRows` is `false` to retrieve all records.
+    */
+    public func getRemainingRows<T: ADDataTable>(ofType type: T.Type, completionHandler:@escaping ([T]?, Error?) -> Void) throws {
+        
+        // Ensure the database is open
+        guard isOpen else {
+            throw ADDataProviderError.dataSourceNotOpen
+        }
+        
+        // Ensure more rows are remaining to load.
+        guard hasMoreRows else {
+            throw ADDataProviderError.noRowsRemaining
+        }
+        
+        // Create storage for the returned records
+        var rows:[T] = []
+        let decoder = ADSQLDecoder()
+        
+        // Assemble query operation
+        let operation = CKQueryOperation(cursor: continuationCursor!)
+        operation.resultsLimit = continuationLimit
+        
+        // Handle a record being returned
+        operation.recordFetchedBlock = { [weak self] record in
+            do {
+                if let data = try self?.buildADRecord(from: record) {
+                    let item = try decoder.decode(type, from: data)
+                    rows.append(item)
+                }
+            } catch {
+                print("Error decoding CKRecord: \(error)")
+            }
+        }
+        
+        // Handle the query completing
+        operation.queryCompletionBlock = { [weak self] (cursor, error) in
+            if let error = error {
+                // Pass error on to handler
+                completionHandler(nil, error)
+            } else {
+                // Save continuation cursor
+                self?.continuationCursor = cursor
+                
+                // Pass retrieved data back to caller
+                completionHandler(rows, nil)
+            }
+        }
     }
 }

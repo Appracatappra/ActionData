@@ -57,4 +57,7 @@ public enum ADDataProviderError: Error {
     
     /// While reading a value from a CloudKit record, the data provider was unable to move that value forward.
     case unableToConvertValue(message: String)
+    
+    /// No further rows are remaining from a call to `getRows`.
+    case noRowsRemaining
 }
