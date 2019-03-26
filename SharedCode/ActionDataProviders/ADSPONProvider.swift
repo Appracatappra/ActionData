@@ -126,7 +126,7 @@ open class ADSPONProvider: ADDataProvider {
      - Parameter name: The name of the table to forget.
      */
     public func forgetTable(_ name: String) {
-        if let index = knownTables.index(of: name) {
+        if let index = knownTables.firstIndex(of: name) {
             knownTables.remove(at: index)
         }
     }

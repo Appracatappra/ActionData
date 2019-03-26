@@ -56,6 +56,8 @@ open class ADiCloudProvider {
                 description = "You must be logged into an iCloud account in Setting before Media Marquee save, load or delete items."
             case .restricted:
                 description = "Your iCloud account doesn't have the required rights to write to you iCloud Database."
+            @unknown default:
+                description = "An unknown issue occurred while trying to access your CloudKit database: \(dbError)"
             }
             
             DispatchQueue.main.async {
