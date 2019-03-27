@@ -522,6 +522,18 @@ open class ADiCloudProvider {
         // Try to encode record
         if let data = try ADSQLEncoder().encode(value) as? ADRecord {
             if let key = data[baseType.primaryKey] {
+                // Is the key field blank?
+                if isUndefined(key: key) {
+                    if let handler = completionHandler {
+                        // Return to caller.
+                        handler(nil, nil)
+                        return
+                    } else {
+                        // Consider this an error and throw
+                        throw ADDataProviderError.failedToPrepareSQL(message: "Primary key was not defined for  \(baseType.primaryKey).")
+                    }
+                }
+                
                 // Assemble key
                 let cloudkitKey = uniqueKey(baseType, forPrimaryKeyValue: key)
                 let recordKey = CKRecord.ID(recordName: cloudkitKey)
