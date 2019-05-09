@@ -77,9 +77,9 @@ open class ADBoundViewController: UIViewController, ADBindingController {
     
     /// Create an array of keyboard notification events.
     private let keyboardNotifications: [Notification.Name] = [
-        .UIKeyboardWillShow,
-        .UIKeyboardWillHide,
-        .UIKeyboardWillChangeFrame
+        UIResponder.keyboardWillShowNotification,
+        UIResponder.keyboardWillHideNotification,
+        UIResponder.keyboardWillChangeFrameNotification
         ]
     
     /// Holds the frame for the onscreen keyboard.
@@ -585,7 +585,7 @@ open class ADBoundViewController: UIViewController, ADBindingController {
         guard let userInfo = notification.userInfo else { return }
         
         // Get the current keyboard information and calculate the height of the keyboard from the bottom of the screen.
-        keyboardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
         keyboardOffset = UIScreen.main.bounds.height - keyboardFrame!.origin.y
         
         // Move the view to avoid the keyboard if required.

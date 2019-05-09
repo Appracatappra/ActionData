@@ -47,13 +47,9 @@
 
 /* Begin PBXBuildFile section */
 		2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8020A4D90400045146 /* ADBindingDetailController.swift */; };
-		2D008D8320A4DE8A00045146 /* ADBoundTableViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D008D8220A4DE8A00045146 /* ADBoundTableViewDetailController.swift */; };
 		2D23420A209B51810034FDC6 /* ADValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234209209B51810034FDC6 /* ADValidatable.swift */; };
 		2D234214209B831C0034FDC6 /* ADBoundTableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234213209B831C0034FDC6 /* ADBoundTableSection.swift */; };
 		2D234216209B87690034FDC6 /* ADBindingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234215209B87690034FDC6 /* ADBindingController.swift */; };
-		2D234218209B90300034FDC6 /* ADBoundTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234217209B90300034FDC6 /* ADBoundTableViewController.swift */; };
-		2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D234219209B934E0034FDC6 /* ADBoundTableViewCell.swift */; };
-		2D23421C209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23421B209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift */; };
 		2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3BF82220A36D0F00BC4928 /* ADBindingDataSource.swift */; };
 		2D548639222DA76C00184231 /* ADiCloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D548638222DA76C00184231 /* ADiCloudProvider.swift */; };
 		2D54863A222DA7A500184231 /* ADiCloudProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D548638222DA76C00184231 /* ADiCloudProvider.swift */; };
@@ -310,11 +306,6 @@
 		2D92C9702017E34D006598F3 /* ADSQLExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C96A2017E346006598F3 /* ADSQLExpression.swift */; };
 		2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92C9692017E346006598F3 /* ADSQLInstruction.swift */; };
 		2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA2C54320892F5C0058CC26 /* ADBoundPathProcessor.swift */; };
-		2DAE7DA120B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA020B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift */; };
-		2DAE7DA320B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA220B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift */; };
-		2DAE7DA520B5E01500DDEFD4 /* ADBoundSQLTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA420B5E01500DDEFD4 /* ADBoundSQLTableView.swift */; };
-		2DAE7DA720B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA620B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift */; };
-		2DAE7DA920B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAE7DA820B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift */; };
 		2DCC5C3C201B6728003D221C /* ActionData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D92C7ED2017DCB6006598F3 /* ActionData.framework */; };
 		2DCC5C43201B682B003D221C /* SQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C42201B682B003D221C /* SQLiteTests.swift */; };
 		2DCC5C46201B688E003D221C /* CategoryUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC5C45201B688E003D221C /* CategoryUsage.swift */; };
@@ -329,7 +320,6 @@
 		2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F44D207FD6B000180131 /* ADBindable.swift */; };
 		2DE9F48E207FE95600180131 /* ADBoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F48D207FE95600180131 /* ADBoundLabel.swift */; };
 		2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE9F490207FF47900180131 /* ADBoundTextField.swift */; };
-		2DFAF694209CA76C003C0A06 /* ADBoundTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAF693209CA76C003C0A06 /* ADBoundTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1304,7 +1294,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DAE7DA120B5DC3400DDEFD4 /* ADBoundSQLTableViewDataSource.swift in Sources */,
 				2D92C8862017E13A006598F3 /* ADSPONKeyedDecodingContainer.swift in Sources */,
 				2D92C85F2017E0D6006598F3 /* ADSQLUnkeyedDecodingContainer.swift in Sources */,
 				2D92C8A52017E1C4006598F3 /* ADColumnSchema.swift in Sources */,
@@ -1318,7 +1307,6 @@
 				2D64C5DC2080FD6C0030D5D8 /* ADBoundSlider.swift in Sources */,
 				2D92C90F2017E2E8006598F3 /* ADSQLDeleteInstruction.swift in Sources */,
 				2D92C90C2017E2E8006598F3 /* ADSQLCreateTableInstruction.swift in Sources */,
-				2DAE7DA520B5E01500DDEFD4 /* ADBoundSQLTableView.swift in Sources */,
 				2D92C93A2017E306006598F3 /* ADSQLForeignKeyExpression.swift in Sources */,
 				2D92C8742017E11A006598F3 /* ADSPONSingleValueEncodingContainer.swift in Sources */,
 				2DE9F44E207FD6B000180131 /* ADBindable.swift in Sources */,
@@ -1338,9 +1326,7 @@
 				2D92C93C2017E306006598F3 /* ADSQLInExpression.swift in Sources */,
 				2D92C8A72017E1C4006598F3 /* ADDataStore.swift in Sources */,
 				2D87F337208F976B00393187 /* ADMaskedStringFormatter.swift in Sources */,
-				2D234218209B90300034FDC6 /* ADBoundTableViewController.swift in Sources */,
 				2D92C8E72017E2CF006598F3 /* ADSQLColumnDefinition.swift in Sources */,
-				2D23421C209BAD2B0034FDC6 /* ADBoundTableViewDataSource.swift in Sources */,
 				2D92C8BD2017E1E6006598F3 /* ADSQLExecutionError.swift in Sources */,
 				2D7706A4208111D3007601FF /* ADBoundStepper.swift in Sources */,
 				2DE9F44B207FCC7400180131 /* ADBoundViewController.swift in Sources */,
@@ -1357,7 +1343,6 @@
 				2D7706B520813143007601FF /* ADBoundSegmentedControl.swift in Sources */,
 				2D92C8982017E1A5006598F3 /* ADSPONProvider.swift in Sources */,
 				2D92C9122017E2E8006598F3 /* ADSQLSelectInstruction.swift in Sources */,
-				2DAE7DA320B5DEF400DDEFD4 /* ADBoundSQLTableViewController.swift in Sources */,
 				2D92C93B2017E306006598F3 /* ADSQLFunctionExpression.swift in Sources */,
 				2D92C8752017E11A006598F3 /* ADSPONUnkeyedEncodingContainer.swift in Sources */,
 				2D92C8312017E038006598F3 /* ADKey.swift in Sources */,
@@ -1365,7 +1350,6 @@
 				2D92C85E2017E0D6006598F3 /* ADSQLSingleValueDecodingContainer.swift in Sources */,
 				2DA2C54420892F5C0058CC26 /* ADBoundPathProcessor.swift in Sources */,
 				2D92C8E82017E2CF006598F3 /* ADSQLJoinClause.swift in Sources */,
-				2DAE7DA920B5ED7000DDEFD4 /* ADBoundSQLTableViewDetailController.swift in Sources */,
 				2D64C5E02081036A0030D5D8 /* ADBoundProgressView.swift in Sources */,
 				2D92C9712017E34D006598F3 /* ADSQLInstruction.swift in Sources */,
 				2D7706A6208115F7007601FF /* ADBoundImageView.swift in Sources */,
@@ -1380,11 +1364,9 @@
 				2D92C93F2017E306006598F3 /* ADSQLWhenExpression.swift in Sources */,
 				2DE9F491207FF47900180131 /* ADBoundTextField.swift in Sources */,
 				2D92C9142017E2E8006598F3 /* ADSQLUpdateInstruction.swift in Sources */,
-				2D23421A209B934E0034FDC6 /* ADBoundTableViewCell.swift in Sources */,
 				2D7706B120811CA5007601FF /* ADBoundTextView.swift in Sources */,
 				2D92C95E2017E329006598F3 /* ADSQLParseError.swift in Sources */,
 				2D008D8120A4D90400045146 /* ADBindingDetailController.swift in Sources */,
-				2DAE7DA720B5E09000DDEFD4 /* ADBoundSQLTableViewCell.swift in Sources */,
 				2D92C8322017E038006598F3 /* ADRecord.swift in Sources */,
 				2D3BF82320A36D0F00BC4928 /* ADBindingDataSource.swift in Sources */,
 				2D92C90A2017E2E8006598F3 /* ADSQLAlterTableInstruction.swift in Sources */,
@@ -1406,9 +1388,7 @@
 				2D92C8DA2017E2AD006598F3 /* ADSQLParser.swift in Sources */,
 				2D92C9112017E2E8006598F3 /* ADSQLInsertInstruction.swift in Sources */,
 				2D92C9382017E306006598F3 /* ADSQLCaseExpression.swift in Sources */,
-				2DFAF694209CA76C003C0A06 /* ADBoundTableView.swift in Sources */,
 				2D64C5DE2081017F0030D5D8 /* ADBoundSwitch.swift in Sources */,
-				2D008D8320A4DE8A00045146 /* ADBoundTableViewDetailController.swift in Sources */,
 				2D92C90E2017E2E8006598F3 /* ADSQLCreateViewInstruction.swift in Sources */,
 				2D71E315208A4EC300E0C68E /* ADBoundTextPicker.swift in Sources */,
 				2D92C8A92017E1C4006598F3 /* ADTableStore.swift in Sources */,
@@ -1718,7 +1698,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks/ActionUtilities/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1744,7 +1724,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1792,7 +1772,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(LOCAL_LIBRARY_DIR)/Frameworks/ActionUtilities/iOS";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1810,7 +1790,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

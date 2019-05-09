@@ -309,7 +309,7 @@ open class ADBoundSlider: UISlider, ADBindable {
         super.init(coder: aDecoder)
         
         // Watch value chage
-        addTarget(self, action: #selector(sliderValueChanged(sender:)), for: UIControlEvents.valueChanged)
+        addTarget(self, action: #selector(sliderValueChanged(sender:)), for: UIControl.Event.valueChanged)
     }
     
     // MARK: - Deinitialization

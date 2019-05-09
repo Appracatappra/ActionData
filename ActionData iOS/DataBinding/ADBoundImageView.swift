@@ -53,7 +53,7 @@ open class ADBoundImageView: UIImageView, ADBindable, UIImagePickerControllerDel
     private var imagePicker = UIImagePickerController()
     
     /// Holds the source of a editable image view's image.
-    private var imageSourceType = UIImagePickerControllerSourceType.photoLibrary
+    private var imageSourceType = UIImagePickerController.SourceType.photoLibrary
     
     // MARK: - Computed Properties
     /// If `true`, the user can select a new image when the user taps the control.
@@ -433,14 +433,15 @@ open class ADBoundImageView: UIImageView, ADBindable, UIImagePickerControllerDel
     }
     
     // MARK: - UIImagePickerControllerDelegate
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var newImage: UIImage? = nil
+        
         
         // Get image from results.
         if canCropImage {
-            newImage = info[UIImagePickerControllerEditedImage] as? UIImage
+            newImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         } else {
-            newImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+            newImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         }
         
         // Run on main UI thread

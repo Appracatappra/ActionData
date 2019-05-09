@@ -701,16 +701,16 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
      - Remark: The `ADBoundTableViewDataSource` currently only supports deleting and not inserting rows.
     */
     public func tableView(_ tableView: UITableView,
-                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+                          editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
         // Are we attached to a bound view?
         if let boundTableView = parentTableView {
             // Do we allow rows to be deleted?
-            return boundTableView.canDeleteRows ? UITableViewCellEditingStyle.delete : UITableViewCellEditingStyle.none
+            return boundTableView.canDeleteRows ? UITableViewCell.EditingStyle.delete : UITableViewCell.EditingStyle.none
         }
         
         // Default to nothing
-        return UITableViewCellEditingStyle.none
+        return UITableViewCell.EditingStyle.none
     }
     
     /**
@@ -723,7 +723,7 @@ open class ADBoundTableViewDataSource<T:Codable>: NSObject, UITableViewDataSourc
      
      - Remark: The `ADBoundTableViewDataSource` currently only supports deleting and not inserting rows.
     */
-    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         // Take action based o nthe editing style
         switch editingStyle {

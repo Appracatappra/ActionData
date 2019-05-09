@@ -307,7 +307,7 @@ open class ADBoundSwitch: UISwitch, ADBindable {
         super.init(coder: aDecoder)
         
         // Watch value change
-        addTarget(self, action: #selector(controlValueChanged(sender:)), for: UIControlEvents.valueChanged)
+        addTarget(self, action: #selector(controlValueChanged(sender:)), for: UIControl.Event.valueChanged)
     }
     
     // MARK: - Deinitialization

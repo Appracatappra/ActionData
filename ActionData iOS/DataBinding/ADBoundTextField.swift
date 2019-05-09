@@ -567,7 +567,7 @@ open class ADBoundTextField: UITextField, UITextFieldDelegate, ADBindable, ADVal
         }
     }
     
-    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
         // Is the control live updating?
         if liveUpdate {
             if let bindEngine = controller {

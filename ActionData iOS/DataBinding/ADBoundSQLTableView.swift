@@ -133,7 +133,7 @@ open class ADBoundSQLTableView: UITableView {
     }
     
     /// Initializes a new instance of the `ADBoundTableView`.
-    public override init(frame: CGRect, style: UITableViewStyle) {
+    public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
         // Finish initialization

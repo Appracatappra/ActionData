@@ -106,7 +106,7 @@ open class ADBoundSQLTableViewCell: UITableViewCell, ADBindingController, ADBind
     }
     
     /// Initializes a new instance of the `ADBoundViewController`.
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         // Finish initialization
